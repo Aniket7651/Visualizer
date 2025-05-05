@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EAPM - Breast Cancer Facts</title>
+    <link rel="stylesheet" href="{% static 'admin/css/styles.css' %}">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="{% static 'admin/img/european-union.png' %}" alt="EU Flag">
+            <!-- Placeholder for EU flag -->
+            <span>EAPM</span>
+            <span class="subtitle">EUROPEAN ALLIANCE FOR PERSONALISED MEDICINE</span>
+        </div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Data</a>
+            <a href="#">About</a>
+            <a href="#">Help</a>
+        </nav>
+    </header>
+
+    {% block body %}
+    {% endblock %}
+
+    <footer>
+        <div class="footer-content">
+            <div class="logo">
+                <img src="{% static 'admin/img/european-union.png' %}" alt="EU Flag">
+                <span><b>EAPM</b> -
+                    <span class="subtitle">EUROPEAN ALLIANCE FOR PERSONALISED MEDICINE</span>
+            </div>
+            <div class="links">
+                <a href="#">Contact Us</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">About EAPM</a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
