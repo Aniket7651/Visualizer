@@ -22,7 +22,12 @@ from django.conf import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', Index, name='home'),
+
+    path('', Infra, name='infra'),
+    path('Utilsbiomarker/', UB, name='utilization'),
+    path('cancerScreen/', cancerScreen, name='cancerScreen'),
+    path('remb/', remb, name='remb'),
+    path('care/', care, name='care'),
 ]
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

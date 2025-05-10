@@ -1,0 +1,179 @@
+{% extends 'base.htm' %}
+{% load static %}
+
+
+{% block descript %}
+
+<section class="filter"></section>
+
+<h1>Breast Cancer Factsheet: Insights & Key Developments</h1>
+<p>This factsheet provides a comprehensive overview of key pillars shaping breast cancer care, including
+    specialised infrastructure, treatment accessibility, research funding, early detection, and palliative care.
+</p>
+
+{% endblock %}
+
+{% block content %}
+
+<div class="content">
+    <h2>Utilization of Biomarkers</h2>
+    <div class="row">
+        <div class="cont">
+            <div class="column">
+                <h3>Strengths</h3>
+                <p>HER2, ER, and PR testing are part of institutional care standards. Testing is increasingly
+                    recognized in national clinical workflows</p>
+                <h3>Opportunities</h3>
+                <p>Standardize and reimburse HER2 and BRCA testing across public providers.
+                    Develop centralized labs to improve equity and efficiency.
+                </p>
+            </div>
+            <div class="column">
+                <h3>Weaknesses</h3>
+                <p>BRCA testing is cost-prohibitive ($800-$2,500 USD) and not reimbursed in the public system.
+                    Turnaround times are long due to limited pathology capacity in public hospitals.
+                </p>
+                <h3>Threats</h3>
+                <p>Unequal access to biomarker data undermines personalized treatment plans and precision care.</p>
+            </div>
+        </div>
+
+        <div class="map">
+            <div id="geo_map" style="width: 100%;"></div>
+            <div class="map-buttons">
+                <button onclick="changeMap('her')">HER2</button>
+                <button onclick="changeMap('er')">ER</button>
+                <button onclick="changeMap('pr')">PR</button>
+                <button onclick="changeMap('brca1')">BRCA1</button>
+                <button onclick="changeMap('brca2')">BRCA2</button>
+            </div>
+            <div class="map-icons">
+                <span><i class='fa fa-globe'></i></span>
+                <span><i class="fa fa-bar-chart"></i></span>
+                <span><i class="fa fa-download"></i></span>
+                <span><i class="fa fa-info"></i></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="chart-section">
+        <h2>Overall Average Design</h2>
+        <div class="chart-wrapper">
+            <div id="scatter-chart" style="width: 100%;"></div>
+            <div class="chart-icons">
+                <span><i class='fa fa-globe'></i></span>
+                <span><i class="fa fa-bar-chart"></i></span>
+                <span><i class="fa fa-download"></i></span>
+                <span><i class="fa fa-info"></i></span>
+            </div>
+        </div>
+    </div>
+</div>
+</main>
+
+<script>
+
+    google.charts.load('current', {
+        'packages': ['geochart'],
+    });
+    google.charts.setOnLoadCallback(drawRegionsMap);
+
+    function drawRegionsMap() {
+        var data = google.visualization.arrayToDataTable([
+            ['Country', 'Popularity'],
+            ['Germany', 200],
+            ['United States', 300],
+            ['Brazil', 400],
+            ['Canada', 500],
+            ['France', 600],
+            ['Russia', 700],
+            ['India', 800],
+            ['China', 900],
+            ['Italy', 1000],
+            ['Spain', 1100],
+            ['United Kingdom', 1200],
+            ['Australia', 1300],
+            ['Japan', 1400],
+            ['South Korea', 1500],
+            ['Mexico', 1600],
+            ['Argentina', 1700],
+            ['South Africa', 1800],
+            ['Egypt', 1900],
+            ['Turkey', 2000]
+        ]);
+
+        var options = {
+            colorAxis: { colors: ['#003087'] },
+            backgroundColor: '#f0f0f0',
+            datalessRegionColor: '#ffffff',
+        };
+
+        var chart = new google.visualization.GeoChart(document.getElementById('geo_map'));
+
+        chart.draw(data, options);
+    }
+
+    // Map change functionality
+    function changeMap(type) {
+        const mapImage = document.getElementById('map-image');
+        if (type === 'spc_cent') {
+            mapImage.src = 'rough/bar-chart.png';
+        } else if (type === 'gm_test') {
+            mapImage.src = 'rough/line-chart.png';
+        }
+    }
+    // Scatter chart using Chart.js
+
+    google.charts.load('current', { packages: ['corechart'] });
+    google.charts.setOnLoadCallback(drawChart);
+
+    function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+            ['Country', 'Avg'],
+            ['Germany', 2.00],
+            ['United States', 3.00],
+            ['Brazil', 4.00],
+            ['Canada', 5.00],
+            ['France', 4.00],
+            ['Russia', 2.00],
+            ['India', 1.00],
+            ['China', 5.00],
+            ['Italy', 1.00],
+            ['Spain', 1.00],
+            ['United Kingdom', 2.00],
+            ['Australia', 3.00],
+            ['Japan', 4.00],
+            ['South Korea', 5.00],
+            ['Mexico', 1.00],
+            ['Argentina', 1.00],
+            ['South Africa', 1.00],
+            ['Egypt', 1.00],
+            ['Turkey', 2.00]
+        ]);
+
+        var options = {
+            title: 'Overall Average Utilization of Biomarker',
+            legend: 'none',
+            hAxis: {
+                title: 'Country',
+                textStyle: { fontSize: 10 }, // Smaller font to fit more labels
+                slantedText: true, // Rotate labels to prevent overlap
+                slantedTextAngle: 45 // Angle for readability
+            },
+            vAxis: {
+                title: 'Avg',
+                gridlines: { count: 5 } // Consistent gridlines
+            },
+            backgroundColor: '#f0f0f0',
+            colors: ['#003087'],
+            pointSize: 8,
+            pointShape: { type: 'circle' },
+            height: 500,
+        };
+
+        var chartscatter = new google.visualization.ScatterChart(document.getElementById('scatter-chart'));
+        chartscatter.draw(data, options);
+    }
+</script>
+
+{% endblock %}

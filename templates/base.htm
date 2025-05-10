@@ -5,43 +5,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EAPM - Breast Cancer Facts</title>
+    <title>EAPM - {{ title }} {{cancer}}</title>
     <link rel="stylesheet" href="{% static 'admin/css/styles.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- For scatter chart -->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <style>
+        .tab {
+            color: black;
+        }
+    </style>
 </head>
 
 <body>
     <header>
         <div class="logo">
             <img src="{% static 'admin/img/european-union.png' %}" alt="EU Flag">
-            <!-- Placeholder for EU flag -->
             <span>EAPM</span>
-            <span class="subtitle">EUROPEAN ALLIANCE FOR PERSONALISED MEDICINE</span>
+            <span class="subtitle">European Alliance for Personalised Medicine</span>
         </div>
         <nav>
-            <a href="#">Home</a>
+            <a href="{% url 'infra' %}">Home</a>
             <a href="#">Data</a>
             <a href="#">About</a>
             <a href="#">Help</a>
         </nav>
     </header>
 
-    {% block body %}
-    {% endblock %}
+    <main>
+        {% block descript %}
 
-    <footer>
-        <div class="footer-content">
-            <div class="logo">
-                <img src="{% static 'admin/img/european-union.png' %}" alt="EU Flag">
-                <span><b>EAPM</b> -
-                    <span class="subtitle">EUROPEAN ALLIANCE FOR PERSONALISED MEDICINE</span>
-            </div>
-            <div class="links">
-                <a href="#">Contact Us</a>
-                <a href="#">Privacy Policy</a>
-                <a href="#">About EAPM</a>
-            </div>
+        {% endblock %}
+
+        <div class="tabs">
+            <a class="tab" href="{% url 'infra' %}">Infrastructure</a>
+            <a class="tab" href="{% url 'cancerScreen' %}">Cancer Screening</a>
+            <a class="tab" href="{% url 'remb' %}">Reimbursement</a>
+            <a class="tab" href="{% url 'utilization' %}">Utilisation of Biomarker</a>
+            <a class="tab">Clinical Guidelines</a>
+            <a class="tab" href="{% url 'care' %}">Care & Diagnosis</a>
+            <a class="tab">Treatment Funding & Awareness</a>
         </div>
-    </footer>
+
+        {% block content %}
+
+        {% endblock %}
+
+        <footer>
+            <div class="footer-content">
+                <div class="logo">
+                    <img src="{% static 'admin/img/european-union.png' %}" alt="EU Flag">
+                    <span>EAPM</span>
+                    <span class="subtitle">European Alliance for Personalised Medicine</span>
+                </div>
+                <div class="links">
+                    <a href="#">Contact Us</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">About EAPM</a>
+                </div>
+            </div>
+        </footer>
+
 </body>
 
 </html>

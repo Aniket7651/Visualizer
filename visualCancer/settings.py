@@ -28,6 +28,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
 
+CANCER_TYPES = ''
 
 # Application definition
 

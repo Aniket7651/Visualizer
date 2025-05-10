@@ -46,6 +46,8 @@ header nav a {
     margin-left: 1rem;
 }
 
+.a:hover { transition: .3s; }
+
 header nav a:hover {
     text-decoration: underline;
 }
@@ -67,64 +69,95 @@ header nav a:hover {
     background-color: #ffd700;
     border: none;
     cursor: pointer;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
 }
 
-.content {
+main {
     max-width: 1200px;
     margin: 2rem auto;
     padding: 0 1rem;
 }
 
-.content h1 {
+main h1 {
     font-size: 2rem;
     margin-bottom: 1rem;
 }
 
-.content p {
-    margin-bottom: 2rem;
+main p {
+    margin-bottom: 1rem;
     color: #555;
 }
 
-.section {
+.tabs {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    
+}
+
+.tab {
+    padding: 0.5rem 1rem;
+    font-size: 13px;
+    background-color: #e0e0e0;
+    border: none;
+    cursor: pointer;
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.tab.active {
+    background-color: #003087;
+    color: white;
+}
+
+.tab:hover {
+    background-color: #003087;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+.content {
     background-color: white;
     padding: 1.5rem;
-    margin-bottom: 2rem;
     border-radius: 5px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
-.section h2 {
-    font-size: 1.5rem;
+.column h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.column p {
     margin-bottom: 1rem;
-    color: #003087;
 }
 
 .row {
     display: flex;
-    flex-direction: column; /* Keep the overall row vertical */
+    flex-direction: column; /* Stack columns and map vertically */
     gap: 2rem;
 }
 
-/* New wrapper for text columns to display them side-by-side */
-.text-columns {
+/* Make columns take full width */
+
+.cont {
     display: flex;
-    flex-direction: row; /* Text columns will be side-by-side */
+    flex-direction: row; /* Stack rows and map vertically */
     gap: 2rem;
-    flex-wrap: wrap; /* Wrap on smaller screens if needed */
 }
 
-.column {
-    flex: 1;
-    min-width: 0; /* Prevent overflow */
+/* Ensure map takes full width below */
+.map {
+    width: 100%; /* Full width */
+    min-width: 0; /* Reset min-width */
+    position: relative;
 }
 
-/* Map and chart remain full-width below the text columns */
-.map, .chart {
-    width: 100%;
-    text-align: center;
-}
-
-.map img, .chart canvas {
+.map img {
     width: 100%;
     height: auto;
 }
@@ -142,10 +175,45 @@ header nav a:hover {
     color: white;
     border: none;
     cursor: pointer;
+    border-radius: 5px;
 }
 
 .map-buttons button:hover {
     background-color: #0056b3;
+    transition: 0.3s;
+}
+
+.map-icons, .chart-icons {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    gap: 1.8rem;
+}
+
+i {
+    color: #003087;
+    cursor: pointer;
+    transition: #5751fa 0.3s;
+}
+
+.chart-section {
+    margin-top: 2rem;
+}
+
+.chart-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #003087;
+}
+
+.chart-wrapper {
+    position: relative;
+}
+
+.chart-wrapper canvas {
+    width: 100%;
+    height: 300px;
 }
 
 footer {
@@ -161,6 +229,7 @@ footer .footer-content {
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
+    flex-wrap: wrap;
 }
 
 footer .logo {
@@ -198,12 +267,12 @@ footer .links a:hover {
         align-items: center;
     }
 
-    .text-columns {
-        flex-direction: column; /* Stack text columns on mobile */
+    .cont {
+        flex-direction: column; /* Stack columns and map vertically */
     }
 
-    .map, .chart {
-        margin-top: 1rem;
+    .row {
+        flex-direction: column;
     }
 
     footer .footer-content {
