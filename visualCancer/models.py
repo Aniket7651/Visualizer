@@ -46,3 +46,11 @@ class BreastCancer(models.Model):
     
     def __str__(self):
         return self.country
+    
+# TODO: add more fields to the model
+class Sarcoma(models.Model):
+    
+    country = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.country

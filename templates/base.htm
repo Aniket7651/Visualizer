@@ -5,24 +5,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EAPM - {{ title }} {{cancer}}</title>
+    <title id="title-section">ICPC - International Cancer Patient Coalition</title>
     <link rel="stylesheet" href="{% static 'admin/css/styles.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- For scatter chart -->
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <style>
+        body{
+            font-family: 'Poppins', sans-serif;
+        }
+
         .tab {
             color: black;
         }
+
+        [data-tab-info] {
+            display: none;
+        }
+
+        .active[data-tab-info] {
+            display: block;
+        }
     </style>
+    
 </head>
 
 <body>
     <header>
         <div class="logo">
-            <img src="{% static 'admin/img/european-union.png' %}" alt="EU Flag">
-            <span>EAPM</span>
-            <span class="subtitle">European Alliance for Personalised Medicine</span>
+            <img src="{% static 'admin/img/ICPClogo.jpg' %}" alt="ICPC Logo">
+            <span>ICPC</span>
+            <span class="subtitle">International Cancer Patient Coalition</span>
         </div>
         <nav>
             <a href="{% url 'infra' %}">Home</a>
@@ -31,40 +45,300 @@
             <a href="#">Help</a>
         </nav>
     </header>
+    <section class="filter">
+            <form method="post">
+                {% csrf_token %}
+                <select name="cancerType" id="cancerType">
+                    <option value="BreastCancer" selected>Breast Cancer</option>
+                    <option value="ColorectalCancer">Colorectal Cancer</option>
+                    <option value="ProstateCancer">Prostate Cancer</option>
+                    <option value="nscl">Non-Small Cell Lung Cancer</option>
+                    <option value="BloodCancer">Blood Cancer</option>
+                </select>
+                <button type="submit">Submit</button>
+            </form>
+    </section>
 
     <main>
-        {% block descript %}
+        
 
-        {% endblock %}
+        <h1>Breast Cancer Factsheet: Insights & Key Developments</h1>
+        <p>This factsheet provides a comprehensive overview of key pillars shaping breast cancer care, including
+            specialised infrastructure, treatment accessibility, research funding, early detection, and palliative care.
+        </p>
 
         <div class="tabs">
-            <a class="tab" href="{% url 'infra' %}">Infrastructure</a>
-            <a class="tab" href="{% url 'cancerScreen' %}">Cancer Screening</a>
-            <a class="tab" href="{% url 'remb' %}">Reimbursement</a>
-            <a class="tab" href="{% url 'utilization' %}">Utilisation of Biomarker</a>
-            <a class="tab">Clinical Guidelines</a>
-            <a class="tab" href="{% url 'care' %}">Care & Diagnosis</a>
-            <a class="tab">Treatment Funding & Awareness</a>
+            <span class="tab" data-tab-value="#tab_1">Infrastructure</span>
+            <span class="tab" data-tab-value="#tab_2">Cancer Screening</span>
+            <span class="tab" data-tab-value="#tab_3">Reimbursement</span>
+            <span class="tab" data-tab-value="#tab_4">Utilisation of Biomarker</span>
+            <span class="tab" data-tab-value="#tab_5">Clinical Guidelines</span>
+            <span class="tab" data-tab-value="#tab_6">Care & Diagnosis</span>
+            <span class="tab" data-tab-value="#tab_7">Treatment Funding & Awareness</span>
         </div>
+        <div class="tab-content">
+            <div class="content tabs__tab active" id="tab_1" data-tab-info>
+                <h2>Infrastructure</h2>
+                <div class="row">
+                    <div class="cont">
+                        <div class="column">
+                            <h3>Strengths</h3>
+                            <p>Centers like INCan and Hospital General de Mexico provide high-quality care in major
+                                cities.
+                                HER2, ER, and PR testing are available in the tertiary hospitals and integrated into
+                                standard care.</p>
+                            <h3>Opportunities</h3>
+                            <p>Expand regional cancer centers and public investment in pathology. Improve access to BRCA
+                                and
+                                molecular testing beyond private sector availability.</p>
+                        </div>
+                        <div class="column">
+                            <h3>Weaknesses</h3>
+                            <p>Only ~35% of cancer patients access specialised centers; most rely on general hospitals
+                                with
+                                limited oncology capacity. Pathology and genetic testing infrastructure is
+                                underdeveloped in
+                                the public sector.</p>
+                            <h3>Threats</h3>
+                            <p>Rural and low-income patients are at risk of delayed diagnosis and under-treatment due to
+                                lack of infrastructure.</p>
+                        </div>
+                    </div>
 
-        {% block content %}
-
-        {% endblock %}
-
-        <footer>
-            <div class="footer-content">
-                <div class="logo">
-                    <img src="{% static 'admin/img/european-union.png' %}" alt="EU Flag">
-                    <span>EAPM</span>
-                    <span class="subtitle">European Alliance for Personalised Medicine</span>
+                    <div class="map">
+                        <div id="geo_map" style="width: 100%;"></div>
+                        <div class="map-buttons">
+                            <button onclick="changeMap('spc_cent')">Specialized Centers</button>
+                            <button onclick="changeMap('gm_test')">Genetic & Molecular Testing</button>
+                        </div>
+                        <div class="map-icons">
+                            <span><i class='fa fa-globe'></i></span>
+                            <span><i class="fa fa-bar-chart"></i></span>
+                            <span><i class="fa fa-download"></i></span>
+                            <span><i class="fa fa-info"></i></span>
+                        </div>
+                    </div>
                 </div>
-                <div class="links">
-                    <a href="#">Contact Us</a>
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">About EAPM</a>
+
+                <div class="chart-section">
+                    <h2 style="color: #604eb1;">Overall Average Design</h2>
+                    <div class="chart-wrapper">
+                        <div id="scatter-chart" style="width: 100%;"></div>
+                        <div class="chart-icons">
+                            <span><i class='fa fa-globe'></i></span>
+                            <span><i class="fa fa-bar-chart"></i></span>
+                            <span><i class="fa fa-download"></i></span>
+                            <span><i class="fa fa-info"></i></span>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </footer>
+
+
+            <!-- Tab 2 -->
+            <div class="content tabs__tab" id="tab_4" data-tab-info>
+                <h2>Utilization of Biomarkers</h2>
+                <div class="row">
+                    <div class="cont">
+                        <div class="column">
+                            <h3>Strengths</h3>
+                            <p>HER2, ER, and PR testing are part of institutional care standards. Testing is
+                                increasingly
+                                recognized in national clinical workflows</p>
+                            <h3>Opportunities</h3>
+                            <p>Standardize and reimburse HER2 and BRCA testing across public providers.
+                                Develop centralized labs to improve equity and efficiency.
+                            </p>
+                        </div>
+                        <div class="column">
+                            <h3>Weaknesses</h3>
+                            <p>BRCA testing is cost-prohibitive ($800-$2,500 USD) and not reimbursed in the public
+                                system.
+                                Turnaround times are long due to limited pathology capacity in public hospitals.
+                            </p>
+                            <h3>Threats</h3>
+                            <p>Unequal access to biomarker data undermines personalized treatment plans and precision
+                                care.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="map">
+                        <div id="geo_map" style="width: 100%;"></div>
+                        <div class="map-buttons">
+                            <button onclick="changeMap('her')">HER2</button>
+                            <button onclick="changeMap('er')">ER</button>
+                            <button onclick="changeMap('pr')">PR</button>
+                            <button onclick="changeMap('brca1')">BRCA1</button>
+                            <button onclick="changeMap('brca2')">BRCA2</button>
+                        </div>
+                        <div class="map-icons">
+                            <span><i class='fa fa-globe'></i></span>
+                            <span><i class="fa fa-bar-chart"></i></span>
+                            <span><i class="fa fa-download"></i></span>
+                            <span><i class="fa fa-info"></i></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="chart-section">
+                    <h2 style="color: #604eb1;">Overall Average Design</h2>
+                    <div class="chart-wrapper">
+                        <div id="scatter-chart" style="width: 100%;"></div>
+                        <div class="chart-icons">
+                            <span><i class='fa fa-globe'></i></span>
+                            <span><i class="fa fa-bar-chart"></i></span>
+                            <span><i class="fa fa-download"></i></span>
+                            <span><i class="fa fa-info"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+        // function to get each tab details
+        const tabs = document.querySelectorAll('[data-tab-value]')
+        const tabInfos = document.querySelectorAll('[data-tab-info]')
+        const title = document.getElementById('title-section');
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                const target = document
+                    .querySelector(tab.dataset.tabValue);
+                tabInfos.forEach(tabInfo => {
+                    tabInfo.classList.remove('active')
+                })
+                title.innerText = 'ICPC - ' + target.querySelector('h2').innerText;
+                target.classList.add('active');
+            })
+        })
+    </script>
+
+    </main>
+
+
+
+    <script>
+
+        google.charts.load('current', { 'packages': ['geochart'] });
+        google.charts.load('current', { 'packages': ['corechart'] });
+        google.charts.setOnLoadCallback(drawRegionsMap);
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawRegionsMap() {
+            var data = google.visualization.arrayToDataTable([
+                ['Country', 'Popularity'],
+                ['Germany', 200],
+                ['United States', 300],
+                ['Brazil', 400],
+                ['Canada', 500],
+                ['France', 600],
+                ['Russia', 700],
+                ['India', 800],
+                ['China', 900],
+                ['Italy', 1000],
+                ['Spain', 1100],
+                ['United Kingdom', 1200],
+                ['Australia', 1300],
+                ['Japan', 1400],
+                ['South Korea', 1500],
+                ['Mexico', 1600],
+                ['Argentina', 1700],
+                ['South Africa', 1800],
+                ['Egypt', 1900],
+                ['Turkey', 2000]
+            ]);
+
+            var options = {
+                colorAxis: { colors: ['#003087'] },
+                backgroundColor: '#f0f0f0',
+                datalessRegionColor: '#ffffff',
+            };
+
+            var chart = new google.visualization.GeoChart(document.getElementById('geo_map'));
+
+            chart.draw(data, options);
+        }
+
+        // Map change functionality
+        function changeMap(type) {
+            const mapImage = document.getElementById('map-image');
+            if (type === 'spc_cent') {
+                mapImage.src = 'rough/bar-chart.png';
+            } else if (type === 'gm_test') {
+                mapImage.src = 'rough/line-chart.png';
+            }
+        }
+
+        // Scatter chart using Chart.js
+
+        google.charts.load('current', { packages: ['corechart'] });
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+                ['Country', 'Avg'],
+                ['Germany', 2.00],
+                ['United States', 3.00],
+                ['Brazil', 4.00],
+                ['Canada', 5.00],
+                ['France', 4.00],
+                ['Russia', 2.00],
+                ['India', 1.00],
+                ['China', 5.00],
+                ['Italy', 1.00],
+                ['Spain', 1.00],
+                ['United Kingdom', 2.00],
+                ['Australia', 3.00],
+                ['Japan', 4.00],
+                ['South Korea', 5.00],
+                ['Mexico', 1.00],
+                ['Argentina', 1.00],
+                ['South Africa', 1.00],
+                ['Egypt', 1.00],
+                ['Turkey', 2.00]
+            ]);
+
+            var options = {
+                title: 'Overall Average of Infrastructure',
+                legend: 'none',
+                hAxis: {
+                    title: 'Country',
+                    textStyle: { fontSize: 10 }, // Smaller font to fit more labels
+                    slantedText: true, // Rotate labels to prevent overlap
+                    slantedTextAngle: 45 // Angle for readability
+                },
+                vAxis: {
+                    title: 'Avg',
+                    gridlines: { count: 5 } // Consistent gridlines
+                },
+                backgroundColor: '#f0f0f0',
+                colors: ['#003087'],
+                pointSize: 8,
+                pointShape: { type: 'circle' },
+                height: 500,
+            };
+
+            var chartscatter = new google.visualization.ScatterChart(document.getElementById('scatter-chart'));
+            chartscatter.draw(data, options);
+        }
+    </script>
+
+
+    <footer>
+        <div class="footer-content">
+            <div class="logo">
+                <img src="{% static 'admin/img/ICPClogo.jpg' %}" alt="ICPC Logo">
+                <span>ICPC -</span>
+                <span class="subtitle"> - International Cancer Patient Coalition</span>
+            </div>
+            <div class="links">
+                <a href="#">Contact Us</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">About ICPC</a>
+            </div>
+        </div>
+    </footer>
 
 </body>
 

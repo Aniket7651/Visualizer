@@ -5,14 +5,13 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-color: #f4f4f4;
+    background-color: #f7f1f8;
 }
 
 header {
-    background-color: #003087;
-    color: white;
+    background-color: #fff;
+    color: #5743c8;
     padding: 1rem;
     display: flex;
     justify-content: space-between;
@@ -25,7 +24,7 @@ header .logo {
 }
 
 header .logo img {
-    width: 40px;
+    width: 70px;
     margin-right: 10px;
 }
 
@@ -41,7 +40,7 @@ header .logo .subtitle {
 }
 
 header nav a {
-    color: white;
+    color: #5743c8;
     text-decoration: none;
     margin-left: 1rem;
 }
@@ -49,11 +48,16 @@ header nav a {
 .a:hover { transition: .3s; }
 
 header nav a:hover {
+    color: #5e5a98;
     text-decoration: underline;
 }
 
+h2 {
+    color: #604eb1;
+}
+
 .filter {
-    background-color: #003087;
+    background-color: #fff;
     padding: 1rem;
     display: flex;
     gap: 1rem;
@@ -66,7 +70,7 @@ header nav a:hover {
 }
 
 .filter button {
-    background-color: #ffd700;
+    background-color: #f6c646;
     border: none;
     cursor: pointer;
     padding: 0.5rem 1rem;
@@ -91,7 +95,7 @@ main p {
 
 .tabs {
     display: flex;
-    gap: 0.5rem;
+    gap: 0.8rem;
     margin-bottom: 1rem;
     flex-wrap: wrap;
     
@@ -99,9 +103,8 @@ main p {
 
 .tab {
     padding: 0.5rem 1rem;
-    font-size: 13px;
+    font-size: 12px;
     background-color: #e0e0e0;
-    border: none;
     cursor: pointer;
     color: black;
     text-decoration: none;
@@ -109,13 +112,13 @@ main p {
 }
 
 .tab.active {
-    background-color: #003087;
+    background-color: #f3c750;
     color: white;
 }
 
 .tab:hover {
-    background-color: #003087;
-    color: white;
+    background-color: #f3c750;
+    color: #5e5a98;
     transition: background-color 0.3s;
 }
 
@@ -129,7 +132,7 @@ main p {
 .column h3 {
     font-size: 1.2rem;
     margin-bottom: 0.5rem;
-    color: #333;
+    color: #f3c750;
 }
 
 .column p {
@@ -171,7 +174,7 @@ main p {
 
 .map-buttons button {
     padding: 0.5rem 1rem;
-    background-color: #003087;
+    background-color: #5743c8;
     color: white;
     border: none;
     cursor: pointer;
@@ -179,7 +182,7 @@ main p {
 }
 
 .map-buttons button:hover {
-    background-color: #0056b3;
+    background-color: #5751fa;
     transition: 0.3s;
 }
 
@@ -217,7 +220,7 @@ i {
 }
 
 footer {
-    background-color: #003087;
+    background-color: #5743c8;
     color: white;
     padding: 1rem;
     text-align: center;
