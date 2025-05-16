@@ -5,23 +5,34 @@ from django.conf import settings
 from .models import *
 import pandas as pd
 import numpy as np
+from django_pandas.io import read_frame # type: ignore
 import plotly.express as px # type: ignore
 import plotly.graph_objects as go # type: ignore
 from django.views.decorators.clickjacking import xframe_options_exempt
+from .models import BreastCancer, Sarcoma
 
+discription = {
+    5: "Advanced nationwide infrastructure, widespread availability in public and private sectors, integration with clinical practice.",
+    4: "Strong infrastructure in major hospitals and cancer centers, some regional disparities.", 
+    3: "Moderate infrastructure, primarily in private settings or research institutions.",
+    2: "Limited infrastructure, available only in select centers or for high-cost private testing.",
+    1: "Minimal or no infrastructure, testing mostly unavailable or sent abroad."
+}
 
 
 
 def Infra(request):
     if request.method == 'POST':
         selected_database = request.POST.get('cancerType')
+        df = read_frame(selected_database.objects.all())
         settings.CANCER_TYPES = selected_database
         print("settings.CANCER_TYPES:", settings.CANCER_TYPES)
+        print(df)
     return render(request, 'base.htm')
 
 
 
-def plot_choropleth_map(country, discription, spcCenter, orthographic=True):
+def plot_choropleth_map(country, discription, datapoints, orthographic=True):
     
     data = dict(type = 'choropleth', 
         # location: country col
@@ -35,7 +46,7 @@ def plot_choropleth_map(country, discription, spcCenter, orthographic=True):
                 
         # text can be used as popup datapoints
         text = discription, 
-        z = spcCenter, # data point
+        z = datapoints, # data point
         colorscale = [[0, '#F7F1F8'], [1, '#5643D1']],
         # colour bar if needed
         # colorbar = {'title': 'Specialized Centers'}
