@@ -1,3 +1,4 @@
+<!-- templates/map.html -->
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
@@ -9,10 +10,11 @@
     <link rel="stylesheet" href="{% static 'admin/css/styles.css' %}">
     <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- For scatter chart -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <style>
-        body{
+        body {
             font-family: 'Poppins', sans-serif;
         }
 
@@ -27,8 +29,18 @@
         .active[data-tab-info] {
             display: block;
         }
+
+        .map-buttons button {
+            margin: 5px;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .map-buttons button.active {
+            background-color: #604eb1;
+            color: white;
+        }
     </style>
-    
 </head>
 
 <body>
@@ -46,20 +58,18 @@
         </nav>
     </header>
     <section class="filter">
-            <form method="post">
-                {% csrf_token %}
-                <select name="cancerType" id="cancerType">
-                    <option value="BreastCancer" selected>Breast Cancer</option>
-                    <option value="ColorectalCancer">Colorectal Cancer</option>
-                    <option value="ProstateCancer">Prostate Cancer</option>
-                </select>
-                <button type="submit">Submit</button>
-            </form>
+        <form method="post">
+            {% csrf_token %}
+            <select name="cancerType" id="cancerType">
+                <option value="BreastCancer" selected>Breast Cancer</option>
+                <option value="ColorectalCancer">Colorectal Cancer</option>
+                <option value="ProstateCancer">Prostate Cancer</option>
+            </select>
+            <button type="submit">Submit</button>
+        </form>
     </section>
 
     <main>
-        
-
         <h1>Breast Cancer Factsheet: Insights & Key Developments</h1>
         <p>This factsheet provides a comprehensive overview of key pillars shaping breast cancer care, including
             specialised infrastructure, treatment accessibility, research funding, early detection, and palliative care.
@@ -82,38 +92,56 @@
                         <div class="column">
                             <h3>Strengths</h3>
                             <p>Centers like INCan and Hospital General de Mexico provide high-quality care in major
-                                cities.
-                                HER2, ER, and PR testing are available in the tertiary hospitals and integrated into
-                                standard care.</p>
+                                cities. HER2, ER, and PR testing are available in the tertiary hospitals and integrated
+                                into standard care.</p>
                             <h3>Opportunities</h3>
                             <p>Expand regional cancer centers and public investment in pathology. Improve access to BRCA
-                                and
-                                molecular testing beyond private sector availability.</p>
+                                and molecular testing beyond private sector availability.</p>
                         </div>
                         <div class="column">
                             <h3>Weaknesses</h3>
                             <p>Only ~35% of cancer patients access specialised centers; most rely on general hospitals
-                                with
-                                limited oncology capacity. Pathology and genetic testing infrastructure is
-                                underdeveloped in
-                                the public sector.</p>
+                                with limited oncology capacity. Pathology and genetic testing infrastructure is
+                                underdeveloped in the public sector.</p>
                             <h3>Threats</h3>
                             <p>Rural and low-income patients are at risk of delayed diagnosis and under-treatment due to
                                 lack of infrastructure.</p>
                         </div>
                     </div>
 
+                    <!-- Map section -->
                     <div class="map">
-                        <div id="geo_map" style="width: 100%;"></div>
+                        <div>
+                            {% if map_type == 'sc' %}
+                                <h2>Specialized Canters</h2>
+                            {% elif map_type == 'gm' %}
+                                <h2>Genetic & Molecular Testing</h2>
+                            {% else %}
+                                <h2>Specialized Canters</h2>
+                            {% endif %}
+                        </div>
+                        <div id="geoChangable" style="height: fit-content;">
+                            {% if geomap %}
+                            {{ geomap|safe }}
+                            {% else %}
+                            <div>No map data available</div>
+                            {% endif %}
+                        </div>
                         <div class="map-buttons">
-                            <button onclick="changeMap('spc_cent')">Specialized Centers</button>
-                            <button onclick="changeMap('gm_test')">Genetic & Molecular Testing</button>
+                            <form method="get" action="{% url 'infra' %}" style="display: inline;">
+                                <input type="hidden" name="map_type" value="sc">
+                                <button type="submit" {% if map_type == 'sc' %}class="active"{% endif %}>Specialized Centers</button>
+                            </form>
+                            <form method="get" action="{% url 'infra' %}" style="display: inline;">
+                                <input type="hidden" name="map_type" value="gm">
+                                <button type="submit" {% if map_type == 'gm' %}class="active"{% endif %}>Genetic & Molecular Testing</button>
+                            </form>
                         </div>
                         <div class="map-icons">
-                            <span><i class='fa fa-globe'></i></span>
-                            <span><i class="fa fa-bar-chart"></i></span>
-                            <span><i class="fa fa-download"></i></span>
-                            <span><i class="fa fa-info"></i></span>
+                            <span><i class='fa fa-globe' style="font-size: 1.8rem;"></i></span>
+                            <span><i class="fa fa-bar-chart" style="font-size: 1.8rem;"></i></span>
+                            <span><i class="fa fa-download" style="font-size: 1.8rem;"></i></span>
+                            <span><i class="fa fa-info" style="font-size: 1.8rem;"></i></span>
                         </div>
                     </div>
                 </div>
@@ -132,8 +160,7 @@
                 </div>
             </div>
 
-
-            <!-- Tab 2 -->
+            <!-- Tab 4 (Utilization of Biomarkers, keep as is) -->
             <div class="content tabs__tab" id="tab_4" data-tab-info>
                 <h2>Utilization of Biomarkers</h2>
                 <div class="row">
@@ -141,23 +168,19 @@
                         <div class="column">
                             <h3>Strengths</h3>
                             <p>HER2, ER, and PR testing are part of institutional care standards. Testing is
-                                increasingly
-                                recognized in national clinical workflows</p>
+                                increasingly recognized in national clinical workflows</p>
                             <h3>Opportunities</h3>
-                            <p>Standardize and reimburse HER2 and BRCA testing across public providers.
-                                Develop centralized labs to improve equity and efficiency.
-                            </p>
+                            <p>Standardize and reimburse HER2 and BRCA testing across public providers. Develop
+                                centralized labs to improve equity and efficiency.</p>
                         </div>
                         <div class="column">
                             <h3>Weaknesses</h3>
                             <p>BRCA testing is cost-prohibitive ($800-$2,500 USD) and not reimbursed in the public
-                                system.
-                                Turnaround times are long due to limited pathology capacity in public hospitals.
+                                system. Turnaround times are long due to limited pathology capacity in public hospitals.
                             </p>
                             <h3>Threats</h3>
                             <p>Unequal access to biomarker data undermines personalized treatment plans and precision
-                                care.
-                            </p>
+                                care.</p>
                         </div>
                     </div>
 
@@ -178,98 +201,30 @@
                         </div>
                     </div>
                 </div>
-
-                <div class="chart-section">
-                    <h2 style="color: #604eb1;">Overall Average Design</h2>
-                    <div class="chart-wrapper">
-                        <div id="scatter-chart" style="width: 100%;"></div>
-                        <div class="chart-icons">
-                            <span><i class='fa fa-globe'></i></span>
-                            <span><i class="fa fa-bar-chart"></i></span>
-                            <span><i class="fa fa-download"></i></span>
-                            <span><i class="fa fa-info"></i></span>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
-        <script>
-        // function to get each tab details
-        const tabs = document.querySelectorAll('[data-tab-value]')
-        const tabInfos = document.querySelectorAll('[data-tab-info]')
+    </main>
+
+    <!-- Tab switching script (keep as is) -->
+    <script>
+        const tabs = document.querySelectorAll('[data-tab-value]');
+        const tabInfos = document.querySelectorAll('[data-tab-info]');
         const title = document.getElementById('title-section');
 
         tabs.forEach(tab => {
             tab.addEventListener('click', () => {
-                const target = document
-                    .querySelector(tab.dataset.tabValue);
+                const target = document.querySelector(tab.dataset.tabValue);
                 tabInfos.forEach(tabInfo => {
-                    tabInfo.classList.remove('active')
-                })
+                    tabInfo.classList.remove('active');
+                });
                 title.innerText = 'ICPC - ' + target.querySelector('h2').innerText;
                 target.classList.add('active');
-            })
-        })
+            });
+        });
     </script>
 
-    </main>
-
-
-
+    <!-- Google Charts script (keep as is) -->
     <script>
-
-        google.charts.load('current', { 'packages': ['geochart'] });
-        google.charts.load('current', { 'packages': ['corechart'] });
-        google.charts.setOnLoadCallback(drawRegionsMap);
-        google.charts.setOnLoadCallback(drawChart);
-
-        function drawRegionsMap() {
-            var data = google.visualization.arrayToDataTable([
-                ['Country', 'Popularity'],
-                ['Germany', 200],
-                ['United States', 300],
-                ['Brazil', 400],
-                ['Canada', 500],
-                ['France', 600],
-                ['Russia', 700],
-                ['India', 800],
-                ['China', 900],
-                ['Italy', 1000],
-                ['Spain', 1100],
-                ['United Kingdom', 1200],
-                ['Australia', 1300],
-                ['Japan', 1400],
-                ['South Korea', 1500],
-                ['Mexico', 1600],
-                ['Argentina', 1700],
-                ['South Africa', 1800],
-                ['Egypt', 1900],
-                ['Turkey', 2000]
-            ]);
-
-            var options = {
-                colorAxis: { colors: ['#003087'] },
-                backgroundColor: '#f0f0f0',
-                datalessRegionColor: '#ffffff',
-            };
-
-            var chart = new google.visualization.GeoChart(document.getElementById('geo_map'));
-
-            chart.draw(data, options);
-        }
-
-        // Map change functionality
-        function changeMap(type) {
-            const mapImage = document.getElementById('map-image');
-            if (type === 'spc_cent') {
-                mapImage.src = 'rough/bar-chart.png';
-            } else if (type === 'gm_test') {
-                mapImage.src = 'rough/line-chart.png';
-            }
-        }
-
-        // Scatter chart using Chart.js
-
         google.charts.load('current', { packages: ['corechart'] });
         google.charts.setOnLoadCallback(drawChart);
 
@@ -302,13 +257,13 @@
                 legend: 'none',
                 hAxis: {
                     title: 'Country',
-                    textStyle: { fontSize: 10 }, // Smaller font to fit more labels
-                    slantedText: true, // Rotate labels to prevent overlap
-                    slantedTextAngle: 45 // Angle for readability
+                    textStyle: { fontSize: 10 },
+                    slantedText: true,
+                    slantedTextAngle: 45
                 },
                 vAxis: {
                     title: 'Avg',
-                    gridlines: { count: 5 } // Consistent gridlines
+                    gridlines: { count: 5 }
                 },
                 backgroundColor: '#f0f0f0',
                 colors: ['#003087'],
@@ -321,7 +276,6 @@
             chartscatter.draw(data, options);
         }
     </script>
-
 
     <footer>
         <div class="footer-content">
@@ -337,7 +291,6 @@
             </div>
         </div>
     </footer>
-
 </body>
 
 </html>

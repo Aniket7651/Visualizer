@@ -1,72 +1,101 @@
-from django.shortcuts import render, redirect
-from django.db.models import Q
-from django.contrib import messages
-from django.conf import settings
-from .models import *
+# views.py
+from django.shortcuts import render
+from django_pandas.io import read_frame # type: ignore
 import pandas as pd
 import numpy as np
-from django_pandas.io import read_frame # type: ignore
-import plotly.express as px # type: ignore
 import plotly.graph_objects as go # type: ignore
-from django.views.decorators.clickjacking import xframe_options_exempt
-from .models import BreastCancer, Sarcoma
+import plotly.offline as opy # type: ignore
+from .models import BreastCancerData
+from .discription import brst_Infra_discription
 
-discription = {
-    5: "Advanced nationwide infrastructure, widespread availability in public and private sectors, integration with clinical practice.",
-    4: "Strong infrastructure in major hospitals and cancer centers, some regional disparities.", 
-    3: "Moderate infrastructure, primarily in private settings or research institutions.",
-    2: "Limited infrastructure, available only in select centers or for high-cost private testing.",
-    1: "Minimal or no infrastructure, testing mostly unavailable or sent abroad."
-}
+def discLoader(dict, num):
+    for key, value in dict.items():
+        if key == num:
+            return value
 
+def plot_choropleth_map(country, discription, spcCenter, orthographic=False):
+    # Check for empty or invalid data
+    if not country.size or not discription.size or not spcCenter.size:  # Use .size to check array length
+        return "<div>No data available for map</div>"
 
+    # Ensure arrays are not all NaN or invalid
+    if np.all(pd.isna(country)) or np.all(pd.isna(discription)) or np.all(pd.isna(spcCenter)):
+        print("Error: All data is NaN or invalid")
+        return "<div>Invalid data for map</div>"
 
-def Infra(request):
-    if request.method == 'POST':
-        selected_database = request.POST.get('cancerType')
-        df = read_frame(selected_database.objects.all())
-        settings.CANCER_TYPES = selected_database
-        print("settings.CANCER_TYPES:", settings.CANCER_TYPES)
-        print(df)
-    return render(request, 'base.htm')
+    data = dict(
+        type='choropleth',
+        locations=country,
+        locationmode='country names',
+        text=discription,
+        z=spcCenter,
+        colorscale=[[0, '#F7F1F8'], [1, '#5643D1']],
+        showscale=False,
+    )
 
+    layout = dict(geo={'scope': 'world'})
 
+    fig = go.Figure(data=[data], layout=layout)
 
-def plot_choropleth_map(country, discription, datapoints, orthographic=True):
-    
-    data = dict(type = 'choropleth', 
-        # location: country col
-        locations = country, 
-                
-        # over country names if country code; 'ISO-3' can be used
-        locationmode = 'country names', 
-                
-        # colorscale can be added as per requirement 
-        # colorscale = 'Viridis', 
-                
-        # text can be used as popup datapoints
-        text = discription, 
-        z = datapoints, # data point
-        colorscale = [[0, '#F7F1F8'], [1, '#5643D1']],
-        # colour bar if needed
-        # colorbar = {'title': 'Specialized Centers'}
-        showscale = False,
-        ) 
-                
-    layout = dict(geo ={'scope': 'world'}) 
-    
-    # passing data dictionary as a list 
-    fig = go.Figure(data = [data], layout = layout)
-
-    # fig.update_layout(title_text="title", title_x=.5)
     if orthographic:
         fig.update_geos(projection_type="orthographic", showland=True, landcolor="#ffffff",
             showocean=True, oceancolor="#fcf4d2", showcoastlines=True, coastlinecolor="#5743c8")
-        fig.update_layout(height=600, width=700, margin={"r":0,"t":0,"l":0,"b":0})
+        fig.update_layout(height=650, margin={"r":0,"t":0,"l":0,"b":0})
     else:
         fig.update_geos(showland=True, landcolor="#ffffff",
             showocean=True, oceancolor="#fcf4d2", showcoastlines=True, coastlinecolor="#5743c8")
-        fig.update_layout(height=400, width=800, margin={"r":0,"t":0,"l":0,"b":0}, dragmode=False)
-    fig.update_traces(hovertemplate = "<span><b>%{location}: %{z}</b><br>%{text}</span><extra></extra>",)
-    # plotting graph
-    return fig.show(config={'displayModeBar': False})
+        fig.update_layout(height=650, margin={"r":0,"t":0,"l":0,"b":0}, dragmode=False)
+    fig.update_traces(hovertemplate="<span><b>%{location}: %{z}</b><br>%{text}</span><extra></extra>")
+
+    html_fig = opy.plot(fig, auto_open=False, output_type='div', config={'displayModeBar': False})
+    return html_fig
+
+
+def Infra(request):
+    # Default context
+    context = {'geomap': None, 'map_type': 'sc', 'cancer_type': 'BreastCancer'}
+
+    # Handle POST request (cancer type selection)
+    if request.method == 'POST':
+        selected_database = request.POST.get('cancerType', 'BreastCancer')
+        context['cancer_type'] = selected_database
+    else:
+        selected_database = 'BreastCancer'  # Default for GET requests
+
+    # Load data
+    try:
+        df = read_frame(BreastCancerData.objects.all())
+        if df.empty:
+            context['geomap'] = "<div>No data available</div>"
+            return render(request, 'base.htm', context)
+        
+    except Exception as e:
+        context['geomap'] = "<div>Error loading data</div>"
+        return render(request, 'base.htm', context)
+
+    # Handle map type (GET parameter)
+    map_type = request.GET.get('map_type', 'sc')
+    context['map_type'] = map_type
+
+    if map_type == 'gm':
+        df['discription'] = df['GeneMol_Centers'].apply(lambda x: discLoader(brst_Infra_discription, x))
+        # Map 2: Genetic & Molecular Testing
+        gm_div = plot_choropleth_map(
+            df['country'].values,
+            df['discription'].values,
+            df['GeneMol_Centers'].values,
+            orthographic=False
+        )
+        context['geomap'] = gm_div
+    else:
+        df['discription'] = df['Specialized_Centers'].apply(lambda x: discLoader(brst_Infra_discription, x))
+        # Map 1: Specialized Centers
+        sc_div = plot_choropleth_map(
+            df['country'].values,
+            df['discription'].values,
+            df['Specialized_Centers'].values,
+            orthographic=False
+        )
+        context['geomap'] = sc_div
+
+    return render(request, 'base.htm', context)

@@ -1,0 +1,31 @@
+brst_Infra_discription = {
+    5: "Advanced nationwide infrastructure, widespread availability in public and private sectors, integration with clinical practice.",
+    4: "Strong infrastructure in major hospitals and cancer centers, some regional disparities.", 
+    3: "Moderate infrastructure, primarily in private settings or research institutions.",
+    2: "Limited infrastructure, available only in select centers or for high-cost private testing.",
+    1: "Minimal or no infrastructure, testing mostly unavailable or sent abroad."
+}
+
+brst_TRA_discription = {
+    5: "Strong healthcare infrastructure with comprehensive treatment access, high research funding, and nationwide awareness campaigns. Patients have access to advanced therapies, clinical trials, and widespread early detection programs.",
+    4: "Well-developed system with good treatment availability, strong research funding, and effective but regionally focused awareness campaigns. Some disparities may exist in rural areas or between public and private sectors.",
+    3: "Moderate development, with specialized treatments available in major hospitals, research funding concentrated on specific cancers, and occasional but limited awareness efforts. Healthcare access may be restricted by cost or geography.",
+    2: "Limited system where cancer treatment is available only in select urban centers, research funding is minimal or sporadic, and awareness campaigns are rare or underfunded. Patients often face long wait times or financial barriers.",
+    1: "Poor infrastructure with severe barriers to treatment, little to no research funding, and lack of structured awareness campaigns. Cancer care is largely inaccessible, with many patients relying on out-of-pocket expenses or external aid." 
+}
+
+ubiom_discription = {
+    5: "80% Biomarker testing is widely available and routinely performed as part of standard clinical practice. Strong integration into treatment decisions, with national coverage and reimbursement ensuring accessibility.",
+    4: "61-80%. Biomarker testing is commonly used, but access may be limited in certain regions or patient groups. Some disparities exist in coverage or affordability, but it is still a crucial part of cancer diagnostics.",
+    3: "41-60% Moderate utilization, often restricted to major hospitals or private healthcare settings. Some patients may not receive biomarker testing due to cost or limited availability in public healthcare systems.",
+    2: "20-40% Biomarker testing is available but underutilized, with significant barriers such as high costs, lack of awareness, or limited infrastructure. Many patients may not receive recommended biomarker assessments.",
+    1: "20% Biomarker testing is rarely performed, often due to lack of infrastructure, awareness, or financial barriers. Patients typically do not receive targeted therapies based on biomarker status."
+}
+
+SEP_discription = {
+    5: "High survival rates, strong early detection programs, and well-established palliative care services. Patients have access to timely diagnosis, advanced treatments, and comprehensive end-of-life care.",
+    4: "Good survival rates, effective early detection efforts, and accessible but regionally limited palliative care. Some disparities may exist in rural areas or for specific cancer types.",
+    3: "Moderate survival rates, early detection available but not widespread, and palliative care services mainly in urban centers. Some patients experience delays in diagnosis or limited end-of-life care.",
+    2: "Low survival rates, early detection efforts are inconsistent or underfunded, and palliative care is minimal or only available in select hospitals. Cancer patients face significant access barriers.",
+    1: "Very low survival rates, poor early detection infrastructure, and almost no palliative care services. Many patients are diagnosed late and lack proper support for pain management and end-of-life care."
+}

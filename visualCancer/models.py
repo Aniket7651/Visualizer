@@ -1,6 +1,9 @@
 from django.db import models
 
-class BreastCancer(models.Model):
+# python manage.py makemigrations
+# python manage.py migrate --run-syncdb
+
+class BreastCancerData(models.Model):
     # infra..
     country = models.CharField(max_length=100)
     Specialized_Centers = models.IntegerField()
@@ -48,9 +51,9 @@ class BreastCancer(models.Model):
         return self.country
     
 # TODO: add more fields to the model
-class Sarcoma(models.Model):
+# class Sarcoma(models.Model):
     
-    country = models.CharField(max_length=100)
+#     country = models.CharField(max_length=100)
 
-    def __str__(self):
-        return self.country
+#     def __str__(self):
+#         return self.country
