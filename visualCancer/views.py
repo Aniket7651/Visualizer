@@ -5,8 +5,9 @@ import pandas as pd
 import numpy as np
 import plotly.graph_objects as go # type: ignore
 import plotly.offline as opy # type: ignore
-from .models import BreastCancerData
-from .discription import brst_Infra_discription
+from plotly import express as px # type: ignore
+from .models import BreastCancerData, LungCancerData, ColorectalCancerData, ProstateCancerData
+from .discription import *
 
 def discLoader(dict, num):
     for key, value in dict.items():
@@ -51,9 +52,28 @@ def plot_choropleth_map(country, discription, spcCenter, orthographic=False):
     return html_fig
 
 
+def histogramChart(df, x, y):
+    fig = px.histogram(
+        df,
+        x=x,
+        y=y
+    )
+    fig.update_traces(marker_color='#f3c750')
+    fig.update_layout(height=500)
+    # Show the plot
+    html_fig = opy.plot(fig, auto_open=False, output_type='div', config={'displayModeBar': False})
+    return html_fig
+
+
 def Infra(request):
     # Default context
-    context = {'geomap': None, 'map_type': 'sc', 'cancer_type': 'BreastCancer'}
+    context = {'geomap': None, 'ubmap': None, 'csmap': None, 'trmap': None, 'sepmap': None,
+               'avgmap': None, 
+               'map_type': 'br_sc', 'ubmap_type': 'her2',
+               'cancer_type': 'BreastCancer',
+               'content': None,
+               'head': None,
+               'biomarker_btn': zip(brst_BioMBtnValue, brst_BioMBtnName)}
 
     # Handle POST request (cancer type selection)
     if request.method == 'POST':
@@ -65,19 +85,28 @@ def Infra(request):
     # Load data
     try:
         df = read_frame(BreastCancerData.objects.all())
+
+        if context['cancer_type'] == 'BreastCancer':
+            df = read_frame(BreastCancerData.objects.all())
+            context['head'] = BreastHeading
+            context['content'] = BreastCancer_cont
+            context['biomarker_btn'] = zip(brst_BioMBtnValue, brst_BioMBtnName)
+        
+        # elif context['cancer_type'] == 'LungCancer':
+
         if df.empty:
             context['geomap'] = "<div>No data available</div>"
-            return render(request, 'base.htm', context)
-        
+            return render(request, 'Visualizer.html', context)
+
     except Exception as e:
         context['geomap'] = "<div>Error loading data</div>"
-        return render(request, 'base.htm', context)
+        return render(request, 'Visualizer.html', context)
 
-    # Handle map type (GET parameter)
-    map_type = request.GET.get('map_type', 'sc')
+    # Handle infra map type (GET parameter)
+    map_type = request.GET.get('map_type', 'br_sc')
     context['map_type'] = map_type
 
-    if map_type == 'gm':
+    if map_type == 'br_gm':
         df['discription'] = df['GeneMol_Centers'].apply(lambda x: discLoader(brst_Infra_discription, x))
         # Map 2: Genetic & Molecular Testing
         gm_div = plot_choropleth_map(
@@ -86,7 +115,9 @@ def Infra(request):
             df['GeneMol_Centers'].values,
             orthographic=False
         )
+        context['avgmap'] = histogramChart(df, df['country'].values, df['Infra_Avg'].values)
         context['geomap'] = gm_div
+    
     else:
         df['discription'] = df['Specialized_Centers'].apply(lambda x: discLoader(brst_Infra_discription, x))
         # Map 1: Specialized Centers
@@ -97,5 +128,59 @@ def Infra(request):
             orthographic=False
         )
         context['geomap'] = sc_div
+        context['avgmap'] = histogramChart(df, df['country'].values, df['Infra_Avg'].values)
 
-    return render(request, 'base.htm', context)
+    # Handle biomarker map type (GET parameter)
+    ubmap_type = request.GET.get('ubmap_type', 'her2')
+    context['ubmap_type'] = ubmap_type
+
+    if ubmap_type == 'brac1':
+        df['discription'] = df['BRAC1'].apply(lambda x: discLoader(brst_ubiom_discription, x))
+        # Map 1: BRCA1
+        brca1_div = plot_choropleth_map(
+            df['country'].values,
+            df['discription'].values,
+            df['BRAC1'].values,
+            orthographic=False
+        )
+        context['avgmap'] = histogramChart(df, df['country'].values, df['Biomark_Avg'].values)
+        context['ubmap'] = brca1_div
+
+    elif ubmap_type == 'er':
+        df['discription'] = df['ER'].apply(lambda x: discLoader(brst_ubiom_discription, x))
+        # Map 2: ER
+        er_div = plot_choropleth_map(
+            df['country'].values,
+            df['discription'].values,
+            df['ER'].values,
+            orthographic=False
+        )
+        context['avgmap'] = histogramChart(df, df['country'].values, df['Biomark_Avg'].values)
+        context['ubmap'] = er_div
+
+    elif map_type == 'pr':
+        df['discription'] = df['PR'].apply(lambda x: discLoader(brst_ubiom_discription, x))
+        # Map 3: PR
+        pr_div = plot_choropleth_map(
+            df['country'].values,
+            df['discription'].values,
+            df['PR'].values,
+            orthographic=False
+        )
+        context['avgmap'] = histogramChart(df, df['country'].values, df['Biomark_Avg'].values)
+        context['ubmap'] = pr_div
+
+    else:
+        df['discription'] = df['HER2'].apply(lambda x: discLoader(brst_ubiom_discription, x))
+        # Map DEFAULT: HER2
+        HER2_div = plot_choropleth_map(
+            df['country'].values,
+            df['discription'].values,
+            df['HER2'].values,
+            orthographic=False
+        )
+        context['avgmap'] = histogramChart(df, df['country'].values, df['Biomark_Avg'].values)
+        context['ubmap'] = HER2_div
+    
+
+    return render(request, 'Visualizer.html', context)
