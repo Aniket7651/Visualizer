@@ -1,11 +1,8 @@
-# views.py
 from django.shortcuts import render
 from django_pandas.io import read_frame # type: ignore
 import pandas as pd
-import numpy as np
-import plotly.graph_objects as go # type: ignore
-import plotly.offline as opy # type: ignore
-from plotly import express as px # type: ignore
+from django.http import JsonResponse
+from django.views.decorators.http import require_GET
 from .models import BreastCancerData, LungCancerData, ColorectalCancerData, ProstateCancerData
 from .discription import *
 
@@ -13,174 +10,167 @@ def discLoader(dict, num):
     for key, value in dict.items():
         if key == num:
             return value
+    return "No description available"
 
-def plot_choropleth_map(country, discription, spcCenter, orthographic=False):
-    # Check for empty or invalid data
-    if not country.size or not discription.size or not spcCenter.size:  # Use .size to check array length
-        return "<div>No data available for map</div>"
+@require_GET
+def get_map_data(request):
+    map_type = request.GET.get('map_type', 'br_sc')
+    cancer_type = request.GET.get('cancer_type', 'BreastCancer')
 
-    # Ensure arrays are not all NaN or invalid
-    if np.all(pd.isna(country)) or np.all(pd.isna(discription)) or np.all(pd.isna(spcCenter)):
-        print("Error: All data is NaN or invalid")
-        return "<div>Invalid data for map</div>"
+    try:
+        if cancer_type == 'BreastCancer':
+            df = read_frame(BreastCancerData.objects.all())
+            discription_dict = brst_Infra_discription if map_type in ['br_sc', 'br_gm'] else brst_ubiom_discription
+        elif cancer_type == 'LungCancer':
+            df = read_frame(LungCancerData.objects.all())
+            discription_dict = lung_Infra_discription if map_type in ['br_sc', 'br_gm'] else lung_ubiom_discription
+        elif cancer_type == 'ColorectalCancer':
+            df = read_frame(ColorectalCancerData.objects.all())
+            discription_dict = colorectal_Infra_discription if map_type in ['br_sc', 'br_gm'] else colorectal_ubiom_discription
+        elif cancer_type == 'ProstateCancer':
+            df = read_frame(ProstateCancerData.objects.all())
+            discription_dict = prostate_Infra_discription if map_type in ['br_sc', 'br_gm'] else prostate_ubiom_discription
+        else:
+            return JsonResponse({'error': 'Invalid cancer type'}, status=400)
 
-    data = dict(
-        type='choropleth',
-        locations=country,
-        locationmode='country names',
-        text=discription,
-        z=spcCenter,
-        colorscale=[[0, '#F7F1F8'], [1, '#5643D1']],
-        showscale=False,
-    )
+        if df.empty:
+            return JsonResponse({'error': 'No data available'}, status=400)
 
-    layout = dict(geo={'scope': 'world'})
+        if map_type == 'br_sc':
+            df['discription'] = df['Specialized_Centers'].apply(lambda x: discLoader(discription_dict, x))
+            data = {
+                'countries': df['country'].tolist(),
+                'descriptions': df['discription'].tolist(),
+                'values': df['Specialized_Centers'].tolist()
+            }
+        elif map_type == 'br_gm':
+            df['discription'] = df['GeneMol_Centers'].apply(lambda x: discLoader(discription_dict, x))
+            data = {
+                'countries': df['country'].tolist(),
+                'descriptions': df['discription'].tolist(),
+                'values': df['GeneMol_Centers'].tolist()
+            }
+        elif map_type == 'her2':
+            df['discription'] = df['HER2'].apply(lambda x: discLoader(discription_dict, x))
+            data = {
+                'countries': df['country'].tolist(),
+                'descriptions': df['discription'].tolist(),
+                'values': df['HER2'].tolist()
+            }
+        elif map_type == 'brac1':
+            df['discription'] = df['BRAC1'].apply(lambda x: discLoader(discription_dict, x))
+            data = {
+                'countries': df['country'].tolist(),
+                'descriptions': df['discription'].tolist(),
+                'values': df['BRAC1'].tolist()
+            }
+        elif map_type == 'er':
+            df['discription'] = df['ER'].apply(lambda x: discLoader(discription_dict, x))
+            data = {
+                'countries': df['country'].tolist(),
+                'descriptions': df['discription'].tolist(),
+                'values': df['ER'].tolist()
+            }
+        elif map_type == 'pr':
+            df['discription'] = df['PR'].apply(lambda x: discLoader(discription_dict, x))
+            data = {
+                'countries': df['country'].tolist(),
+                'descriptions': df['discription'].tolist(),
+                'values': df['PR'].tolist()
+            }
+        else:
+            return JsonResponse({'error': 'Invalid map type'}, status=400)
 
-    fig = go.Figure(data=[data], layout=layout)
+        return JsonResponse(data)
 
-    if orthographic:
-        fig.update_geos(projection_type="orthographic", showland=True, landcolor="#ffffff",
-            showocean=True, oceancolor="#fcf4d2", showcoastlines=True, coastlinecolor="#5743c8")
-        fig.update_layout(height=650, margin={"r":0,"t":0,"l":0,"b":0})
-    else:
-        fig.update_geos(showland=True, landcolor="#ffffff",
-            showocean=True, oceancolor="#fcf4d2", showcoastlines=True, coastlinecolor="#5743c8")
-        fig.update_layout(height=650, margin={"r":0,"t":0,"l":0,"b":0}, dragmode=False)
-    fig.update_traces(hovertemplate="<span><b>%{location}: %{z}</b><br>%{text}</span><extra></extra>")
+    except Exception as e:
+        return JsonResponse({'error': str(e)}, status=500)
 
-    html_fig = opy.plot(fig, auto_open=False, output_type='div', config={'displayModeBar': False})
-    return html_fig
+@require_GET
+def get_histogram_data(request):
+    map_type = request.GET.get('map_type', 'br_sc')
+    cancer_type = request.GET.get('cancer_type', 'BreastCancer')
 
+    try:
+        if cancer_type == 'BreastCancer':
+            df = read_frame(BreastCancerData.objects.all())
+        elif cancer_type == 'LungCancer':
+            df = read_frame(LungCancerData.objects.all())
+        elif cancer_type == 'ColorectalCancer':
+            df = read_frame(ColorectalCancerData.objects.all())
+        elif cancer_type == 'ProstateCancer':
+            df = read_frame(ProstateCancerData.objects.all())
+        else:
+            return JsonResponse({'error': 'Invalid cancer type'}, status=400)
 
-def histogramChart(df, x, y):
-    fig = px.histogram(
-        df,
-        x=x,
-        y=y
-    )
-    fig.update_traces(marker_color='#f3c750')
-    fig.update_layout(height=500)
-    # Show the plot
-    html_fig = opy.plot(fig, auto_open=False, output_type='div', config={'displayModeBar': False})
-    return html_fig
+        if df.empty:
+            return JsonResponse({'error': 'No data available'}, status=400)
+
+        if map_type in ['br_sc', 'br_gm']:
+            data = {
+                'x': df['country'].tolist(),
+                'y': df['Infra_Avg'].tolist()
+            }
+        elif map_type in ['her2', 'brac1', 'er', 'pr']:
+            data = {
+                'x': df['country'].tolist(),
+                'y': df['Biomark_Avg'].tolist()
+            }
+        else:
+            return JsonResponse({'error': 'Invalid map type'}, status=400)
+
+        return JsonResponse(data)
+
+    except Exception as e:
+        return JsonResponse({'error': str(e)}, status=500)
+
 
 
 def Infra(request):
-    # Default context
-    context = {'geomap': None, 'ubmap': None, 'csmap': None, 'trmap': None, 'sepmap': None,
-               'avgmap': None, 
-               'map_type': 'br_sc', 'ubmap_type': 'her2',
-               'cancer_type': 'BreastCancer',
-               'content': None,
-               'head': None,
-               'biomarker_btn': zip(brst_BioMBtnValue, brst_BioMBtnName)}
+    context = {
+        'map_type': 'br_sc',
+        'ubmap_type': 'her2',
+        'cancer_type': 'BreastCancer',
+        'content': None,
+        'head': None,
+        'biomarker_btn': zip(brst_BioMBtnValue, brst_BioMBtnName)
+    }
 
-    # Handle POST request (cancer type selection)
-    if request.method == 'POST':
-        selected_database = request.POST.get('cancerType', 'BreastCancer')
-        context['cancer_type'] = selected_database
-    else:
-        selected_database = 'BreastCancer'  # Default for GET requests
+    selected_database = request.POST.get('cancerType', 'BreastCancer') if request.method == 'POST' else 'BreastCancer'
+    context['cancer_type'] = selected_database
 
-    # Load data
     try:
-        df = read_frame(BreastCancerData.objects.all())
-
-        if context['cancer_type'] == 'BreastCancer':
+        if selected_database == 'BreastCancer':
             df = read_frame(BreastCancerData.objects.all())
             context['head'] = BreastHeading
             context['content'] = BreastCancer_cont
             context['biomarker_btn'] = zip(brst_BioMBtnValue, brst_BioMBtnName)
-        
-        # elif context['cancer_type'] == 'LungCancer':
+            
+        elif selected_database == 'LungCancer':
+            df = read_frame(LungCancerData.objects.all())
+            context['head'] = LungHeading
+            context['content'] = LungCancer_cont
+            context['biomarker_btn'] = zip(lung_BioMBtnValue, lung_BioMBtnName)
+
+        elif selected_database == 'ColorectalCancer':
+            df = read_frame(ColorectalCancerData.objects.all())
+            context['head'] = ColorectalHeading
+            context['content'] = ColorectalCancer_cont
+            context['biomarker_btn'] = zip(colorectal_BioMBtnValue, colorectal_BioMBtnName)
+
+        elif selected_database == 'ProstateCancer':
+            df = read_frame(ProstateCancerData.objects.all())
+            context['head'] = ProstateHeading
+            context['content'] = ProstateCancer_cont
+            context['biomarker_btn'] = zip(prostate_BioMBtnValue, prostate_BioMBtnName)
+        else:
+            return render(request, 'Visualizer.html', context)
 
         if df.empty:
-            context['geomap'] = "<div>No data available</div>"
             return render(request, 'Visualizer.html', context)
 
     except Exception as e:
-        context['geomap'] = "<div>Error loading data</div>"
+        print(f"Error in Infra view: {e}")
         return render(request, 'Visualizer.html', context)
-
-    # Handle infra map type (GET parameter)
-    map_type = request.GET.get('map_type', 'br_sc')
-    context['map_type'] = map_type
-
-    if map_type == 'br_gm':
-        df['discription'] = df['GeneMol_Centers'].apply(lambda x: discLoader(brst_Infra_discription, x))
-        # Map 2: Genetic & Molecular Testing
-        gm_div = plot_choropleth_map(
-            df['country'].values,
-            df['discription'].values,
-            df['GeneMol_Centers'].values,
-            orthographic=False
-        )
-        context['avgmap'] = histogramChart(df, df['country'].values, df['Infra_Avg'].values)
-        context['geomap'] = gm_div
-    
-    else:
-        df['discription'] = df['Specialized_Centers'].apply(lambda x: discLoader(brst_Infra_discription, x))
-        # Map 1: Specialized Centers
-        sc_div = plot_choropleth_map(
-            df['country'].values,
-            df['discription'].values,
-            df['Specialized_Centers'].values,
-            orthographic=False
-        )
-        context['geomap'] = sc_div
-        context['avgmap'] = histogramChart(df, df['country'].values, df['Infra_Avg'].values)
-
-    # Handle biomarker map type (GET parameter)
-    ubmap_type = request.GET.get('ubmap_type', 'her2')
-    context['ubmap_type'] = ubmap_type
-
-    if ubmap_type == 'brac1':
-        df['discription'] = df['BRAC1'].apply(lambda x: discLoader(brst_ubiom_discription, x))
-        # Map 1: BRCA1
-        brca1_div = plot_choropleth_map(
-            df['country'].values,
-            df['discription'].values,
-            df['BRAC1'].values,
-            orthographic=False
-        )
-        context['avgmap'] = histogramChart(df, df['country'].values, df['Biomark_Avg'].values)
-        context['ubmap'] = brca1_div
-
-    elif ubmap_type == 'er':
-        df['discription'] = df['ER'].apply(lambda x: discLoader(brst_ubiom_discription, x))
-        # Map 2: ER
-        er_div = plot_choropleth_map(
-            df['country'].values,
-            df['discription'].values,
-            df['ER'].values,
-            orthographic=False
-        )
-        context['avgmap'] = histogramChart(df, df['country'].values, df['Biomark_Avg'].values)
-        context['ubmap'] = er_div
-
-    elif map_type == 'pr':
-        df['discription'] = df['PR'].apply(lambda x: discLoader(brst_ubiom_discription, x))
-        # Map 3: PR
-        pr_div = plot_choropleth_map(
-            df['country'].values,
-            df['discription'].values,
-            df['PR'].values,
-            orthographic=False
-        )
-        context['avgmap'] = histogramChart(df, df['country'].values, df['Biomark_Avg'].values)
-        context['ubmap'] = pr_div
-
-    else:
-        df['discription'] = df['HER2'].apply(lambda x: discLoader(brst_ubiom_discription, x))
-        # Map DEFAULT: HER2
-        HER2_div = plot_choropleth_map(
-            df['country'].values,
-            df['discription'].values,
-            df['HER2'].values,
-            orthographic=False
-        )
-        context['avgmap'] = histogramChart(df, df['country'].values, df['Biomark_Avg'].values)
-        context['ubmap'] = HER2_div
-    
 
     return render(request, 'Visualizer.html', context)

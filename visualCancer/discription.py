@@ -42,7 +42,7 @@ BreastCancer_cont = {
 }
 
 brst_BioMBtnValue = ['her2', 'er', 'pr', 'brac1', 'brac2']
-brst_BioMBtnName = ['HER2', 'ER', 'PR', 'BRAC1', 'BRAC2']
+brst_BioMBtnName = ['HER2', 'ER', 'PR', 'BRCA1', 'BRAC2']
 
 brst_Infra_discription = {
     5: "Advanced nationwide infrastructure, widespread availability in public and private sectors, integration with clinical practice.",

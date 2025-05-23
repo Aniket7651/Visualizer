@@ -24,6 +24,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
 
     path('', Infra, name='infra'),
+    path('get_map_data/', get_map_data, name='get_map_data'),
+    path('get_histogram_data/', get_histogram_data, name='get_histogram_data'),
 ]
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
