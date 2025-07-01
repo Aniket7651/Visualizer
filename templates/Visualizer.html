@@ -4,14 +4,14 @@
 
 <section class="filter">
     <form method="post">
-    {% csrf_token %}
     <select id="cancerType" class="select-field">
         <option value="BreastCancer" {% if cancer_type == 'BreastCancer' %}selected{% endif %}>Breast Cancer</option>
         <option value="LungCancer" {% if cancer_type == 'LungCancer' %}selected{% endif %}>Lung Cancer</option>
         <option value="ColorectalCancer" {% if cancer_type == 'ColorectalCancer' %}selected{% endif %}>Colorectal Cancer</option>
         <option value="ProstateCancer" {% if cancer_type == 'ProstateCancer' %}selected{% endif %}>Prostate Cancer</option>
     </select>
-    <button type="submit" class="btn">Submit</button>
+    <button type="submit" class="btn btn-primary">Submit</button>
+    {% csrf_token %}
     </form>
 </section>
 
@@ -155,21 +155,27 @@
     </div>
 </main>
 
-
 <!-- JavaScript -->
-<script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
+<script src="https://www.gstatic.com/charts/loader.js"></script>
 <script>
-    // Debug: Check if script is running
-    console.log("JavaScript loaded at", new Date().toISOString());
+    // Load Google Charts
+    console.log("Loading Google Charts at", new Date().toISOString());
+    google.charts.load('current', {
+        'packages': ['geochart', 'corechart'],
+        'mapsApiKey': 'YOUR_GOOGLE_MAPS_API_KEY' // Add your Google Maps API key here
+    });
+    google.charts.setOnLoadCallback(() => {
+        console.log("Google Charts loaded");
+    });
 
-    // Initialize data (no server-side JSON to avoid parsing issues)
+    // Initialize data
     const initialData = {
         geomap: { map_type: 'br_sc', data: { countries: [], descriptions: [], values: [] } },
         ubmap: { ubmap_type: 'her2', data: { countries: [], descriptions: [], values: [] } },
         avgmap: { data: { x: [], y: [] } }
     };
 
-    // Render Plotly map
+    // Render Google GeoChart (Map)
     function renderMap(containerId, mapData, title) {
         console.log(`Rendering map in ${containerId} with title: ${title}`);
         const container = document.getElementById(containerId);
@@ -183,36 +189,36 @@
             return;
         }
 
-        const plotData = [{
-            type: 'choropleth',
-            locations: mapData.countries,
-            locationmode: 'country names',
-            text: mapData.descriptions,
-            z: mapData.values,
-            colorscale: [[0, '#F7F1F8'], [1, '#5643D1']],
-            showscale: false,
-            hovertemplate: "<span><b>%{location}: %{z}</b><br>%{text}</span><extra></extra>"
-        }];
+        // Prepare data for GeoChart
+        const dataTable = [['Country', 'Value', { role: 'tooltip' }]];
+        for (let i = 0; i < mapData.countries.length; i++) {
+            dataTable.push([
+                mapData.countries[i],
+                mapData.values[i],
+                `${mapData.countries[i]}: ${mapData.values[i]}\n${mapData.descriptions[i]}`
+            ]);
+        }
 
-        const layout = {
-            geo: {
-                scope: 'world',
-                showland: true,
-                landcolor: '#ffffff',
-                showocean: true,
-                oceancolor: '#fcf4d2',
-                showcoastlines: true,
-                coastlinecolor: '#5743c8'
-            },
+        const data = google.visualization.arrayToDataTable(dataTable);
+
+        const options = {
             height: 400,
-            margin: { r: 0, t: 0, l: 0, b: 0 },
-            dragmode: false
+            width: '100%',
+            colorAxis: { colors: ['#F7F1F8', '#5643D1'] },
+            backgroundColor: {
+                fill: '#fcf4d2', // Ocean color
+                stroke: '#5743c8', // Coastline color
+                strokeWidth: 1
+            },
+            datalessRegionColor: '#ffffff', // Land color for no data
+            tooltip: { isHtml: true },
+            legend: 'none'
         };
 
-        Plotly.newPlot(containerId, plotData, layout, { displayModeBar: false })
-            .then(() => console.log(`Map rendered in ${containerId}`))
-            .catch(err => console.error(`Plotly error in ${containerId}:`, err));
-        
+        const chart = new google.visualization.GeoChart(container);
+        chart.draw(data, options);
+        console.log(`Map rendered in ${containerId}`);
+
         const titleElement = document.getElementById(`map-title${containerId.includes('Biomarker') ? '-biomarker' : ''}`);
         if (titleElement) {
             titleElement.innerText = title;
@@ -220,7 +226,7 @@
         }
     }
 
-    // Render histogram
+    // Render Google Histogram
     function renderHistogram(containerId, histogramData) {
         console.log(`Rendering histogram in ${containerId}`);
         const container = document.getElementById(containerId);
@@ -234,21 +240,26 @@
             return;
         }
 
-        const plotData = [{
-            type: 'histogram',
-            x: histogramData.x,
-            y: histogramData.y,
-            marker: { color: '#f3c750' }
-        }];
+        // Prepare data for Histogram
+        const dataTable = [['Country', 'Average']];
+        for (let i = 0; i < histogramData.x.length; i++) {
+            dataTable.push([histogramData.x[i], histogramData.y[i]]);
+        }
 
-        const layout = {
+        const data = google.visualization.arrayToDataTable(dataTable);
+
+        const options = {
             height: 500,
-            margin: { r: 0, t: 0, l: 0, b: 0 }
+            width: '100%',
+            colors: ['#f3c750'],
+            legend: { position: 'none' },
+            hAxis: { title: 'Country' },
+            vAxis: { title: 'Average' }
         };
 
-        Plotly.newPlot(containerId, plotData, layout, { displayModeBar: false })
-            .then(() => console.log(`Histogram rendered in ${containerId}`))
-            .catch(err => console.error(`Histogram error in ${containerId}:`, err));
+        const chart = new google.visualization.Histogram(container);
+        chart.draw(data, options);
+        console.log(`Histogram rendered in ${containerId}`);
     }
 
     // Update map
@@ -390,7 +401,7 @@
         padding: 10px 20px;
         margin-right: 10px;
         border: none;
-        background: #5643d1;
+        background: #5743c8;
         cursor: pointer;
     }
     .map-buttons button.active {
@@ -398,7 +409,7 @@
         color: white;
     }
     .map-buttons button:hover {
-        background: #5846ba;
+        background: #5743c8;
     }
     #scatter-chart {
         width: 100%;
@@ -410,14 +421,13 @@
         margin-bottom: 20px;
     }
     .tab {
-        padding: 10px 15px;
+        padding: 10px 10px;
         cursor: pointer;
-        background: #dddddd;
-        transition: 0.3s;
-        border-radius: 10px;
+        background: #e7e7e7;
     }
     .tab:hover {
-        background: #f3c750;
+        color: #604eb1;
+        background: #f6c646;
     }
     .tabs__tab {
         display: none;
