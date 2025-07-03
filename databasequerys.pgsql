@@ -1,7 +1,7 @@
 -- create tablespace ts_primary in project directory
 -- CREATE TABLESPACE ts_primary
 --   OWNER postgres
---   LOCATION E'B:\\website\\visenv\\visualCancer';
+--   LOCATION E'/home/aniket-yadav/WORKSPACE/WebProjects/.visenv/Visualizer';
 
 -- ALTER TABLESPACE ts_primary
 --   OWNER TO postgres;
