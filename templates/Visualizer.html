@@ -54,6 +54,8 @@
                 <div class="map">
                     <h2 id="map-title">Specialized Centers</h2>
                     <div id="geoChangable" style="height: 400px; width: 100%;"></div>
+                    
+                    
                     <div class="map-buttons">
                         <button onclick="updateMap('br_sc')" class="map-button active">Specialized Centers</button>
                         <button onclick="updateMap('br_gm')" class="map-button">Genetic & Molecular Testing</button>
@@ -61,7 +63,7 @@
                     <div class="map-icons">
                         <span><i class='fa fa-globe' style="font-size: 1.8rem;"></i></span>
                         <span><i class="fa fa-bar-chart" style="font-size: 1.8rem;"></i></span>
-                        <span><i class="fa fa-download" style="font-size: 1.8rem;"></i></span>
+                        <button id="downloadbtn"><i class="fa fa-download" style="font-size: 1.8rem;"></i></button>
                         <span><i class="fa fa-info" style="font-size: 1.8rem;"></i></span>
                     </div>
                 </div>
@@ -73,7 +75,7 @@
                     <div id="scatter-chart" style="height: 500px; width: 100%;"></div>
                     <div class="chart-icons">
                         <span><i class="fa fa-bar-chart"></i></span>
-                        <span><i class="fa fa-download"></i></span>
+                        <button id="downloadbtn-overall"><i class="fa fa-download"></i></button>
                         <span><i class="fa fa-info"></i></span>
                     </div>
                 </div>
@@ -102,15 +104,17 @@
                 <div class="map">
                     <h2 id="map-title-biomarker">HER2</h2>
                     <div id="geoChangableBiomarker" style="height: 400px; width: 100%;"></div>
+                    
                     <div class="map-buttons">
                         {% for btnValue, btnName in biomarker_btn %}
-                        <button onclick="updateMap('{{ btnValue }}')" class="map-button {% if btnValue == 'her2' %}active{% endif %}">{{ btnName }}</button>
+                        <button onclick="updateMap('{{ btnValue }}')"
+                            class="map-button {% if btnValue == 'her2' %}active{% endif %}">{{ btnName }}</button>
                         {% endfor %}
                     </div>
                     <div class="map-icons">
                         <span><i class='fa fa-globe'></i></span>
                         <span><i class="fa fa-bar-chart"></i></span>
-                        <span><i class="fa fa-download"></i></span>
+                        <button id="downloadbtn"><i class="fa fa-download"></i></button>
                         <span><i class="fa fa-info"></i></span>
                     </div>
                 </div>
@@ -120,7 +124,9 @@
         <!-- Other Tabs (Placeholder) -->
         {% for tab_id in 'tab_2,tab_3,tab_5,tab_6,tab_7' %}
         <div class="content tabs__tab" id="{{ tab_id }}" data-tab-info>
-            <h2>{% if tab_id == 'tab_2' %}Cancer Screening{% elif tab_id == 'tab_3' %}Reimbursement{% elif tab_id == 'tab_5' %}Clinical Guidelines{% elif tab_id == 'tab_6' %}Care & Diagnosis{% else %}Treatment Funding & Awareness{% endif %}</h2>
+            <h2>{% if tab_id == 'tab_2' %}Cancer Screening{% elif tab_id == 'tab_3' %}Reimbursement{% elif tab_id ==
+                'tab_5' %}Clinical Guidelines{% elif tab_id == 'tab_6' %}Care & Diagnosis{% else %}Treatment Funding &
+                Awareness{% endif %}</h2>
             <div class="row">
                 <div class="cont">
                     <div class="column">
@@ -145,7 +151,7 @@
                     <div class="map-icons">
                         <span><i class='fa fa-globe'></i></span>
                         <span><i class="fa fa-bar-chart"></i></span>
-                        <span><i class="fa fa-download"></i></span>
+                        <button id="downloadbtn"><i class="fa fa-download"></i></button>
                         <span><i class="fa fa-info"></i></span>
                     </div>
                 </div>
@@ -153,10 +159,14 @@
         </div>
         {% endfor %}
     </div>
+    <div id="popup" class="popup"></div>
+    
 </main>
 
 <!-- JavaScript -->
 <script src="https://www.gstatic.com/charts/loader.js"></script>
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script>
     // Load Google Charts
     console.log("Loading Google Charts at", new Date().toISOString());
@@ -173,6 +183,15 @@
         geomap: { map_type: 'br_sc', data: { countries: [], descriptions: [], values: [] } },
         ubmap: { ubmap_type: 'her2', data: { countries: [], descriptions: [], values: [] } },
         avgmap: { data: { x: [], y: [] } }
+    };
+
+    const countryData = {
+        'Germany': { population: '83M', capital: 'Berlin', language: 'German' },
+        'United States': { population: '331M', capital: 'Washington, D.C.', language: 'English' },
+        'Brazil': { population: '213M', capital: 'Brasília', language: 'Portuguese' },
+        'Canada': { population: '38M', capital: 'Ottawa', language: 'English, French' },
+        'France': { population: '67M', capital: 'Paris', language: 'French' },
+        'RU': { population: '146M', capital: 'Moscow', language: 'Russian' }
     };
 
     // Render Google GeoChart (Map)
@@ -212,18 +231,84 @@
             },
             datalessRegionColor: '#ffffff', // Land color for no data
             tooltip: { isHtml: true },
-            legend: 'none'
+            explorer: {
+                actions: ['dragToZoom', 'rightClickToReset'],
+                keepInBounds: true,
+                axis: 'horizontal',
+                maxZoomIn: 8,
+                maxZoomOut: 1,
+                zoomDelta: 2,
+            },
+            // legend: 'none'
         };
 
         const chart = new google.visualization.GeoChart(container);
+
+        // Click event listener
+        google.visualization.events.addListener(chart, 'select', function() {
+            var selection = chart.getSelection();
+            if (selection.length > 0) {
+                var country = data.getValue(selection[0].row, 0);
+                showPopup(country, containerId); // Pass map container ID
+            } else {
+                hidePopup();
+            }
+        });
+
         chart.draw(data, options);
         console.log(`Map rendered in ${containerId}`);
+
+        document.getElementById('downloadbtn').onclick = () => {
+            downloadChart(chart);
+        };
 
         const titleElement = document.getElementById(`map-title${containerId.includes('Biomarker') ? '-biomarker' : ''}`);
         if (titleElement) {
             titleElement.innerText = title;
             console.log(`Title updated to ${title}`);
         }
+
+    }
+
+    // Popup show function
+    function showPopup(country, mapContainerId) {
+        var popup = document.getElementById('popup');
+        var activeTab = document.querySelector('.tabs__tab.active');
+        var mapContainer = document.getElementById(mapContainerId);
+
+        // Check if the map is in the active tab
+        if (activeTab.contains(mapContainer)) {
+            // Fetch data (replace with your database call)
+            var data = countryData[country] || { population: 'N/A', capital: 'N/A', language: 'N/A' };
+
+            // Update popup content
+            popup.innerHTML = `
+                <h3>${country}</h3>
+                <p><strong>Population:</strong> ${data.population}</p>
+                <p><strong>Capital:</strong> ${data.capital}</p>
+                <p><strong>Language:</strong> ${data.language}</p>
+            `;
+
+            // Position popup relative to the active map container
+            var x = event.clientX + window.scrollX; // Mouse X coordinate
+            var y = event.clientY + window.scrollY; // Mouse Y coordinate
+
+            popup.style.display = 'block';
+            popup.style.position = 'absolute';
+            popup.style.left = `${x + 10}px`;
+            popup.style.top = `${y + 10}px`;
+    
+
+            // Ensure popup is appended to or positioned within active tab
+            activeTab.appendChild(popup); // Move popup to active tab's DOM
+        } else {
+            popup.style.display = 'none'; // Hide if map is not in active tab
+        }
+    }
+
+    // Popup hide function
+    function hidePopup() {
+        document.getElementById('popup').style.display = 'none';
     }
 
     // Render Google Histogram
@@ -260,6 +345,22 @@
         const chart = new google.visualization.Histogram(container);
         chart.draw(data, options);
         console.log(`Histogram rendered in ${containerId}`);
+
+        document.getElementById('downloadbtn-overall').onclick = () => {
+            downloadChart(chart);
+        };
+    }
+
+    // Download chart as PNG
+    function downloadChart(chartInstance) {
+        console.log(`Downloading chart from ${chartInstance}`);
+
+        var link = document.createElement('a');
+        link.href = chartInstance.getImageURI();
+        link.download = `${chartInstance}.png`;
+        link.click();
+        alert(`Chart downloaded as ${chartInstance}.png`);
+
     }
 
     // Update map
@@ -389,14 +490,19 @@
         console.log("Triggering initial map load");
         updateMap('br_sc');
     });
+
+
 </script>
 
 <style>
-    #geoChangable, #geoChangableBiomarker, [id^="geo_map_"] {
+    #geoChangable,
+    #geoChangableBiomarker,
+    [id^="geo_map_"] {
         width: 100%;
         height: 400px;
         border: 1px solid #ccc;
     }
+
     .map-buttons button {
         padding: 10px 20px;
         margin-right: 10px;
@@ -404,34 +510,42 @@
         background: #5743c8;
         cursor: pointer;
     }
+
     .map-buttons button.active {
         background: #604eb1;
         color: white;
     }
+
     .map-buttons button:hover {
         background: #5743c8;
     }
+
     #scatter-chart {
         width: 100%;
         height: 500px;
     }
+
     .tabs {
         display: flex;
         gap: 10px;
         margin-bottom: 20px;
     }
+
     .tab {
         padding: 10px 10px;
         cursor: pointer;
         background: #e7e7e7;
     }
+
     .tab:hover {
         color: #604eb1;
         background: #f6c646;
     }
+
     .tabs__tab {
         display: none;
     }
+
     .tabs__tab.active {
         display: block;
     }

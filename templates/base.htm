@@ -10,11 +10,10 @@
     <link rel="stylesheet" href="{% static 'admin/css/styles.css' %}">
     <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    
+    <!-- <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script> -->
+    
     <style>
-        
         body {
             margin: 0;
             padding: 0;
@@ -38,6 +37,18 @@
         .select-field:focus {
             outline: none;
             border-color: #604eb1;
+        }
+
+        /* Popup div style */
+        .popup {
+            width: 300px;
+            background-color: white;
+            border: 1px solid #ccc;
+            padding: 15px;
+            border-radius: 25px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: none; /* Default hidden */
+            z-index: 1000;
         }
     </style>
 </head>
