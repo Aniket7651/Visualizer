@@ -9,6 +9,7 @@
         <option value="LungCancer" {% if cancer_type == 'LungCancer' %}selected{% endif %}>Lung Cancer</option>
         <option value="ColorectalCancer" {% if cancer_type == 'ColorectalCancer' %}selected{% endif %}>Colorectal Cancer</option>
         <option value="ProstateCancer" {% if cancer_type == 'ProstateCancer' %}selected{% endif %}>Prostate Cancer</option>
+        <option value="GastricCancer" {% if cancer_type == 'GastricCancer' %}selected{% endif %}>Gastric Cancer</option>
     </select>
     <button type="submit" class="btn btn-primary">Submit</button>
     {% csrf_token %}

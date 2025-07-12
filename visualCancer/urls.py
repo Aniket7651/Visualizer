@@ -17,6 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from .views import *
+from .dataViewer import get_cancer_data, index
 from django.conf.urls.static import static
 from django.conf import settings
 
@@ -26,6 +27,9 @@ urlpatterns = [
     path('', Infra, name='infra'),
     path('get_map_data/', get_map_data, name='get_map_data'),
     path('get_histogram_data/', get_histogram_data, name='get_histogram_data'),
+
+    path('index/', index, name='index'),
+    path('api/cancer/<str:cancer_type>/', get_cancer_data, name='get_cancer_data'),
 ]
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

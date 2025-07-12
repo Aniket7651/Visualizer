@@ -3,7 +3,7 @@ from django_pandas.io import read_frame # type: ignore
 import pandas as pd
 from django.http import JsonResponse
 from django.views.decorators.http import require_GET
-from .models import BreastCancerData, LungCancerData, ColorectalCancerData, ProstateCancerData
+from .models import BreastCancerData, LungCancerData, ColorectalCancerData, ProstateCancerData, GastricCancerData
 from .discription import *
 
 def discLoader(dict, num):
@@ -23,13 +23,16 @@ def get_map_data(request):
             discription_dict = brst_Infra_discription if map_type in ['br_sc', 'br_gm'] else brst_ubiom_discription
         elif cancer_type == 'LungCancer':
             df = read_frame(LungCancerData.objects.all())
-            discription_dict = lung_Infra_discription if map_type in ['br_sc', 'br_gm'] else lung_ubiom_discription
+            discription_dict = brst_Infra_discription if map_type in ['br_sc', 'br_gm'] else lung_ubiom_discription
         elif cancer_type == 'ColorectalCancer':
             df = read_frame(ColorectalCancerData.objects.all())
             discription_dict = colorectal_Infra_discription if map_type in ['br_sc', 'br_gm'] else colorectal_ubiom_discription
         elif cancer_type == 'ProstateCancer':
             df = read_frame(ProstateCancerData.objects.all())
             discription_dict = prostate_Infra_discription if map_type in ['br_sc', 'br_gm'] else prostate_ubiom_discription
+        elif cancer_type == 'GastricCancer':
+            df = read_frame(GastricCancerData.objects.all())
+            discription_dict = gastric_Infra_discription if map_type in ['br_sc', 'br_gm'] else gastric_ubiom_discription
         else:
             return JsonResponse({'error': 'Invalid cancer type'}, status=400)
 

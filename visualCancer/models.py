@@ -1,6 +1,6 @@
 from django.db import models
 
-# python manage.py makemigrations
+# python manage.py makemigrations visualCancer
 # python manage.py migrate --run-syncdb
 
 class BreastCancerData(models.Model):
@@ -86,6 +86,7 @@ class LungCancerData(models.Model):
     Adopt_inti = models.IntegerField()
     Engagement_Updates = models.IntegerField()
     ESMO = models.IntegerField()
+    Overall_Average = models.FloatField()
 
     # Reimbursement
     Reimbursement = models.IntegerField()
@@ -130,6 +131,14 @@ class ColorectalCancerData(models.Model):
     Adopt_inti = models.IntegerField()
     Engagement_Updates = models.IntegerField()
     ESMO = models.IntegerField()
+    Overall_Average = models.FloatField()
+
+    # Reimbursement
+    Reimbursement = models.IntegerField()
+    No_cost = models.IntegerField()
+
+    # cancer sreening
+    Cancer_Screening = models.CharField(max_length=200)
 
 
     def __str__(self):
@@ -158,9 +167,9 @@ class ProstateCancerData(models.Model):
     # Biomarkers
     PSA = models.IntegerField()
     TMPRSS2_ERG = models.IntegerField()
-    BRAF_MUT = models.IntegerField()
-    BRCA1 = models.IntegerField()
-    BRCA2 = models.IntegerField()
+    PTEN = models.IntegerField()
+    UNKNOWN = models.IntegerField()
+    avg_marker = models.IntegerField()
 
     # clinical guide
     Clinical_Guideline = models.IntegerField()
@@ -168,6 +177,54 @@ class ProstateCancerData(models.Model):
     Adopt_inti = models.IntegerField()
     Engagement_Updates = models.IntegerField()
     ESMO = models.IntegerField()
+    Overall_Average = models.FloatField()
+
+    # Reimbursement
+    Reimbursement = models.IntegerField()
+    No_cost = models.IntegerField()
+
+    # cancer screening
+    Cancer_Screening = models.CharField(max_length=200)
+    
+
+    def __str__(self):
+        return self.country
+    
+
+class GastricCancerData(models.Model):
+    
+    country = models.CharField(max_length=100)
+    Specialized_Centers = models.IntegerField()
+    GeneMol_Centers = models.IntegerField()
+    Infra_Avg = models.FloatField()
+
+    # treatment, funding, awareness
+    Treatment_Access = models.IntegerField()
+    Research_Funding = models.IntegerField()
+    Awareness_Campaigns = models.IntegerField()
+    Treatment_Avg = models.FloatField()
+
+    # Survival rate, early detection, palliative care 
+    Survival_Rates = models.IntegerField()
+    Early_Detection = models.IntegerField()
+    Palliative_Care = models.IntegerField()
+    SEdPc_Avg = models.FloatField()
+
+    # Biomarkers
+    HER2 = models.IntegerField()
+    MSI_H = models.IntegerField()
+    PD_L1 = models.IntegerField()
+    CLDN18_2 = models.IntegerField()
+    FGFR2b = models.IntegerField()
+    avg_marker = models.IntegerField()
+
+    # clinical guide
+    Clinical_Guideline = models.IntegerField()
+    Feasibility_Integration = models.IntegerField()
+    Adopt_inti = models.IntegerField()
+    Engagement_Updates = models.IntegerField()
+    ESMO = models.IntegerField()
+    Overall_Average = models.FloatField()
 
     # Reimbursement
     Reimbursement = models.IntegerField()
@@ -175,7 +232,6 @@ class ProstateCancerData(models.Model):
 
     # cancer sreening
     Cancer_Screening = models.CharField(max_length=200)
-    
 
     def __str__(self):
         return self.country
