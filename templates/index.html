@@ -6,9 +6,9 @@
 
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 <script type="text/javascript" src="{% static 'admin/utility_mains.js' %}"></script>
-<!-- <script type="text/javascript">
-    
+<!-- <script type="text/javascript">    
 </script> -->
+<link rel="stylesheet" type="text/css" href="{% static 'admin/index.css' %}">
 
 <h2>Cancer Data Visualizer</h2>
 <label for="cancerType">Cancer Type:</label>
@@ -24,12 +24,8 @@
 <label for="column">Data Features:</label>
 <select id="column" onchange="drawChart()"></select>
 
-<div id="geochart" style="width: 100%; height: 800px; border: none;"></div>
-<div id="popup" style="position: absolute; 
-                        display: none; background: white; 
-                        border: 1px solid black; 
-                        padding: 10px; box-shadow: 2px 2px 5px rgba(0,0,0,0.3); 
-                        max-width: 300px; z-index: 1000;"></div>
+<div id="geochart"></div>
+<div id="popup"></div>
 
 
 

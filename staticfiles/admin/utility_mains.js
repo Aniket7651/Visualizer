@@ -91,7 +91,7 @@ function drawChart() {
     }
 
     const options = {
-        colorAxis: { colors: ['#F7F1F8', '#5643D1'] },
+        colorAxis: { colors: ['#F6C646', '#5643D1'] },
         backgroundColor: {
             fill: 'transparent', // Ocean color
             // stroke: 'yellow', // Coastline color
