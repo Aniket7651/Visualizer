@@ -1,4 +1,4 @@
-# views.py
+# type of views.py
 
 from django.http import JsonResponse
 from django.shortcuts import render

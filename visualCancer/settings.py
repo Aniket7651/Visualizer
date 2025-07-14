@@ -11,17 +11,20 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 """
 
 from pathlib import Path
-import os
+import os, json
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
+with open(f'{BASE_DIR}/secrete.json', 'r') as f:
+    data = json.load(f)
+    
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-rd9qvzb(=&z790slpz&z-op%sao6y8hj30__b+v%txfemxi!#n'
+SECRET_KEY = data["secreteKey"]
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -82,12 +85,12 @@ DATABASES = {
     # }
 
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'ICPC_Database', 
-        'USER': 'root',
-        'PASSWORD': 'root',
-        'HOST': 'localhost',
-        'PORT': '5432'
+        'ENGINE': data["ENGINE"],
+        'NAME': data["NAME"], 
+        'USER': data["USER"],
+        'PASSWORD': data["PASSWORD"],
+        'HOST': data["HOST"],
+        'PORT': data["PORT"]
     }
 }
 
