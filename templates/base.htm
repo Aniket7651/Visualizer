@@ -6,7 +6,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title id="title-section">ICPC - International Cancer Patient Coalition</title>
+    <title id="title-section">{% block title %} {% endblock %} - International Cancer Patient Coalition (ICPC)</title>
     <link rel="stylesheet" href="{% static 'admin/css/styles.css' %}">
     <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -61,8 +61,9 @@
             <span class="subtitle">International Cancer Patient Coalition</span>
         </div>
         <nav>
-            <a href="https://unite4cancer.com/">Home</a>
-            <a href="#">Data</a>
+            <a href="{% url 'index' %}">Home</a>
+            <a href="{% url 'datasetView' %}">Data</a>
+            <a href="#">API Access</a>
             <a href="https://unite4cancer.com/about-us/">About</a>
             <a href="#">Help</a>
         </nav>

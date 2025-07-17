@@ -6,6 +6,40 @@ from django.views.decorators.http import require_GET
 from .models import BreastCancerData, LungCancerData, ColorectalCancerData, ProstateCancerData, GastricCancerData
 from .discription import *
 
+# Views for the visualCancer app
+def index(request):
+    return render(request, 'index.html')
+
+
+def datasetView(request):
+    
+    context = {
+        'table': pd.DataFrame(LungCancerData.objects.all().values()).to_html(classes='dataframe', index=False),
+        'heading': 'Lung Cancer Data Visualization',
+    }
+    cancer_type = request.GET.get('cancerType', 'lung')
+    print(f"Selected cancer type: {cancer_type}")
+
+    if cancer_type == 'breast':
+        data_query = BreastCancerData.objects.all().values()
+        df = pd.DataFrame(data_query)
+        context['table'] = df.to_html(classes='dataframe', index=False)
+        context['heading'] = 'Breast Cancer Data Visualization'
+
+    return render(request, 'data.html', context)
+
+
+
+
+
+
+
+
+
+
+
+
+
 def discLoader(dict, num):
     for key, value in dict.items():
         if key == num:

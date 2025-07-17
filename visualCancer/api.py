@@ -42,5 +42,3 @@ def get_cancer_data(request, cancer_type):
 
     return JsonResponse(response)
 
-def index(request):
-    return render(request, 'index.html')

@@ -1,5 +1,9 @@
 {% extends 'base.htm' %}
 
+{% block title %}
+Cancer Explorer
+{% endblock %}
+
 {% load static %}
 
 {% block content %}
@@ -24,8 +28,18 @@
 <label for="column">Data Features:</label>
 <select id="column" onchange="drawChart()"></select>
 
-<div id="geochart"></div>
-<div id="popup"></div>
+
+<section class="map-content">
+    <div class="chart_div">
+        <button><i class='fa fa-globe'></i></button>
+        <button><i class="fa fa-bar-chart"></i></button>
+        <button id="downloadbtn"><i class="fa fa-download"></i></button>
+        <button><i class="fa fa-info"></i></button>
+    </div>
+    <div id="geochart"></div>
+    <div id="popup"></div>
+</section>
+
 
 
 
