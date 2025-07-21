@@ -14,6 +14,7 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+
 from django.contrib import admin
 from django.urls import path
 from .views import *
@@ -30,6 +31,7 @@ urlpatterns = [
 
     path('index/', index, name='index'),
     path('data/', datasetView, name='datasetView'),
+    path('api/', apiAccess, name='apiAccess'),
 
     path('api/cancer/<str:cancer_type>/', get_cancer_data, name='get_cancer_data'), # API link for cancer data
 ]

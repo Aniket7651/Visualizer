@@ -1,0 +1,113 @@
+{% extends "base.htm" %}
+
+{% load static %}
+{% block title %}API Access Documentation{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" type="text/css" href="{% static 'admin/index.css' %}">
+
+<div class="container">
+    <style>
+
+        h1 {
+            color: #604eb1;
+            font-size: 3.5rem;
+        }
+
+        h2 {
+            color: #604eb1;
+            font-size: 2.5rem;
+        }
+
+        .endpoint {
+            background-color: #e8e8e8;
+            padding: 10px;
+            border-radius: 5px;
+            display: inline-block;
+        }
+
+        pre {
+            background-color: #e6e6e6;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        code {
+            font-family: monospace;
+        }
+
+        .note {
+            background-color: #fff3cd;
+            padding: 10px;
+            border-left: 5px solid #ffe596;
+        }
+
+    </style>
+
+
+    <h1>ICPC API Documentation</h1>
+    <p>Retrieve comprehensive information about different cancer types in JSON format.</p>
+
+    <h2>Endpoint</h2>
+    <p><span class="endpoint">GET /api/cancer/{cancerType}</span></p>
+    <p>Replace <code>{cancerType}</code> with the desired type, e.g. <code>lung</code>, <code>breast</code>,
+        <code>prostate</code>, <code>Colorectal</code>, <code>gastric</code>.</p>
+
+    <h3>Examples</h3>
+    <pre><code>https://domain-name.com/api/cancer/lung
+https://domain-name.com/api/cancer/breast</code></pre>
+
+    <h2>Usage</h2>
+    <h3>1. In the Browser</h3>
+    <p>Paste the URL into your browser; JSON will display. To download it, right-click and choose <strong>Save
+            As…</strong>.</p>
+
+    <h3>2. Using <code>curl</code></h3>
+    <pre onclick="copyToClipBtn('curlCode')"><code id="curlCode">curl -X GET "https://domain-name.com/api/cancer/lung" \
+  -H "Accept: application/json"</code></pre>
+
+    <h3>3. Using <code>wget</code></h3>
+    <pre onclick="copyToClipBtn('wgetCode')"><code id="wgetCode">wget https://domain-name.com/api/cancer/lung</code></pre>
+
+    <h3>4. With Python (<code>requests</code>)</h3>
+    <pre onclick="copyToClipBtn('pythonCode')"><code id="pythonCode">import requests
+
+url = "https://domain-name.com/api/cancer/lung"
+response = requests.get(url, headers={"Accept": "application/json"})
+
+if response.status_code == 200:
+    data = response.json()
+    print(data)
+else:
+    print("Error:", response.status_code)</code></pre>
+
+    <h2>Sample JSON Response</h2>
+    <pre><code style="position: inherit; white-space: pre-wrap; word-break: break-all;">
+        {"columns": ["country", "Specialized_Centers", "GeneMol_Centers", "Infra_Avg", "Treatment_Access", "Research_Funding", "Awareness_Campaigns", "Treatment_Avg", "Survival_Rates", "Early_Detection", "Palliative_Care", "SEdPc_Avg", "EGFR", "ALK", "PD_L1", "MET", "ROS1", "BRAF", "KRAS", "Biomark_Avg", "Clinical_Guideline", "Feasibility_Integration", "Adopt_inti", "Engagement_Updates", "ESMO", "Overall_Average", "Reimbursement", "No_cost", "Cancer_Screening"], "data": [{"country": "South Africa", "Specialized_Centers": 3, "GeneMol_Centers": 3, "Infra_Avg": 3.0, "Treatment_Access": 3, "Research_Funding": 3, "Awareness_Campaigns": 4, .........
+    </code></pre>
+
+    <h2>Usage Tips</h2>
+    <ul>
+        <li>Ensure the <code>{cancerType}</code> is a valid subtype (e.g., <code>lung</code>, <code>breast</code>,
+            <code>prostate</code>, <code>Colorectal</code>, <code>gastric</code>).</li>
+        <li>If you see an HTTP error (404, 500, etc.), check the URL and retry.</li>
+        <li>Save browser JSON via <strong>Save As</strong> and name it like <code>lung_cancer.json</code>.</li>
+    </ul>
+
+    <div class="note">
+        <strong>Note:</strong> This API is public—no authentication required.
+    </div>
+    <script>
+        function copyToClipBtn(copid) {
+            const code = document.getElementById(copid);
+            const text = code.textContent || code.innerText;
+            navigator.clipboard.writeText(text).then(() => {
+                alert('Code copied to clipboard!');
+            }).catch(err => {
+                console.error('Failed to copy: ', err);
+            });
+        }
+    </script>
+</div>
+{% endblock %}

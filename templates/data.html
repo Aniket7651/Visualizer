@@ -5,24 +5,46 @@
 {% load static %}
 
 {% block content %}
+<link rel="stylesheet" type="text/css" href="{% static 'admin/dataframePage.css' %}">
 <div class="container">
     <h2>Data Statistics</h2>
-    <label for="cancerType">Cancer Type:</label>
-    <form method="get">
-        <select id="cancerType" name="cancerType" onchange="this.form.submit()">
-            <option value="lung" {% if request.GET.cancerType == 'lung' %}selected{% endif %}>Lung</option>
-            <option value="breast" {% if request.GET.cancerType == 'breast' %}selected{% endif %}>Breast</option>
-            <option value="prostate" {% if request.GET.cancerType == 'prostate' %}selected{% endif %}>Prostate</option>
-            <option value="gastric" {% if request.GET.cancerType == 'gastric' %}selected{% endif %}>Gastric</option>
-            <option value="colorectal" {% if request.GET.cancerType == 'colorectal' %}selected{% endif %}>Colorectal</option>
-            <!-- Add other cancer types here -->
-        </select>
-    </form>
-
+    <div class="input-header">
+        <label for="cancerType">Cancer Type:</label>
+        <form method="get">
+            <select id="cancerType" name="cancerType" onchange="this.form.submit()">
+                <option value="lung" {% if request.GET.cancerType == 'lung' %}selected{% endif %}>Lung</option>
+                <option value="breast" {% if request.GET.cancerType == 'breast' %}selected{% endif %}>Breast</option>
+                <option value="prostate" {% if request.GET.cancerType == 'prostate' %}selected{% endif %}>Prostate</option>
+                <option value="gastric" {% if request.GET.cancerType == 'gastric' %}selected{% endif %}>Gastric</option>
+                <option value="colorectal" {% if request.GET.cancerType == 'colorectal' %}selected{% endif %}>Colorectal</option>
+                <!-- Add other cancer types here -->
+            </select>
+        </form>
+        <form method="post">
+            {% csrf_token %}
+            <!-- <input type="submit" value="All" name="tag"> -->
+        </form>
+    </div>
     <div class="frame-div">
         <h3>{{ heading }}</h3>
         {{ table|safe }}
     </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.dataframe').DataTable({
+                "paging": true,
+                "searching": true,
+                "ordering": true,
+                "info": true,
+                "lengthMenu": [5, 10, 25, 50, 100],
+                "pageLength": 5
+            });
+        });
+    </script>
 
 </div>
 

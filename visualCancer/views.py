@@ -11,6 +11,9 @@ def index(request):
     return render(request, 'index.html')
 
 
+def apiAccess(request):
+    return render(request, 'apiAccess.html')
+
 def datasetView(request):
     
     context = {
@@ -18,13 +21,39 @@ def datasetView(request):
         'heading': 'Lung Cancer Data Visualization',
     }
     cancer_type = request.GET.get('cancerType', 'lung')
+    SelectedTag = request.POST.get('tag')
     print(f"Selected cancer type: {cancer_type}")
+    print(f"Selected tag: {SelectedTag}")
 
     if cancer_type == 'breast':
         data_query = BreastCancerData.objects.all().values()
         df = pd.DataFrame(data_query)
         context['table'] = df.to_html(classes='dataframe', index=False)
         context['heading'] = 'Breast Cancer Data Visualization'
+
+
+    elif cancer_type == 'lung':
+        data_query = LungCancerData.objects.all().values()
+        df = pd.DataFrame(data_query)
+        context['table'] = df.to_html(classes='dataframe', index=False)
+        context['heading'] = 'Lung Cancer Data Visualization'
+
+
+    elif cancer_type == 'colorectal':
+        data_query = ColorectalCancerData.objects.all().values()
+        df = pd.DataFrame(data_query)
+        context['table'] = df.to_html(classes='dataframe', index=False)
+        context['heading'] = 'Colorectal Cancer Data Visualization'
+
+    elif cancer_type == 'prostate':
+        data_query = ProstateCancerData.objects.all().values()
+        df = pd.DataFrame(data_query)
+        context['table'] = df.to_html(classes='dataframe', index=False)
+        context['heading'] = 'Prostate Cancer Data Visualization'
+
+    else:
+        context['table'] = None
+        context['heading'] = "No data available for the selected cancer type."
 
     return render(request, 'data.html', context)
 
