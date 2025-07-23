@@ -42,3 +42,7 @@
 .pagination li {
     list-style: none;
 }
+
+.row {
+    overflow-x: scroll;
+}
