@@ -10,6 +10,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 
+# Global variable for mapping cancer type to model
 model_map = {
     'colorectal': ColorectalCancerData,
     'lung': LungCancerData,
@@ -21,15 +22,6 @@ model_map = {
 
 
 def get_cancer_data(request, cancer_type):
-    # Map cancer type to model
-    model_map = {
-        'colorectal': ColorectalCancerData,
-        'lung': LungCancerData,
-        'breast': BreastCancerData,
-        'prostate': ProstateCancerData,
-        'gastric': GastricCancerData,
-        # Add other cancer types here
-    }
 
     if cancer_type not in model_map:
         return JsonResponse({'error': 'Invalid cancer type'}, status=400)
@@ -61,9 +53,11 @@ def stats_data(request, cancer_type):
         return JsonResponse({'error': 'Invalid cancer type'}, status=400)
     
     model = model_map[cancer_type]
+    data_query = model.objects.all().values()
+    df = pd.DataFrame(data_query)
 
-
-
+    dstat = get_descriptive_statistics(df)
+    return JsonResponse(dstat.to_dict())
 
 
 def get_descriptive_statistics(df):
@@ -77,9 +71,10 @@ def get_descriptive_statistics(df):
     pd.DataFrame: DataFrame containing the descriptive statistics.
     """
     datavals = {}
-    for i in range(df.shape[1]-2):
-        data = df.iloc[:, i+1].astype(float).to_list()
-        datavals[df.iloc[:, i+1].name] = {
+    # Exclude first two columns (id and country) and last column if it's text (CANCER SCREENING)
+    for i in range(df.shape[1]-3): 
+        data = df.iloc[:, i+2].astype(float).to_list()
+        datavals[df.iloc[:, i+2].name] = {
             "mean": np.mean(data).__float__(),
             "median": np.median(data).__float__(),
             "std": np.std(data).__float__(),

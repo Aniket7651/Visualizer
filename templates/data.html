@@ -25,11 +25,58 @@
             <!-- <input type="submit" value="All" name="tag"> -->
         </form>
     </div>
+    
     <div class="frame-div">
-        <h3>{{ heading }}</h3>
+        <h3>
+            Descriptive Statistics
+            <span>
+            <button class="btn btn-primary" onclick="fetchStatJSON('{{ request.GET.cancerType}}')">Download JSON</button>
+            <button class="btn btn-primary">Chart</button>
+            </span>
+        </h3>
+        {{ des_stat|safe }}
+    </div>
+    <div class="frame-div">
+        <h3>
+            {{ request.GET.cancerType.capitalize|default:"Lung" }} Cancer Data
+            <span>
+                <button class="btn btn-primary" onclick="fetchDataJSON('{{request.GET.cancerType}}')">Download JSON</button>
+                <button class="btn btn-primary">Chart</button>
+            </span>
+        </h3>
         {{ table|safe }}
     </div>
+    <div class="data-downloads">
+        <h3>Download Formatted Data In Tables</h3>
+        
+            {% if request.GET.cancerType == 'lung' %}
+                <a href="{% static 'Data/LungCancer_All.csv' %}">Download CSV</a>
 
+            {% elif request.GET.cancerType == 'breast' %}
+                <a href="{% static 'Data/brstCancer.csv' %}">Download CSV</a>
+            
+            {% elif request.GET.cancerType == 'prostate' %}
+                <a href="{% static 'Data/ProstateCancer.csv' %}"><i class="fa-solid fa-file-csv"></i>Download CSV</a>
+                <a href="{% static 'Data/ProstateCancer.xlsx' %}"><i class="fa-solid fa-file-excel"></i>Download Excel</a>
+            
+            {% elif request.GET.cancerType == 'gastric' %}
+                <a href="{% static 'Data/GastricCancer.csv' %}"><i class="fa-solid fa-file-csv"></i>Download CSV</a>
+
+            {% elif request.GET.cancerType == 'colorectal' %}
+                <a href="{% static 'Data/ColorectalCancer.csv' %}"><i class="fa-solid fa-file-csv"></i>Download CSV</a>
+                <a href="{% static 'Data/ColorectalCancer.xlsx' %}"><i class="fa-solid fa-file-excel"></i>Download Excel</a>
+            
+            {% else %}
+                <i class="fa-solid fa-file-csv"></i>
+                <li><a href="{% static 'Data/LungCancer_All.csv' %}">Download CSV</a></li>
+                
+            {% endif %}
+            <!-- Add other cancer types download links here -->
+            
+        
+    </div>
+
+    <script src="{% static 'admin/stat_data_fetch.js' %}"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js"></script>
@@ -38,14 +85,14 @@
             $('.dataframe').DataTable({
                 "paging": true,
                 "searching": true,
-                "ordering": true,
                 "info": true,
-                "lengthMenu": [5, 10, 25, 50, 100],
-                "pageLength": 5
+                "lengthChange": true,
+                "pageLength": 5,
+
             });
         });
-    </script>
 
+    </script>
 </div>
 
 {% endblock %}

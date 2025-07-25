@@ -5,7 +5,7 @@
 
 {% block content %}
 <link rel="stylesheet" type="text/css" href="{% static 'admin/index.css' %}">
-
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <div class="container">
     <style>
 
@@ -45,11 +45,10 @@
 
     </style>
 
-
     <h1>ICPC API Documentation</h1>
     <p>Retrieve comprehensive information about different cancer types in JSON format.</p>
 
-    <h2>Endpoint</h2>
+    <h2><i class="material-icons">&#xe86c;</i> Endpoint For Dataset Information</h2>
     <p><span class="endpoint">GET /api/cancer/{cancerType}</span></p>
     <p>Replace <code>{cancerType}</code> with the desired type, e.g. <code>lung</code>, <code>breast</code>,
         <code>prostate</code>, <code>Colorectal</code>, <code>gastric</code>.</p>

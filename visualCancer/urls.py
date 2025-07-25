@@ -18,7 +18,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from .views import *
-from .api import get_cancer_data
+from .api import get_cancer_data, stats_data
 from django.conf.urls.static import static
 from django.conf import settings
 
@@ -34,6 +34,7 @@ urlpatterns = [
     path('api/', apiAccess, name='apiAccess'),
 
     path('api/cancer/<str:cancer_type>/', get_cancer_data, name='get_cancer_data'), # API link for cancer data
+    path('api/stats/<str:cancer_type>/', stats_data, name='stats_data'),  # API link for statistics data
 ]
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

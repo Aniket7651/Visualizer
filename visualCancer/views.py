@@ -1,6 +1,9 @@
 from django.shortcuts import render
 from django_pandas.io import read_frame # type: ignore
 import pandas as pd
+import io, base64
+import matplotlib.pyplot as plt
+from .api import get_descriptive_statistics
 from django.http import JsonResponse
 from django.views.decorators.http import require_GET
 from .models import BreastCancerData, LungCancerData, ColorectalCancerData, ProstateCancerData, GastricCancerData
@@ -14,12 +17,16 @@ def index(request):
 def apiAccess(request):
     return render(request, 'apiAccess.html')
 
+
 def datasetView(request):
     
+    default = pd.DataFrame(LungCancerData.objects.all().values())
     context = {
-        'table': pd.DataFrame(LungCancerData.objects.all().values()).to_html(classes='dataframe', index=False),
-        'heading': 'Lung Cancer Data Visualization',
+        'table': default.to_html(classes='dataframe', index=False),
+        'heading': 'Lung Cancer Data',
+        'des_stat': get_descriptive_statistics(default).to_html(classes='statframe'),
     }
+    
     cancer_type = request.GET.get('cancerType', 'lung')
     SelectedTag = request.POST.get('tag')
     print(f"Selected cancer type: {cancer_type}")
@@ -28,36 +35,53 @@ def datasetView(request):
     if cancer_type == 'breast':
         data_query = BreastCancerData.objects.all().values()
         df = pd.DataFrame(data_query)
+        context['des_stat'] = get_descriptive_statistics(df).to_html(classes='statframe')
         context['table'] = df.to_html(classes='dataframe', index=False)
-        context['heading'] = 'Breast Cancer Data Visualization'
+        context['heading'] = 'Breast Cancer Data'
 
 
     elif cancer_type == 'lung':
         data_query = LungCancerData.objects.all().values()
         df = pd.DataFrame(data_query)
+        context['des_stat'] = get_descriptive_statistics(df).to_html(classes='statframe')
         context['table'] = df.to_html(classes='dataframe', index=False)
-        context['heading'] = 'Lung Cancer Data Visualization'
+        context['heading'] = 'Lung Cancer Data'
 
 
     elif cancer_type == 'colorectal':
         data_query = ColorectalCancerData.objects.all().values()
         df = pd.DataFrame(data_query)
+        context['des_stat'] = get_descriptive_statistics(df).to_html(classes='statframe')
         context['table'] = df.to_html(classes='dataframe', index=False)
-        context['heading'] = 'Colorectal Cancer Data Visualization'
+        context['heading'] = 'Colorectal Cancer Data'
 
     elif cancer_type == 'prostate':
         data_query = ProstateCancerData.objects.all().values()
         df = pd.DataFrame(data_query)
+        context['des_stat'] = get_descriptive_statistics(df).to_html(classes='statframe')
         context['table'] = df.to_html(classes='dataframe', index=False)
-        context['heading'] = 'Prostate Cancer Data Visualization'
+        context['heading'] = 'Prostate Cancer Data'
 
     else:
         context['table'] = None
+        context['des_stat'] = None
         context['heading'] = "No data available for the selected cancer type."
 
     return render(request, 'data.html', context)
 
 
+def plot_generator(column_, title, xlabel='Date', ylabel='Value', kind='bar'):
+    column_.plot(kind=kind, figsize=(10, 5), title=title, xlabel=xlabel, ylabel=ylabel)
+
+    # Save plot to a BytesIO object
+    buf = io.BytesIO()
+    plt.savefig(buf, format='png')
+    buf.seek(0)
+    plt.close() # Close the plot to free memory
+
+    # Encode the image to base64
+    image_base64 = base64.b64encode(buf.read()).decode('utf-8')
+    return image_base64
 
 
 
