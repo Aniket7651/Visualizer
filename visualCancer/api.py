@@ -60,21 +60,22 @@ def stats_data(request, cancer_type):
     return JsonResponse(dstat.to_dict())
 
 
-def get_descriptive_statistics(df):
+def get_descriptive_statistics(df, alter=3):
     """
     Calculate descriptive statistics for each column in the DataFrame.
     
     Parameters:
     df (pd.DataFrame): DataFrame containing the data.
+    alter: drop numbers of start column and last one column; i.e. only select numeric; default will be 3 (id and country) and last cancer screening
     
     Returns:
     pd.DataFrame: DataFrame containing the descriptive statistics.
     """
     datavals = {}
     # Exclude first two columns (id and country) and last column if it's text (CANCER SCREENING)
-    for i in range(df.shape[1]-3): 
-        data = df.iloc[:, i+2].astype(float).to_list()
-        datavals[df.iloc[:, i+2].name] = {
+    for i in range(df.shape[1]-alter): 
+        data = df.iloc[:, (alter-1)+i].astype(float).to_list()
+        datavals[df.iloc[:, (alter-1)+i].name] = {
             "mean": np.mean(data).__float__(),
             "median": np.median(data).__float__(),
             "std": np.std(data).__float__(),

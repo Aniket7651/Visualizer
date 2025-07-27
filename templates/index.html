@@ -16,7 +16,7 @@ Cancer Explorer
 
 <h2>Cancer Data Visualizer</h2>
 <label for="cancerType">Cancer Type:</label>
-<select id="cancerType" onchange="updateChart()">
+<select id="cancerType" class="select-field" onchange="updateChart()">
     <option value="lung">Lung</option>
     <option value="breast">Breast</option>
     <option value="prostate">Prostate</option>
@@ -26,7 +26,7 @@ Cancer Explorer
 </select>
 
 <label for="column">Data Features:</label>
-<select id="column" onchange="drawChart()"></select>
+<select id="column" class="select-field" onchange="drawChart()"></select>
 
 
 <section class="map-content">

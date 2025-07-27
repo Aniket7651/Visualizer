@@ -3,6 +3,7 @@
 const domain = "http://127.0.0.1:8000"; // Update with your actual domain
 
 
+
 async function fetchStatJSON(cancerType) {
     if (!cancerType) {
         console.error("Cancer type is required to fetch statistics.");
@@ -13,7 +14,7 @@ async function fetchStatJSON(cancerType) {
     const response = await fetch(`${domain}/api/stats/${cancerType}/`);
     const data = await response.json();
     console.log(`Statistics for ${cancerType}:`, data); // Debug: API response check
-    
+
     if (data) {
         const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
         const url = URL.createObjectURL(blob);
@@ -76,4 +77,44 @@ function downloadChart(chartInstance) {
     alert(`Chart downloaded as ${chartInstance}.png`);
 
 }
+
+
+// popup
+function openPopup() {
+    document.getElementById('popup').style.display = 'block';
+}
+
+function closePopup() {
+    document.getElementById('popup').style.display = 'none';
+}
+
+
+
+// function toggle_stat_charts() {
+//     var chartPane = document.getElementById("des_stat_toggle_popup");
+//     chartPane.addEventListener('click', showPopup());
+// }
+
+
+// function createCharts(chart_JSON) {
+    
+//     chart_JSON.forEach(function (chart_info, indx) {
+//         var data = google.visualization.arrayToDataTable(JSON.parse(chart_info.data)); // data not exist
+        
+//         var options = {
+//             chart: {
+//                 title: "Bar chart for "+chart_info.column, // column not exist
+//                 subtitle: "Data by category"
+//             },
+//             bars: 'vertical',
+//             vAxis: {title: chart_info.column, minValue: 0},
+//             hAxis: {title: 'Categories'},
+//             height: 400,
+//             colors: ['#1b9e77']
+//         };
+
+//         var chart = new google.charts.Bar(document.getElementById('bar_chart_'+indx));
+//         chart.draw(data, google.charts.Bar.convertOptions(options))
+//     });
+// }
 
