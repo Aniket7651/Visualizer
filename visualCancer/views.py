@@ -43,66 +43,38 @@ def apiAccess(request):
 
 def datasetView(request):
     
-    default = pd.DataFrame(LungCancerData.objects.all().values())
-    stat = get_descriptive_statistics(default)
+    df = pd.DataFrame(LungCancerData.objects.all().values())
+    stat = get_descriptive_statistics(df)
 
     context = {
-        'table': default.to_html(classes='dataframe', index=False),
+        'table': df.to_html(classes='dataframe', index=False),
         'heading': 'Lung Cancer Data',
         'des_stat': stat.to_html(classes='statframe'),
-
         'chart_data': dataframe_to_column_json(stat),
     }
     
     cancer_type = request.GET.get('cancerType', 'lung')
-    SelectedTag = request.POST.get('tag')
-    print(f"Selected cancer type: {cancer_type}")
-    print(f"Selected tag: {SelectedTag}")
 
     if cancer_type == 'breast':
-        data_query = BreastCancerData.objects.all().values()
-        df = pd.DataFrame(data_query)
-        stat = get_descriptive_statistics(df)
-        context['des_stat'] = stat.to_html(classes='statframe')
-        context['table'] = df.to_html(classes='dataframe', index=False)
-        context['heading'] = 'Breast Cancer Data'
-        context['chart_data'] = dataframe_to_column_json(stat)
-
+        df = pd.DataFrame(BreastCancerData.objects.all().values())
     elif cancer_type == 'lung':
-        data_query = LungCancerData.objects.all().values()
-        df = pd.DataFrame(data_query)
-        stat = get_descriptive_statistics(df)
-
-        context['des_stat'] = stat.to_html(classes='statframe')
-        context['table'] = df.to_html(classes='dataframe', index=False)
-        context['heading'] = 'Lung Cancer Data'
-        context['chart_data'] = dataframe_to_column_json(stat)
-
-
+        df = pd.DataFrame(LungCancerData.objects.all().values())
     elif cancer_type == 'colorectal':
-        data_query = ColorectalCancerData.objects.all().values()
-        df = pd.DataFrame(data_query)
-        stat = get_descriptive_statistics(df)
-
-        context['des_stat'] = stat.to_html(classes='statframe')
-        context['table'] = df.to_html(classes='dataframe', index=False)
-        context['heading'] = 'Colorectal Cancer Data'
-        context['chart_data'] = dataframe_to_column_json(stat)
-
+        df = pd.DataFrame(ColorectalCancerData.objects.all().values())
     elif cancer_type == 'prostate':
-        data_query = ProstateCancerData.objects.all().values()
-        df = pd.DataFrame(data_query)
-        stat = get_descriptive_statistics(df)
-
-        context['des_stat'] = stat.to_html(classes='statframe')
-        context['table'] = df.to_html(classes='dataframe', index=False)
-        context['heading'] = 'Prostate Cancer Data'
-        context['chart_data'] = dataframe_to_column_json(stat)
-
+        df = pd.DataFrame(ProstateCancerData.objects.all().values())
+    elif cancer_type == 'gastric':
+        df = pd.DataFrame(GastricCancerData.objects.all().values())
     else:
         context['table'] = None
         context['des_stat'] = None
         context['heading'] = "No data available for the selected cancer type."
+    
+    stat = get_descriptive_statistics(df)
+    context['des_stat'] = stat.to_html(classes='statframe')
+    context['table'] = df.to_html(classes='dataframe', index=False)
+    context['heading'] = 'Breast Cancer Data'
+    context['chart_data'] = dataframe_to_column_json(stat)
 
     return render(request, 'data.html', context)
 

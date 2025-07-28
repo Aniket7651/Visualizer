@@ -6,7 +6,7 @@
 
 {% block content %}
 <script src="https://www.gstatic.com/charts/loader.js" type="text/javascript"></script>
-
+<div id="overlay" class="overlay"></div>
 <link rel="stylesheet" type="text/css" href="{% static 'admin/dataframePage.css' %}">
 <div class="container">
     <h2>Data Statistics</h2>
@@ -42,6 +42,7 @@
         </h3>
         <span class="stat_pane">
             {{ des_stat|safe }}
+            
             <div id="popup" class="popup">
                 <button class="close-btn" onclick="closePopup()">X</button>
                 <div id="chart-container"></div>
@@ -104,6 +105,7 @@
     <script src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js"></script>
     <script>
 
+        const statLabel = []
 
         google.charts.load('current', { 'packages': ['corechart'] });
         google.charts.setOnLoadCallback(drawCharts);
@@ -124,7 +126,7 @@
             var chart_data = JSON.parse('{{ chart_data | safe }}');
 
             chart_data.forEach((column, index) => {
-                console.log(column.column_name)
+                console.log(column)
 
                 var data = new google.visualization.DataTable();
                 data.addColumn('string', 'Index');
@@ -140,6 +142,8 @@
                 var options = {
                     title: 'Bar Cart for ' + column.column_name,
                     colors: ['#604eb1'],
+                    width: 400,
+                    height: 300,
                     hAxis: { title: 'Index' },
                     vAxis: { title: column.column_name },
                     legend: { position: 'none' }
@@ -149,8 +153,8 @@
                 var chartDiv = document.createElement('div');
                 chartDiv.id = 'chart_div_' + index;
                 chartDiv.className = 'chart-div';
-                chartDiv.style.width = '100%';
-                chartDiv.style.height = '400px';
+                chartDiv.style.width = 'auto';
+                chartDiv.style.height = 'auto';
                 document.getElementById('chart-container').appendChild(chartDiv);
 
                 var chart = new google.visualization.BarChart(document.getElementById('chart_div_' + index));

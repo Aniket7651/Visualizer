@@ -219,10 +219,11 @@ class GastricCancerData(models.Model):
 class AverageValues(models.Model):
     cancer_type = models.CharField(max_length=100)
     country = models.CharField(max_length=100)
-    average_infra = models.FloatField()
-    average_treatment = models.FloatField()
-    average_se_dpc = models.FloatField()
+    average_infrastructure = models.FloatField()
+    average_treatment_finding_and_awareness = models.FloatField()
+    average_SEP = models.FloatField()
     average_biomarkers = models.FloatField()
+    average_clinical_guidlines = models.FloatField()
 
     def __str__(self):
         return self.cancer_type

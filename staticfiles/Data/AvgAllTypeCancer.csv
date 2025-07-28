@@ -1,203 +1,203 @@
-Type,Country,InfraAvg,Treatment_Avg,SEdPc_Avg,Biomark_Avg,Clinical_Avg
-Breast,South Africa,4,3,3,3.6,2.8
-Breast,Kenya,2,2,2,2.6,1.8
-Breast,Nigeria,2,2,1.7,2,1.8
-Breast,Egypt,3.5,3,3,3.6,3
-Breast,Morocco,3.5,2.3,3,2.6,2.6
-Breast,Algeria,3.5,2,2,2.6,2.6
-Breast,Ethiopia,1.5,1,1,1.6,1
-Breast,India,4,3,3,3.6,2.8
-Breast,Japan,4,4,4,5,4.8
-Breast,South Korea,4,4,4,5,4.6
-Breast,China,3,3.3,3,4,3.8
-Breast,Thailand,4,3,3,3.6,3.6
-Breast,Singapore,4.5,4.7,4.3,5,4.6
-Breast,United Kingdom,4,4.7,4.3,5,4.6
-Breast,Germany,4.5,5,5,5,4.8
-Breast,France,4,4.7,4.3,5,4.6
-Breast,Netherlands,4,5,5,5,4.6
-Breast,Sweden,4,5,5,5,4.6
-Breast,Italy,2.5,4,4,5,4.6
-Breast,Spain,3.5,4,4,5,4.6
-Breast,Poland,3,3,3,3.6,3.6
-Breast,Mexico,2,2.3,2.3,2.6,2.8
-Breast,Brazil,2.5,3,3,2.6,2.8
-Breast,Argentina,2,3,3,2.6,2.8
-Breast,Chile,3,2.7,2.7,3.6,3.6
-Breast,Colombia,3,2.3,2.3,2.6,2.8
-Breast,United States,4.5,5,5,5,4.6
-Breast,Canada,4,5,4.7,5,4.6
-Breast,Australia,4,4.3,4,5,4.6
-Breast,New Zealand,4,4,4,5,4.6
-Breast,Greece,3,3,3,3.6,3.6
+Type,Country,SEdPc_Avg,InfraAvg,Clinical_Avg,Biomark_Avg,Treatment_Avg
+Breast,South Africa,3,4,2.8,3.6,3
+Breast,Kenya,2,2,1.8,2.6,2
+Breast,Nigeria,1.7,2,1.8,2,2
+Breast,Egypt,3,3.5,3,3.6,3
+Breast,Morocco,3,3.5,2.6,2.6,2.3
+Breast,Algeria,2,3.5,2.6,2.6,2
+Breast,Ethiopia,1,1.5,1,1.6,1
+Breast,India,3,4,2.8,3.6,3
+Breast,Japan,4,4,4.8,5,4
+Breast,South Korea,4,4,4.6,5,4
+Breast,China,3,3,3.8,4,3.3
+Breast,Thailand,3,4,3.6,3.6,3
+Breast,Singapore,4.3,4.5,4.6,5,4.7
+Breast,United Kingdom,4.3,4,4.6,5,4.7
+Breast,Germany,5,4.5,4.8,5,5
+Breast,France,4.3,4,4.6,5,4.7
+Breast,Netherlands,5,4,4.6,5,5
+Breast,Sweden,5,4,4.6,5,5
+Breast,Italy,4,2.5,4.6,5,4
+Breast,Spain,4,3.5,4.6,5,4
+Breast,Poland,3,3,3.6,3.6,3
+Breast,Mexico,2.3,2,2.8,2.6,2.3
+Breast,Brazil,3,2.5,2.8,2.6,3
+Breast,Argentina,3,2,2.8,2.6,3
+Breast,Chile,2.7,3,3.6,3.6,2.7
+Breast,Colombia,2.3,3,2.8,2.6,2.3
+Breast,United States,5,4.5,4.6,5,5
+Breast,Canada,4.7,4,4.6,5,5
+Breast,Australia,4,4,4.6,5,4.3
+Breast,New Zealand,4,4,4.6,5,4
+Breast,Greece,3,3,3.6,3.6,3
 Breast,Rwanda,1,1,1,1.6,1
 Breast,Uganda,1,1,1,1.6,1
-Breast,Serbia,3,3,3,2.6,2.8
-Lung,South Africa,3,3.5,3,2.7,2.8
-Lung,Kenya,1.5,1,1,2.2,1.8
-Lung,Nigeria,1.5,1,1,2.1,1.8
-Lung,Egypt,2.5,2,2,3.1,2.8
-Lung,Morocco,2,2,2,2.9,2.8
-Lung,Algeria,2,2,2,2.7,1.8
-Lung,Ethiopia,1,1,1,1.9,1.2
-Lung,India,3.5,3,3,2.9,2
-Lung,Japan,5,4.5,4.5,4.2,4.6
-Lung,South Korea,5,4.5,4.5,4.1,4.6
-Lung,China,4,3.5,3.5,3.4,3
+Breast,Serbia,3,3,2.8,2.6,3
+Lung,South Africa,3,3,2.8,2.7,3.5
+Lung,Kenya,1,1.5,1.8,2.2,1
+Lung,Nigeria,1,1.5,1.8,2.1,1
+Lung,Egypt,2,2.5,2.8,3.1,2
+Lung,Morocco,2,2,2.8,2.9,2
+Lung,Algeria,2,2,1.8,2.7,2
+Lung,Ethiopia,1,1,1.2,1.9,1
+Lung,India,3,3.5,2,2.9,3
+Lung,Japan,4.5,5,4.6,4.2,4.5
+Lung,South Korea,4.5,5,4.6,4.1,4.5
+Lung,China,3.5,4,3,3.4,3.5
 Lung,Thailand,3,3,3,3.4,3
-Lung,Singapore,5,5,5,4,4.6
-Lung,United Kingdom,5,5,5,3.8,4.6
-Lung,Germany,4.5,5,5,4,4.6
-Lung,France,5,4.5,5,3.7,4.6
-Lung,Netherlands,4.5,5,5,3.7,4.6
-Lung,Sweden,4.5,5,5,3.6,4.6
-Lung,Italy,4.5,4,4.5,3.6,3.6
-Lung,Spain,4.5,4,4.5,3.5,3.6
-Lung,Poland,3.5,3.5,3.5,3.2,2.8
-Lung,Mexico,2.5,2.5,2.5,3.3,2.8
+Lung,Singapore,5,5,4.6,4,5
+Lung,United Kingdom,5,5,4.6,3.8,5
+Lung,Germany,5,4.5,4.6,4,5
+Lung,France,5,5,4.6,3.7,4.5
+Lung,Netherlands,5,4.5,4.6,3.7,5
+Lung,Sweden,5,4.5,4.6,3.6,5
+Lung,Italy,4.5,4.5,3.6,3.6,4
+Lung,Spain,4.5,4.5,3.6,3.5,4
+Lung,Poland,3.5,3.5,2.8,3.2,3.5
+Lung,Mexico,2.5,2.5,2.8,3.3,2.5
 Lung,Brazil,3,3,3,3.4,3
 Lung,Argentina,3,3,3,3.4,3
 Lung,Chile,3,3,3,3.3,3
-Lung,Colombia,2.5,2.5,2.5,3.2,3
-Lung,United States,5,5,5,4,4.6
-Lung,Canada,4.5,5,5,3.9,4.6
-Lung,Australia,5,4.5,4.5,3.8,4.6
-Lung,New Zealand,4,4,4,3.8,4.6
-Lung,Greece,3.5,3.5,3.5,3.5,3
-Lung,Rwanda,1,1,1,1.7,1.2
-Lung,Uganda,1,1,1,1.8,1.2
-Lung,Serbia,3,3,3,3.1,2.8
-Lung,Saudi Arabia,4,3.5,3.5,3.4,3.6
-Lung,UAE,4,3.5,3.5,3.5,3.6
-Lung,Syria,1,1,1,1.7,1.2
-Lung,Indonesia,2,2.5,2.5,2.7,2
-Lung,Vietnam,3,2.5,2.5,2.8,2
-Lung,Philippines,2,2.5,2.5,2.6,2
-Lung,Russia,3.5,3,3,3.5,3
-Lung,Malaysia,4,3,2.5,2.6,3.6
-Prostate,South Africa,3,3,2.3,1.6,3
-Prostate,Kenya,1.5,1,1,0.8,1.6
-Prostate,Nigeria,1.5,1,1,0.8,1.6
-Prostate,Egypt,2.5,2,2,1.4,2.6
-Prostate,Morocco,2.5,2,2,1.2,1.6
-Prostate,Algeria,2,2,2,1.2,1.6
+Lung,Colombia,2.5,2.5,3,3.2,2.5
+Lung,United States,5,5,4.6,4,5
+Lung,Canada,5,4.5,4.6,3.9,5
+Lung,Australia,4.5,5,4.6,3.8,4.5
+Lung,New Zealand,4,4,4.6,3.8,4
+Lung,Greece,3.5,3.5,3,3.5,3.5
+Lung,Rwanda,1,1,1.2,1.7,1
+Lung,Uganda,1,1,1.2,1.8,1
+Lung,Serbia,3,3,2.8,3.1,3
+Lung,Saudi Arabia,3.5,4,3.6,3.4,3.5
+Lung,UAE,3.5,4,3.6,3.5,3.5
+Lung,Syria,1,1,1.2,1.7,1
+Lung,Indonesia,2.5,2,2,2.7,2.5
+Lung,Vietnam,2.5,3,2,2.8,2.5
+Lung,Philippines,2.5,2,2,2.6,2.5
+Lung,Russia,3,3.5,3,3.5,3
+Lung,Malaysia,2.5,4,3.6,2.6,3
+Prostate,South Africa,2.3,3,3,1.6,3
+Prostate,Kenya,1,1.5,1.6,0.8,1
+Prostate,Nigeria,1,1.5,1.6,0.8,1
+Prostate,Egypt,2,2.5,2.6,1.4,2
+Prostate,Morocco,2,2.5,1.6,1.2,2
+Prostate,Algeria,2,2,1.6,1.2,2
 Prostate,Ethiopia,1,1,1,0.5,1
-Prostate,India,3,3,3,1.1,2.6
-Prostate,Japan,5,4.3,4.7,0.8,3.2
-Prostate,South Korea,5,4.3,4.3,1,3.4
-Prostate,China,3.5,3,3,0.9,2.6
-Prostate,Thailand,3,2.3,2,1.4,2.6
-Prostate,Singapore,5,4.7,5,2.1,4.4
-Prostate,United Kingdom,5,4.7,5,2.6,4.6
-Prostate,Germany,5,5,5,3,4.6
-Prostate,France,5,4,4.3,2.8,4.6
-Prostate,Netherlands,5,5,5,3,4.6
-Prostate,Sweden,5,5,5,3,4.6
-Prostate,Italy,4.5,4,4.3,2.8,4.6
-Prostate,Spain,4.5,4,4.3,2.6,4.6
-Prostate,Poland,3.5,3,3,2.3,3.6
-Prostate,Mexico,3,2.7,2,1.7,2.8
-Prostate,Brazil,3,2.7,3,1.9,3.6
-Prostate,Argentina,3,2.7,3,1.7,3.6
-Prostate,Chile,3,2.7,3,1.7,3.6
-Prostate,Colombia,2.5,1.7,2,1.6,2.8
-Prostate,United States,5,5,5,2.8,4.6
-Prostate,Canada,5,5,5,2.6,4.6
-Prostate,Australia,5,4,4.3,2.8,4.6
-Prostate,New Zealand,4,3,3.7,2.8,4.6
-Prostate,Greece,3.5,3,3,2.3,3.6
+Prostate,India,3,3,2.6,1.1,3
+Prostate,Japan,4.7,5,3.2,0.8,4.3
+Prostate,South Korea,4.3,5,3.4,1,4.3
+Prostate,China,3,3.5,2.6,0.9,3
+Prostate,Thailand,2,3,2.6,1.4,2.3
+Prostate,Singapore,5,5,4.4,2.1,4.7
+Prostate,United Kingdom,5,5,4.6,2.6,4.7
+Prostate,Germany,5,5,4.6,3,5
+Prostate,France,4.3,5,4.6,2.8,4
+Prostate,Netherlands,5,5,4.6,3,5
+Prostate,Sweden,5,5,4.6,3,5
+Prostate,Italy,4.3,4.5,4.6,2.8,4
+Prostate,Spain,4.3,4.5,4.6,2.6,4
+Prostate,Poland,3,3.5,3.6,2.3,3
+Prostate,Mexico,2,3,2.8,1.7,2.7
+Prostate,Brazil,3,3,3.6,1.9,2.7
+Prostate,Argentina,3,3,3.6,1.7,2.7
+Prostate,Chile,3,3,3.6,1.7,2.7
+Prostate,Colombia,2,2.5,2.8,1.6,1.7
+Prostate,United States,5,5,4.6,2.8,5
+Prostate,Canada,5,5,4.6,2.6,5
+Prostate,Australia,4.3,5,4.6,2.8,4
+Prostate,New Zealand,3.7,4,4.6,2.8,3
+Prostate,Greece,3,3.5,3.6,2.3,3
 Prostate,Rwanda,1,1,1,0.4,1
 Prostate,Uganda,1,1,1,0.5,1
-Prostate,Serbia,3,2.7,2.3,1.7,3.6
-Prostate,Saudi Arabia,4,4,4,1.7,3.6
-Prostate,UAE,4,4,4,1.9,3.6
+Prostate,Serbia,2.3,3,3.6,1.7,2.7
+Prostate,Saudi Arabia,4,4,3.6,1.7,4
+Prostate,UAE,4,4,3.6,1.9,4
 Prostate,Syria,1,1,1,0.8,1
-Prostate,Indonesia,2,2,2,1.5,2.6
-Prostate,Vietnam,2.5,2.3,2,0.8,2.6
-Prostate,Philippines,2.5,2.3,2,1.5,2.6
-Prostate,Russia,4,4,3.7,2.1,3
-Prostate,Malaysia,2.5,2.7,2.7,2.7,2.6
-Colorectal,South Africa,3,3,2.3,1.2,3
-Colorectal,Kenya,2,1,1,0.6,1.6
-Colorectal,Nigeria,2,1,1,0.6,1.6
-Colorectal,Egypt,3,2,2,1.1,2.6
-Colorectal,Morocco,3,2,2,0.8,1.6
-Colorectal,Algeria,2,2,2,0.8,1.6
+Prostate,Indonesia,2,2,2.6,1.5,2
+Prostate,Vietnam,2,2.5,2.6,0.8,2.3
+Prostate,Philippines,2,2.5,2.6,1.5,2.3
+Prostate,Russia,3.7,4,3,2.1,4
+Prostate,Malaysia,2.7,2.5,2.6,2.7,2.7
+Colorectal,South Africa,2.3,3,3,1.2,3
+Colorectal,Kenya,1,2,1.6,0.6,1
+Colorectal,Nigeria,1,2,1.6,0.6,1
+Colorectal,Egypt,2,3,2.6,1.1,2
+Colorectal,Morocco,2,3,1.6,0.8,2
+Colorectal,Algeria,2,2,1.6,0.8,2
 Colorectal,Ethiopia,1,1,1,0.3,1
-Colorectal,India,3.5,3,3,0.8,2.6
-Colorectal,Japan,5,4.3,4.7,0.5,3.2
-Colorectal,South Korea,5,4.3,4.3,0.8,3.4
-Colorectal,China,4,3,3,0.7,2.6
-Colorectal,Thailand,3,2.3,2,1.1,2.6
-Colorectal,Singapore,5,4.7,5,1.7,4.4
-Colorectal,United Kingdom,5,4.7,5,2.2,4.6
-Colorectal,Germany,5,5,5,2.5,4.6
-Colorectal,France,5,4,4.3,2.3,4.6
-Colorectal,Netherlands,5,5,5,2.5,4.6
-Colorectal,Sweden,5,5,5,2.5,4.6
-Colorectal,Italy,5,4,4.3,2.3,4.6
-Colorectal,Spain,5,4,4.3,2.2,4.6
-Colorectal,Poland,4,3,3,2,3.6
-Colorectal,Mexico,3,2.7,2,1.3,2.8
-Colorectal,Brazil,3.5,2.7,3,1.6,3.6
-Colorectal,Argentina,3,2.7,3,1.3,3.6
-Colorectal,Chile,3,2.7,3,1.3,3.6
-Colorectal,Colombia,3,1.7,2,1.3,2.8
-Colorectal,United States,5,5,5,2.4,4.6
-Colorectal,Canada,5,5,5,2.2,4.6
-Colorectal,Australia,5,4,4.3,2.4,4.6
-Colorectal,New Zealand,5,3,3.7,2.4,4.6
-Colorectal,Greece,4,3,3,1.9,3.6
+Colorectal,India,3,3.5,2.6,0.8,3
+Colorectal,Japan,4.7,5,3.2,0.5,4.3
+Colorectal,South Korea,4.3,5,3.4,0.8,4.3
+Colorectal,China,3,4,2.6,0.7,3
+Colorectal,Thailand,2,3,2.6,1.1,2.3
+Colorectal,Singapore,5,5,4.4,1.7,4.7
+Colorectal,United Kingdom,5,5,4.6,2.2,4.7
+Colorectal,Germany,5,5,4.6,2.5,5
+Colorectal,France,4.3,5,4.6,2.3,4
+Colorectal,Netherlands,5,5,4.6,2.5,5
+Colorectal,Sweden,5,5,4.6,2.5,5
+Colorectal,Italy,4.3,5,4.6,2.3,4
+Colorectal,Spain,4.3,5,4.6,2.2,4
+Colorectal,Poland,3,4,3.6,2,3
+Colorectal,Mexico,2,3,2.8,1.3,2.7
+Colorectal,Brazil,3,3.5,3.6,1.6,2.7
+Colorectal,Argentina,3,3,3.6,1.3,2.7
+Colorectal,Chile,3,3,3.6,1.3,2.7
+Colorectal,Colombia,2,3,2.8,1.3,1.7
+Colorectal,United States,5,5,4.6,2.4,5
+Colorectal,Canada,5,5,4.6,2.2,5
+Colorectal,Australia,4.3,5,4.6,2.4,4
+Colorectal,New Zealand,3.7,5,4.6,2.4,3
+Colorectal,Greece,3,4,3.6,1.9,3
 Colorectal,Rwanda,1,1,1,0.2,1
 Colorectal,Uganda,1,1,1,0.3,1
-Colorectal,Serbia,3,2.7,2.3,1.3,3.6
-Colorectal,Saudi Arabia,3,2.7,2.7,1,3.6
-Colorectal,UAE,4,3.7,4,1,3.8
+Colorectal,Serbia,2.3,3,3.6,1.3,2.7
+Colorectal,Saudi Arabia,2.7,3,3.6,1,2.7
+Colorectal,UAE,4,4,3.8,1,3.7
 Colorectal,Syria,1,1,1,0.8,1
-Colorectal,Indonesia,2,2,2,0.9,1.8
-Colorectal,Vietnam,2,1.7,1.7,0.9,1.8
-Colorectal,Philippines,2,2.3,2.3,0.9,2.8
-Colorectal,Russia,3,2.7,3.3,1.6,3.6
-Colorectal,Malaysia,3,2.7,2.7,2.5,2.6
-Gastric,South Africa,3,2.3,3,1.7,3
-Gastric,Kenya,2,1.7,2,0.5,1.6
-Gastric,Nigeria,1.5,1.3,1.3,0.5,1.6
-Gastric,Egypt,2.5,2.3,2.3,1.8,2.6
-Gastric,Morocco,2,2,2,1.4,1.6
-Gastric,Algeria,2,2,2,1.4,1.6
+Colorectal,Indonesia,2,2,1.8,0.9,2
+Colorectal,Vietnam,1.7,2,1.8,0.9,1.7
+Colorectal,Philippines,2.3,2,2.8,0.9,2.3
+Colorectal,Russia,3.3,3,3.6,1.6,2.7
+Colorectal,Malaysia,2.7,3,2.6,2.5,2.7
+Gastric,South Africa,3,3,3,1.7,2.3
+Gastric,Kenya,2,2,1.6,0.5,1.7
+Gastric,Nigeria,1.3,1.5,1.6,0.5,1.3
+Gastric,Egypt,2.3,2.5,2.6,1.8,2.3
+Gastric,Morocco,2,2,1.6,1.4,2
+Gastric,Algeria,2,2,1.6,1.4,2
 Gastric,Ethiopia,1,1,1,0.2,1
-Gastric,India,3,3,3,1.7,2.6
-Gastric,Japan,5,5,5,3.7,3.2
-Gastric,South Korea,5,5,5,3.7,3.4
-Gastric,China,5,4.3,4,2.6,2.6
-Gastric,Thailand,3,3,3,2.1,2.6
-Gastric,Singapore,5,4.3,5,3.2,4.4
-Gastric,United Kingdom,4.5,4.7,5,3.9,4.6
-Gastric,Germany,5,5,5,3.9,4.6
-Gastric,France,5,4.7,5,3.9,4.6
-Gastric,Netherlands,5,4.7,5,3.9,4.6
-Gastric,Sweden,4.5,4.7,5,3.9,4.6
-Gastric,Italy,4,4,4,3.9,4.6
-Gastric,Spain,4,4,4,3.9,4.6
-Gastric,Poland,3,3,3,3.1,3.6
-Gastric,Mexico,2.5,2.3,3,2.2,2.8
-Gastric,Brazil,3.5,3.3,3,2.6,3.6
-Gastric,Argentina,3,3,3,2.6,3.6
-Gastric,Chile,3,3,3,2.6,3.6
-Gastric,Colombia,2.5,2.3,3,2.2,2.8
-Gastric,United States,5,4.7,4.7,3.9,4.6
-Gastric,Canada,5,4.7,5,3.9,4.6
-Gastric,Australia,5,4.7,5,3.9,4.6
-Gastric,New Zealand,4,3.7,5,3.6,4.6
-Gastric,Greece,3,3,4,2.6,3.6
+Gastric,India,3,3,2.6,1.7,3
+Gastric,Japan,5,5,3.2,3.7,5
+Gastric,South Korea,5,5,3.4,3.7,5
+Gastric,China,4,5,2.6,2.6,4.3
+Gastric,Thailand,3,3,2.6,2.1,3
+Gastric,Singapore,5,5,4.4,3.2,4.3
+Gastric,United Kingdom,5,4.5,4.6,3.9,4.7
+Gastric,Germany,5,5,4.6,3.9,5
+Gastric,France,5,5,4.6,3.9,4.7
+Gastric,Netherlands,5,5,4.6,3.9,4.7
+Gastric,Sweden,5,4.5,4.6,3.9,4.7
+Gastric,Italy,4,4,4.6,3.9,4
+Gastric,Spain,4,4,4.6,3.9,4
+Gastric,Poland,3,3,3.6,3.1,3
+Gastric,Mexico,3,2.5,2.8,2.2,2.3
+Gastric,Brazil,3,3.5,3.6,2.6,3.3
+Gastric,Argentina,3,3,3.6,2.6,3
+Gastric,Chile,3,3,3.6,2.6,3
+Gastric,Colombia,3,2.5,2.8,2.2,2.3
+Gastric,United States,4.7,5,4.6,3.9,4.7
+Gastric,Canada,5,5,4.6,3.9,4.7
+Gastric,Australia,5,5,4.6,3.9,4.7
+Gastric,New Zealand,5,4,4.6,3.6,3.7
+Gastric,Greece,4,3,3.6,2.6,3
 Gastric,Rwanda,1,1,1,0.2,1
 Gastric,Uganda,1,1,1,0.2,1
-Gastric,Serbia,3,2.3,3,2.6,3.6
-Gastric,Saudi Arabia,3,2.3,3,2.2,2.6
-Gastric,UAE,3,3,3,2.2,2.6
+Gastric,Serbia,3,3,3.6,2.6,2.3
+Gastric,Saudi Arabia,3,3,2.6,2.2,2.3
+Gastric,UAE,3,3,2.6,2.2,3
 Gastric,Syria,1,1,1,0.5,1
-Gastric,Indonesia,2.5,2.3,2.3,1.4,1.6
-Gastric,Vietnam,2.5,2.3,2.3,1.4,1.6
-Gastric,Philippines,2.5,2.3,2.3,1.4,1.6
-Gastric,Russia,4,3.3,3,2.6,3.6
-Gastric,Malaysia,2.5,2.3,2.7,2.1,2.6
+Gastric,Indonesia,2.3,2.5,1.6,1.4,2.3
+Gastric,Vietnam,2.3,2.5,1.6,1.4,2.3
+Gastric,Philippines,2.3,2.5,1.6,1.4,2.3
+Gastric,Russia,3,4,3.6,2.6,3.3
+Gastric,Malaysia,2.7,2.5,2.6,2.1,2.3
