@@ -51,6 +51,7 @@ def datasetView(request):
         'heading': 'Lung Cancer Data',
         'des_stat': stat.to_html(classes='statframe'),
         'chart_data': dataframe_to_column_json(stat),
+        'country_stat': None,
     }
     
     cancer_type = request.GET.get('cancerType', 'lung')

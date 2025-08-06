@@ -73,7 +73,7 @@ def get_descriptive_statistics(df, alter=3):
     """
     datavals = {}
     # Exclude first two columns (id and country) and last column if it's text (CANCER SCREENING)
-    for i in range(df.shape[1]-alter): 
+    for i in range(df.shape[1]-alter):
         data = df.iloc[:, (alter-1)+i].astype(float).to_list()
         datavals[df.iloc[:, (alter-1)+i].name] = {
             "mean": np.mean(data).__float__(),
@@ -93,3 +93,10 @@ def get_descriptive_statistics(df, alter=3):
     dstat = pd.DataFrame.from_dict(datavals, orient='index').transpose().transform(lambda x: x.round(3))
     # dstat = pd.read_json(dstat)
     return dstat
+
+
+def get_CountryStat(avg_df, cancer_type):
+    
+    avg_df = avg_df[avg_df['Type'] == cancer_type.title()]
+    avgDataTransposed = avg_df.iloc[:,1:].set_index('Country').transpose()
+    get_descriptive_statistics(avgDataTransposed, alter=0).transpose()

@@ -91,32 +91,3 @@ function closePopup() {
 }
 
 
-
-// function toggle_stat_charts() {
-//     var chartPane = document.getElementById("des_stat_toggle_popup");
-//     chartPane.addEventListener('click', showPopup());
-// }
-
-
-// function createCharts(chart_JSON) {
-    
-//     chart_JSON.forEach(function (chart_info, indx) {
-//         var data = google.visualization.arrayToDataTable(JSON.parse(chart_info.data)); // data not exist
-        
-//         var options = {
-//             chart: {
-//                 title: "Bar chart for "+chart_info.column, // column not exist
-//                 subtitle: "Data by category"
-//             },
-//             bars: 'vertical',
-//             vAxis: {title: chart_info.column, minValue: 0},
-//             hAxis: {title: 'Categories'},
-//             height: 400,
-//             colors: ['#1b9e77']
-//         };
-
-//         var chart = new google.charts.Bar(document.getElementById('bar_chart_'+indx));
-//         chart.draw(data, google.charts.Bar.convertOptions(options))
-//     });
-// }
-

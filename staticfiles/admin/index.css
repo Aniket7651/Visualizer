@@ -1,3 +1,20 @@
+
+:root {
+    --background-color-body: #f7f1f8;
+    --background-color-header: #fff;
+    --color-header: #5743c8;
+    --text-color: #000;
+}
+
+.dark-theme {
+    --background-color-header: #353535;
+    --background-color-body: #1f1f1f;
+    --color-header: #f7f7f7;
+    --text-color: #fff;
+}
+
+
+
 .container {
     font-size: 18px;
     max-width: 900px;
@@ -13,7 +30,7 @@
 
 #popup {
     position: absolute;
-    background: white;
+    background: var(--background-color-header);
     border: 1px solid #ccc;
     padding: 10px;
     z-index: 1000;
