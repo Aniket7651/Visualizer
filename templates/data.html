@@ -6,6 +6,7 @@
 
 {% block content %}
 <script src="https://www.gstatic.com/charts/loader.js" type="text/javascript"></script>
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 <div id="overlay" class="overlay"></div>
 <link rel="stylesheet" type="text/css" href="{% static 'admin/dataframePage.css' %}">
 <div class="container">
@@ -35,16 +36,20 @@
             Descriptive Statistics
             <span class="btn-group">
                 <button class="btn btn-primary" onclick="toggle_changeCountryWise()">Country Wise</button>
-                <button class="btn btn-primary" onclick="fetchStatJSON('{{ request.GET.cancerType}}')">Download
+                <button class="btn btn-primary" onclick="fetchStatJSON('{{ request.GET.cancerType }}')">Download
                     JSON</button>
-                <button class="btn btn-primary" onclick="openPopup()">Chart</button>
+                <button class="btn btn-primary" onclick="openPopup('popup')">Chart</button>
             </span>
         </h3>
         <span class="stat_pane">
-            {{ des_stat|safe }}
-            
+            <div id="data-stat-div">
+                {{ des_stat|safe }}
+            </div>
+            <div id="country_stat-div">
+                {{ countryWise_stat|safe }}
+            </div>
             <div id="popup" class="popup">
-                <button class="close-btn" onclick="closePopup()">X</button>
+                <button class="close-btn" onclick="closePopup('popup')">X</button>
                 <div id="chart-container"></div>
             </div>
         </span>
@@ -56,7 +61,6 @@
                 <button class="btn btn-primary" onclick="fetchDataJSON('{{request.GET.cancerType}}')">Download
                     JSON</button>
                 <button class="btn btn-primary">Chart</button>
-                <button id="barPlotButton" onclick="openPopup()">Show Bar Plot</button>
             </span>
         </h3>
         <span class="stat_pane">
@@ -122,7 +126,15 @@
         });
 
         function toggle_changeCountryWise() {
-            
+            const colWise_div = document.getElementById('data-stat-div');
+            const countryWise_div = document.getElementById('country_stat-div');
+            if(colWise_div.style.display === 'block') {
+                colWise_div.style.display = 'none';
+                countryWise_div.style.display = 'block';
+            } else {
+                colWise_div.style.display = 'block';
+                countryWise_div.style.display = 'none';
+            }
         }
 
 

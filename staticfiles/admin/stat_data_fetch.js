@@ -66,27 +66,14 @@ async function fetchDataJSON(cancerType) {
 }
 
 
-// Download chart as PNG
-function downloadChart(chartInstance) {
-    console.log(`Downloading chart from ${chartInstance}`);
-
-    var link = document.createElement('a');
-    link.href = chartInstance.getImageURI();
-    link.download = `${chartInstance}.png`;
-    link.click();
-    alert(`Chart downloaded as ${chartInstance}.png`);
-
-}
-
-
 // popup
-function openPopup() {
-    document.getElementById('popup').style.display = 'block';
+function openPopup(popup_id) {
+    document.getElementById(popup_id).style.display = 'block';
     document.getElementById('overlay').style.display = 'block';
 }
 
-function closePopup() {
-    document.getElementById('popup').style.display = 'none';
+function closePopup(popup_id) {
+    document.getElementById(popup_id).style.display = 'none';
     document.getElementById('overlay').style.display = 'none';
 }
 

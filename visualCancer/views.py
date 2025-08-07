@@ -3,7 +3,7 @@ from django_pandas.io import read_frame # type: ignore
 import pandas as pd
 import io, base64, json
 import matplotlib.pyplot as plt
-from .api import get_descriptive_statistics
+from .api import get_descriptive_statistics, OverAllAvg_statDF
 from django.http import JsonResponse
 from django.views.decorators.http import require_GET
 from .models import BreastCancerData, LungCancerData, ColorectalCancerData, ProstateCancerData, GastricCancerData
@@ -45,13 +45,14 @@ def datasetView(request):
     
     df = pd.DataFrame(LungCancerData.objects.all().values())
     stat = get_descriptive_statistics(df)
+    countryStat = OverAllAvg_statDF('lung')
 
     context = {
         'table': df.to_html(classes='dataframe', index=False),
         'heading': 'Lung Cancer Data',
         'des_stat': stat.to_html(classes='statframe'),
         'chart_data': dataframe_to_column_json(stat),
-        'country_stat': None,
+        'countryWise_stat': countryStat.to_html(classes='statframe'),
     }
     
     cancer_type = request.GET.get('cancerType', 'lung')
@@ -72,10 +73,12 @@ def datasetView(request):
         context['heading'] = "No data available for the selected cancer type."
     
     stat = get_descriptive_statistics(df)
+    countryStat = OverAllAvg_statDF(cancer_type)
     context['des_stat'] = stat.to_html(classes='statframe')
     context['table'] = df.to_html(classes='dataframe', index=False)
     context['heading'] = 'Breast Cancer Data'
     context['chart_data'] = dataframe_to_column_json(stat)
+    context['countryWise_stat'] = countryStat.to_html(classes='statframe')
 
     return render(request, 'data.html', context)
 

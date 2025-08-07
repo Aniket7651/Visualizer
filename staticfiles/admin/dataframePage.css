@@ -157,3 +157,7 @@ li {
     backdrop-filter: blur(3px);
     z-index: 999;
 }
+
+#country_stat-div {
+    display: none;
+}

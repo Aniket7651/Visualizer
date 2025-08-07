@@ -1,6 +1,6 @@
 from django.http import JsonResponse
 from django.shortcuts import render
-from .models import ColorectalCancerData, LungCancerData, BreastCancerData, ProstateCancerData, GastricCancerData  # Import other models as needed
+from .models import ColorectalCancerData, LungCancerData, BreastCancerData, ProstateCancerData, GastricCancerData, AverageValues  # Import other models as needed
 from django.core.serializers import serialize
 import json
 from .discription import *
@@ -94,9 +94,26 @@ def get_descriptive_statistics(df, alter=3):
     # dstat = pd.read_json(dstat)
     return dstat
 
+def OverAllAvg_statDF(cancer_type):
 
-def get_CountryStat(avg_df, cancer_type):
+    data_query = AverageValues.objects.all().values()
+    avg_df = pd.DataFrame(data_query).drop('id', axis=1)
+
+    avg_df = avg_df[avg_df['cancer_type'] == cancer_type.title()]
+    avgDataTransposed = avg_df.iloc[:,1:].set_index('country').transpose()
+    return get_descriptive_statistics(avgDataTransposed, alter=0).transpose()
+
+
+
+def get_CountryStatJSON(request, cancer_type):
+
+    if cancer_type not in model_map:
+        return JsonResponse({'error': 'Invalid cancer type'}, status=400)
     
-    avg_df = avg_df[avg_df['Type'] == cancer_type.title()]
-    avgDataTransposed = avg_df.iloc[:,1:].set_index('Country').transpose()
-    get_descriptive_statistics(avgDataTransposed, alter=0).transpose()
+    data_query = AverageValues.objects.all().values()
+    avg_df = pd.DataFrame(data_query).drop('id', axis=1)
+
+    avg_df = avg_df[avg_df['cancer_type'] == cancer_type.title()]
+    avgDataTransposed = avg_df.iloc[:,1:].set_index('country').transpose()
+    stat_dataframe = get_descriptive_statistics(avgDataTransposed, alter=0).transpose()
+    return JsonResponse(stat_dataframe.to_dict())

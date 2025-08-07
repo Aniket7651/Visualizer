@@ -44,5 +44,19 @@ Cancer Explorer
 
 
 
-<script type="text/javascript" src="{% static 'admin/popups.js' %}"></script>
+<script>
+    document.getElementById('downloadbtn').addEventListener('click', function() {
+        const mapContainer = document.getElementById('map-container');
+
+        html2canvas(mapContainer).then(function(canvas) {
+            // Create a temporary link element
+            const link = document.createElement('a');
+            link.download = 'map.png'; // Set the desired filename
+            link.href = canvas.toDataURL('image/png'); // Get data URL of the canvas as a PNG
+            document.body.appendChild(link); // Append to the body (necessary for clicking)
+            link.click(); // Programmatically click the link to trigger download
+            document.body.removeChild(link); // Remove the temporary link
+        });
+    });
+</script>
 {% endblock %}
