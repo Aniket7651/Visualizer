@@ -8,26 +8,28 @@ Cancer Explorer
 
 {% block content %}
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 <script type="text/javascript" src="{% static 'admin/utility_mains.js' %}"></script>
-<!-- <script type="text/javascript">    
-</script> -->
+
 <link rel="stylesheet" type="text/css" href="{% static 'admin/index.css' %}">
+<div class="title-nav">
+    <h2>Cancer Data Visualizer</h2>
+    <div>
+        <label for="cancerType">Cancer Type:</label>
+        <select id="cancerType" class="select-field" onchange="updateChart()">
+            <option value="lung">Lung</option>
+            <option value="breast">Breast</option>
+            <option value="prostate">Prostate</option>
+            <option value="gastric">Gastric</option>
+            <option value="colorectal">Colorectal</option>
+            <!-- Add other cancer types here -->
+        </select>
 
-<h2>Cancer Data Visualizer</h2>
-<label for="cancerType">Cancer Type:</label>
-<select id="cancerType" class="select-field" onchange="updateChart()">
-    <option value="lung">Lung</option>
-    <option value="breast">Breast</option>
-    <option value="prostate">Prostate</option>
-    <option value="gastric">Gastric</option>
-    <option value="colorectal">Colorectal</option>
-    <!-- Add other cancer types here -->
-</select>
-
-<label for="column">Data Features:</label>
-<select id="column" class="select-field" onchange="drawChart()"></select>
-
+        <label for="column">Data Features:</label>
+        <select id="column" class="select-field" onchange="drawChart()"></select>
+    </div>
+</div>
 
 <section class="map-content">
     <div class="chart_div">
@@ -46,12 +48,12 @@ Cancer Explorer
 
 <script>
     document.getElementById('downloadbtn').addEventListener('click', function() {
-        const mapContainer = document.getElementById('map-container');
+        const mapContainer = document.getElementById('geochart');
 
         html2canvas(mapContainer).then(function(canvas) {
             // Create a temporary link element
             const link = document.createElement('a');
-            link.download = 'map.png'; // Set the desired filename
+            link.download = 'ICPC_GeoData.png'; // Set the desired filename
             link.href = canvas.toDataURL('image/png'); // Get data URL of the canvas as a PNG
             document.body.appendChild(link); // Append to the body (necessary for clicking)
             link.click(); // Programmatically click the link to trigger download

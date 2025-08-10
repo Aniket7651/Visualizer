@@ -33,6 +33,7 @@ urlpatterns = [
     path('data/', datasetView, name='datasetView'),
     path('api/', apiAccess, name='apiAccess'),
 
+    # API Links
     path('api/cancer/<str:cancer_type>/', get_cancer_data, name='get_cancer_data'), # API link for cancer data
     path('api/stats/<str:cancer_type>/', stats_data, name='stats_data'),  # API link for statistics data
     path('api/stats/country_Wise/<str:cancer_type>/', get_CountryStatJSON, name='country_stat'), 

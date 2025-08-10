@@ -161,3 +161,24 @@ li {
 #country_stat-div {
     display: none;
 }
+
+
+.page-link {
+    text-decoration: none;
+    text-align: center;
+    color: #5743c8;
+}
+
+.previous, .next {
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 1px solid #5743c8;
+    border-radius: 30px;
+    transition: background-color 2ms;
+
+}
+
+.previous:hover, .next:hover {
+    background-color: #f3c750;
+}
+

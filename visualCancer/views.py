@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 from .api import get_descriptive_statistics, OverAllAvg_statDF
 from django.http import JsonResponse
 from django.views.decorators.http import require_GET
-from .models import BreastCancerData, LungCancerData, ColorectalCancerData, ProstateCancerData, GastricCancerData
+from .models import BreastCancerData, LungCancerData, ColorectalCancerData, ProstateCancerData, GastricCancerData, AverageValues
 from .discription import *
 
 
@@ -29,7 +29,25 @@ def dataframe_to_column_json(df):
     json_data = json.dumps(charts_data)
 
     return json_data
-    
+
+
+def DataSet_to_JSON_Avg_for_BoxPlot(df, cancer_type):
+    data = df[df['cancer_type'] == cancer_type.title()].set_index('country')
+    data = data.drop(['id', 'cancer_type'], axis=1)
+    chart_data = []
+    for col in data.columns:
+        dict_data = {
+            'y': data[col].to_list(),
+            'name': col.replace('_', ' ').title(),
+            'boxpoints': 'all',
+            'jitter': 0.3,
+            'pointpos': -1.8,
+            'type': 'box',
+            'marker': {'color': '#f3c750'}
+        }
+        chart_data.append(dict_data)
+    return json.dumps(chart_data)
+
 
 # Views for the visualCancer app
 def index(request):
@@ -44,6 +62,7 @@ def apiAccess(request):
 def datasetView(request):
     
     df = pd.DataFrame(LungCancerData.objects.all().values())
+    ovaDF = pd.DataFrame(AverageValues.objects.all().values())
     stat = get_descriptive_statistics(df)
     countryStat = OverAllAvg_statDF('lung')
 
@@ -53,6 +72,7 @@ def datasetView(request):
         'des_stat': stat.to_html(classes='statframe'),
         'chart_data': dataframe_to_column_json(stat),
         'countryWise_stat': countryStat.to_html(classes='statframe'),
+        'boxPlot_data': DataSet_to_JSON_Avg_for_BoxPlot(ovaDF, 'lung'),
     }
     
     cancer_type = request.GET.get('cancerType', 'lung')
@@ -79,6 +99,7 @@ def datasetView(request):
     context['heading'] = 'Breast Cancer Data'
     context['chart_data'] = dataframe_to_column_json(stat)
     context['countryWise_stat'] = countryStat.to_html(classes='statframe')
+    context['boxPlot_data'] = DataSet_to_JSON_Avg_for_BoxPlot(ovaDF, cancer_type)
 
     return render(request, 'data.html', context)
 

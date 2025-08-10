@@ -1,7 +1,14 @@
 
+// fetch("../../../secrete.json")
+// .then(data => {
+//     const domain = data.domain;
+// })
+// .catch(error => {
+//     console.error('Error fetching or parsing JSON:', error);
+// });
 
-const domain = "http://127.0.0.1:8000"; // Update with your actual domain
 
+const domain = "http://127.0.0.1:8000/"; // Update with your actual domain
 
 
 async function fetchStatJSON(cancerType) {
@@ -11,7 +18,7 @@ async function fetchStatJSON(cancerType) {
         alert("No cancer type provided. Defaulting to 'lung'.");
     }
 
-    const response = await fetch(`${domain}/api/stats/${cancerType}/`);
+    const response = await fetch(`${domain}api/stats/${cancerType}/`);
     const data = await response.json();
     console.log(`Statistics for ${cancerType}:`, data); // Debug: API response check
 
@@ -37,7 +44,7 @@ async function fetchDataJSON(cancerType) {
     }
 
     try {
-        const response = await fetch(`${domain}/api/cancer/${cancerType}/`);
+        const response = await fetch(`${domain}api/cancer/${cancerType}/`);
         const result = await response.json();
         console.log(`API Response for ${cancerType}:`, result); // Debug: API response check
         if (result.error || !result.columns || !result.data) {
@@ -63,6 +70,11 @@ async function fetchDataJSON(cancerType) {
         alert(`Failed to fetch data for ${cancerType}. Please try again.`);
         return false;
     }
+}
+
+
+function boxDraw() {
+    
 }
 
 
