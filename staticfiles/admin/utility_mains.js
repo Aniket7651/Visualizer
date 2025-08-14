@@ -14,7 +14,7 @@ async function fetchData(cancerType) {
   try {
     const response = await fetch(`/api/cancer/${cancerType}/`);
     const result = await response.json();
-    console.log(`API Response for ${cancerType}:`, result); // Debug: API response check
+    // console.log(`API Response for ${cancerType}:`, result); // Debug: API response check
     if (result.error || !result.columns || !result.data) {
       console.error(`Invalid API response for ${cancerType}:`, result);
       alert(`Error: Could not load data for ${cancerType}. Please check the server.`);
@@ -27,7 +27,7 @@ async function fetchData(cancerType) {
     populateColumns(cancerType);
     return true; // Indicate success
   } catch (error) {
-    console.error(`Error fetching data for ${cancerType}:`, error);
+    // console.error(`Error fetching data for ${cancerType}:`, error);
     alert(`Failed to fetch data for ${cancerType}. Please try again.`);
     return false;
   }
@@ -57,7 +57,7 @@ function drawChart() {
 
   // Check if data exists
   if (!datasets[cancerType] || !datasets[cancerType].columns || !datasets[cancerType].data) {
-    console.log(`No data for ${cancerType}, fetching now...`);
+    // console.log(`No data for ${cancerType}, fetching now...`);
     fetchData(cancerType).then(success => {
       if (success) {
         drawChart(); // Retry after fetching
@@ -67,7 +67,7 @@ function drawChart() {
   }
 
   if (!columnName) {
-    console.error(`No valid column selected for ${cancerType}`);
+    // console.error(`No valid column selected for ${cancerType}`);
     alert('Please select a valid data column.');
     return;
   }
@@ -85,6 +85,7 @@ function drawChart() {
     }
   });
 
+  fetchAndRenderJson(cancerType); // Fetch and render JSON data
   console.log(`DataTable for ${cancerType} (${columnName}):`, data.toJSON()); // Debug: DataTable check
   if (rowCount === 0) {
     console.warn(`No valid data rows for ${cancerType} (${columnName})`);
@@ -130,8 +131,41 @@ function updateChart() {
     });
   } else {
     populateColumns(cancerType);
+    // fetchAndRenderJson(cancerType);
     drawChart();
   }
+}
+
+
+function fetchAndRenderJson(cancerType, attempt = 1, maxAttempts = 3) {
+    const baseJsonUrl = '../static/json/';
+    const dataList = document.getElementById('data-list');
+    const jsonUrl = `${baseJsonUrl}${cancerType}.json`;
+    console.log('Fetching URL:', jsonUrl); // Debugging ke liye
+
+    fetch(jsonUrl, { cache: 'no-store' })
+        .then(response => {
+          if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+          }
+          return response.json();
+        })
+        .then(data => {
+          dataList.innerHTML = `
+            <h3>${data.title}</h3>
+            <p>${data.description}</p>
+            `; // Add new data
+                    
+        })
+        .catch(error => {
+          console.error(`Attempt ${attempt}: Error fetching ${cancerType}.json:`, error);
+            if (attempt < maxAttempts) {
+              console.log(`Retrying ${cancerType}.json (Attempt ${attempt + 1})`);
+              setTimeout(() => fetchAndRenderJson(cancerType, attempt + 1, maxAttempts), 1000);
+            } else {
+              dataList.innerHTML = `<li>Error loading ${cancerType}.json after ${maxAttempts} attempts. Check console.</li>`;
+            }
+        });
 }
 
 
@@ -160,11 +194,11 @@ function hidePopup() {
 // Get text data for a country
 function getTextData(cancerType, country, textColumn) {
   if (!datasets[cancerType] || !datasets[cancerType].data) {
-    console.log(`No data for ${cancerType}`);
+    // console.log(`No data for ${cancerType}`);
     return null;
   }
   const row = datasets[cancerType].data.find(row => row.country === country);
-  console.log(`Text data for ${country} (${textColumn}):`, row ? row[textColumn] : 'Not found');
+  // console.log(`Text data for ${country} (${textColumn}):`, row ? row[textColumn] : 'Not found');
   return row ? row[textColumn] || 'No data available' : 'No data available';
 }
 
@@ -207,3 +241,7 @@ function addChartClickListener(chart, cancerType, textColumn) {
 
 // Initial load
 window.onload = () => fetchData(document.getElementById('cancerType').value);
+
+window.addEventListener('load', () => {
+    fetchAndRenderJson(document.getElementById('cancerType').value); // Default lung.json
+});

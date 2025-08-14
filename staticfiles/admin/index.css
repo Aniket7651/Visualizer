@@ -42,7 +42,7 @@
     border: none;
 }
 
-#popup {
+.popup {
     position: absolute;
     background: var(--background-color-header);
     border: 1px solid #ccc;
@@ -86,4 +86,11 @@
     background-color: #ccc;
     color: #666666;
     transition: background-color 0.3s ease;
+}
+
+.title-nav p {
+    padding: 30px;
+    padding-left: 20%;
+    padding-right: 20%;
+    text-align: center;
 }

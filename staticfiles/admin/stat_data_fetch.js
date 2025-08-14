@@ -8,7 +8,8 @@
 // });
 
 
-const domain = "http://127.0.0.1:8000/"; // Update with your actual domain
+const domain = window.location.protocol+"//"+window.location.host+"/";
+                // || "http://127.0.0.1:8000/"; // Update with your actual domain
 
 
 async function fetchStatJSON(cancerType) {
@@ -17,7 +18,7 @@ async function fetchStatJSON(cancerType) {
         fetchStatJSON('lung'); // Default to 'lung' if no type provided
         alert("No cancer type provided. Defaulting to 'lung'.");
     }
-
+    
     const response = await fetch(`${domain}api/stats/${cancerType}/`);
     const data = await response.json();
     console.log(`Statistics for ${cancerType}:`, data); // Debug: API response check
@@ -70,11 +71,6 @@ async function fetchDataJSON(cancerType) {
         alert(`Failed to fetch data for ${cancerType}. Please try again.`);
         return false;
     }
-}
-
-
-function boxDraw() {
-    
 }
 
 

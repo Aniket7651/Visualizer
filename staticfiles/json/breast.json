@@ -1,0 +1,24 @@
+{
+    "title": "Breast Cancer Fact Sheet",
+    "description": 
+        "Breast cancer remains one of the most prevalent cancers worldwide, affecting millions of individuals each year. Despite advancements in diagnostics, treatment, and awareness, disparities in access to care, molecular testing, and specialized centers persist.",
+    
+    "long_discription": 
+        "Breast cancer incidence: 25.6% of all female cancers Incidence rate: 36.8 per 100,000 women per year Total cases (2022): Approximately 29,929 new cases Daily diagnoses (2022): Around 82 women per day Breast cancer deaths (2021): About 7,900 women 5-year survival rate: 82% overall; 97% for early-stage disease, 82% for locally advanced disease, and 36% for metastatic disease Most affected age group: 50-69 years Screening participation (ages 50-69): 21.2%",
+    
+    "infrastructure": {
+        "STRENGTH": "Centers like INCan and Hospital General de México provide high-quality care in major cities. HER2, ER, and PR testing are available in tertiary hospitals and integrated into standard care.",
+        "WEAKNESS": "Only ~35% of cancer patients access specialized centers; most rely on general hospitals with limited oncology capacity. Pathology and genetic testing infrastructure is underdeveloped in the public sector.",
+        "OPPORTUNITIES": "Expand regional cancer centers and public investment in pathology. Improve access to BRCA and molecular testing beyond private sector availability.",
+        "THREATS": "Rural and low-income patients are at risk of delayed diagnosis and under-treatment due to lack of infrastructure.",
+
+        "legands": [
+            "5 – Advanced nationwide infrastructure, widespread availability in public and private sectors, integration with clinical practice.",
+            "4 – Strong infrastructure in major hospitals and cancer centers, some regional disparities.",
+            "3 – Moderate infrastructure, primarily in private settings or research institutions.",
+            "2 – Limited infrastructure, available only in select centers or for high-cost private testing.",
+            "1 – Minimal or no infrastructure, testing mostly unavailable or sent abroad."
+
+        ]
+    }
+}

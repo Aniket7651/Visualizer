@@ -21,6 +21,10 @@
 body {
     line-height: 1.6;
     background-color: var(--background-color-body);
+    /* background-image: url("https://unite4cancer.com/wp-content/uploads/2024/02/bckg-icpc-2-fixed.webp");
+    background-repeat: no-repeat;
+    background-position: 100% 0%; 
+    background-size: auto padding-box border-box; */
     color: var(--text-color);
     font-family: 'Poppins', sans-serif;
 }
@@ -106,6 +110,8 @@ header nav a:hover {
 
 h2 {
     color: #604eb1;
+    font-weight: 700;
+    font-style: bold;
 }
 
 .filter {

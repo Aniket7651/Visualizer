@@ -51,7 +51,9 @@ def DataSet_to_JSON_Avg_for_BoxPlot(df, cancer_type):
 
 # Views for the visualCancer app
 def index(request):
-    return render(request, 'index.html')
+    textContext = {}
+    
+    return render(request, 'index.html', textContext)
 
 
 def apiAccess(request):

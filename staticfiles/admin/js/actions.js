@@ -202,3 +202,24 @@
         }
     });
 }
+
+
+
+
+        // // Cancer type selection ke change event par
+        // $(document).ready(function() {
+        //     const cancerType = $('#cancerType').val(); // Selected cancer type
+        //     // const cancerType = $(this).val(); // Selected cancer type
+        //     if (cancerType) {
+        //         // Dynamic JSON file URL
+        //         const jsonUrl = `${baseJsonUrl}${cancerType}.json`;
+        //         $.getJSON(jsonUrl, function(data) {
+        //             const dataList = $('.data-list');
+        //             console.log(data);
+
+        //             dataList.html(`${data.title} <br> ${data.description}`);
+        //         }).fail(function() {
+        //             $('.data-list').html('<li>Error loading JSON data</li>');
+        //         });
+        //     }
+        // });

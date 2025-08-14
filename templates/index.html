@@ -15,6 +15,11 @@ Cancer Explorer
 <link rel="stylesheet" type="text/css" href="{% static 'admin/index.css' %}">
 <div class="title-nav">
     <h2>Cancer Data Visualizer</h2>
+    <p>
+        This study will provide us a comprehensive overview of key pillars shaping different cancer care, 
+        including specialized infrastructure, treatment accessibility, research funding, early detection, 
+        and palliative care.
+    </p>
     <div>
         <label for="cancerType">Cancer Type:</label>
         <select id="cancerType" class="select-field" onchange="updateChart()">
@@ -32,21 +37,48 @@ Cancer Explorer
 </div>
 
 <section class="map-content">
+    <div class="glass-content">
+        <div id="data-list">
+
+        </div>
+    </div>
     <div class="chart_div">
-        <button><i class='fa fa-globe'></i></button>
-        <button><i class="fa fa-bar-chart"></i></button>
+        <button id="toggle-rowdetail"><i class="fa fa-bar-chart"></i></button>
         <button id="downloadbtn"><i class="fa fa-download"></i></button>
+        <button><i class='fa fa-globe'></i></button>
         <button><i class="fa fa-info"></i></button>
     </div>
     <div id="geochart"></div>
-    <div id="popup"></div>
+
+    <div id="country-detail" class="popup">
+        <h3>Regional Details</h3>
+        <div id="country-info">
+
+        </div>
+    </div>
+
+    <div id="popup" class="popup"></div>
 </section>
 
 
 
-
-
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
+    
+
+    document.getElementById('toggle-rowdetail').addEventListener('click', function() {
+        const countryDetail = document.getElementById('country-detail');
+        const geochart = document.getElementById('geochart');
+        if (countryDetail.style.display === 'none' || countryDetail.style.display === '') {
+            countryDetail.style.display = 'block';
+            geochart.style.filter = 'blur(5px)';
+        } else {
+            countryDetail.style.display = 'none';
+            geochart.style.filter = ''; // Reset background
+        }
+    })
+    
+
     document.getElementById('downloadbtn').addEventListener('click', function() {
         const mapContainer = document.getElementById('geochart');
 
