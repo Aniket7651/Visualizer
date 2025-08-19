@@ -37,16 +37,18 @@ Cancer Explorer
 </div>
 
 <section class="map-content">
+    
     <div class="glass-content">
         <div id="data-list">
-
+            <!-- Text descriptional content goes here -->
         </div>
     </div>
+
     <div class="chart_div">
         <button id="toggle-rowdetail"><i class="fa fa-bar-chart"></i></button>
         <button id="downloadbtn"><i class="fa fa-download"></i></button>
         <button><i class='fa fa-globe'></i></button>
-        <button><i class="fa fa-info"></i></button>
+        <button id="infoBtn"><i class="fa fa-info"></i></button>
     </div>
     <div id="geochart"></div>
 
@@ -56,7 +58,14 @@ Cancer Explorer
 
         </div>
     </div>
+    <div id="feature-detail" class="popup">
+        <!-- Feature details content goes here i.e. infrastructure, treatment accessibility, etc.-->
+        <h3>Feature Details</h3>
+        <div id="feature-info">
 
+        </div>
+    </div>
+    
     <div id="popup" class="popup"></div>
 </section>
 
@@ -77,7 +86,18 @@ Cancer Explorer
             geochart.style.filter = ''; // Reset background
         }
     })
-    
+
+    document.getElementById('infoBtn').addEventListener('click', function() {
+        const countryDetail = document.getElementById('feature-detail');
+        const geochart = document.getElementById('geochart');
+        if (countryDetail.style.display === 'none' || countryDetail.style.display === '') {
+            countryDetail.style.display = 'block';
+            geochart.style.filter = 'blur(5px)';
+        } else {
+            countryDetail.style.display = 'none';
+            geochart.style.filter = ''; // Reset background
+        }
+    });
 
     document.getElementById('downloadbtn').addEventListener('click', function() {
         const mapContainer = document.getElementById('geochart');
@@ -93,4 +113,5 @@ Cancer Explorer
         });
     });
 </script>
+<!-- <script src="{% static 'json/test.js' %}" type="text/javascript"></script> -->
 {% endblock %}

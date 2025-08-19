@@ -31,6 +31,7 @@ urlpatterns = [
 
     path('', index, name='index'), # path 'index/' root path current time
     path('data/', datasetView, name='datasetView'),
+    path('overview/<str:cancer_type>/<str:country>', overviewPage, name='overviewPage'),
     path('api/', apiAccess, name='apiAccess'),
 
     # API Links

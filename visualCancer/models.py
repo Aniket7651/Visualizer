@@ -227,3 +227,21 @@ class AverageValues(models.Model):
 
     def __str__(self):
         return self.cancer_type
+    
+
+class OverviewDetails(models.Model):
+    cancer_type = models.CharField(max_length=100)
+    country = models.CharField(max_length=100)
+    introduction = models.TextField()
+    swot_analysis = models.JSONField()
+    infrastructure = models.JSONField()
+    survival_early_detection_palliative_care = models.JSONField()
+    treatment_research_awareness = models.JSONField()
+    biomarker_utilization = models.JSONField()
+
+    def __str__(self):
+        return f"{self.cancer_type} Overview - {self.country}"
+
+
+# class PolicyDetails(models.Model):
+

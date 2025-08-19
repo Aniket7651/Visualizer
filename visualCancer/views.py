@@ -60,6 +60,13 @@ def apiAccess(request):
     return render(request, 'apiAccess.html')
 
 
+def overviewPage(request, cancer_type, country):
+    context = {
+        'cancer_type': cancer_type.title(),
+        'country': country.title()
+    }
+    return render(request, 'overview.html', context)
+
 
 def datasetView(request):
     
