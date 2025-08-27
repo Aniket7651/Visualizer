@@ -1,5 +1,5 @@
 
-var domain_link = window.location.protocol+"//"+window.location.host+"/"
+var domain_link = window.location.protocol + "//" + window.location.host + "/"
 
 
 google.charts.load('current', {
@@ -10,6 +10,8 @@ google.charts.setOnLoadCallback(drawChart);
 
 let datasets = {};
 let currentCancerType = 'lung';
+const baseJsonUrl = '../static/json/';
+
 
 const infrastructure = ["Specialized_Centers", "GeneMol_Centers"];
 const TRFA = ["Treatment_Access", "Research_Funding", "Awareness_Campaigns"];
@@ -75,11 +77,11 @@ function populateColumns(cancerType) {
 function drawChart() {
   const cancerType = document.getElementById('cancerType').value;
   const columnSelect = document.getElementById('column');
-  
+
   // Use first numerical column as fallback if none selected
   const columnName = columnSelect.value || (datasets[cancerType]?.columns ? datasets[cancerType].columns[1] : null);
-  
-  
+
+
   // Check if data exists
   if (!datasets[cancerType] || !datasets[cancerType].columns || !datasets[cancerType].data) {
     // console.log(`No data for ${cancerType}, fetching now...`);
@@ -168,43 +170,43 @@ function findStringInArrays(searchString, arrays) {
 
 
 function fetchAndRenderJson(cancerType, colNameFromPillar, attempt = 1, maxAttempts = 3) {
-    const baseJsonUrl = '../static/json/';
-    const dataList = document.getElementById('data-list');
-    const featureDetail = document.getElementById('feature-detail');
 
-    const jsonUrl = `${baseJsonUrl}${cancerType}.json`;
-    
-    fetch(jsonUrl, { cache: 'no-store' })
-        .then(response => {
-          if (!response.ok) {
-            throw new Error(`HTTP error! Status: ${response.status}`);
-          }
-          return response.json();
-        })
-        .then(data => {
-          
-          // console.log(`Fetched ${cancerType}.json successfully:`, data); // Debugging ke liye
-          dataList.innerHTML = `
+  const dataList = document.getElementById('data-list');
+  const featureDetail = document.getElementById('feature-detail');
+
+  const jsonUrl = `${baseJsonUrl}${cancerType}.json`;
+
+  fetch(jsonUrl, { cache: 'no-store' })
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
+      }
+      return response.json();
+    })
+    .then(data => {
+
+      // console.log(`Fetched ${cancerType}.json successfully:`, data); // Debugging ke liye
+      dataList.innerHTML = `
             <h3>${data.title}</h3>
             <p>${data.description}</p>
             `; // Add new data
-          const pillar = findStringInArrays(colNameFromPillar, allArrays);
-          if (pillar !== null) {
-            featureDetail.innerHTML = `<ul>${data[pillar].legends.map(legend => `<li class="legend">${legend}</li>`).join('')}</ul>`;
-          }
-          else {
-            featureDetail.innerHTML = `<ul>${data.utilization_biom.legends.map(legend => `<li class="legend">${legend}</li>`).join('')}</ul>`;
-          }
-        })
-        .catch(error => {
-          console.error(`Attempt ${attempt}: Error fetching ${cancerType}.json:`, error);
-            if (attempt < maxAttempts) {
-              console.log(`Retrying ${cancerType}.json (Attempt ${attempt + 1})`);
-              setTimeout(() => fetchAndRenderJson(cancerType, colNameFromPillar, attempt + 1, maxAttempts), 1000);
-            } else {
-              dataList.innerHTML = `<li>Error loading ${cancerType}.json after ${maxAttempts} attempts. Check console.</li>`;
-            }
-        });
+      const pillar = findStringInArrays(colNameFromPillar, allArrays);
+      if (pillar !== null) {
+        featureDetail.innerHTML = `<ul>${data[pillar].legends.map(legend => `<li class="legend">${legend}</li>`).join('')}</ul>`;
+      }
+      else {
+        featureDetail.innerHTML = `<ul>${data.utilization_biom.legends.map(legend => `<li class="legend">${legend}</li>`).join('')}</ul>`;
+      }
+    })
+    .catch(error => {
+      console.error(`Attempt ${attempt}: Error fetching ${cancerType}.json:`, error);
+      if (attempt < maxAttempts) {
+        console.log(`Retrying ${cancerType}.json (Attempt ${attempt + 1})`);
+        setTimeout(() => fetchAndRenderJson(cancerType, colNameFromPillar, attempt + 1, maxAttempts), 1000);
+      } else {
+        dataList.innerHTML = `<li>Error loading ${cancerType}.json after ${maxAttempts} attempts. Check console.</li>`;
+      }
+    });
 }
 
 
@@ -219,7 +221,7 @@ function showPopup(country, text, overviewLink, x, y, overviewShort = null) {
     return;
   }
   popup.innerHTML = `<strong>
-                          ${country}<br><br>Cancer Screening</strong><br>${text}
+                          ${country}<br><br>Cancer Screening</strong><br>${text}<br>
                           <br>${overviewShort}<br><p>For more details, visit ${overviewLink}</p>`;
 
   popup.style.left = `${x + 10}px`; // 10px offset
@@ -244,6 +246,53 @@ function getTextData(cancerType, country, textColumn) {
   return row ? row[textColumn] || 'No data available' : 'No data available';
 }
 
+
+async function fetchPopupContext(cancerType, countryName) {
+  // Validate inputs
+  if (!cancerType || !countryName) {
+    return "Cancer type and country name are required";
+  }
+
+  try {
+    
+    // Fetch the JSON file (adjust path as needed)
+    const response = await fetch(`${baseJsonUrl}overviewPopupContext.json`);
+    
+    // Check if response is valid
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status} ${response.statusText}`);
+    }
+
+    // Verify Content-Type is JSON
+    const contentType = response.headers.get('content-type');
+    if (!contentType || !contentType.includes('application/json')) {
+      throw new Error('Response is not JSON');
+    }
+
+    // Parse the JSON
+    const data = await response.json();
+    
+    // Check if cancerType exists and is not empty
+    if (!data[cancerType] || Object.keys(data[cancerType]).length === 0) {
+      return `<b style="color: red;">No data available for cancer type '${cancerType}'</b>`;
+    }
+
+    // Check if countryName exists under cancerType
+    if (!data[cancerType][countryName]) {
+      return `<b style="color: red;">No data available for country '${countryName}'; under cancer type '${cancerType}'</b>`;
+    }
+
+    // Return popup_context
+    const popupContext = data[cancerType][countryName].popup_context;
+    return popupContext || "<b style=\"color: yellow;\">Popup context not found</b>";
+  } catch (error) {
+    console.error("Error fetching or accessing popup context:", error);
+    return `<b style="color: red;">Error: ${error.message}</b>`;
+  }
+}
+
+
+
 // Updated click event listener for GeoChart
 function addChartClickListener(chart, cancerType, textColumn) {
   let lastSelectedCountry = null;
@@ -256,7 +305,7 @@ function addChartClickListener(chart, cancerType, textColumn) {
       lastSelectedCountry = dataTable.getValue(selection[0].row, 0); // Store selected country
       var link = domain_link + "overview/" + encodeURIComponent(cancerType) + "/" + encodeURIComponent(lastSelectedCountry);
       var popupContent = `<a href="${link}" target="_blank">Overview</a>`;
-      
+
       overviewLink = popupContent;
 
     } else {
@@ -267,10 +316,10 @@ function addChartClickListener(chart, cancerType, textColumn) {
 
   // Handle mouse coordinates with native click event
   const chartDiv = document.getElementById('geochart');
-  chartDiv.addEventListener('click', function (e) {
+  chartDiv.addEventListener('click', async function (e) {
     if (lastSelectedCountry) {
       const text = getTextData(cancerType, lastSelectedCountry, textColumn);
-      showPopup(lastSelectedCountry, text, overviewLink, e.clientX, e.clientY);
+      showPopup(lastSelectedCountry, text, overviewLink, e.clientX, e.clientY, await fetchPopupContext(cancerType, lastSelectedCountry));
     } else {
       hidePopup();
     }
@@ -290,5 +339,5 @@ function addChartClickListener(chart, cancerType, textColumn) {
 window.onload = () => fetchData(document.getElementById('cancerType').value);
 
 window.addEventListener('load', () => {
-    fetchAndRenderJson(document.getElementById('cancerType').value, document.getElementById('column').value);
+  fetchAndRenderJson(document.getElementById('cancerType').value, document.getElementById('column').value);
 });

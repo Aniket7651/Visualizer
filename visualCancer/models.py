@@ -232,12 +232,16 @@ class AverageValues(models.Model):
 class OverviewDetails(models.Model):
     cancer_type = models.CharField(max_length=100)
     country = models.CharField(max_length=100)
+    country_shortForm = models.CharField(max_length=10) # to store country short form i.e. "US", "UK", "IN", "AU"
     introduction = models.TextField()
     swot_analysis = models.JSONField()
     infrastructure = models.JSONField()
-    survival_early_detection_palliative_care = models.JSONField()
-    treatment_research_awareness = models.JSONField()
-    biomarker_utilization = models.JSONField()
+    treatment_funding_awareness = models.JSONField()
+    survival_rates = models.JSONField()
+    biomarkers = models.JSONField()
+    clinical_guidelines = models.JSONField()
+    reimbursement = models.JSONField()
+    cancer_screening = models.JSONField()
 
     def __str__(self):
         return f"{self.cancer_type} Overview - {self.country}"

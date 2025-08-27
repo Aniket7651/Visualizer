@@ -1,0 +1,50 @@
+{% extends 'base.htm' %}
+
+{% block title %}
+Page Does Not Exist
+{% endblock %}
+
+{% load static %}
+
+{% block content %}
+
+<div class="not-found">
+    <link rel="stylesheet" type="text/css" href="{% static 'admin/overview.css' %}">
+
+    <div class="title-nav">
+        <img src="{% static 'admin/img/404-error.png' %}" alt="Not Found" />
+        <h1>{{ cancer_type }} Cancer Overview For {{ country }} Does Not Exist Yet</h1>
+        <a href="{% url 'index' %}">Home</a>
+    </div>
+</div>
+
+<style>
+    .not-found {
+        text-align: center;
+        margin-top: 50px;
+        margin-bottom: 100px;
+        width: 100%;
+    }
+
+    .title-nav h1 {
+        margin-bottom: 20px;
+        font-weight: 800;
+    }
+
+    .title-nav a {
+        background-color: #5743c8;
+        color: white;
+        font-weight: 800;
+        padding: 10px 15px;
+        border-radius: 5px;
+        text-decoration: none;
+        transition: all 0.3s ease;
+    }
+
+    .title-nav a:hover {
+        background-color: #452c8c;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    }
+</style>
+
+{% endblock %}

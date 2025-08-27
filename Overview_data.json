@@ -1,0 +1,881 @@
+[
+    {
+        "id": 3,
+        "cancer_type": "prostate",
+        "country": "China",
+        "country_shortForm": "CN",
+        "introduction": "Prostate cancer incidence is steadily rising in China, reflecting increased life expectancy, westernized lifestyles, and improved detection rates. Specialized cancer centers are well-established in major metropolitan areas, but access in rural and less developed regions remains constrained. Molecular diagnostic infrastructure is relatively stronger compared to many LMICs, though advanced biomarker testing (TMPRSS2-ERG, PTEN, BRCA1/2) is still underutilized and concentrated in higher-tier hospitals. Standard treatment options are broadly available, and national clinical guidelines exist, with moderate implementation and partial alignment to international standards. However, reimbursement and no-cost access remain limited, leading to high out-of-pocket expenditures. Opportunistic PSA testing and some regional screening initiatives exist, but no nationwide organized screening program is in place. Overall, China demonstrates a moderate maturity level (3) in prostate cancer care, with strong foundations in infrastructure and treatment but persistent inequities in biomarker access, screening, and financial protection.",
+        "swot_analysis": {
+            "Strengths":
+                ["Established specialized cancer centers across urban regions.",
+                "Relatively stronger infrastructure for genetic and molecular testing compared to many LMICs.", 
+                "Standard treatments (surgery, radiotherapy, androgen deprivation therapy) widely available in tertiary centers.",
+                "Active cancer research environment with growing local evidence base.",
+                "Awareness efforts improving, especially in metropolitan areas."],
+
+            "Weaknesses":
+                ["Significant urban–rural disparities in access to diagnosis and treatment.",
+                "Advanced biomarkers (TMPRSS2-ERG, PTEN, BRCA1/2) rarely used in clinical practice.",
+                "Opportunistic screening only; no national organized program.",
+                "Out-of-pocket burden remains high due to weak reimbursement.",
+                "Palliative care is underdeveloped, particularly in rural regions"],
+
+            "Opportunities": ["Expand molecular diagnostic testing beyond top-tier hospitals.",
+                            "Develop structured early detection pilots for high-risk populations.",
+                            "Strengthen national reimbursement schemes to reduce inequities.",
+                            "Leverage digital health and telemedicine to bridge urban–rural gaps.",
+                            "Enhance participation in global clinical trials to accelerate innovation."],
+
+            "Threats": 
+                ["Rising prostate cancer burden risks overwhelming health systems.",
+                "Financial barriers may worsen inequities between rich and poor regions.",
+                "Slow adoption of international guideline updates may limit optimal care.",
+                "Workforce shortages in oncology and urology persist outside urban centers."]
+        },
+        "infrastructure": {
+            "Specialized_Centers": {"score": "3/5", "disc": "Established in major urban hubs; weaker in rural/remote regions."},
+            "Genetic_Molecular_Testing": {"score": "4/5", "disc": "Stronger infrastructure than many LMICs; access uneven."}
+        },
+        "treatment_funding_awareness": {
+            "Treatment_Access": {"score": "3/5", "disc": "Broadly available in tertiary hospitals; inequities by geography."},
+            "Research_Funding": {"score": "3/5", "disc": "Active research programs; moderate funding support."},
+            "Awareness_Campaigns": {"score": "3/5", "disc": "Growing campaigns in urban areas; rural reach remains limited."}
+        },
+        "survival_rates": {
+            "Survival_Rates": {"score": "3/5", "disc": "Outcomes improving but still below high-income countries."},
+            "Early_Detection": {"score": "3/5", "disc": "Opportunistic PSA testing; some regional pilots, no national program."},
+            "Palliative_Care": {"score": "3/5", "disc": "Services exist but underdeveloped; rural coverage weak."}
+        },
+        "biomarkers": {
+            "PSA":{"score": "~30%", "disc": "Widely available but not systematically applied."},
+            "TMPRSS2_ERG": {"score": "~15%", "disc": "Limited use, mainly in research settings"},
+            "PTEN": {"score": "~10%", "disc": "Rarely accessible outside top centers."},
+            "BRCA1": {"score": "~5%", "disc": "Very limited testing capacity."},
+            "BRCA2": {"score": "~5%", "disc": "Very limited testing capacity."}
+        },
+        "clinical_guidelines": {
+            "Implementation": {"score": "3/5", "disc": "Moderate implementation in tertiary hospitals."},
+            "Feasibility": {"score": "3/5", "disc": "Feasible in urban centers; weaker in rural hospitals."},
+            "Adoption_International_Guideline": {"score": "3/5", "disc": "Partial alignment with NCCN/ESMO; adaptation ongoing."},
+            "Engagement_with_Updates": {"score": "2/3", "disc": "Larger hospitals keep pace; smaller ones lag"},
+            "ESMO_Guidelines": {"score": "2/5", "disc": "Integrated to some extent, but not consistently applied."}
+        },
+        "reimbursement": {
+            "Reimbursement_Coverage": {"score": "2/5", "disc": "Limited coverage for advanced therapies; high out-of-pocket costs."},
+            "No-cost_Access": {"score": "2/5", "disc": "Minimal subsidies available; inequities persist."}
+        },
+        "cancer_screening": {
+            "National_Screening": {"score": "--", "disc": "Opportunistic PSA testing; some regional programs, no national rollout."}
+        }
+    },
+
+
+    {
+        "id": 4,
+        "cancer_type": "prostate",
+        "country": "France",
+        "country_shortForm": "FR",
+        "introduction": "Prostate cancer is a major health concern among men in France, but the country has well-established infrastructure and relatively high standards of care. Specialized cancer centers are widely available, advanced diagnostics and molecular testing are integrated into clinical practice, and clinical guidelines are consistently implemented across institutions. Screening is primarily opportunistic, and while reimbursement coverage exists, some out-of-pocket costs remain. Overall, prostate cancer care in France demonstrates high maturity (level 4), with strong infrastructure and clinical integration, though there is room for improving national screening programs and equitable access in all regions.",
+        "swot_analysis": {
+            "Strengths":
+                ["Comprehensive network of specialized cancer centers covering most regions.",
+"Broad access to standard treatments (surgery, radiotherapy, androgen deprivation therapy).",
+"Advanced molecular diagnostics widely available (TMPRSS2-ERG, PTEN, BRCA1/2).",
+"High research activity and clinical trial participation.",
+"National clinical guidelines consistently implemented and aligned with ESMO/NCCN standards."],
+
+            "Weaknesses":
+                ["Screening is mostly opportunistic, with no formal population-based national program.",
+"Some minor inequities in access to advanced therapies and molecular testing in rural areas.",
+"Reimbursement coverage is good but not always comprehensive for all advanced therapies."],
+
+            "Opportunities": ["Implement organized national screening for high-risk populations.",
+"Expand public awareness campaigns to further improve early detection.",
+"Increase access to palliative care in underserved regions.",
+"Integrate new biomarker-based targeted therapies into routine practice."],
+
+            "Threats": 
+                ["Rising prostate cancer incidence may challenge healthcare resources.",
+"Workforce shortages in urology and oncology may impact rural service delivery.",
+"Disparities in access between metropolitan and rural areas could persist without policy interventions."]
+        },
+        "infrastructure": {
+            "Specialized_Centers": {"score": "5/5", "disc": "Extensive network across France; rural areas mostly covered."},
+            "Genetic_Molecular_Testing": {"score": "5/5", "disc": "Advanced biomarkers (TMPRSS2-ERG, PTEN, BRCA1/2) routinely available."}
+        },
+        "treatment_funding_awareness": {
+            "Treatment_Access": {"score": "4/5", "disc": "Standard therapies widely available; minor rural gaps."},
+            "Research_Funding": {"score": "4/5", "disc": "Strong local and international clinical research participation."},
+            "Awareness_Campaigns": {"score": "4/5", "disc": "Effective campaigns, but scope to increase outreach in underserved areas"}
+        },
+        "survival_rates": {
+            "Survival_Rates": {"score": "5/5", "disc": "High survival due to early detection and standard-of-care treatment."},
+            "Early_Detection": {"score": "4/5", "disc": "Opportunistic PSA testing common; no organized national program."},
+            "Palliative_Care": {"score": "4/5", "disc": "Good coverage; some gaps in rural service integration."}
+        },
+        "biomarkers": {
+            "PSA":{"score": "80%", "disc": "Widely used in clinical practice."},
+            "TMPRSS2_ERG": {"score": "45%", "disc": "Integrated in selected centers for risk stratification."},
+            "PTEN": {"score": "40%", "disc": "Routine in tertiary centers for advanced/metastatic cases."},
+            "BRCA1": {"score": "30%", "disc": "Available for targeted therapy and clinical trials."},
+            "BRCA2": {"score": "35%", "disc": "Similar to BRCA1; supports precision medicine decisions"}
+        },
+        "clinical_guidelines": {
+            "Implementation": {"score": "5/5", "disc": "Guidelines fully implemented across most hospitals."},
+            "Feasibility": {"score": "5/5", "disc": "Easily integrated into clinical workflow."},
+            "Adoption_International_Guideline": {"score": "5/5", "disc": "Full alignment with ESMO/NCCN standards."},
+            "Engagement_with_Updates": {"score": "3/3", "disc": "National centers regularly update protocols."},
+            "ESMO_Guidelines": {"score": "5/5", "disc": "Comprehensive integration for localized and advanced disease."}
+        },
+        "reimbursement": {
+            "Reimbursement_Coverage": {"score": "3/5", "disc": "Public insurance covers most treatments; some out-of-pocket costs persist."},
+            "No-cost_Access": {"score": "3/5", "disc": "Limited gaps; certain advanced therapies require co-payment."}
+        },
+        "cancer_screening": {
+            "National_Screening": {"score": "Opportunistic PSA testing", "disc": "No organized population-based program; mostly opportunistic screenin"}
+        }
+    },
+
+
+    {
+        "id": 5,
+        "cancer_type": "prostate",
+        "country": "Algeria",
+        "country_shortForm": "DZ",
+        "introduction": "Prostate cancer is a growing public health concern in Algeria, yet structured early detection and equitable service distribution remain limited. Specialized cancer centers exist but are unevenly distributed, with stronger access in urban areas compared to rural regions. Advanced diagnostics and biomarker testing (PSA, TMPRSS2-ERG, PTEN, BRCA1/2) are available only in a limited capacity, primarily in tertiary or private facilities. National clinical guidelines exist but implementation and integration are inconsistent, and alignment with international standards (such as ESMO) is weak. Treatment access is moderately available, but inequities persist due to geographic, financial, and infrastructural barriers. Palliative care services are constrained, and awareness efforts remain insufficient. Screening is not systematic, with opportunistic PSA testing and limited awareness campaigns forming the mainstay of early detection. Overall, Algeria demonstrates a moderate maturity level (3), reflecting a health system with established foundations but persistent challenges in screening, biomarker integration, and equitable care delivery.",
+        "swot_analysis": {
+            "Strengths":
+                ["Specialized cancer centers established in urban regions.",
+"PSA testing is available, though not systematically applied.",
+"National clinical guidelines present, with partial adoption in higher-level hospitals.",
+"Basic treatment options (surgery, radiotherapy, hormone therapy) available in public sector.",
+"Some local research activity contributing to regional understanding."
+],
+
+            "Weaknesses":
+                ["Geographic disparities; rural areas lack access to advanced services.",
+"Biomarker utilization (TMPRSS2-ERG, PTEN, BRCA1/2) is very low.",
+"No national screening program; opportunistic testing dominates.",
+"Palliative care coverage is limited, with opioid access barriers.",
+"Low public awareness and stigma affect early health-seeking behavior.",
+"Implementation of guidelines inconsistent across facilities."
+],
+
+            "Opportunities": ["Expand molecular diagnostic infrastructure beyond urban hubs.",
+"Strengthen awareness campaigns and community engagement to improve early detection.",
+"Enhance palliative care through workforce training and opioid access reform.",
+"Leverage telemedicine to support oncology services in underserved areas.",
+"Increase participation in international research collaborations and clinical trials."
+],
+
+            "Threats": 
+                ["Rising incidence of prostate cancer without structured screening may worsen late-stage diagnoses.",
+"Limited reimbursement and subsidy mechanisms contribute to high out-of-pocket burden.",
+"Inequities between private and public sector care could deepen.",
+"Workforce and budgetary constraints may slow expansion of advanced diagnostics."
+]
+        },
+        "infrastructure": {
+            "Specialized_Centers": {"score": "2/5", "disc": "Present in major cities but unevenly distributed; rural access weak."},
+            "Genetic_Molecular_Testing": {"score": "2/5", "disc": "Limited availability; advanced biomarkers rarely accessible."}
+        },
+        "treatment_funding_awareness": {
+            "Treatment_Access": {"score": "2/5", "disc": "Standard treatments available, but access varies by geography."},
+            "Research_Funding": {"score": "2/5", "disc": "Some activity, but limited in scope and funding."},
+            "Awareness_Campaigns": {"score": "2/5", "disc": "Low visibility; limited impact in rural areas."}
+        },
+        "survival_rates": {
+            "Survival_Rates": {"score": "2/5", "disc": "Outcomes compromised by late diagnosis and treatment delays."},
+            "Early_Detection": {"score": "2/5", "disc": "Opportunistic PSA only; no structured program."},
+            "Palliative_Care": {"score": "2/5", "disc": "Limited integration and opioid access challenges."}
+        },
+        "biomarkers": {
+            "PSA":{"score": "~45%", "disc": "Most commonly used biomarker, but coverage inconsistent."},
+            "TMPRSS2_ERG": {"score": "~15%", "disc": "Rarely available, mostly in specialized facilities."},
+            "PTEN": {"score": "~10%", "disc": "Very limited testing."},
+            "BRCA1": {"score": "~5%", "disc": "Rarely available."},
+            "BRCA2": {"score": "~5%", "disc": "Rarely available."}
+        },
+        "clinical_guidelines": {
+            "Implementation": {"score": "2/5", "disc": "Partial implementation, stronger in tertiary hospitals."},
+            "Feasibility": {"score": "2/5", "disc": "Feasible in higher-tier centers, limited in smaller hospitals."},
+            "Adoption_International_Guideline": {"score": "2/5", "disc": "Weak alignment with ESMO/NCCN."},
+            "Engagement_with_Updates": {"score": "1/3", "disc": "Limited; smaller hospitals not consistently updated."},
+            "ESMO_Guidelines": {"score": "1/5", "disc": "Minimal alignment."}
+        },
+        "reimbursement": {
+            "Reimbursement_Coverage": {"score": "2/5", "disc": "Limited insurance coverage; patients often face high OOP costs."},
+            "No-cost_Access": {"score": "2/5", "disc": "Some subsidies exist, but patchy and insufficient."}
+        },
+        "cancer_screening": {
+            "National_Screening": {"score": "None", "disc": "No organized program; awareness efforts underway but limited."}
+        }
+    },
+    
+
+    {
+        "id": 6,
+        "cancer_type": "prostate",
+        "country": "Argentina",
+        "country_shortForm": "AR",
+        "introduction": "Prostate cancer is a significant health concern in Argentina. Specialized centers exist in urban regions, but rural access remains limited. Molecular biomarker testing is available mainly in tertiary or private facilities. Clinical guidelines are generally implemented in larger hospitals, with partial alignment to international standards. Screening is opportunistic via PSA testing, with no national program. Overall, prostate cancer care in Argentina shows moderate maturity, with gaps in equitable access, systematic screening, and biomarker utilization.",
+        "swot_analysis": {
+            "Strengths":
+                ["Presence of specialized cancer centers in major urban areas.",
+"Access to standard prostate cancer therapies (surgery, radiotherapy, androgen deprivation therapy) in tertiary hospitals.",
+"Clinical guidelines exist and are relatively well implemented in urban hospitals.",
+"Active research funding contributing to regional data."
+],
+
+            "Weaknesses":
+                ["Limited access to advanced diagnostics and molecular testing in rural areas.",
+"Biomarker utilization (TMPRSS2-ERG, PTEN, BRCA1/2) remains low.",
+"No population-level screening; PSA testing is opportunistic.",
+"Palliative care availability is moderate but may be limited in non-urban settings.",
+"Financial burden for advanced therapies can be high due to partial reimbursement."
+],
+
+            "Opportunities": ["Expand access to molecular diagnostics and biomarker testing.",
+"Strengthen public health awareness campaigns and community outreach.",
+"Develop pilot programs for systematic early detection in high-risk populations.",
+"Integrate Argentine patients in international clinical trials.",
+"Improve equitable access to palliative care services."
+],
+
+            "Threats": 
+                ["Rising prostate cancer incidence could strain existing healthcare infrastructure.",
+"Budget constraints may limit adoption of advanced therapies.",
+"Disparities between private and public sectors could worsen inequities.",
+"Workforce shortages in oncology and urology outside urban centers."
+]
+        },
+        "infrastructure": {
+            "Specialized_Centers": {"score": "3/5", "disc": "Urban centers well-equipped; rural access limited"},
+            "Genetic_Molecular_Testing": {"score": "3/5", "disc": "Advanced biomarkers mainly in tertiary/private facilities"}
+        },
+        "treatment_funding_awareness": {
+            "Treatment_Access": {"score": "2/5", "disc": "Standard therapies available; inequities in rural areas"},
+            "Research_Funding": {"score": "3/5", "disc": "Ongoing funding supports regional studies"},
+            "Awareness_Campaigns": {"score": "3/5", "disc": "Moderate campaigns; awareness gaps remain"}
+        },
+        "survival_rates": {
+            "Survival_Rates": {"score": "3/5", "disc": "Comparable to regional standards; late-stage diagnoses persist"},
+            "Early_Detection": {"score": "3/5", "disc": "Opportunistic PSA testing only; no national program"},
+            "Palliative_Care": {"score": "3/5", "disc": "Available in urban centers; rural gaps persist"}
+        },
+        "biomarkers": {
+            "PSA":{"score": "55%", "disc": "Widely used but opportunistic"},
+            "TMPRSS2_ERG": {"score": "25%", "disc": "Limited access"},
+            "PTEN": {"score": "20%", "disc": "Rarely used outside research"},
+            "BRCA1": {"score": "15%", "disc": "Very limited testing"},
+            "BRCA2": {"score": "15%", "disc": "Very limited testing"}
+        },
+        "clinical_guidelines": {
+            "Implementation": {"score": "4/5", "disc": "Guidelines followed in tertiary centers"},
+            "Feasibility": {"score": "4/5", "disc": "Feasible in urban hospitals"},
+            "Adoption_International_Guideline": {"score": "4/5", "disc": "Partial alignment with ESMO/NCCN"},
+            "Engagement_with_Updates": {"score": "2/3", "disc": "National centers update regularly; smaller hospitals lag"},
+            "ESMO_Guidelines": {"score": "4/5", "disc": "Integrated for advanced/metastatic care"}
+        },
+        "reimbursement": {
+            "Reimbursement_Coverage": {"score": "3/5", "disc": "Partial reimbursement; gaps remain for advanced therapies"},
+            "No-cost_Access": {"score": "3/5", "disc": "Limited free access; out-of-pocket costs persist"}
+        },
+        "cancer_screening": {
+            "National_Screening": {"score": "Opportunistic PSA", "disc": "No organized national screening; PSA testing common"}
+        }
+    },
+
+
+    {
+        "id": 7,
+        "cancer_type": "prostate",
+        "country": "Australia",
+        "country_shortForm": "AU",
+        "introduction": "Australia has a well-developed prostate cancer care system with high coverage of specialized centers, structured early detection, and access to advanced diagnostics. Survival rates are high due to systematic PSA screening and timely intervention. Molecular biomarker testing is available but not fully universal. National guidelines are implemented comprehensively, and awareness campaigns are active. Reimbursement exists but some gaps persist for newer therapies. Overall, the system shows advanced maturity with strong infrastructure, clinical governance, and early detection programs.",
+        "swot_analysis": {
+            "Strengths":
+                ["Comprehensive network of specialized cancer centers across the country.",
+"High access to standard and advanced prostate cancer treatments.",
+"Strong clinical guideline adoption and regular updates.",
+"Structured PSA screening program with informed decision-making.",
+"Active research programs and funding for local and international trials."
+],
+
+            "Weaknesses":
+                ["Biomarker utilization (e.g., TMPRSS2-ERG, PTEN, BRCA1/2) not fully universal.",
+"Some rural and remote areas still face accessibility challenges.",
+"Reimbursement coverage for advanced therapies is partial, leading to occasional out-of-pocket costs."
+],
+
+            "Opportunities": ["Expand molecular testing to all eligible patients.",
+"Strengthen integration of genomic-guided therapy in clinical pathways.",
+"Enhance telemedicine services for remote and indigenous populations.",
+"Increase public awareness campaigns focusing on high-risk populations."
+],
+
+            "Threats": 
+                ["Rising incidence may challenge resource allocation.",
+"Disparities in care between urban and remote regions.",
+"Cost constraints for novel therapies and biomarker tests."
+]
+        },
+        "infrastructure": {
+            "Specialized_Centers": {"score": "5/5", "disc": "Nationwide access, highly developed centers"},
+            "Genetic_Molecular_Testing": {"score": "5/5", "disc": "Well-established, widely available across major centers"}
+        },
+        "treatment_funding_awareness": {
+            "Treatment_Access": {"score": "4/5", "disc": "Standard and advanced therapies accessible, minor rural gaps"},
+            "Research_Funding": {"score": "4/5", "disc": "Strong research programs and clinical trials"},
+            "Awareness_Campaigns": {"score": "4/5", "disc": "Strong research programs and clinical trials"}
+        },
+        "survival_rates": {
+            "Survival_Rates": {"score": "5/5", "disc": "High survival due to early detection and treatment"},
+            "Early_Detection": {"score": "4/5", "disc": "PSA screening program in place (informed decision for ages 50–69)"},
+            "Palliative_Care": {"score": "4/5", "disc": "Good coverage, integrated with oncology services"}
+        },
+        "biomarkers": {
+            "PSA":{"score": "80%", "disc": "Widely used"},
+            "TMPRSS2_ERG": {"score": "25%", "disc": "Available in many centers"},
+            "PTEN": {"score": "20%", "disc": "Growing availability"},
+            "BRCA1": {"score": "15%", "disc": "Increasing adoption for targeted therapy"},
+            "BRCA2": {"score": "15%", "disc": "Similar to BRCA1"}
+        },
+        "clinical_guidelines": {
+            "Implementation": {"score": "5/5", "disc": "Fully implemented nationally"},
+            "Feasibility": {"score": "5/5", "disc": "Guidelines easily integrated in practice"},
+            "Adoption_International_Guideline": {"score": "5/5", "disc": "Full alignment with NCCN/ESMO"},
+            "Engagement_with_Updates": {"score": "3/3", "disc": "Regularly updated and applied"},
+            "ESMO_Guidelines": {"score": "5/5", "disc": "Comprehensive integration"}
+        },
+        "reimbursement": {
+            "Reimbursement_Coverage": {"score": "3/5", "disc": "Moderate; some therapies partially covered"},
+            "No-cost_Access": {"score": "3/5", "disc": "Most standard care covered; advanced therapies may require co-pay"}
+        },
+        "cancer_screening": {
+            "National_Screening": {"score": "--", "disc": "PSA every 2 years (50–69 years, informed decision)"}
+        }
+    },
+
+
+    {
+        "id": 8,
+        "cancer_type": "prostate",
+        "country": "Brazil",
+        "country_shortForm": "BR",
+        "introduction": "Prostate cancer is one of the most prevalent cancers among men in Brazil. While specialized centers exist in major urban areas, rural regions face limited access to diagnostics and treatment. Molecular biomarker testing (TMPRSS2-ERG, PTEN, BRCA1/2) is available but not widespread. Clinical guidelines are largely implemented in tertiary hospitals, with partial alignment to international standards. Opportunistic PSA screening is common, but a structured national program is lacking. Public insurance covers some therapies, but out-of-pocket costs remain a barrier. Overall, prostate cancer care in Brazil shows moderate maturity (level 2), with gaps in biomarker access, rural coverage, and systematic early detection.",
+        "swot_analysis": {
+            "Strengths":
+                ["Specialized cancer centers concentrated in major cities.",
+"Standard prostate cancer treatments available in tertiary hospitals.",
+"National clinical guidelines exist and are implemented in urban centers.",
+"Research activity contributes to regional prostate cancer data."
+],
+
+            "Weaknesses":
+                ["Limited access to advanced diagnostics and molecular testing outside urban hubs.",
+"Biomarker utilization is low.",
+"No population-level screening program; mainly opportunistic PSA testing.",
+"Rural populations face barriers to specialized care.",
+"Out-of-pocket costs remain high due to partial insurance coverage."
+],
+
+            "Opportunities": ["Expand molecular testing, particularly for BRCA mutations.",
+"Improve palliative care coverage and opioid availability.",
+"Implement pilot programs for systematic early detection in high-risk populations.",
+"Leverage telemedicine to extend oncology services to underserved areas.",
+"Increase participation in international clinical trials."
+],
+
+            "Threats": 
+                ["Rising prostate cancer incidence may strain healthcare infrastructure.",
+"Budget constraints could limit adoption of advanced diagnostics and therapies.",
+"Unequal access between public and private sectors may worsen disparities.",
+"Late diagnosis due to lack of organized screening.",
+"Workforce shortages in oncology and urology, particularly in rural regions."
+]
+        },
+        "infrastructure": {
+            "Specialized_Centers": {"score": "3/5", "disc": "Concentrated in major metros; rural areas underserved."},
+            "Genetic_Molecular_Testing": {"score": "3/5", "disc": "Limited availability; advanced biomarkers mainly in tertiary/private centers."}
+        },
+        "treatment_funding_awareness": {
+            "Treatment_Access": {"score": "2/5", "disc": "Standard therapies in urban tertiary hospitals; inequities persist in rural areas."},
+            "Research_Funding": {"score": "3/5", "disc": "Active research, contributing to local evidence."},
+            "Awareness_Campaigns": {"score": "3/5", "disc": "Campaigns exist but uptake remains low in underserved regions."}
+        },
+        "survival_rates": {
+            "Survival_Rates": {"score": "3/5", "disc": "Slightly below global averages due to late diagnosis."},
+            "Early_Detection": {"score": "3/5", "disc": "Opportunistic PSA testing; no organized national screening program."},
+            "Palliative_Care": {"score": "3/5", "disc": "Services available but limited coverage in rural regions."}
+        },
+        "biomarkers": {
+            "PSA":{"score": "60%", "disc": "Widely used but not standardized."},
+            "TMPRSS2_ERG": {"score": "30%", "disc": "Limited availability in tertiary/private centers."},
+            "PTEN": {"score": "25%", "disc": "Minimal access, research-focused."},
+            "BRCA1": {"score": "20%", "disc": "Very limited testing."},
+            "BRCA2": {"score": "20%", "disc": "Very limited testing."}
+        },
+        "clinical_guidelines": {
+            "Implementation": {"score": "4/5", "disc": "Guidelines largely followed in tertiary hospitals."},
+            "Feasibility": {"score": "4/5", "disc": "Feasible in urban centers; smaller hospitals lag."},
+            "Adoption_International_Guideline": {"score": "4/5", "disc": "Partial alignment with ESMO/NCCN."},
+            "Engagement_with_Updates": {"score": "2/3", "disc": "Updates adopted mostly in national centers."},
+            "ESMO_Guidelines": {"score": "4/5", "disc": "Implemented, especially in advanced/metastatic care."}
+        },
+        "reimbursement": {
+            "Reimbursement_Coverage": {"score": "3/5", "disc": "Partial coverage under public insurance."},
+            "No-cost_Access": {"score": "3/5", "disc": "Some out-of-pocket costs remain."}
+        },
+        "cancer_screening": {
+            "National_Screening": {"score": "Opportunistic PSA testing every 2 years (50–74 years)", "disc": "No organized national screening program."}
+        }
+    },
+
+
+    {
+        "id": 9,
+        "cancer_type": "prostate",
+        "country": "Canada",
+        "country_shortForm": "CA",
+        "introduction": "Prostate cancer is a leading cancer among Canadian men, with well-established healthcare infrastructure, systematic early detection strategies, and advanced treatment options. Specialized centers are widely available in major cities, and rural areas have access via telemedicine and regional networks. Biomarker utilization and molecular testing are increasingly integrated into clinical practice. National clinical guidelines are fully implemented and aligned with international standards (ESMO/NCCN). Public funding provides substantial coverage, minimizing out-of-pocket costs. Screening is primarily opportunistic with informed shared decision-making. Overall, prostate cancer care in Canada demonstrates high maturity, though ongoing improvements in personalized therapy and biomarker access are possible.",
+        "swot_analysis": {
+            "Strengths":
+                ["Comprehensive network of specialized cancer centers across provinces.",
+"Access to standard and advanced therapies (surgery, radiotherapy, androgen deprivation therapy, targeted therapies).",
+"National clinical guidelines well implemented and aligned with international standards.",
+"Strong research ecosystem and participation in clinical trials.",
+"High public awareness and education campaigns."
+],
+
+            "Weaknesses":
+                ["Some rural areas rely on telemedicine for specialist access.",
+"Biomarker and molecular testing adoption is improving but not universal.",
+"Opportunistic rather than population-wide screening."
+],
+
+            "Opportunities": ["Expand molecular testing and precision medicine integration.",
+"Increase rural patient access via mobile diagnostics and tele-oncology.",
+"Enhance patient-centered shared decision-making for screening and treatment.",
+"Further participation in global clinical trials."
+],
+
+            "Threats": 
+                ["Rising incidence with aging population may increase healthcare demand.",
+"Cost and resource pressures for advanced therapies.",
+"Geographic disparities in care delivery may persist."
+]
+        },
+        "infrastructure": {
+            "Specialized_Centers": {"score": "5/5", "disc": "Widely available in major cities; regional networks cover rural areas."},
+            "Genetic_Molecular_Testing": {"score": "5/5", "disc": "Comprehensive infrastructure; increasing integration into routine care."}
+        },
+        "treatment_funding_awareness": {
+            "Treatment_Access": {"score": "5/5", "disc": "Full access to standard and advanced therapies across provinces."},
+            "Research_Funding": {"score": "5/5", "disc": "Strong academic and industry support for clinical and translational research."},
+            "Awareness_Campaigns": {"score": "5/5", "disc": "High awareness through national campaigns and education programs."}
+        },
+        "survival_rates": {
+            "Survival_Rates": {"score": "5/5", "disc": "High survival rates due to early detection and advanced treatment."},
+            "Early_Detection": {"score": "5/5", "disc": "Opportunistic PSA testing with shared decision-making; organized programs for high-risk groups."},
+            "Palliative_Care": {"score": "5/5", "disc": "Accessible and well-integrated palliative care services."}
+        },
+        "biomarkers": {
+            "PSA":{"score": "80%", "disc": "Widely used in screening and monitoring."},
+            "TMPRSS2_ERG": {"score": "40%", "disc": "Moderate adoption in select centers."},
+            "PTEN": {"score": "35%", "disc": "Increasing use for prognostic purposes."},
+            "BRCA1": {"score": "30%", "disc": "Targeted testing available for high-risk patients."},
+            "BRCA2": {"score": "35%", "disc": "Similar targeted testing as BRCA1."}
+        },
+        "clinical_guidelines": {
+            "Implementation": {"score": "5/5", "disc": "National guidelines fully implemented."},
+            "Feasibility": {"score": "5/5", "disc": "High feasibility across urban and regional centers."},
+            "Adoption_International_Guideline": {"score": "4/5", "disc": "Fully aligned with ESMO/NCCN."},
+            "Engagement_with_Updates": {"score": "3/3", "disc": "Timely adoption of updates at national and provincial levels."},
+            "ESMO_Guidelines": {"score": "5/5", "disc": "Integrated throughout advanced/metastatic care."}
+        },
+        "reimbursement": {
+            "Reimbursement_Coverage": {"score": "5/5", "disc": "Publicly funded healthcare ensures high coverage."},
+            "No-cost_Access": {"score": "5/5", "disc": "Minimal out-of-pocket burden for patients."}
+        },
+        "cancer_screening": {
+            "National_Screening": {"score": "Opportunistic PSA testing with shared decision-making; population-level screening not recommended", "disc": ""}
+        }
+    },
+
+
+    {
+        "id": 10,
+        "cancer_type": "prostate",
+        "country": "Chile",
+        "country_shortForm": "CL",
+        "introduction": "Prostate cancer is a significant health concern for men in Chile. Specialized cancer centers exist primarily in urban areas, with rural access remaining limited. Molecular testing infrastructure is emerging but not widespread, and biomarkers beyond PSA are used sparingly. National clinical guidelines are established and relatively well implemented, with moderate alignment to international standards. Screening is opportunistic, with PSA testing recommended for men 50+. Public funding provides partial reimbursement, but patients often incur out-of-pocket costs. Overall, prostate cancer care in Chile demonstrates moderate maturity, with gaps in equitable access, molecular diagnostics, and systematic early detection.",
+        "swot_analysis": {
+            "Strengths":
+                ["Presence of specialized cancer centers in major cities.",
+"Standard prostate cancer treatments are available in urban hospitals.",
+"National clinical guidelines in place and largely implemented.",
+"Research activities contribute to regional knowledge."
+],
+
+            "Weaknesses":
+                ["Limited access to advanced diagnostics and molecular testing outside urban hubs.",
+"Biomarker utilization beyond PSA is low.",
+"Opportunistic screening only; no organized national program.",
+"Rural and disadvantaged populations face access barriers.",
+"Palliative care availability is moderate but could be expanded.",
+"Out-of-pocket costs remain for advanced therapies."
+],
+
+            "Opportunities": ["Expand molecular testing, including BRCA and PTEN testing.",
+"Strengthen palliative care services, especially in rural areas.",
+"Implement pilot programs for organized early detection.",
+"Leverage telemedicine to support underserved regions.",
+"Increase patient awareness through national campaigns.",
+"Enhance participation in clinical trials."
+],
+
+            "Threats": 
+                ["Rising incidence may strain health systems.",
+"Financial limitations could slow adoption of advanced therapies.",
+"Unequal access between private and public sectors.",
+"Lack of organized screening may sustain late-stage diagnosis.",
+"Workforce shortages in oncology and urology outside major cities."
+
+]
+        },
+        "infrastructure": {
+            "Specialized_Centers": {"score": "3/5", "disc": "Centers available in major cities; rural access limited."},
+            "Genetic_Molecular_Testing": {"score": "3/5", "disc": "Emerging infrastructure; advanced biomarkers limited to select hospitals."}
+        },
+        "treatment_funding_awareness": {
+            "Treatment_Access": {"score": "2/5", "disc": "Standard therapies in urban centers; rural inequities persist."},
+            "Research_Funding": {"score": "3/5", "disc": "Ongoing research contributing to local data."},
+            "Awareness_Campaigns": {"score": "3/5", "disc": "Campaigns exist but coverage and impact vary regionally."}
+        },
+        "survival_rates": {
+            "Survival_Rates": {"score": "3/5", "disc": "Moderate survival; influenced by stage at diagnosis."},
+            "Early_Detection": {"score": "3/5", "disc": "pportunistic PSA testing; no population-based program."},
+            "Palliative_Care": {"score": "3/5", "disc": "Services available but not fully comprehensive."}
+        },
+        "biomarkers": {
+            "PSA":{"score": "55%", "disc": "Most commonly used biomarker, not systematically applied."},
+            "TMPRSS2_ERG": {"score": "25%", "disc": "Limited availability."},
+            "PTEN": {"score": "20%", "disc": "Minimal access."},
+            "BRCA1": {"score": "15%", "disc": "Very limited testing."},
+            "BRCA2": {"score": "15%", "disc": "Very limited testing."}
+        },
+        "clinical_guidelines": {
+            "Implementation": {"score": "4/5", "disc": "Guidelines largely implemented in tertiary hospitals."},
+            "Feasibility": {"score": "4/5", "disc": "Feasible in well-equipped hospitals."},
+            "Adoption_International_Guideline": {"score": "4/5", "disc": "Moderate alignment with ESMO/NCCN standards."},
+            "Engagement_with_Updates": {"score": "2/3", "disc": "National centers update periodically; smaller hospitals lag."},
+            "ESMO_Guidelines": {"score": "4/5", "disc": "Applied especially for advanced care."}
+        },
+        "reimbursement": {
+            "Reimbursement_Coverage": {"score": "2/5", "disc": "Partial coverage; gaps remain."},
+            "No-cost_Access": {"score": "2/5", "disc": "Patients often incur out-of-pocket costs."}
+        },
+        "cancer_screening": {
+            "National_Screening": {"score": "PSA testing recommended for men 50+; opportunistic only.", "disc": ""}
+        }
+    },
+
+
+    {
+        "id": 11,
+        "cancer_type": "prostate",
+        "country": "Colombia",
+        "country_shortForm": "CO",
+        "introduction": "Prostate cancer is a growing concern in Colombia, with limited systematic detection and uneven access to care. Specialized centers exist but are concentrated in major cities, leaving rural areas underserved. Genetic and molecular testing is available but limited to select institutions. Treatment access varies, with standard therapies more accessible in urban tertiary centers. Public awareness is modest, and screening is opportunistic but integrated into public health services in some regions. Overall, Colombia shows moderate-low maturity in prostate cancer care, with gaps in early detection, biomarker utilization, and equitable access.",
+        "swot_analysis": {
+            "Strengths":
+                ["Specialized centers present in main urban areas.",
+"Standard prostate cancer treatments (surgery, radiotherapy, androgen deprivation therapy) available in tertiary hospitals.",
+"PSA screening partially integrated into public health services.",
+"Guidelines exist and are moderately implemented in urban centers."
+],
+
+            "Weaknesses":
+                ["Rural and low-resource regions have limited access to specialized care.",
+"Molecular biomarker testing (TMPRSS2-ERG, PTEN, BRCA1/2) is scarce.",
+"Research funding is limited, and awareness campaigns are not widespread.",
+"Palliative care infrastructure is weak."
+],
+
+            "Opportunities": ["Expand molecular diagnostics and BRCA testing for targeted therapies.",
+"Strengthen awareness campaigns and community engagement.",
+"Leverage telemedicine to reach underserved populations.",
+"Improve national screening programs and early detection strategies."
+],
+
+            "Threats": 
+                ["Growing incidence of prostate cancer may strain resources.",
+"Limited budgets may hinder adoption of advanced diagnostics and therapies.",
+"Disparities between urban and rural care could widen.",
+"Workforce shortages in oncology and urology persist outside major cities."
+]
+        },
+        "infrastructure": {
+            "Specialized_Centers": {"score": "2/5", "disc": "Concentrated in major cities; rural areas underserved."},
+            "Genetic_Molecular_Testing": {"score": "3/5", "disc": "Available in select tertiary/private centers; limited access nationwide."}
+        },
+        "treatment_funding_awareness": {
+            "Treatment_Access": {"score": "1/5", "disc": "Standard therapies in urban tertiary centers; limited rural access."},
+            "Research_Funding": {"score": "2/5", "disc": "Modest local research activity."},
+            "Awareness_Campaigns": {"score": "2/5", "disc": "Limited outreach; low awareness in underserved regions."}
+        },
+        "survival_rates": {
+            "Survival_Rates": {"score": "2/5", "disc": "Lower than global benchmarks due to late diagnosis."},
+            "Early_Detection": {"score": "2/5", "disc": "Opportunistic PSA screening; partial integration in public services."},
+            "Palliative_Care": {"score": "2/5", "disc": "Limited services; coverage challenges in rural regions."}
+        },
+        "biomarkers": {
+            "PSA":{"score": "50%", "disc": "Most widely used, though not universally applied."},
+            "TMPRSS2_ERG": {"score": "25%", "disc": "Limited availability in select centers."},
+            "PTEN": {"score": "20%", "disc": "Scarce, mostly research-focused."},
+            "BRCA1": {"score": "15%", "disc": "Very limited testing."},
+            "BRCA2": {"score": "15%", "disc": "Very limited testing."}
+        },
+        "clinical_guidelines": {
+            "Implementation": {"score": "3/5", "disc": "Moderately implemented in tertiary centers."},
+            "Feasibility": {"score": "3/5", "disc": "Feasible in urban hospitals; challenging in smaller centers."},
+            "Adoption_International_Guideline": {"score": "3/5", "disc": "Partially aligned with ESMO/NCCN."},
+            "Engagement_with_Updates": {"score": "2/3", "disc": "Some centers adopt updates; broader adoption limited."},
+            "ESMO_Guidelines": {"score": "3/5", "disc": "Applied in part, especially advanced/metastatic care."}
+        },
+        "reimbursement": {
+            "Reimbursement_Coverage": {"score": "2/5", "disc": "Partial coverage; out-of-pocket expenses common."},
+            "No-cost_Access": {"score": "2/5", "disc": "Limited subsidy programs; financial burden persists."}
+        },
+        "cancer_screening": {
+            "National_Screening": {"score": "PSA screening integrated into public health services", "disc": "Opportunistic but partially implemented; no systematic national program."}
+        }
+    },
+
+
+    {
+        "id": 12,
+        "cancer_type": "prostate",
+        "country": "Egypt",
+        "country_shortForm": "EG",
+        "introduction": "Prostate cancer is a leading cancer among men in Egypt, yet early detection and equitable access to advanced care remain challenging. Specialized cancer centers exist but are concentrated in urban hubs, with rural regions underserved. Genetic and molecular testing infrastructure exists at a moderate level, though advanced biomarker utilization (beyond PSA) is limited. Standard treatments are available in tertiary hospitals, but access varies significantly across the health system. Research and awareness efforts are present but underfunded, with low public knowledge contributing to late-stage presentation. National clinical guidelines exist and are moderately well implemented, with partial alignment to international standards such as ESMO/NCCN. However, reimbursement coverage remains limited, leaving most patients to face significant out-of-pocket costs. Screening is opportunistic, relying mainly on PSA testing, with no organized national program. Overall, Egypt demonstrates a moderate maturity level (3), with strong foundations in treatment access and guidelines but persistent gaps in early detection, reimbursement, and advanced biomarker integration.",
+        "swot_analysis": {
+            "Strengths":
+                ["Specialized cancer centers exist in major cities with trained oncology/urology expertise.",
+"Standard prostate cancer treatments (surgery, radiotherapy, ADT) available in tertiary centers.",
+"PSA testing is relatively accessible in urban areas.",
+"National clinical guidelines in place with moderate alignment to international standards.",
+"Some local research and academic contributions to regional cancer data."
+],
+
+            "Weaknesses":
+                ["Rural access to specialized care remains very limited.",
+"Advanced biomarker testing (TMPRSS2-ERG, PTEN, BRCA1/2) is rarely available.",
+"Research funding and awareness campaigns are underdeveloped.",
+"No structured national screening program.",
+"Palliative care services limited, with gaps in opioid access and integration.",
+"Reimbursement mechanisms remain weak, leading to high patient costs."
+],
+
+            "Opportunities": ["Expand molecular diagnostic infrastructure to improve eligibility for targeted therapies.",
+"Scale up awareness campaigns and community outreach to promote early detection.",
+"Strengthen palliative care integration into national cancer plans.",
+"Increase participation in international research collaborations and clinical trials.",
+"Use telemedicine and regional centers to improve rural service access."
+],
+
+            "Threats": 
+                ["Rising prostate cancer incidence with late-stage diagnoses strains resources.",
+"Financial barriers may worsen inequities in access to diagnostics and treatment.",
+"Budget constraints could limit adoption of novel therapies.",
+"Workforce shortages in oncology/urology outside major centers"
+]
+        },
+        "infrastructure": {
+            "Specialized_Centers": {"score": "2/5", "disc": "Available in urban areas, but rural access weak."},
+            "Genetic_Molecular_Testing": {"score": "3/5", "disc": "Some infrastructure exists; advanced biomarker testing limited."}
+        },
+        "treatment_funding_awareness": {
+            "Treatment_Access": {"score": "2/5", "disc": "Standard therapies available in tertiary hospitals; inequities persist."},
+            "Research_Funding": {"score": "2/5", "disc": "Modest funding; limited national research output."},
+            "Awareness_Campaigns": {"score": "2/5", "disc": "Efforts exist but lack wide coverage; stigma persists."}
+        },
+        "survival_rates": {
+            "Survival_Rates": {"score": "2/5", "disc": "Survival remains low due to late detection."},
+            "Early_Detection": {"score": "2/5", "disc": "Opportunistic PSA testing; no structured screening."},
+            "Palliative_Care": {"score": "2/5", "disc": "Services limited; opioid access a challenge."}
+        },
+        "biomarkers": {
+            "PSA":{"score": "~50%", "disc": "Most commonly used biomarker; not systematic."},
+            "TMPRSS2_ERG": {"score": "~20%", "disc": "Rare; limited to research/private centers."},
+            "PTEN": {"score": "~15%", "disc": "Very limited testing."},
+            "BRCA1": {"score": "~10%", "disc": "Rare availability."},
+            "BRCA2": {"score": "~10%", "disc": "Rare availability."}
+        },
+        "clinical_guidelines": {
+            "Implementation": {"score": "3/5", "disc": "Moderately implemented in tertiary centers."},
+            "Feasibility": {"score": "3/5", "disc": "Feasible in larger hospitals; difficult in smaller ones."},
+            "Adoption_International_Guideline": {"score": "3/5", "disc": "Partial alignment with NCCN/ESMO"},
+            "Engagement_with_Updates": {"score": "2/3", "disc": "Updates adopted in major centers; lag in smaller hospitals."},
+            "ESMO_Guidelines": {"score": "2/5", "disc": "Some integration, mainly for advanced cases."}
+        },
+        "reimbursement": {
+            "Reimbursement_Coverage": {"score": "2/5", "disc": "Partial coverage; many therapies remain out-of-pocket."},
+            "No-cost_Access": {"score": "2/5", "disc": "Limited subsidies; financial burden remains high."}
+        },
+        "cancer_screening": {
+            "National_Screening": {"score": "None", "disc": "Opportunistic PSA testing only; no structured program."}
+        }
+    },
+
+
+    {
+        "id": 13,
+        "cancer_type": "prostate",
+        "country": "Ethiopia",
+        "country_shortForm": "ET",
+        "introduction": "Prostate cancer is an increasingly recognized health burden in Ethiopia, yet the system for detection, treatment, and equitable access remains at an early stage. Specialized cancer care is concentrated in a handful of tertiary hospitals (notably Addis Ababa), leaving most of the country without access to oncology or urology services. Genetic and molecular testing infrastructure is almost absent, and biomarker utilization beyond PSA is minimal. Treatment options are limited by geography, cost, and capacity constraints, with radiotherapy and surgery accessible only in a few facilities. Research activity is extremely modest, and awareness campaigns remain scarce, leading to late-stage presentation in the majority of patients. Clinical guidelines are not well implemented, and alignment with international standards is minimal. Reimbursement and no-cost access are weak, resulting in high out-of-pocket costs. No national screening program exists; prostate cancer detection relies almost entirely on opportunistic PSA testing in urban hospitals. Overall, Ethiopia demonstrates a low maturity level (2) in prostate cancer care, with nascent foundations but wide gaps across the continuum.",
+        "swot_analysis": {
+            "Strengths":
+                ["Centralized tertiary hospitals in Addis Ababa provide at least some access to oncology care.",
+"PSA testing available in select urban hospitals.",
+"Growing recognition of cancer as a national health priority."
+],
+
+            "Weaknesses":
+                ["Extremely limited specialized centers; rural populations have almost no access.",
+"Molecular biomarker testing capacity (BRCA1/2, PTEN, TMPRSS2-ERG) virtually absent.",
+"No organized screening program; detection depends on opportunistic PSA testing.",
+"Minimal palliative care availability, weak opioid access.",
+"Research funding and local clinical data are scarce.",
+"Clinical guidelines exist only on paper, with no consistent implementation.",
+"Very limited financial coverage, with most patients paying out of pocket."
+],
+
+            "Opportunities": ["Expand cancer treatment centers beyond Addis Ababa to regional hubs.",
+"Introduce pilot programs for early detection in high-risk groups.",
+"Strengthen partnerships with international research institutions for biomarker access.",
+"Build capacity in oncology workforce through regional training initiatives.",
+"Improve integration of palliative care services into primary healthcare."
+],
+
+            "Threats": 
+                ["Rising incidence and late presentation may overwhelm limited health system capacity.",
+"Economic constraints and high treatment costs perpetuate inequity.",
+"Dependence on external donors or private sector may hinder sustainable scale-up.",
+"Lack of structured awareness campaigns fuels stigma and delays diagnosis."
+]
+        },
+        "infrastructure": {
+            "Specialized_Centers": {"score": "1/5", "disc": "Very limited; mainly Addis Ababa."},
+            "Genetic_Molecular_Testing": {"score": "1/5", "disc": "Virtually no infrastructure for advanced biomarkers."}
+        },
+        "treatment_funding_awareness": {
+            "Treatment_Access": {"score": "1/5", "disc": "Highly centralized, weak rural access."},
+            "Research_Funding": {"score": "1/5", "disc": "Minimal funding, limited local studies."},
+            "Awareness_Campaigns": {"score": "1/5", "disc": "Very limited; public awareness remains low."}
+        },
+        "survival_rates": {
+            "Survival_Rates": {"score": "1/5", "disc": "Outcomes are poor due to late diagnosis."},
+            "Early_Detection": {"score": "1/5", "disc": "Opportunistic PSA testing only; no structured program."},
+            "Palliative_Care": {"score": "1/5", "disc": "Very weak services, minimal integration."}
+        },
+        "biomarkers": {
+            "PSA":{"score": "~20%", "disc": "Limited use in urban hospitals."},
+            "TMPRSS2_ERG": {"score": "~5%", "disc": "Virtually absent."},
+            "PTEN": {"score": "~5%", "disc": "Rare, research-only."},
+            "BRCA1": {"score": "~1%", "disc": "Extremely limited."},
+            "BRCA2": {"score": "~1%", "disc": "Extremely limited."}
+        },
+        "clinical_guidelines": {
+            "Implementation": {"score": "1/5", "disc": "Not consistently applied."},
+            "Feasibility": {"score": "1/5", "disc": "Limited by resources."},
+            "Adoption_International_Guideline": {"score": "1/5", "disc": "Minimal alignment."},
+            "Engagement_with_Updates": {"score": "1/3", "disc": "Rarely updated."},
+            "ESMO_Guidelines": {"score": "1/5", "disc": "Not implemented."}
+        },
+        "reimbursement": {
+            "Reimbursement_Coverage": {"score": "1/5", "disc": "Almost no reimbursement; costs borne by patients."},
+            "No-cost_Access": {"score": "1/5", "disc": "Very few free/subsidized services."}
+        },
+        "cancer_screening": {
+            "National_Screening": {"score": "None", "disc": "No program; opportunistic PSA only."}
+        }
+    },
+
+
+    {
+        "id": 14,
+        "cancer_type": "prostate",
+        "country": "Germany",
+        "country_shortForm": "DE",
+        "introduction": "Prostate cancer care in Germany is highly developed, with strong infrastructure, organized screening programs, and well-implemented clinical guidelines. Specialized centers are widely available, molecular diagnostics are increasingly integrated into routine care, and patients generally have access to advanced therapies across both public and private sectors. Early detection through organized PSA and DRE screening contributes to higher survival rates, while palliative care services are well-established. Research activity is robust, and guideline adoption aligns closely with international standards. Despite this, challenges remain in reimbursement for certain advanced therapies and equitable access for all population groups.",
+        "swot_analysis": {
+            "Strengths":
+                ["Extensive network of specialized cancer centers across the country.",
+"Access to advanced treatments including surgery, radiotherapy, systemic therapies, and precision medicine.",
+"Well-funded and ongoing prostate cancer research programs.",
+"High awareness campaigns and public health engagement supporting early detection.",
+"Organized screening for men aged 45+, including PSA testing and DRE.",
+"Clinical guidelines closely follow international standards (ESMO/NCCN) and are widely implemented."
+],
+
+            "Weaknesses":
+                ["Some advanced biomarker testing (BRCA, PTEN) still limited outside major tertiary centers.",
+"Moderate gaps in reimbursement for cutting-edge therapies.",
+"Minor regional disparities in access to specialized care in remote areas."
+],
+
+            "Opportunities": ["Expand molecular and genomic testing across all regions.",
+"Further integrate telemedicine and digital pathology for rural populations.",
+"Increase inclusion of German patients in international clinical trials for precision medicine.",
+"Enhance public education on genetic risk factors and personalized therapy options."
+],
+
+            "Threats": 
+                ["Rising incidence of prostate cancer may strain existing resources in some regions.",
+"Budgetary pressures could slow adoption of next-generation therapies.",
+"Workforce shortages in oncology/urology in less-populated areas."
+]
+        },
+        "infrastructure": {
+            "Specialized_Centers": {"score": "5/5", "disc": "Wide availability across regions; well-equipped facilities."},
+            "Genetic_Molecular_Testing": {"score": "5/5", "disc": "Advanced biomarker infrastructure largely available; growing precision oncology programs."}
+        },
+        "treatment_funding_awareness": {
+            "Treatment_Access": {"score": "5/5", "disc": "Comprehensive access to standard and advanced therapies nationwide."},
+            "Research_Funding": {"score": "5/5", "disc": "Strong national and international research activity."},
+            "Awareness_Campaigns": {"score": "5/5", "disc": "High public engagement and early detection campaigns."}
+        },
+        "survival_rates": {
+            "Survival_Rates": {"score": "5/5", "disc": "High survival due to early detection and effective treatment."},
+            "Early_Detection": {"score": "5/5", "disc": "Organized PSA/DRE screening programs for men aged 45+."},
+            "Palliative_Care": {"score": "5/5", "disc": "Integrated services with good opioid availability and hospice care."}
+        },
+        "biomarkers": {
+            "PSA":{"score": "85%", "disc": "Widely used in screening and monitoring."},
+            "TMPRSS2_ERG": {"score": "50%", "disc": "Increasing availability in specialized centers."},
+            "PTEN": {"score": "45%", "disc": "Moderate access; primarily tertiary hospitals."},
+            "BRCA1": {"score": "35%", "disc": "Limited but growing; mainly in precision medicine programs."},
+            "BRCA2": {"score": "38%", "disc": "Similar access as BRCA1."}
+        },
+        "clinical_guidelines": {
+            "Implementation": {"score": "5/5", "disc": "Widely implemented; regularly updated."},
+            "Feasibility": {"score": "5/5", "disc": "High; well-resourced hospitals."},
+            "Adoption_International_Guideline": {"score": "5/5", "disc": "Closely aligned with ESMO/NCCN."},
+            "Engagement_with_Updates": {"score": "3/3", "disc": "Strong; centers adopt latest recommendations."},
+            "ESMO_Guidelines": {"score": "5/5", "disc": "Fully integrated, especially for advanced/metastatic care."}
+        },
+        "reimbursement": {
+            "Reimbursement_Coverage": {"score": "3/5", "disc": "Standard therapies covered; some advanced therapies require co-pay."},
+            "No-cost_Access": {"score": "3/5", "disc": "Public insurance covers most care; gaps exist for cutting-edge treatments."}
+        },
+        "cancer_screening": {
+            "National_Screening": {"score": "Annual PSA test and DRE for men aged 45+; organized and widely accessible.", "disc": ""}
+        }
+    },
+
+
+
+]

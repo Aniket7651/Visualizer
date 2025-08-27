@@ -1,0 +1,63 @@
+{
+    "lung": {
+        "Russia": {
+            "country_sort_form": "RU",
+            "popup_context": " A score of 3 indicates a moderate maturity level: strong foundations in treatment access and guidelines, but gaps remain in early detection, reimbursement, and advanced biomarker testing."
+        },
+        "India": {
+            "country_sort_form": "IN",
+            "popup_context": "A score of 3 indicates a moderate maturity level: strong foundations in treatment access and guidelines, but gaps remain in early detection, reimbursement, and advanced biomarker testing."
+        }
+
+    },
+    "prostate": {
+        "China": {
+            "country_sort_form": "CN",
+            "popup_context": "A score of 3 indicates a moderate maturity level: China’s case load is high, survival is improving, but rural inequities remain significant."
+        },
+        "France": {
+            "country_sort_form": "FR",
+            "popup_context": " A score of 4 indicates a high maturity level: France offers comprehensive treatment, robust national coverage, and guideline alignment."
+        },
+        "Algeria": {
+            "country_sort_form": "DZ",
+            "popup_context": "A score of 3 indicates a moderate maturity level: Algeria has functioning tertiary hospitals, but rural access remains weak."
+        },
+        "Argentina": { 
+            "country_sort_form": "AR",
+            "popup_context": "A score of 2 indicates a low–moderate maturity level: Argentina has declining mortality, but rural–urban disparities persist."
+        },
+        "Australia": {
+            "country_sort_form": "AU",
+            "popup_context": "A score of 4 indicates a high maturity level: Australia has equitable access, survival above 85%, and robust awareness efforts."
+        },
+        "Brazil": {
+            "country_sort_form": "BR",
+            "popup_context": "A score of 2 indicates a low–moderate maturity level: Brazil has high case numbers, with survival improving but uneven access."
+        },
+        "Canada": {
+            "country_sort_form": "CA",
+            "popup_context": " A score of 4 indicates a high maturity level: Canada achieves high survival with broad public coverage and strong treatment standards."
+        },
+        "Chile": {
+            "country_sort_form": "CL",
+            "popup_context": "A score of 3 indicates a moderate maturity level: Chile provides cancer care mainly in cities, with barriers in public access."
+        },
+        "Colombia": {
+            "country_sort_form": "",
+            "popup_context": "A score of 2 indicates a low–moderate maturity level: Colombia is expanding cancer care but still struggles with late detection."
+        },
+        "Egypt": {
+            "country_sort_form": "EG",
+            "popup_context": "A score of 3 indicates a moderate maturity level: treatment is available in tertiary centers, but systematic early detection is lacking."
+        },
+        "Ethiopia": {
+            "country_sort_form": "ET",
+            "popup_context": "A score of 2 indicates a low–moderate maturity level: Ethiopia lacks organized screening, with most cases detected late."
+        },
+        "Germany": {
+            "country_sort_form": "DE",
+            "popup_context": "A score of 4 indicates a high maturity level: Germany combines advanced diagnostics, wide reimbursement, and declining mortality."
+        }
+    }
+}

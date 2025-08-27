@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 from .api import get_descriptive_statistics, OverAllAvg_statDF
 from django.http import JsonResponse
 from django.views.decorators.http import require_GET
-from .models import BreastCancerData, LungCancerData, ColorectalCancerData, ProstateCancerData, GastricCancerData, AverageValues
+from .models import BreastCancerData, LungCancerData, ColorectalCancerData, ProstateCancerData, GastricCancerData, AverageValues, OverviewDetails
 from .discription import *
 
 
@@ -61,11 +61,32 @@ def apiAccess(request):
 
 
 def overviewPage(request, cancer_type, country):
-    context = {
-        'cancer_type': cancer_type.title(),
-        'country': country.title()
-    }
-    return render(request, 'overview.html', context)
+    context = {}
+    try:
+        OverviewDetails_obj = OverviewDetails.objects.get(cancer_type=cancer_type, country=country.title())
+
+        context['cancer_type'] = OverviewDetails_obj.cancer_type.title()
+        context['country'] = OverviewDetails_obj.country
+        context['country_shortForm'] = OverviewDetails_obj.country_shortForm
+        context['introduction'] = OverviewDetails_obj.introduction
+        context['swot_analysis'] = OverviewDetails_obj.swot_analysis
+        context['infrastructure'] = OverviewDetails_obj.infrastructure
+        context['treatment_funding_awareness'] = OverviewDetails_obj.treatment_funding_awareness
+        context['survival_rates'] = OverviewDetails_obj.survival_rates
+        context['biomarkers'] = OverviewDetails_obj.biomarkers
+        context['clinical_guidelines'] = OverviewDetails_obj.clinical_guidelines
+        context['reimbursement'] = OverviewDetails_obj.reimbursement
+        context['cancer_screening'] = OverviewDetails_obj.cancer_screening
+
+        return render(request, 'overview.html', context)
+    
+    except OverviewDetails.DoesNotExist:
+        context['cancer_type'] = cancer_type.title()
+        context['country'] = country.title()
+        
+        return render(request, 'notfound.html', context)
+
+    
 
 
 def datasetView(request):

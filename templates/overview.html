@@ -5,24 +5,17 @@ Overview of {{ cancer_type }} Cancer in {{ country }}
 {% endblock %}
 
 {% load static %}
+{% load customTagFilter %}
 
 {% block content %}
+
 <link rel="stylesheet" href="{% static 'admin/overview.css' %}">
 <h1>Overview of {{ cancer_type }} Cancer in {{ country }}</h1>
 <div class="container">
     <div class="text-content">
         <div class="box">
             <h2>Introduction</h2>
-            <p>Breast cancer is a major health challenge in Russia, where progress has been made in infrastructure and
-                treatment access. The country benefits from specialized cancer centers and growing molecular testing
-                capacity, though regional disparities remain. Treatment access is supported by public funding and
-                guidelines, yet awareness and early detection lag. Survival rates are comparatively good, but palliative
-                care services are less developed. Biomarker testing is strong for HER2, ER, and PR, while BRCA1/2
-                coverage is more limited. Clinical guidelines, including ESMO standards, are well implemented, though
-                updates are not consistently adopted. Reimbursement provides partial coverage, with limited no-cost
-                access creating inequities. Screening programs exist but struggle to achieve wide, systematic coverage.
-                Overall, Russia demonstrates strong foundations but requires targeted efforts to improve equity, early
-                detection, and advanced diagnostics.</p>
+            <p>{{ introduction }}</p>
         </div>
         <div class="">
             <div id="mapchart"></div>
@@ -32,54 +25,38 @@ Overview of {{ cancer_type }} Cancer in {{ country }}
 </div>
 <div class="container">
     <div class="swot-content">
-        <h2>SWOT Analysis: Breast Cancer Care in Russia</h2>
+        <h2>SWOT Analysis: {{ cancer_type }} Cancer Care in {{ country }}</h2>
         <div class="swot-sections">
             <div class="swot-section">
                 <h2>Strengths</h2>
                 <ul>
-                    <li>Well-established specialized cancer centers in major cities (e.g., Moscow, St. Petersburg).</li>
-                    <li>Genetic and molecular testing available in leading institutions.</li>
-                    <li>Strong treatment access with public funding and inclusion of standard therapies.</li>
-                    <li>Active oncology research programs led by national institutes (e.g., Blokhin Cancer Center).</li>
-                    <li>Biomarker testing (HER2, ER, PR) widely implemented in clinical practice.</li>
-                    <li>National clinical guidelines largely aligned with ESMO/NCCN standards.</li>
-                    <li>Survival rates improving, now around 70% for breast cancer patients.</li>
+                    {% for item in swot_analysis.Strengths %}
+                    <li>{{ item }}</li>
+                    {% endfor %}
                 </ul>
             </div>
             <div class="swot-section">
                 <h2>Weaknesses</h2>
                 <ul>
-                    <li>Regional disparities in access to specialized care and advanced diagnostics.</li>
-                    <li>Awareness campaigns are limited in reach, particularly in rural areas.</li>
-                    <li>Early detection programs have low coverage, with <50% of eligible women screened.</li>
-                    <li>Palliative care remains underdeveloped, with challenges in opioid access.</li>
-                    <li>Limited access to BRCA1/2 testing, restricting personalized treatment.</li>
-                    <li>Reimbursement gaps create inequities, especially for innovative therapies.</li>
-                    <li>No-cost access to targeted medicines is limited, leading to out-of-pocket burden.</li>
+                    {% for item in swot_analysis.Weaknesses %}
+                    <li>{{ item }}</li>
+                    {% endfor %}
                 </ul>
             </div>
             <div class="swot-section">
                 <h2>Opportunities</h2>
                 <ul>
-                    <li>Expansion of national screening coverage to rural and underserved populations.</li>
-                    <li>Investment in biomarker testing infrastructure (BRCA1/2, next-generation sequencing).</li>
-                    <li>Strengthening palliative care networks and revising opioid regulations.</li>
-                    <li>Increased collaboration in international clinical trials to expand research capacity.</li>
-                    <li>Enhancing public awareness campaigns to encourage early detection and screening uptake.</li>
-                    <li>Adoption of digital health tools and telemedicine to reduce regional disparities.</li>
-                    <li>Policy reforms to expand reimbursement and reduce financial toxicity for patients.</li>
+                    {% for item in swot_analysis.Opportunities %}
+                    <li>{{ item }}</li>
+                    {% endfor %}
                 </ul>
             </div>
             <div class="swot-section">
                 <h2>Threats</h2>
                 <ul>
-                    <li>Geographic and socioeconomic disparities may widen without targeted interventions.</li>
-                    <li>Economic constraints and healthcare budget pressures could limit innovation uptake.</li>
-                    <li>Possible shortages of oncology workforce in rural regions.</li>
-                    <li>Risk of slower adoption of updated international guidelines, leading to delays in best practice
-                        implementation.</li>
-                    <li>Patient distrust or low participation in screening programs may persist.</li>
-                    <li>Rising incidence rates of breast cancer could strain existing healthcare infrastructure.</li>
+                    {% for item in swot_analysis.Threats %}
+                    <li>{{ item }}</li>
+                    {% endfor %}
                 </ul>
             </div>
         </div>
@@ -87,113 +64,70 @@ Overview of {{ cancer_type }} Cancer in {{ country }}
 </div>
 <div class="container">
     <div class="category"><img src="{% static 'admin/img/column.png' %}" alt="Infrastructure"> Infrastructure</div>
-    <div class="card">
-        <h3>Specialized Centers</h3>
-        <p>4/5</p>
-        <p class="score">Around four national oncology centers provide specialized breast cancer care (e.g., Moscow, St.
-            Petersburg)</p>
-    </div>
-    <div class="card">
-        <h3>Genetic & Molecular Testing</h3>
-        <p>3/5</p>
-        <p class="score">Testing facilities exist in leading urban regions - delays in rural and remote regions</p>
-    </div>
+    {% for ikey, ival in infrastructure.items %}
+        <div class="card">
+            <h3>{{ ikey|str_replace:"_, " }}</h3>
+            <p>{{ ival.score }}</p>
+            <p class="score">{{ ival.disc }}</p>
+        </div>
+    {% endfor %}
 
     <div class="category"><img src="{% static 'admin/img/column.png' %}" alt="Infrastructure"> Survival, Early Detection
         & Palliative Care</div>
-    <div class="card">
-        <h3>Survival Rates</h3>
-        <p>4/5</p>
-        <p class="score">5-year survival rates are around 80% - though lower than global averages</p>
-    </div>
-    <div class="card">
-        <h3>Early Detection</h3>
-        <p>3/5</p>
-        <p class="score">Mammography programs remain under 50% - especially in rural areas</p>
-    </div>
-    <div class="card">
-        <h3>Palliative Care</h3>
-        <p>3/5</p>
-        <p class="score">Availability of palliative care varies - uneven distribution across regions</p>
-    </div>
+        {% for ikey, ival in survival_rates.items %}
+            <div class="card">
+                <h3>{{ ikey|str_replace:"_, " }}</h3>
+                <p>{{ ival.score }}</p>
+                <p class="score">{{ ival.disc }}</p>
+            </div>
+        {% endfor %}
+    
     <div class="category"><img src="{% static 'admin/img/column.png' %}" alt="Infrastructure"> Treatment, Research &
         Awareness</div>
-    <div class="card">
-        <h3>Treatment Access</h3>
-        <p>4/5</p>
-        <p class="score">Access to targeted drugs is generally available - delays to trastuzumab and newer agents</p>
-    </div>
-    <div class="card">
-        <h3>Research Funding</h3>
-        <p>4/5</p>
-        <p class="score">Russian Invests steadily in oncology - Russian Cancer Research Center and global collaborations
-        </p>
-    </div>
-    <div class="card">
-        <h3>Awareness Campaigns</h3>
-        <p>3/5</p>
-        <p class="score">National breast cancer awareness reaches in rural areas and lower socioeconomic groups -
-            improving over past year</p>
-    </div>
+        {% for ikey, ival in treatment_funding_awareness.items %}
+            <div class="card">
+                <h3>{{ ikey|str_replace:"_, " }}</h3>
+                <p>{{ ival.score }}</p>
+                <p class="score">{{ ival.disc }}</p>
+            </div>
+        {% endfor %}
 
     <div class="category"><img src="{% static 'admin/img/column.png' %}" alt="Infrastructure"> Biomarker Utilization
     </div>
-    <div class="card">
-        <h3>HER2</h3>
-        <p>80%</p>
-        <p class="score">Widely tested in major cancer centers with ESMO recommendations</p>
-    </div>
-    <div class="card">
-        <h3>ER</h3>
-        <p>80%</p>
-        <p class="score">Standard testing for breast cancer in some hospitals - some delays</p>
-    </div>
-    <div class="card">
-        <h3>PR</h3>
-        <p>80%</p>
-        <p class="score">Testing widely available in comprehensive cancer centers</p>
-    </div>
+        {% for ikey, ival in biomarkers.items %}
+            <div class="card">
+                <h3>{{ ikey|str_replace:"_, " }}</h3>
+                <p>{{ ival.score }}</p>
+                <p class="score">{{ ival.disc }}</p>
+            </div>
+        {% endfor %}
 
     <div class="category"><img src="{% static 'admin/img/column.png' %}" alt="Infrastructure"> Clinical Guidelines</div>
-    <div class="card">
-        <h3>Implementation</h3>
-        <p>4/5</p>
-        <p class="score">National guidelines for breast cancer care are well-established and adopted</p>
-    </div>
-    <div class="card">
-        <h3>Adoption of International Guidelines</h3>
-        <p>4/5</p>
-        <p class="score">Russian guidelines are aligned with ESMO recommendations, especially for HER2+ care</p>
-    </div>
-    <div class="card">
-        <h3>Engagement with Updates</h3>
-        <p>2/5</p>
-        <p class="score">Updates followed at national cancer centers, but lag in regional hospitals</p>
-    </div>
-    <div class="card">
-        <h3>ESMO</h3>
-        <p>4</p>
-        <p class="score">Adoption and practice in leading hospitals</p>
-    </div>
+        {% for ikey, ival in clinical_guidelines.items %}
+            <div class="card">
+                <h3>{{ ikey|str_replace:"_, " }}</h3>
+                <p>{{ ival.score }}</p>
+                <p class="score">{{ ival.disc }}</p>
+            </div>
+        {% endfor %}
 
     <div class="category"><img src="{% static 'admin/img/column.png' %}" alt="Infrastructure"> Reimbursement</div>
-    <div class="card">
-        <h3>Reimbursement Coverage</h3>
-        <p>3/5</p>
-        <p class="score">Basic therapies covered under the current system - innovative drugs remain limited</p>
-    </div>
-    <div class="card">
-        <h3>No-cost Access</h3>
-        <p>2/5</p>
-        <p class="score">Patients often face out-of-pocket costs, especially for advanced therapies</p>
-    </div>
+        {% for ikey, ival in reimbursement.items %}
+            <div class="card">
+                <h3>{{ ikey|str_replace:"_, " }}</h3>
+                <p>{{ ival.score }}</p>
+                <p class="score">{{ ival.disc }}</p>
+            </div>
+        {% endfor %}
 
     <div class="category"><img src="{% static 'admin/img/column.png' %}" alt="Infrastructure"> Screening</div>
-    <div class="card">
-        <h3>National Screening</h3>
-        <p>Present but limited</p>
-        <p class="score">A coverage estimate at only ~40% - underreported in some regions</p>
-    </div>
+        {% for ikey, ival in cancer_screening.items %}
+            <div class="card">
+                <h3>{{ ikey|str_replace:"_, " }}</h3>
+                <p>{{ ival.score }}</p>
+                <p class="score">{{ ival.disc }}</p>
+            </div>
+        {% endfor %}
 </div>
 <div class="feedback-section">
     <h2>Feedback & Collaboration</h2>
@@ -215,11 +149,11 @@ Overview of {{ cancer_type }} Cancer in {{ country }}
     function drawRegionsMap() {
         var data = google.visualization.arrayToDataTable([
             ['Country', 'Popularity'],
-            ['Russia', 200]
+            ['{{ country }}', 200]
         ]);
 
         var options = {
-            region: 'RU',
+            region: '{{ country_shortForm }}',
             datalessRegionColor: 'transparent',
             defaultColor: 'transparent',
             colorAxis: {
