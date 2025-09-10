@@ -1,15 +1,324 @@
 {
     "lung": {
-        "Russia": {
-            "country_sort_form": "RU",
-            "popup_context": " A score of 3 indicates a moderate maturity level: strong foundations in treatment access and guidelines, but gaps remain in early detection, reimbursement, and advanced biomarker testing."
-        },
         "India": {
             "country_sort_form": "IN",
-            "popup_context": "A score of 3 indicates a moderate maturity level: strong foundations in treatment access and guidelines, but gaps remain in early detection, reimbursement, and advanced biomarker testing."
+            "popup_context": "A score of 3 indicates a moderate maturity level: treatment access and guidelines are improving, but screening and biomarker testing remain limited. Lung cancer incidence is ~11 per 100,000, with high mortality due to late diagnosis."
+        },
+        "Algeria": {
+            "country_sort_form": "DZ",
+            "popup_context": "A score of 2 indicates an early maturity level: basic treatment services are in place, but major gaps exist in early detection, reimbursement, and access to modern therapies. Lung cancer incidence is ~12 per 100,000, with most cases diagnosed at late stages."
+        },
+        "Argentina": {
+            "country_sort_form": "AR",
+            "popup_context": "A score of 3 indicates a moderate maturity level: strong foundations in treatment access and guidelines, but gaps remain in early detection, reimbursement, and biomarker testing. Incidence is ~20 per 100,000, and regional disparities affect equitable access."
+        },
+        "Australia": {
+            "country_sort_form": "AU",
+            "popup_context": "A score of 5 indicates a high maturity level: comprehensive infrastructure with screening pilots, biomarker testing, and near-universal treatment access. Lung cancer incidence is ~30 per 100,000, with survival steadily improving through targeted therapies."
+        },
+        "Brazil": {
+            "country_sort_form": "BR",
+            "popup_context": "A score of 3 indicates a moderate maturity level: treatment guidelines and public funding exist, but early detection and biomarker access remain limited. Lung cancer incidence is ~16 per 100,000, with urban–rural gaps in care quality."
+        },
+        "Canada": {
+            "country_sort_form": "CA",
+            "popup_context": "A score of 5 indicates a high maturity level: structured screening programs, strong reimbursement, and widespread biomarker testing support equitable access. Incidence is ~25 per 100,000, and 5-year survival is improving with immunotherapy use."
+        },
+        "Chile": {
+            "country_sort_form": "CL",
+            "popup_context": "A score of 2 indicates an early maturity level: limited screening, late-stage diagnosis, and restricted biomarker access hinder outcomes. Incidence is ~19 per 100,000, with most patients reliant on public coverage for standard chemotherapy."
+        },
+        "United Kingdom": {
+            "country_sort_form": "GB",
+            "popup_context" :"A score of 5 indicates a high maturity level: structured lung health checks, advanced biomarker testing, and universal treatment access. Lung cancer incidence is ~34 per 100,000, with survival improving through early detection programs."
+        },
+        "United States": {
+            "country_sort_form": "US",
+            "popup_context": "A score of 5 indicates a high maturity level: widespread low-dose CT screening, advanced biomarker testing, and broad access to immunotherapies. Incidence is ~38 per 100,000, with improving survival in high-risk populations."
+        },
+        "Uganda": {
+            "country_sort_form": "UG",
+            "popup_context": "A score of 1 indicates a very low maturity level: cancer infrastructure is limited, with almost no biomarker testing or access to modern therapies. Incidence is ~3 per 100,000, though many cases are undiagnosed."
+        },
+        "China": {
+            "country_sort_form": "CN",
+            "popup_context": "A score of 4 indicates an advanced maturity level: strong treatment infrastructure and biomarker testing, but early detection and equitable access remain challenges. China has one of the world’s highest lung cancer burdens, with incidence ~36 per 100,000 and high smoking prevalence."
+        },
+        "Colombia": {
+            "country_sort_form": "CO",
+            "popup_context": "A score of 2 indicates an early maturity level: treatment access exists, but major barriers persist in screening, molecular testing, and reimbursement. Incidence is ~15 per 100,000, with most patients diagnosed at advanced stages."
+        },
+        "Egypt": {
+            "country_sort_form": "EG",
+            "popup_context": "A score of 2 indicates an early maturity level: chemotherapy and radiotherapy are widely available, but biomarker testing and access to immunotherapy are limited. Lung cancer incidence is ~10 per 100,000, with late-stage diagnosis the norm."
+        },
+        "Ethiopia": {
+            "country_sort_form": "ET",
+            "popup_context": "A score of 1 indicates a very low maturity level: minimal infrastructure, no organized screening, and very limited access to advanced therapies. Lung cancer incidence is ~5 per 100,000, but underdiagnosis is common due to weak registries."
+        },
+        "France": {
+            "country_sort_form": "FR",
+            "popup_context": "A score of 5 indicates a high maturity level: robust screening pilots, broad biomarker testing, and universal access to advanced therapies. Lung cancer incidence is ~32 per 100,000, with steadily improving 5-year survival rates."
+        },
+        "Germany": {
+            "country_sort_form": "DE",
+            "popup_context": "A score of 5 indicates a high maturity level: strong national cancer plans, comprehensive biomarker testing, and wide access to immunotherapies. Incidence is ~30 per 100,000, and survival is improving through early diagnosis initiatives."
+        },
+        "Greece": {
+            "country_sort_form": "GR",
+            "popup_context": "A score of 4 indicates an advanced maturity level: national guidelines and strong treatment infrastructure are in place, but screening programs and equitable access lag. Lung cancer incidence is ~28 per 100,000, with smoking prevalence still high."
+        },
+        "Indonesia": {
+            "country_sort_form": "ID",
+            "popup_context": "A score of 2 indicates an early maturity level: limited screening, late-stage diagnosis, and constrained access to biomarker testing hinder outcomes. Incidence is ~14 per 100,000, with tobacco use among the highest globally."
+        },
+        "Italy": {
+            "country_sort_form": "IT",
+            "popup_context": "A score of 5 indicates a high maturity level: robust screening pilots, strong biomarker testing, and universal access to immunotherapy. Incidence is ~27 per 100,000, with steady improvements in survival over the past decade."
+        },
+        "Japan": {
+            "country_sort_form": "JP",
+            "popup_context": "A score of 5 indicates a high maturity level: established screening programs, advanced biomarker testing, and strong access to precision medicines. Lung cancer incidence is ~28 per 100,000, with some of the best survival outcomes in Asia."
+        },
+        "Kenya": {
+            "country_sort_form": "KE",
+            "popup_context": "A score of 1 indicates a very low maturity level: weak infrastructure, no structured screening, and minimal access to biomarker testing or immunotherapy. Lung cancer incidence is ~4 per 100,000, but many cases go undiagnosed."
+        },
+        "Malaysia": {
+            "country_sort_form": "MY",
+            "popup_context": "A score of 3 indicates a moderate maturity level: guidelines and treatment centers exist, but screening and biomarker access are inconsistent. Lung cancer incidence is ~15 per 100,000, with survival outcomes still poor."
+        },
+        "Mexico": {
+            "country_sort_form": "MX",
+            "popup_context": "A score of 2 indicates an early maturity level: treatment services are available, but gaps in screening, biomarker testing, and reimbursement remain large. Lung cancer incidence is ~12 per 100,000, with most patients diagnosed at late stages."
+        },
+        "Morocco": {
+            "country_sort_form": "MA",
+            "popup_context": "A score of 2 indicates an early maturity level: national guidelines exist, but access to molecular testing and advanced therapies is limited. Incidence is ~13 per 100,000, with outcomes constrained by late diagnosis and out-of-pocket costs."
+        },
+        "Netherlands": {
+            "country_sort_form": "NL",
+            "popup_context": "A score of 5 indicates a high maturity level: robust screening pilots, comprehensive biomarker testing, and universal access to targeted and immune therapies. Incidence is ~35 per 100,000, with strong survival improvements over the past decade."
+        },
+        "New Zealand": {
+            "country_sort_form": "NZ",
+            "popup_context": "A score of 4 indicates an advanced maturity level: good access to treatments and biomarker testing, though screening programs are still developing. Incidence is ~34 per 100,000, with notable disparities in outcomes for Māori populations."
+        },
+        "Nigeria": {
+            "country_sort_form": "NG",
+            "popup_context": "A score of 1 indicates a very low maturity level: minimal infrastructure, no organized screening, and poor access to advanced cancer medicines. Incidence is ~3 per 100,000, though underdiagnosis and reporting gaps are significant."
+        },
+        "Poland": {
+            "country_sort_form": "PL",
+            "popup_context": "A score of 4 indicates an advanced maturity level: strong treatment guidelines and growing biomarker testing capacity, though access delays persist. Incidence is ~32 per 100,000, with screening pilots being explored to improve early detection."
+        },
+        "Russia": {
+            "country_sort_form": "RU",
+            "popup_context": "A score of 3 indicates a moderate maturity level: treatment centers and guidelines are well established, but early detection and biomarker access remain uneven. Lung cancer incidence is ~25 per 100,000, with regional disparities in outcomes."
+        },
+        "Rwanda": {
+            "country_sort_form": "RW",
+            "popup_context": "A score of 1 indicates a very low maturity level: cancer infrastructure is limited, with almost no access to biomarker testing or advanced therapies. Lung cancer incidence is ~2–3 per 100,000, though underdiagnosis is widespread."
+        },
+        "Saudi Arabia": {
+            "country_sort_form": "SA",
+            "popup_context": "A score of 3 indicates a moderate maturity level: treatment access and reimbursement are improving, but screening and biomarker use remain limited. Lung cancer incidence is ~9 per 100,000, with rising cases linked to tobacco use."
+        },
+        "Serbia": {
+            "country_sort_form": "RS",
+            "popup_context": "A score of 3 indicates a moderate maturity level: national guidelines and treatment services are in place, but access to biomarker testing and modern therapies is still expanding. Incidence is ~34 per 100,000, among the highest in Europe."
+        },
+        "Singapore": {
+            "country_sort_form": "SG",
+            "popup_context": "A score of 5 indicates a high maturity level: comprehensive biomarker testing, access to cutting-edge therapies, and strong cancer control policies drive outcomes. Incidence is ~22 per 100,000, with some of the best survival rates in Asia."
+        },
+        "South Africa": {
+            "country_sort_form": "ZA",
+            "popup_context": "A score of 3 indicates a moderate maturity level: cancer centers and treatment access exist, but biomarker testing and equitable care remain limited. Lung cancer incidence is ~14 per 100,000, with late-stage presentation common."
+        },
+        "South Korea": {
+            "country_sort_form": "KR",
+            "popup_context": "A score of 5 indicates a high maturity level: national screening programs, advanced biomarker testing, and strong access to targeted therapy are in place. Incidence is ~27 per 100,000, with improving survival driven by early detection."
+        },
+        "Spain": {
+            "country_sort_form": "ES",
+            "popup_context": "A score of 5 indicates a high maturity level: robust guidelines, comprehensive biomarker testing, and universal access to advanced therapies. Lung cancer incidence is ~29 per 100,000, with improving survival through early detection initiatives."
+        },
+        "Sweden": {
+            "country_sort_form": "SE",
+            "popup_context": "A score of 5 indicates a high maturity level: strong national cancer plans, molecular diagnostics, and equitable access to immunotherapies. Incidence is ~31 per 100,000, with steadily improving 5-year survival."
+        },
+        "Thailand": {
+            "country_sort_form": "TH",
+            "popup_context": "A score of 3 indicates a moderate maturity level: treatment centers and guidelines are present, but screening and biomarker testing remain underdeveloped. Lung cancer incidence is ~17 per 100,000, with late diagnosis common."
+        },
+        "Philippines": {
+            "country_sort_form": "PH",
+            "popup_context": "A score of 2 indicates an early maturity level: chemotherapy and radiotherapy are accessible, but biomarker testing and immunotherapy remain limited. Incidence is ~18 per 100,000, with late diagnosis driving poor survival rates."
         }
 
     },
+
+    "breast": {
+        "China": {
+            "country_sort_form": "CN",
+            "popup_context": "A score of 3 indicates a system in transition: survival rates are rising, but the rural–urban divide in access remains stark."
+        },
+        "France": {
+            "country_sort_form": "FR",
+            "popup_context": "A score of 4 signals well-established systems: nationwide programs and widespread access result in favorable outcomes."
+        },
+        "Algeria": {
+            "country_sort_form": "DZ",
+            "popup_context": "A score of 2 signals uneven maturity: urban areas benefit from oncology centers, but rural populations and uninsured patients face major gaps."
+        },
+        "Argentina": {
+            "country_sort_form": "AR",
+            "popup_context": "A score of 3 signals moderate strength: screening and treatment are widely available in cities, but rural inequities persist."
+        },
+        "Australia": {
+            "country_sort_form": "AU",
+            "popup_context": "A score of 4 denotes comprehensive systems: national screening and world-class urban centers sustain high-quality care."
+        },
+        "Brazil": {
+            "country_sort_form": "BR",
+            "popup_context": "A score of 3 reveals a dual system: metropolitan areas provide modern care, yet rural and low-income patients face long delays."
+        },
+        "Canada": {
+            "country_sort_form": "CA",
+            "popup_context": "A score of 5 shows comprehensive maturity: universal access, national screening, and modern care ensure consistently high outcomes."
+        },
+        "Chile": {
+            "country_sort_form": "CL",
+            "popup_context": "A score of 3 indicates solid foundations: national strategies are improving outcomes, though underserved populations lag behind."
+        },
+        "Colombia": {
+            "country_sort_form": "CO",
+            "popup_context": "A score of 2 underscores limited coordination: late-stage presentation remains common, reflecting poor awareness and uneven access to services."
+        },
+        "Egypt": {
+            "country_sort_form": "EG",
+            "popup_context": "A score of 3 suggests a maturing system: survival is improving as national programs expand, but resource distribution remains imbalanced."
+        },
+        "Ethiopia": {
+            "country_sort_form": "ET",
+            "popup_context": "A score of 1 indicates a very low maturity level,Extremely limited infrastructure and awareness; survival rates remain very low due to late diagnosis and scarce treatment options."
+        },
+        "Germany": {
+            "country_sort_form": "DE",
+            "popup_context": "A score of 5 indicates global leadership: integrated screening, research, and treatment infrastructure deliver top outcomes."
+        },
+        "Greece": {
+            "country_sort_form": "GR",
+            "popup_context": "A score of 3 points to moderate maturity: urban hospitals provide effective treatment, though screening coverage lacks consistency."
+        },
+        "India": {
+            "country_sort_form": "IN",
+            "popup_context": "A score of 3 points to mixed capacity: world-class urban centers coexist with widespread late-stage diagnoses in rural regions."
+        },
+        "Indonesia": {
+            "country_sort_form": "ID",
+            "popup_context": "A score of 2 highlights structural challenges: breast cancer services are expanding, yet remote communities lack reliable access to diagnostics and therapies."
+        },
+        "Italy": {
+            "country_sort_form": "IT",
+            "popup_context": "A score of 4 indicates advanced maturity: regional centers of excellence support high survival, though some disparities remain."
+        },
+        "Japan": {
+            "country_sort_form": "JP",
+            "popup_context": "A score of 4 indicates an advanced system: nationwide screening and cutting-edge therapies ensure high survival outcomes."
+        },
+        "Kenya": {
+            "country_sort_form": "KE",
+            "popup_context": "A score of 2 indicates a developing maturity level,Screening and treatment are available mainly in urban centers, but late diagnosis and high out-of-pocket costs limit outcomes."
+        },
+        "Mexico": {
+            "country_sort_form": "MX",
+            "popup_context": "A score of 2 denotes a fragmented system: while metropolitan hospitals provide modern care, rural and low-income populations experience delayed treatment."
+        },
+        "Morocco": {
+            "country_sort_form": "MA",
+            "popup_context": "A score of 3 marks steady progress: national screening initiatives are in place, though rural outreach and equity are still limited."
+        },
+        "Netherlands": {
+            "country_sort_form": "NL",
+            "popup_context": "A score of 5 highlights pioneering systems: structured screening and evidence-based care ensure excellent survival."
+        },
+        "New Zealand": {
+            "country_sort_form": "NZ",
+            "popup_context": "A score of 4 represents solid infrastructure: national programs support effective early detection and treatment."
+        },
+        "Nigeria": {
+            "country_sort_form": "NG",
+            "popup_context": "A score of 2 reflects a struggling system: with limited organized screening and treatment access, most women present at stage III or IV."
+        },
+        "Philippines": {
+            "country_sort_form": "PH",
+            "popup_context": "A score of 2 reveals partial progress: opportunistic screening exists in cities, but prevention and early detection remain weak nationwide."
+        },
+        "Rwanda": {
+            "country_sort_form": "RW",
+            "popup_context": "A score of 1 indicates a very low maturity level,Healthcare services for breast cancer are minimal, with poor access and low early detection rates."
+        },
+        "Saudi Arabia": {
+            "country_sort_form": "SA",
+            "popup_context": "A score of 3 demonstrates improving capacity: advanced therapies are offered in major cities, though outreach to rural communities is weaker."
+        },
+        "Serbia": {
+            "country_sort_form": "RS",
+            "popup_context": "A score of 3 reflects gradual progress: guidelines and treatment are applied in tertiary hospitals, while smaller centers face implementation gaps."
+        },
+        "Singapore": {
+            "country_sort_form": "SG",
+            "popup_context": "A score of 4 highlights comprehensive capacity: early detection and modern oncology services are integrated into the national health system."
+        },
+        "South Africa": {
+            "country_sort_form": "ZA",
+            "popup_context": "A score of 3 indicates moderate maturity: tertiary hospitals offer advanced treatment, yet rural inequities and diagnostic delays persist."
+        },
+        "South Korea": {
+            "country_sort_form": "KR",
+            "popup_context": "A score of 4 reflects strong infrastructure: organized screening and universal access deliver excellent outcomes. "
+        },
+        "spain": {
+            "country_sort_form": "ES",
+            "popup_context": "A score of 4 reflects strong development: broad access to detection and treatment drives positive outcomes."
+        },
+        "Sweden": {
+            "country_sort_form": "SE",
+            "popup_context": " A score of 5 reflects best-in-class systems: nationwide coverage and early detection programs achieve world-leading results."
+        },
+        "Syria": {
+            "country_sort_form": "SY",
+            "popup_context": "A score of 1 indicates a very low maturity level,Conflict has disrupted cancer care; limited diagnostics and treatment result in very low survival rates."
+        },
+        "Thailand": {
+            "country_sort_form": "TH",
+            "popup_context": "A score of 3 reflects partial advancement: urban detection and treatment are strong, while rural uptake is less consistent."
+        },
+        "UAE": {
+            "country_sort_form": "AE",
+            "popup_context": "A score of 4 demonstrates rapid advancement: investment in modern facilities and awareness campaigns delivers strong outcomes."
+        },
+        "Uganda": {
+            "country_sort_form": "UG",
+            "popup_context": "A score of 1 indicates a very low maturity level,Screening and treatment facilities are sparse, leading to late-stage diagnoses and poor survival."
+        },
+        "United Kingdom": {
+            "country_sort_form": "GB",
+            "popup_context": "A score of 4 demonstrates robust maturity: systematic screening and advanced care protocols maintain high survival rates."
+        },
+        "United States": {
+            "country_sort_form": "US",
+            "popup_context": "A score of 5 demonstrates cutting-edge capacity: advanced therapies, strong screening programs, and robust research sustain high survival rates."
+        },
+        "Vietnam": {
+            "country_sort_form": "VN",
+            "popup_context": "A score of 3 shows advancing maturity: early detection and treatment are expanding, but regional inequities remain evident."
+        }
+        
+    },
+
     "prostate": {
         "China": {
             "country_sort_form": "CN",
@@ -58,6 +367,127 @@
         "Germany": {
             "country_sort_form": "DE",
             "popup_context": "A score of 4 indicates a high maturity level: Germany combines advanced diagnostics, wide reimbursement, and declining mortality."
+        },
+        "Greece": {
+            "country_sort_form": "GR",
+            "popup_context": "A score of 3 indicates a moderate maturity level: Greece has treatment access but limited national screening and biomarker uptake."
+        }, 
+        "India": {
+            "country_sort_form": "IN",
+            "popup_context": "A score of 3 indicates a moderate maturity level: India faces late detection challenges, though urban treatment access is strengthening."
+        },
+
+        "Indonesia": {
+            "country_sort_form": "ID",
+            "popup_context": "A score of 2 indicates a low–moderate maturity level: Indonesia has low detection and poor survival due to late-stage diagnosis."
+        },
+        "Italy": {
+            "country_sort_form": "IT",
+            "popup_context": "A score of 3 indicates a moderate maturity level: Italy has high incidence and good survival, though regional disparities persist. "
+        },
+        "Japan": {
+            "country_sort_form": "JP",
+            "popup_context": "A score of 4 indicates a high maturity level: Japan achieves excellent survival outcomes with advanced infrastructure, strong use of biomarkers, and robust alignment with international guidelines."
+        },
+        "kenya": {
+            "country_sort_form": "KE",
+            "popup_context": "A score of 2 indicates a low–moderate maturity level: Kenya faces late diagnoses, high mortality, and limited infrastructure."
+        },
+        "Malaysia": {
+            "country_sort_form": "MY",
+            "popup_context": "A score of 3 indicates a moderate maturity level: Malaysia has growing cancer capacity, though public–private access gaps persist."
+        },
+        "Mexico": {
+            "country_sort_form": "MX",
+            "popup_context": "A score of 2 indicates a low–moderate maturity level: Mexico’s incidence is rising, but access gaps between sectors remain wide."
+        },
+        "Morocco": {
+            "country_sort_form": "MA",
+            "popup_context": "A score of 3 indicates a moderate maturity level: Morocco has urban-focused cancer care, with gaps in screening and advanced diagnostics."
+        },
+        "Netherlands": {
+            "country_sort_form": "NL",
+            "popup_context": "A score of 4 indicates a high maturity level: the Netherlands has strong registry data, integrated biomarker use, and high survival."
+        },
+        "New Zealand": {
+            "country_sort_form": "NZ",
+            "popup_context": "A score of 4 indicates a high maturity level: New Zealand provides strong early detection, equitable access, and outcomes similar to Australia."
+        },
+        "Nigeria": {
+            "country_sort_form": "NG",
+            "popup_context": "A score of 2 indicates a low–moderate maturity level: Nigeria struggles with low survival and weak access outside urban centers."
+        },
+        "Philippines": {
+            "country_sort_form": "PH",
+            "popup_context": "A score of 2 indicates a low–moderate maturity level: the Philippines faces limited screening and treatment capacity, leading to modest survival."
+        },
+        "Poland": {
+            "country_sort_form": "PL",
+            "popup_context": "A score of 3 indicates a moderate maturity level: Poland’s survival is improving, but biomarker integration is limited."
+        },
+        "Russia": {
+            "country_sort_form": "RU",
+            "popup_context": "A score of 3 indicates a moderate maturity level: Russia shows survival improvements but persistent regional inequities."
+        },
+        "Rwanda": {
+            "country_sort_form": "RW",
+            "popup_context": "A score of 1 indicates a very low maturity level: Rwanda has minimal diagnostic and treatment infrastructure, with very poor outcomes."
+        },
+        "Saudi Arabia": {
+            "country_sort_form": "SA",
+            "popup_context": "A score of 3 indicates a moderate maturity level: oncology services are expanding, though early detection remains limited."
+        },
+        "Serbia": {
+            "country_sort_form": "RS",
+            "popup_context": "A score of 3 indicates a moderate maturity level: Serbia has basic treatment access but lags in biomarker use and guideline updates."
+        },
+        "Singapore": {
+            "country_sort_form": "SG",
+            "popup_context": "A score of 4 indicates a high maturity level: Singapore ensures equitable access, cutting-edge diagnostics, and integration of best global practices."
+        },
+        "South Africa": {
+            "country_sort_form": "ZA",
+            "popup_context": "A score of 3 indicates a moderate maturity level: South Africa has strong foundations in treatment access and clinical guidelines, but gaps remain in early detection, reimbursement, and advanced biomarker testing."
+        },
+        "South Korea": {
+            "country_sort_form": "KR",
+            "popup_context":  "A score of 4 indicates a high maturity level: South Korea combines strong early detection, advanced therapies, and widespread access to guideline-driven care."
+        },
+        "Spain": {
+            "country_sort_form": "ES",
+            "popup_context": "A score of 3 indicates a moderate maturity level: Spain has robust healthcare services but gaps in organized early detection."
+        },
+        "Sweden": {
+            "country_sort_form": "SE",
+            "popup_context": "A score of 4 indicates a high maturity level: Sweden achieves world-leading survival through structured early detection and modern therapies."
+        },
+        "Syria": {
+            "country_sort_form": "SY",
+            "popup_context": "A score of 1 indicates a very low maturity level: Syria’s healthcare system is severely disrupted, leaving almost no structured prostate cancer services."
+        },
+        "Thailand": {
+            "country_sort_form": "TH",
+            "popup_context": "A score of 2 indicates a low–moderate maturity level: Thailand has low survival, limited biomarker use, and opportunistic screening."
+        },
+        "UAE": {
+            "country_sort_form": "AE",
+            "popup_context": "A score of 4 indicates a high maturity level: the UAE rapidly expanded oncology infrastructure, with advanced therapies and guideline adoption."
+        },
+        "Uganda": {
+            "country_sort_form": "UG",
+            "popup_context": "A score of 1 indicates a very low maturity level: Uganda lacks oncology capacity, and most patients present with advanced disease."
+        },
+        "United Kingdom": {
+            "country_sort_form": "GB",
+            "popup_context": "A score of 4 indicates a high maturity level: the UK delivers strong treatment systems and high survival, though screening is opportunistic."
+        },
+        "United States": {
+            "country_sort_form": "US",
+            "popup_context": "A score of 4 indicates a high maturity level: the US has very high incidence but strong biomarker adoption, advanced therapies, and declining mortality"
+        },
+        "Vietnam": {
+            "country_sort_form": "VN",
+            "popup_context": "A score of 2 indicates a low–moderate maturity level: Vietnam lacks robust infrastructure and most patients present late."
         }
     }
 }

@@ -1,26 +1,47 @@
-html, body {
-    font-family: 'Poppins', sans-serif;
-    background-color: #f7f1f8;
-    /* background: linear-gradient(45deg, #ffff99, #cc99ff); */
-    margin: 0;
-    height: 100%; /* Ensures body takes full height for vertical centering */
-    padding: 0;
-    /* animation: gradientAnimation 6s ease infinite; */
-    min-height: 100vh;
+:root {
+    --background-color-body: #f7f1f8;
+    --background-color-header: #fff;
+    --color-header: #5743c8;
+    --text-color: #000;
+    --card-up: #a696ff;
+    --card-down: #f7f1f8;
+    --card-text: #7f8c8d;
+    --card-head: #5743c8;
+    --swot-text: #7f8c8d;
 }
+
+.dark-theme {
+    --background-color-header: #353535;
+    --background-color-body: #1f1f1f;
+    --color-header: #f7f7f7;
+    --text-color: #fff;
+    --card-up: #6c649b;
+    --card-down: #333333;
+    --card-text: #333;
+    --card-head: #fff;
+    --swot-text: #ececec;
+}
+
+
 
 .box {
     padding-right: 50px;
 }
 
+
+.category img {
+    background-color: var(--background-color-body);
+}
+
 h1 {
     text-align: center;
-    color: #5743c8;
+    color: var(--color-header);
     margin-top: 20px;
     font-size: 2.5em;
 }
 
 .container {
+    background-color: var(--background-color-body);
     max-width: 80%;
     margin: 0 auto;
     display: grid;
@@ -31,7 +52,7 @@ h1 {
 .category {
     font-size: 1.5em;
     font-weight: bold;
-    color: #000;
+    color: var(--text-color);
     grid-column: 1 / -1;
     margin-bottom: 15px;
     padding: 10px;
@@ -46,8 +67,12 @@ h1 {
     margin-right: 10px;
 }
 
+.box h2, .box p, .swot-content h2, .swot-content p {
+    color: var(--text-color);
+}
+
 .card {
-    background: linear-gradient(45deg, #f7f1f8, #a696ff);
+    background: linear-gradient(45deg, var(--card-down), var(--card-up));
     border-radius: 10px;
     padding: 20px 55px 55px 55px;
     clip-path: polygon(0px 0px, 100% 0px, 99.66% 69.81%, 47.93% 101.38%, 2px 69.33%);
@@ -65,10 +90,11 @@ h1 {
     text-align: center;
     margin: 0 0 10px;
     font-size: 1.2em;
-    color: #5743c8;
+    color: var(--card-head);
 }
 
 .card p {
+    color: var(--text-color);
     margin: 5px 0;
     font-weight: 900;
     text-align: center;
@@ -79,7 +105,7 @@ h1 {
 .card .score {
     font-weight: 600;
     font-size: 0.95em;
-    color: #7f8c8d;
+    color: var(--card-text);
 }
 
 /* Animation for gradient */
@@ -92,13 +118,14 @@ h1 {
 
 
 .text-content {
+    color: var(--text-color);
     display: flex;
     justify-content: space-between;
     margin-bottom: 30px;
 }
 
 .intro-section, .map-section {
-    background-color: #f5f6f5;
+    background-color: var(--background-color-header);
     padding: 15px;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
@@ -116,7 +143,7 @@ h1 {
 
 .swot-content h2 {
     font-size: 1.8em;
-    color: #000;
+    color: var(--text-color);
     margin-bottom: 20px;
     text-align: center;
 }
@@ -128,7 +155,7 @@ h1 {
 }
 
 .swot-section {
-    background-color: #f5f6f5;
+    background-color: var(--background-color-header);
     padding: 15px;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
@@ -136,7 +163,7 @@ h1 {
 
 .swot-section h2 {
     font-size: 1.4em;
-    color: #000;
+    color: var(--text-color);
     margin-bottom: 10px;
 }
 
@@ -148,25 +175,25 @@ h1 {
 
 .swot-section li {
     font-size: 1em;
-    color: #7f8c8d;
+    color: var(--swot-text);
     margin-bottom: 8px;
     line-height: 1.5;
 }
 
 h2 {
     font-size: 1.6em;
-    color: #000;
+    color: var(--text-color);
     margin-bottom: 10px;
 }
 
 p {
     font-size: 1em;
-    color: #000;
+    color: var(--text-color);
     line-height: 1.6;
 }
 
 .feedback-section {
-    background-color: #f5f6f5;
+    background-color: var(--background-color-header);
     padding: 15px;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
@@ -185,7 +212,7 @@ p {
 .feedback-box p {
     flex: 1;
     font-size: 1em;
-    color: #000;
+    color: var(--text-color);
     margin: 0;
     padding-right: 30px;
 }
