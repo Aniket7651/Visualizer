@@ -1,0 +1,69 @@
+[
+    {
+        "id": 121,
+        "cancer_type": "breast",
+        "country": "Russia",
+        "country_shortForm": "RU",
+        "introduction": "Russia has a moderately advanced breast cancer care system. National screening programs provide biennial mammograms for women aged 50–69. Specialized oncology centers across major cities offer comprehensive diagnostics, molecular testing (HER2, ER, PR, BRCA1/2), surgery, chemotherapy, and radiotherapy. Clinical guidelines are aligned with international standards and widely implemented in urban centers. Awareness campaigns are ongoing, contributing to early detection, though rural areas have limited coverage. Palliative care services are moderately developed, and research funding supports local studies and international collaborations. Survival rates are improving, though regional disparities remain.",
+        "swot_analysis": {
+            "Strengths":
+                ["National biennial mammography program.",
+"Tertiary centers with advanced diagnostics and treatment.",
+"Molecular testing widely available in urban hospitals.",
+"Guidelines aligned with international standards."
+],
+
+            "Weaknesses":
+                ["Rural areas remain underserved.",
+"Palliative care unevenly distributed."
+],
+
+            "Opportunities": 
+                ["Expand rural access via mobile screening and telemedicine.",
+"Strengthen public awareness campaigns.",
+"Increase molecular diagnostic and research capabilities nationwide."
+],
+
+            "Threats": 
+                ["Aging population may increase burden.",
+"Urban-rural disparities may persist.",
+"Rising incidence could challenge health infrastructure."
+]
+        },
+        "infrastructure": {
+            "Specialized_Centers": {"score": "4/5", "disc": "Well-distributed in major cities; rural coverage moderate."},
+            "Genetic_Molecular_Testing": {"score": "3/5", "disc": "Widely available in urban hospitals."}
+        },
+        "treatment_funding_awareness": {
+            "Treatment_Access": {"score": "4/5", "disc": "Comprehensive therapies in tertiary centers."},
+            "Research_Funding": {"score": "4/5", "disc": "Moderate; supports local studies and trials."},
+            "Awareness_Campaigns": {"score": "3/5", "disc": "Ongoing campaigns; rural reach limited."}
+        },
+        "survival_rates": {
+            "Survival_Rates": {"score": "4/5", "disc": "Improving; earlier detection in urban areas."},
+            "Early_Detection": {"score": "3/5", "disc": "National biennial mammography program."},
+            "Palliative_Care": {"score": "3/5", "disc": "Moderate coverage; uneven in rural areas."}
+        },
+        "biomarkers": {
+            "HER2":{"score": "60%", "disc": "Widely available in tertiary hospitals."},
+            "ER": {"score": "60%", "disc": "Standard in urban centers."},
+            "PR": {"score": "60%", "disc": "Standard."},
+            "BRCA1": {"score": "30%", "disc": "Selective availability."},
+            "BRCA2": {"score": "25%", "disc": "Selective availability."}
+        },
+        "clinical_guidelines": {
+            "Implementation": {"score": "4/5", "disc": "Well implemented in urban hospitals."},
+            "Feasibility": {"score": "4/5", "disc": "Feasible in tertiary centers."},
+            "Adoption_International_Guideline": {"score": "4/5", "disc": "Aligned with ESMO/NCCN."},
+            "Engagement_with_Updates": {"score": "2/3", "disc": "Moderate adoption."},
+            "ESMO_Guidelines": {"score": "4/5", "disc": "Integrated in practice."}
+        },
+        "reimbursement": {
+            "Reimbursement_Coverage": {"score": "3/5", "disc": "Mostly covered; some out-of-pocket."},
+            "No-cost_Access": {"score": "2/5", "disc": "Limited access outside public hospitals."}
+        },
+        "cancer_screening": {
+            "National_Screening": {"score": "National program for biennial mammograms (50–69 years)", "disc": "Functional in urban and regional centers."}
+        }
+    }
+]

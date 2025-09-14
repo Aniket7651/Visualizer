@@ -129,6 +129,18 @@ Overview of {{ cancer_type }} Cancer in {{ country }}
             </div>
         {% endfor %}
 </div>
+
+<div class="container download-section">
+    <div class="feedback-section download-box">
+        <h2>Download Fact Sheet</h2>
+        <a href="#" class="download-button">Download Fact Sheet</a>
+    </div>
+    <div class="feedback-section download-box">
+        <h2>Download Our Policy Paper</h2>
+        <a href="{% url 'download_file' cancer_type=cancer_type country=country %}" class="download-button">Download Policy Paper</a>
+    </div>
+</div>
+
 <div class="feedback-section">
     <h2>Feedback & Collaboration</h2>
     <div class="feedback-box">

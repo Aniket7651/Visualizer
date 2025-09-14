@@ -1,13 +1,32 @@
+from django.conf import settings
 from django.shortcuts import render
 from django_pandas.io import read_frame # type: ignore
 import pandas as pd
-import io, base64, json
+import io, base64, json, os
 import matplotlib.pyplot as plt
 from .api import get_descriptive_statistics, OverAllAvg_statDF
-from django.http import JsonResponse
+from django.http import FileResponse, HttpResponse, JsonResponse
 from django.views.decorators.http import require_GET
 from .models import BreastCancerData, LungCancerData, ColorectalCancerData, ProstateCancerData, GastricCancerData, AverageValues, OverviewDetails
 from .discription import *
+
+
+def download_file(request, cancer_type, country):
+    # file_path = f"Data/{cancer_type.title()}PolicyPaper/{country} - {cancer_type.title()} Cancer Policy.pdf"
+    cancer_type = cancer_type.title().replace(" ", "_")
+    if cancer_type == "Prostate":
+        cancer_type_wrong_spell = "Protest"
+
+    else:
+        cancer_type_wrong_spell = cancer_type
+
+    country = country.title().replace(" ", "_")
+    file_path = os.path.join(settings.MEDIA_ROOT, 'Data', f"{cancer_type}PolicyPaper", f"{country} - {cancer_type_wrong_spell} Cancer Policy.pdf")
+    print(file_path)
+    if os.path.exists(file_path):
+        return FileResponse(open(file_path, 'rb'), content_type='application/pdf')
+    else: 
+        return HttpResponse(f"Policy Paper file not found for {country} - {cancer_type}", status=404)
 
 
 def dataframe_to_column_json(df):

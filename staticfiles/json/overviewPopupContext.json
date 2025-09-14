@@ -315,6 +315,10 @@
         "Vietnam": {
             "country_sort_form": "VN",
             "popup_context": "A score of 3 shows advancing maturity: early detection and treatment are expanding, but regional inequities remain evident."
+        },
+        "Russia": {
+            "country_sort_form": "RU",
+            "popup_context": "A score of 3 illustrates uneven delivery: national programs exist, yet survival differs widely between urban and rural regions."
         }
         
     },
@@ -488,6 +492,349 @@
         "Vietnam": {
             "country_sort_form": "VN",
             "popup_context": "A score of 2 indicates a low–moderate maturity level: Vietnam lacks robust infrastructure and most patients present late."
+        }
+    },
+
+
+    "colorectal": {
+        "China": {
+            "country_sort_form": "CN",
+            "popup_context": "A score of 3 indicates a moderate maturity level: China’s case load is high, survival is improving, but rural inequities remain significant."
+        },
+        "France": {
+            "country_sort_form": "FR",
+            "popup_context": " A score of 4 indicates a highly developed maturity level: France has organized screening, early detection initiatives, and widespread access to molecular diagnostics."
+        },
+        "Algeria": {
+            "country_sort_form": "DZ",
+            "popup_context": "A score of 3 indicates a moderate maturity level: Algeria has established tertiary care centers, but rural access and organized screening programs are still underdeveloped."
+        },
+        "Argentina": {
+            "country_sort_form": "AR",
+            "popup_context": "A score of 2 indicates a developing maturity level: Argentina has limited screening coverage and restricted access to advanced diagnostics outside major cities."
+        },
+        "Australia": {
+            "country_sort_form": "AU",
+            "popup_context": "A score of 3 indicates a moderate maturity level: Australia has population-based screening and urban tertiary care, but rural coverage and biomarker access are variable."
+        },
+        "Brazil": {
+            "country_sort_form": "BR",
+            "popup_context": "A score of 2 indicates a developing maturity level: Brazil’s colorectal cancer care is constrained by uneven screening programs and disparities in rural versus urban areas."
+        },
+        "Canada": {
+            "country_sort_form": "CA",
+            "popup_context": "A score of 4 indicates a highly developed maturity level: Canada offers national CRC screening programs, comprehensive diagnostics, and equitable treatment."
+        },
+        "Chile": {
+            "country_sort_form": "CL",
+            "popup_context": "A score of 3 indicates a moderate maturity level: Chile has national screening programs and tertiary care centers, but rural and remote regions face access challenges."
+        },
+        "Colombia": {
+            "country_sort_form": "CO",
+            "popup_context": "A score of 2 indicates a developing maturity level: Colombia has limited CRC screening, infrastructure gaps, and regional disparities in treatment access."
+        },
+        "Egypt": {
+            "country_sort_form": "EG",
+            "popup_context": "A score of 3 indicates a moderate maturity level: Egypt has urban cancer centers and improving early detection, but rural coverage and advanced diagnostics remain inconsistent."
+        },
+        "Ethiopia": {
+            "country_sort_form": "ET",
+            "popup_context": "A score of 2 indicates a developing maturity level: Ethiopia faces limited infrastructure, low screening coverage, and restricted access to treatment and palliative care."
+        },
+        "Germany": {
+            "country_sort_form": "DE",
+            "popup_context": "A score of 4 indicates a highly developed maturity level: Germany has comprehensive screening programs, advanced diagnostics, and strong guideline implementation."
+        },
+        "Greece": {
+            "country_sort_form": "GR",
+            "popup_context": "A score of 3 indicates a moderate maturity level: Greece has national screening programs, but regional disparities and limited molecular testing affect outcomes."
+        },
+        "India": {
+            "country_sort_form": "IN",
+            "popup_context": " A score of 3 indicates a moderate maturity level: India has increasing screening initiatives and tertiary care facilities, but rural inequities and limited molecular diagnostics persist."
+        },
+        "Indonesia": {
+            "country_sort_form": "ID",
+            "popup_context": "A score of 2 indicates a developing maturity level: Indonesia has limited screening programs and uneven access to tertiary care across islands."
+        },
+        "Italy": {
+            "country_sort_form": "IT",
+            "popup_context": "A score of 3 indicates a moderate maturity level: Italy has national screening programs, but regional disparities and access to molecular diagnostics affect outcomes."
+        },
+        "Japan": {
+            "country_sort_form": "JP",
+            "popup_context": "A score of 4 indicates a highly developed maturity level: Japan has comprehensive screening programs, widespread molecular diagnostics, and high survival rates."
+        },
+        "Kenya": {
+            "country_sort_form": "KE",
+            "popup_context": "A score of 2 indicates a developing maturity level: Kenya has limited screening and treatment infrastructure, with significant disparities between urban and rural populations."
+        },
+        "Malaysia": {
+            "country_sort_form": "MY",
+            "popup_context": " A score of 3 indicates a moderate maturity level: Malaysia has functional tertiary care and opportunistic screening programs for colorectal cancer, yet most patients are diagnosed at late stages and access in rural areas is uneven."
+        },
+        "Mexico": {
+            "country_sort_form": "MX",
+            "popup_context": "A score of 2 indicates a developing maturity level: Mexico has limited CRC screening and treatment infrastructure, with inequities in rural access."
+        },
+        "Morocco": {
+            "country_sort_form": "MA",
+            "popup_context": "A score of 3 indicates a moderate maturity level: Morocco has moderate access to cancer care with awareness campaigns, but screening and biomarker availability are limited."
+        },
+        "Netherlands": {
+            "country_sort_form": "NL",
+            "popup_context": " A score of 4 indicates a highly developed maturity level: The Netherlands has population-wide screening, high participation, and advanced treatment infrastructure."
+        },
+        "New Zealand": {
+            "country_sort_form": "NZ",
+            "popup_context": "A score of 4 indicates a highly developed maturity level: New Zealand has organized screening, advanced diagnostics, and good access to treatment and early detection. "
+        },
+        "Nigeria": {
+            "country_sort_form": "NG",
+            "popup_context": "A score of 2 indicates a developing maturity level: Nigeria’s colorectal cancer care is constrained by limited access to diagnostics, treatment, and screening programs."
+        },
+        "Philippines": {
+            "country_sort_form": "PH",
+            "popup_context": "A score of 2 indicates a developing maturity level: Philippines has limited national screening and disparities in treatment access between urban and rural populations."
+        },
+        "Poland": {
+            "country_sort_form": "PL",
+            "popup_context": "A score of 3 indicates a moderate maturity level: Poland has national screening programs and advanced molecular testing in tertiary centers, but rural disparities exist."
+        },
+        "Russia": {
+            "country_sort_form": "RU",
+            "popup_context": "A score of 3 indicates a moderate maturity level: Russia has established regional colorectal cancer screening programs and tertiary care centers, but nationwide coverage and systematic early detection remain limited."
+        },
+        "Rwanda": {
+            "country_sort_form": "RW",
+            "popup_context": "A score of 1 indicates an emerging maturity level: Rwanda has minimal colorectal cancer infrastructure, no organized screening, and very limited access to treatment."
+        },
+        "Saudi Arabia": {
+            "country_sort_form": "SA",
+            "popup_context": "A score of 3 indicates a moderate maturity level: Saudi Arabia has screening programs in major cities, but rural areas face inequities in access to care."
+        },
+        "Serbia": {
+            "country_sort_form": "RS",
+            "popup_context": "A score of 3 indicates a moderate maturity level: Serbia has tertiary care centers and screening initiatives, but rural access and molecular diagnostics are limited."
+        },
+        "Singapore": {
+            "country_sort_form": "SG",
+            "popup_context": "A score of 4 indicates a highly developed maturity level: Singapore has organized national screening, early detection, and widespread access to advanced therapies."
+        },
+        "South Africa": {
+            "country_sort_form": "ZA",
+            "popup_context": "A score of 3 indicates a moderate maturity level: South Africa has established cancer centers in major cities and opportunistic screening, but rural access and biomarker utilization remain limited"
+        },
+        "South Korea": {
+            "country_sort_form": "KR",
+            "popup_context": "A score of 4 indicates a highly developed maturity level: South Korea has organized national screening, advanced diagnostics, and effective treatment pathways."
+        },
+        "Spain": {
+            "country_sort_form": "ES",
+            "popup_context": "A score of 3 indicates a moderate maturity level: Spain has organized screening initiatives, yet rural areas face inequities in treatment and early detection."
+        },
+        "Sweden": {
+            "country_sort_form": "SE",
+            "popup_context": "A score of 4 indicates a highly developed maturity level: Sweden offers organized national screening, early diagnosis, and comprehensive cancer care services."
+        },
+        "Syria": {
+            "country_sort_form": "SY",
+            "popup_context": "A score of 1 indicates an emerging maturity level: Syria’s colorectal cancer care is severely limited due to conflict, with minimal screening or treatment infrastructure."
+        },
+        "Thailand": {
+            "country_sort_form": "TH",
+            "popup_context": " A score of 2 indicates a developing maturity level: Thailand has limited organized screening and regional disparities in treatment access."
+        },
+        "UAE": {
+            "country_sort_form": "AE",
+            "popup_context": "A score of 3 indicates a moderate maturity level: UAE has urban tertiary care and screening, but population-wide early detection remains limited."
+        },
+        "Uganda": {
+            "country_sort_form": "UG",
+            "popup_context": "A score of 1 indicates an emerging maturity level: Uganda lacks screening programs, advanced diagnostics, and comprehensive cancer care services."
+        },
+        "United Kingdom": {
+            "country_sort_form": "GB",
+            "popup_context": "A score of 4 indicates a highly developed maturity level: The UK has nationwide CRC screening, robust molecular testing, and equitable treatment access."
+        },
+        "United States": {
+            "country_sort_form": "US",
+            "popup_context": "A score of 4 indicates a highly developed maturity level: The US has organized screening, advanced diagnostics, and widespread access to treatment and palliative care."
+        },
+        "Vietnam": {
+            "country_sort_form": "VN",
+            "popup_context": "A score of 2 indicates a developing maturity level: Vietnam faces constrained infrastructure for CRC care and limited access to organized screening and diagnostics."
+        }
+    },
+
+    "gastric": {
+        "China": {
+            "country_sort_form": "CN",
+            "popup_context": "A score of 3 indicates moderate maturity: case load is high, survival is improving, but rural inequities remain significant."
+        },
+        "France": {
+            "country_sort_form": "FR",
+            "popup_context": "A score of 4 indicates advanced maturity: strong oncology systems with national screening and access to advanced therapies."
+        },
+        "Algeria": {
+            "country_sort_form": "DZ",
+            "popup_context": "A score of 3 indicates moderate maturity: care infrastructure exists, though limited biomarker testing and uneven access persist."
+        },
+        "Argentina": {
+            "country_sort_form": "AR",
+            "popup_context": "A score of 2 indicates early maturity: oncology infrastructure exists in urban areas, but rural inequities and funding gaps persist."
+        },
+        "Australia": {
+            "country_sort_form": "AU",
+            "popup_context": "A score of 4 indicates advanced maturity: high screening coverage and survival rates among the best globally."
+        },
+        "Brazil": {
+            "country_sort_form": "BR",
+            "popup_context": "A score of 3 indicates moderate maturity: urban centers offer advanced care, while rural and public patients face long delays."
+        },
+        "Canada": {
+            "country_sort_form": "CA",
+            "popup_context": "A score of 4 indicates advanced maturity: high survival, with universal access though regional wait times affect outcomes."
+        },
+        "Chile": {
+            "country_sort_form": "CL",
+            "popup_context": "A score of 3 indicates moderate maturity: oncology care is improving, but inequities and funding constraints are barriers."
+        },
+        "Colombia": {
+            "country_sort_form": "CO",
+            "popup_context": "A score of 3 indicates moderate maturity: national cancer plans exist, though survival outcomes are still suboptimal."
+        },
+        "Egypt": {
+            "country_sort_form": "EG",
+            "popup_context": "A score of 3 indicates moderate maturity: specialized centers are strong in cities, yet early detection is underdeveloped."
+        },
+        "Ethiopia": {
+            "country_sort_form": "ET",
+            "popup_context": "A score of 2 indicates early maturity: cancer programs are developing, but access to diagnostics and therapies remains limited."
+        },
+        "Germany": {
+            "country_sort_form": "DE",
+            "popup_context": "A score of 4 indicates advanced maturity: comprehensive cancer networks deliver high survival rates."
+        },
+        "Greece": {
+            "country_sort_form": "GR",
+            "popup_context": "A score of 3 indicates moderate maturity: cancer care is available, but economic constraints affect service quality."
+        },
+        "India": {
+            "country_sort_form": "IN",
+            "popup_context": "A score of 4 indicates advanced maturity: regional cancer centers and programs are strong, though disparities and late detection remain."
+        },
+        "Indonesia": {
+            "country_sort_form": "ID",
+            "popup_context": "A score of 2 indicates early maturity: cancer incidence is rising, but screening and advanced therapy adoption are minimal."
+        },
+        "Italy": {
+            "country_sort_form": "IT",
+            "popup_context": "A score of 3 indicates moderate maturity: care systems are established, but screening programs vary regionally."
+        },
+        "Japan": {
+            "country_sort_form": "JP",
+            "popup_context": "A score of 5 indicates top maturity: excellent survival, national screening programs, and rapid adoption of advanced therapies."
+        },
+        "Kenya": {
+            "country_sort_form": "KE",
+            "popup_context": "A score of 3 indicates moderate maturity: oncology services are expanding, though late detection and access gaps remain major barriers."
+        },
+        "Malaysia": {
+            "country_sort_form": "MY",
+            "popup_context": "A score of 2 indicates early maturity: specialized centers provide care, though screening is absent and biomarker access is limited."
+        },
+        "Mexico": {
+            "country_sort_form": "MX",
+            "popup_context": "A score of 2 indicates early maturity: national cancer plans exist, yet screening and advanced treatments are not widely accessible."
+        },
+        "Morocco": {
+            "country_sort_form": "MA",
+            "popup_context": "A score of 3 indicates moderate maturity: awareness and palliative efforts are growing, but screening and therapy access lag."
+        },
+        "Netherlands": {
+            "country_sort_form": "NL",
+            "popup_context": "A score of 4 indicates advanced maturity: excellent survival rates and advanced clinical trial participation."
+        },
+        "New Zealand": {
+            "country_sort_form": "NZ",
+            "popup_context": "A score of 4 indicates advanced maturity: strong system overall, but rural Māori populations face access inequities."
+        },
+        "Nigeria": {
+            "country_sort_form": "NG",
+            "popup_context": "A score of 3 indicates moderate maturity: cancer incidence is rising, but survival outcomes remain poor due to weak infrastructure."
+        },
+        "Philippines": {
+            "country_sort_form": "PH",
+            "popup_context": "A score of 2 indicates early maturity: services are concentrated in cities, with high out-of-pocket burden for patients."
+        },
+        "Poland": {
+            "country_sort_form": "PL",
+            "popup_context": "A score of 3 indicates moderate maturity: improving national plans, but survival remains below Western Europe averages."
+        },
+        "Russia": {
+            "country_sort_form": "RU",
+            "popup_context": "A score of 3 indicates moderate maturity: oncology infrastructure is extensive, but uneven quality and late-stage diagnosis persist."
+        },
+        "Rwanda": {
+            "country_sort_form": "RW",
+            "popup_context": "A score of 1 indicates very low maturity: cancer services are minimal, with late diagnosis, weak infrastructure, and high mortality."
+        },
+        "Saudi Arabia": {
+            "country_sort_form": "SA",
+            "popup_context": "A score of 3 indicates moderate maturity: tertiary care is strong, yet national screening and biomarker use remain limited."
+        },
+        "Serbia": {
+            "country_sort_form": "RS",
+            "popup_context": "A score of 3 indicates moderate maturity: infrastructure is present, but screening and biomarker adoption are limited."
+        },
+        "Singapore": {
+            "country_sort_form": "SG",
+            "popup_context": "A score of 4 indicates advanced maturity: robust infrastructure and research integration ensure high-quality care."
+        },
+        "South Africa": {
+            "country_sort_form": "ZA",
+            "popup_context": "A score of 3 indicates moderate maturity: tertiary centers exist, but rural and public–private disparities limit equitable access."
+        },
+        "South Korea": {
+            "country_sort_form": "KR",
+            "popup_context": "A score of 5 indicates top maturity: among the best survival globally, with extensive early detection and cutting-edge treatment."
+        },
+        "Spain": {
+            "country_sort_form": "ES",
+            "popup_context": "A score of 3 indicates moderate maturity: good hospital infrastructure, yet survival rates lag behind leading European peers. "
+        },
+        "Sweden": {
+            "country_sort_form": "SE",
+            "popup_context": "A score of 4 indicates advanced maturity: high survival and well-integrated national cancer registry systems."
+        },
+        "Syria": {
+            "country_sort_form": "SY",
+            "popup_context": "A score of 1 indicates very low maturity: conflict has severely disrupted health systems, with fragmented cancer care and minimal access."
+        },
+        "Thailand": {
+            "country_sort_form": "TH",
+            "popup_context": "A score of 3 indicates moderate maturity: cancer services are available, but screening coverage and rural access are weak."
+        },
+        "UAE": {
+            "country_sort_form": "AE",
+            "popup_context": " A score of 3 indicates moderate maturity: advanced private care is available, but public access and national screening are weak."
+        },
+        "Uganda": {
+            "country_sort_form": "UG",
+            "popup_context": "A score of 1 indicates very low maturity: limited oncology services, scarce treatment options, and most patients present at advanced stages."
+        },
+        "United Kingdom": {
+            "country_sort_form": "GB",
+            "popup_context": " A score of 4 indicates advanced maturity: strong screening and guidelines exist, though survival lags top EU peers."
+        },
+        "United States": {
+            "country_sort_form":  "US",
+            "popup_context": "A score of 4 indicates advanced maturity: world-leading innovation, but inequities in access and costs remain challenges."
+        },
+        "Vietnam": {
+            "country_sort_form": "VN",
+            "popup_context": "A score of 2 indicates early maturity: survival remains poor due to late-stage diagnosis and fragmented care delivery"
         }
     }
 }

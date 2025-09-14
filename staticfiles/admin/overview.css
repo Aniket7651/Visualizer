@@ -192,6 +192,39 @@ p {
     line-height: 1.6;
 }
 
+.download-button {
+    display: inline-block;
+    background-color: #5743c8;
+    color: #ffffff;
+    font-weight: bold;
+    border: none;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+.download-button:hover {
+    background-color: #452c8c;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.download-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.download-box {
+    flex: 1;
+    text-align: center;
+    margin: 0 10px;
+}
+
 .feedback-section {
     background-color: var(--background-color-header);
     padding: 15px;
