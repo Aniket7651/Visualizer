@@ -23,11 +23,11 @@ from django.conf.urls.static import static
 from django.conf import settings
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('secret=3nr$DGDG&DjanKNS/', admin.site.urls),
 
     # path('', Infra, name='infra'), # root path
-    path('get_map_data/', get_map_data, name='get_map_data'),
-    path('get_histogram_data/', get_histogram_data, name='get_histogram_data'),
+    # path('get_map_data/', get_map_data, name='get_map_data'),
+    # path('get_histogram_data/', get_histogram_data, name='get_histogram_data'),
 
     path('', index, name='index'), # path 'index/' root path current time
     path('data/', datasetView, name='datasetView'),
@@ -38,7 +38,8 @@ urlpatterns = [
     path('api/cancer/<str:cancer_type>/', get_cancer_data, name='get_cancer_data'), # API link for cancer data
     path('api/stats/<str:cancer_type>/', stats_data, name='stats_data'),  # API link for statistics data
     path('api/stats/country_Wise/<str:cancer_type>/', get_CountryStatJSON, name='country_stat'), 
-    path('downloadPolicy/<str:cancer_type>/<str:country>/', download_file, name='download_file'), # Download Policy Paper
+    path('downloadPolicy/<str:cancer_type>/<str:country>/', downloadPolicy_file, name='downloadPolicy_file'), # Download Policy Paper
+    path('downloadFactSheet/<str:cancer_type>/<str:country>/', downloadFactSheet_file, name='downloadFactSheet_file'), # Download Fact Sheet
 ]
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

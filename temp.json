@@ -1,69 +1,72 @@
 [
     {
-        "id": 121,
+        "id": 206,
         "cancer_type": "breast",
-        "country": "Russia",
-        "country_shortForm": "RU",
-        "introduction": "Russia has a moderately advanced breast cancer care system. National screening programs provide biennial mammograms for women aged 50–69. Specialized oncology centers across major cities offer comprehensive diagnostics, molecular testing (HER2, ER, PR, BRCA1/2), surgery, chemotherapy, and radiotherapy. Clinical guidelines are aligned with international standards and widely implemented in urban centers. Awareness campaigns are ongoing, contributing to early detection, though rural areas have limited coverage. Palliative care services are moderately developed, and research funding supports local studies and international collaborations. Survival rates are improving, though regional disparities remain.",
+        "country": "Poland",
+        "country_shortForm": "PL",
+        "introduction": "Poland has a developing breast cancer care system with organized screening programs and improving access to diagnostics and treatment. Biennial mammography is available for women aged 50–69, though participation varies regionally. Specialized cancer centers exist mainly in urban areas, and molecular testing (HER2, ER, PR, BRCA1/2) is increasingly available but limited outside major cities. Clinical guidelines are aligned with international standards but implementation is inconsistent. Research funding is moderate, with some local studies and limited international trial participation. Public awareness campaigns are present, but screening uptake is lower compared to Western European countries. Palliative care services exist but are less developed in rural areas.",
         "swot_analysis": {
             "Strengths":
-                ["National biennial mammography program.",
-"Tertiary centers with advanced diagnostics and treatment.",
-"Molecular testing widely available in urban hospitals.",
-"Guidelines aligned with international standards."
+                ["Organized national screening program.",
+"Presence of specialized oncology centers in major cities.",
+"Clinical guidelines aligned with international standards.",
+"Some research and clinical trial participation."
 ],
 
             "Weaknesses":
-                ["Rural areas remain underserved.",
-"Palliative care unevenly distributed."
+                ["Regional disparities in access to specialized care.",
+"Limited molecular testing in smaller centers.",
+"Moderate uptake of screening programs in some regions.",
+"Palliative care services unevenly distributed."
 ],
 
             "Opportunities": 
-                ["Expand rural access via mobile screening and telemedicine.",
-"Strengthen public awareness campaigns.",
-"Increase molecular diagnostic and research capabilities nationwide."
+                ["Expand access to molecular testing and targeted therapies.",
+"Improve screening adherence through public campaigns.",
+"Strengthen palliative care networks.",
+"Increase participation in international research."
 ],
 
             "Threats": 
-                ["Aging population may increase burden.",
-"Urban-rural disparities may persist.",
-"Rising incidence could challenge health infrastructure."
+                ["Rising incidence may strain resources.",
+"Regional inequalities in access could persist.",
+"Budget constraints may limit therapy availability."
 ]
         },
         "infrastructure": {
-            "Specialized_Centers": {"score": "4/5", "disc": "Well-distributed in major cities; rural coverage moderate."},
-            "Genetic_Molecular_Testing": {"score": "3/5", "disc": "Widely available in urban hospitals."}
+            "Specialized_Centers": {"score": "3/5", "disc": "Concentrated in urban areas; limited rural access."},
+            "Genetic_Molecular_Testing": {"score": "3/5", "disc": "Available in major centers; limited elsewhere."}
         },
         "treatment_funding_awareness": {
-            "Treatment_Access": {"score": "4/5", "disc": "Comprehensive therapies in tertiary centers."},
-            "Research_Funding": {"score": "4/5", "disc": "Moderate; supports local studies and trials."},
-            "Awareness_Campaigns": {"score": "3/5", "disc": "Ongoing campaigns; rural reach limited."}
+            "Treatment_Access": {"score": "3/5", "disc": "Standard therapies accessible; advanced therapies limited."},
+            "Research_Funding": {"score": "3/5", "disc": "Moderate funding; limited international participation."},
+            "Awareness_Campaigns": {"score": "3/5", "disc": "Awareness campaigns exist but coverage is variable."}
         },
         "survival_rates": {
-            "Survival_Rates": {"score": "4/5", "disc": "Improving; earlier detection in urban areas."},
-            "Early_Detection": {"score": "3/5", "disc": "National biennial mammography program."},
-            "Palliative_Care": {"score": "3/5", "disc": "Moderate coverage; uneven in rural areas."}
+            "Survival_Rates": {"score": "3/5", "disc": "Improving but below Western European standards."},
+            "Early_Detection": {"score": "3/5", "disc": "Biennial mammography available; uptake varies."},
+            "Palliative_Care": {"score": "3/5", "disc": "Services exist but unevenly distributed."}
         },
         "biomarkers": {
-            "HER2":{"score": "60%", "disc": "Widely available in tertiary hospitals."},
-            "ER": {"score": "60%", "disc": "Standard in urban centers."},
-            "PR": {"score": "60%", "disc": "Standard."},
-            "BRCA1": {"score": "30%", "disc": "Selective availability."},
-            "BRCA2": {"score": "25%", "disc": "Selective availability."}
+            "HER2":{"score": "85%", "disc": "Increasingly used in major centers."},
+            "ER": {"score": "85%", "disc": "Increasingly used."},
+            "PR": {"score": "85%", "disc": "Increasingly used."},
+            "BRCA1": {"score": "65%", "disc": "Limited availability; mostly urban centers."},
+            "BRCA2": {"score": "60%", "disc": "Limited availability; mostly urban centers."}
         },
         "clinical_guidelines": {
-            "Implementation": {"score": "4/5", "disc": "Well implemented in urban hospitals."},
-            "Feasibility": {"score": "4/5", "disc": "Feasible in tertiary centers."},
-            "Adoption_International_Guideline": {"score": "4/5", "disc": "Aligned with ESMO/NCCN."},
-            "Engagement_with_Updates": {"score": "2/3", "disc": "Moderate adoption."},
-            "ESMO_Guidelines": {"score": "4/5", "disc": "Integrated in practice."}
+            "Implementation": {"score": "4/5", "disc": "Guidelines generally implemented."},
+            "Feasibility": {"score": "4/5", "disc": "Feasible in tertiary hospitals; limited elsewhere."},
+            "Adoption_International_Guideline": {"score": "4/5", "disc": "Partially aligned with ESMO/NCCN."},
+            "Engagement_with_Updates": {"score": "2/3", "disc": "Updates slower in smaller hospitals."},
+            "ESMO_Guidelines": {"score": "4/5", "disc": "Implemented in major centers."}
         },
         "reimbursement": {
-            "Reimbursement_Coverage": {"score": "3/5", "disc": "Mostly covered; some out-of-pocket."},
-            "No-cost_Access": {"score": "2/5", "disc": "Limited access outside public hospitals."}
+            "Reimbursement_Coverage": {"score": "3/5", "disc": "National insurance covers most treatments."},
+            "No-cost_Access": {"score": "2/5", "disc": "Limited subsidies; out-of-pocket costs exist."}
         },
         "cancer_screening": {
-            "National_Screening": {"score": "National program for biennial mammograms (50–69 years)", "disc": "Functional in urban and regional centers."}
+            "National_Screening": {"score": "Mammograms every 2 years (50-69 years)", "disc": "Coverage exists but variable by region."}
         }
     }
 ]

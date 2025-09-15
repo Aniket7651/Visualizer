@@ -319,6 +319,10 @@
         "Russia": {
             "country_sort_form": "RU",
             "popup_context": "A score of 3 illustrates uneven delivery: national programs exist, yet survival differs widely between urban and rural regions."
+        },
+        "Poland": {
+            "country_sort_form": "PL",
+            "popup_context": "A score of 3 highlights a structured framework: screening is organized, though outcomes vary regionally."
         }
         
     },

@@ -34,21 +34,27 @@ Cancer Explorer
         <label for="column">Data Features:</label>
         <select id="column" class="select-field" onchange="drawChart()"></select>
     </div>
-</div>
 
-<section class="map-content">
-    
     <div class="glass-content">
         <div id="data-list">
             <!-- Text descriptional content goes here -->
         </div>
     </div>
+</div>
 
+<section class="map-content">
+    
     <div class="chart_div">
         <button id="toggle-rowdetail"><i class="fa fa-bar-chart"></i></button>
-        <button id="downloadbtn"><i class="fa fa-download"></i></button>
+        <div class="tooltip-container">
+            <button id="downloadbtn"><i class="fa fa-download"></i></button>
+            <legend class="tooltip-text">Download this map</legend>
+        </div>
         <button><i class='fa fa-globe'></i></button>
-        <button id="infoBtn"><i class="fa fa-info"></i></button>
+        <div class="tooltip-container">
+            <button id="infoBtn"><i class="fa fa-info"></i></button>
+            <legend class="tooltip-text">About the map legend</legend>
+        </div>
     </div>
     <div id="geochart"></div>
 
