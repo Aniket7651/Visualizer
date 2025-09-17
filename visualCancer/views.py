@@ -40,9 +40,27 @@ def downloadFactSheet_file(request, cancer_type, country):
     elif cancer_type == "Breast":
         fileName = f"Factsheet - {country} High Resolution SWOT.pdf" # Factsheet - Algeria High Resolution SWOT
 
+    elif cancer_type == "Gastric":
+        if os.path.exists(os.path.join(settings.MEDIA_ROOT, 'Data', f'{cancer_type}FactSheet', country, f"{country} - {cancer_type} Cancer High Resolution.pdf")):
+            fileName = f"{country} - {cancer_type} Cancer High Resolution.pdf"
+        else: 
+            fileName = f"{country} - Gastric Cancer High Resolution.pdf"
+
+    elif cancer_type == "Prostate":
+        if os.path.exists(os.path.join(settings.MEDIA_ROOT, 'Data', f'{cancer_type}FactSheet', country, f"{country} - {cancer_type} Cancer High Resolution.pdf")):
+            fileName = f"{country} - {cancer_type} Cancer High Resolution.pdf"
+        
+        else:
+            fileName = f"{country} - {cancer_type.lower()} cancer High Resolution.pdf"
+    elif cancer_type == "Colorectal":
+        if os.path.exists(os.path.join(settings.MEDIA_ROOT, 'Data', f'{cancer_type}FactSheet', country, f"{country} - {cancer_type} Cancer High Resolution.pdf")):
+            fileName = f"{country} - {cancer_type} Cancer High Resolution.pdf"
+        else:
+            fileName = f"{country} - High Resolution {cancer_type} Cancer.pdf"
+
 
     file_path = os.path.join(settings.MEDIA_ROOT, 'Data', f'{cancer_type}FactSheet', country, fileName)
-    # print(file_path)
+    print(file_path)
     if os.path.exists(file_path):
         return FileResponse(open(file_path, 'rb'), content_type='application/pdf')
     else:
@@ -188,6 +206,33 @@ def plot_generator(column_, title, xlabel='Date', ylabel='Value', kind='bar'):
     return image_base64
 
 
+def view_feedback(request):
+    if request.method == 'POST':
+
+        name = request.POST.get('name')
+        email = request.POST.get('email')
+        country = request.POST.get('country')
+        affilation = request.POST.get('role')
+        profession = request.POST.get('profession')
+        Feedback_msg = request.POST.get('feedback')
+
+        # Save feedback to the database
+        from .models import Feedback
+        feedback_entry = Feedback(
+            name=name,
+            email=email,
+            country=country,
+            affiliation=affilation,
+            profession=profession,
+            feedback_type="General",
+            comments=Feedback_msg
+        )
+        feedback_entry.save()
+
+        return render(request, 'feedback.html', {
+            'success_message': "“Thank you for contributing to ICPC. Your perspective helps shape the next updates of our factsheets, policy papers, and global equity index.”"
+        })
+    return render(request, 'feedback.html')
 
 
 

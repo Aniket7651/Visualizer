@@ -1,0 +1,68 @@
+{% extends 'base.htm' %}
+
+{% block title %}
+Give Us Feedback
+{% endblock %}
+
+{% load static %}
+{% load customTagFilter %}
+
+{% block content %}
+
+<link rel="stylesheet" href="{% static 'admin/feedback.css' %}">
+<link rel="stylesheet" href="{% static 'admin/overview.css' %}">
+<div class="thankyou-note">
+    <p>{{ success_message }}</p>
+</div>
+<h1>Share Your Feedback</h1>
+<h2>Your voice matters.</h2>
+
+<div class="feedback-container">
+    <p>
+        The International Cancer Policy and Care (ICPC) platform is designed to grow with the people who use
+        it—patients, caregivers, professionals, and advocates. Your comments help us keep the data accurate, the tools
+        practical, and the policies people-centered.
+    </p>
+    <br>
+    <p>
+        Please take a moment to tell us about yourself and share your thoughts. It only takes a minute, and no
+        registration is required.
+    </p>
+</div>
+
+<div class="feedback-form">
+    <h3>Your Feedback Matters</h3>
+    <form method="post">
+        {% csrf_token %}
+        <div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div>
+            <label for="country">Country:</label>
+            <input type="text" id="country" name="country" required>
+        </div>
+        <div>
+            <label for="role">Affiliation / Organization:</label>
+            <input type="text" id="role" name="role" required
+            >
+        </div>
+        <div>
+            <label for="profession">Profession / Role:</label>
+            <input type="text" id="profession" name="profession" required>
+        </div>
+        <div>
+            <label for="feedback">Your Feedback:</label>
+            <textarea id="feedback" name="feedback" rows="4" cols="50" required></textarea>
+        </div>
+        <input type="submit" value="Submit Feedback" class="submit-button">
+    </form>
+</div>
+
+
+
+{% endblock %}

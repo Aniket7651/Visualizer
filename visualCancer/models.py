@@ -247,5 +247,16 @@ class OverviewDetails(models.Model):
         return f"{self.cancer_type} Overview - {self.country}"
 
 
-# class PolicyDetails(models.Model):
+class Feedback(models.Model):
+    name = models.CharField(max_length=100)
+    email = models.EmailField()
+    country = models.CharField(max_length=100)
+    affiliation = models.CharField(max_length=200)
+    profession = models.CharField(max_length=100)
+    feedback_type = models.TextField()
+    comments = models.TextField()
+
+    def __str__(self):
+        return f"Feedback from {self.name} ({self.email})"
+
 
