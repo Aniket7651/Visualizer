@@ -1,0 +1,42 @@
+Country,Specialized Centers,Genetic & Molecular Testing Infrastructure (1-5),Treatment Access,Research Funding,Awareness Campaigns,Survival Rates,Early Detection,Palliative Care,HER2,ER,PR,BRCA1,BRCA2,Clinical Guideline Implementation (1-5),Feasibility of Integration (1-5),Adoption of Int'l Guidelines (1-5),Engagement with Updates (1-3),ESMO Guidelines Implementation (1-5),Reimbursement Framework,No-cost Access,Breast Cancer Screening
+South Africa,3,5,3,3,3,3,3,3,75,70,70,40,35,3,3,3,2,3,3,1,Biennial mammograms (50-74 years)
+Kenya,2,5,2,2,2,2,2,2,55,50,50,25,20,2,2,2,1,2,1,1,Triennial mammograms (50-71 years)
+Nigeria,2,5,2,2,2,2,1,2,40,40,40,20,20,2,2,2,1,2,1,1,Mammograms every 2-3 years (50-74 years)
+Egypt,3,4,3,3,3,3,3,3,75,75,75,40,35,4,3,3,2,3,3,2,Biennial mammograms (50-74 years)
+Morocco,2,5,2,2,3,3,3,3,60,60,60,30,25,3,3,3,2,2,3,1,Mammograms every 2 years (50-69 years)
+Algeria,2,5,2,2,2,2,2,2,60,60,60,30,25,3,3,3,2,2,3,1,Biennial mammograms (50-74 years)
+Ethiopia,1,5,1,1,1,1,1,1,35,30,30,10,10,1,1,1,1,1,1,1,Mammograms every 2 years (50-75 years)
+India,3,5,3,3,3,3,3,3,80,75,75,40,35,3,3,3,2,3,2,1,Mammograms every 18-24 months (40-74 years)
+Japan,4,4,4,4,4,4,4,4,95,95,95,90,90,5,5,5,3,5,3,3,Mammograms every 2 years (50-69 years)
+South Korea,4,4,4,4,4,4,4,4,95,95,95,90,90,5,5,5,3,5,3,3,Mammograms every 2 years (50-69 years)
+China,3,3,3,4,3,3,3,3,85,85,85,70,65,4,4,4,3,4,3,2,Mammograms every 2 years (50-69 years)
+Thailand,3,5,3,3,3,3,3,3,80,80,80,50,45,4,4,4,2,4,3,2,Mammograms every 2 years (40+ years)
+Singapore,4,5,4,5,5,4,5,4,95,95,95,90,90,5,5,5,3,5,3,3,Biennial mammograms (40+ years)
+United Kingdom,4,3,4,5,5,4,5,4,100,100,100,95,95,5,5,5,3,5,3,3,Regional mammogram programs (40-69 years)
+Germany,5,2,5,5,5,5,5,5,100,100,100,95,95,5,5,5,3,5,3,3,Opportunistic screening
+France,4,4,4,5,5,4,5,4,100,100,100,95,95,5,5,5,3,5,3,3,Biennial mammograms (50-69 years)
+Netherlands,5,3,5,5,5,5,5,5,100,100,100,95,95,5,5,5,3,5,3,3,Biennial mammograms (50-69 years)
+Sweden,5,2,5,5,5,5,5,5,100,100,100,95,95,5,5,5,3,5,3,3,Opportunistic screening
+Italy,4,1,4,4,4,4,4,4,100,100,100,95,95,5,5,5,3,5,3,3,No national program
+Spain,4,1,4,4,4,4,4,4,100,100,100,95,95,5,5,5,3,5,3,3,No national program
+Poland,3,3,3,3,3,3,3,3,85,85,85,65,60,4,4,4,2,4,3,2,National awareness campaigns
+Mexico,2,2,2,2,3,2,3,2,65,65,65,30,25,3,3,3,2,3,3,1,National program for 45-69 years
+Brazil,3,2,3,3,3,3,3,3,65,65,65,30,25,3,3,3,2,3,3,1,Planned national program (50-69 years)
+Argentina,3,1,3,3,3,3,3,3,65,65,65,30,25,3,3,3,2,3,3,1,No national program
+Chile,3,3,2,3,3,2,3,3,75,75,75,40,35,4,4,4,2,4,3,2,Biennial mammograms (40-69 years)
+Colombia,2,4,2,2,3,2,3,2,60,60,60,25,25,3,3,3,2,3,3,1,Biennial mammograms (50-69 years)
+United States,5,4,5,5,5,5,5,5,100,100,100,95,95,5,5,5,3,5,3,3,Biennial mammograms (50-69 years)
+Canada,5,3,5,5,5,5,5,4,100,100,100,95,95,5,5,5,3,5,3,3,Mammograms every 3 years (50-69 years)
+Australia,4,3,4,4,5,4,4,4,100,100,100,95,95,5,5,5,3,5,3,3,Biennial mammograms (50-69 years)
+New Zealand,4,4,4,4,4,4,4,4,100,100,100,95,95,5,5,5,3,5,3,3,Biennial mammograms (45-69 years)
+Greece,3,3,3,3,3,3,3,3,85,85,85,65,60,4,4,4,2,4,3,2,Biennial mammograms (50-69 years)
+Rwanda,1,1,1,1,1,1,1,1,30,30,30,10,10,1,1,1,1,1,1,1,No national program
+Uganda,1,1,1,1,1,1,1,1,30,30,30,10,10,1,1,1,1,1,1,1,No national program
+Serbia,3,3,3,3,3,3,3,3,60,60,60,30,30,3,3,3,2,3,3,2,Biennial mammograms (50-69 years)
+Saudi Arabia,3,4,4,4,4,4,4,4,80,80,80,50,45,4,4,4,2,4,3,2,Opportunistic screening; regional programs for women aged 40+
+UAE,3,4,4,4,4,4,4,4,80,80,80,50,45,4,4,4,2,4,3,2,Opportunistic screening; encouraged every 2 years for 40-69 years
+Syria,1,1,2,1,1,2,2,1,35,35,35,10,10,1,1,1,1,1,1,1,No national program; limited local initiatives due to conflict
+Indonesia,2,2,3,2,3,3,3,2,60,60,60,30,25,3,3,3,2,3,2,1,Opportunistic screening; no national mammography program
+Vietnam,2,2,3,2,3,3,3,2,60,60,60,30,25,3,3,3,2,3,2,1,Regional mammography programs; pilot programs in urban areas (age 45–69)
+Philippines,2,2,3,2,3,3,3,3,60,60,60,30,25,3,3,3,2,3,2,1,Opportunistic screening; mammography recommended every 2 years for women 50+
+Russia,4,3,4,4,3,4,3,3,80,80,80,50,45,4,4,4,2,4,3,2,National program for biennial mammograms (50–69 years)

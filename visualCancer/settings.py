@@ -14,7 +14,7 @@ from pathlib import Path
 import os, json
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
 with open(f'{BASE_DIR}/secrete.json', 'r') as f:
@@ -24,12 +24,12 @@ with open(f'{BASE_DIR}/secrete.json', 'r') as f:
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = data["secreteKey"]
+SECRET_KEY = "django-insecure-rd9qvzb(=&z790slpz&z-op%sao6y8hj30__b+v%txfemxi!#n"
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["*", ".ngrok-free.app"]
+ALLOWED_HOSTS = ["*"]
 
 CANCER_TYPES = ''
 
@@ -85,12 +85,12 @@ DATABASES = {
     # }
 
     'default': {
-        'ENGINE': data["ENGINE"],
-        'NAME': data["NAME"], 
-        'USER': data["USER"],
-        'PASSWORD': data["PASSWORD"],
-        'HOST': data["HOST"],
-        'PORT': data["PORT"]
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'ICPC_Database', 
+        'USER': 'root',
+        'PASSWORD': 'root',
+        'HOST': 'localhost',
+        'PORT': '5432'
     }
 }
 
@@ -129,12 +129,12 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'staticfiles')
+    os.path.join(BASE_DIR, 'static')
 ]
 
 

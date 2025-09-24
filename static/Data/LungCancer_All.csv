@@ -1,0 +1,43 @@
+Country,Specialized Centers,Genetic & Molecular Testing Infrastructure (1-5),Treatment Access,Research Funding,Awareness Campaigns,Survival Rates,Early Detection,Palliative Care,EGFR,ALK,PD-L1,MET,ROS1,BRAF,KRAS,Clinical Guideline Implementation (1-5),Feasibility of Integration (1-5),Adoption of Int'l Guidelines (1-5),Engagement with Updates (1-3),ESMO Guidelines Implementation (1-5),Reimbursement Framework,No-cost Access,Lung Cancer Screening
+South Africa,3,3,3,3,4,3,3,3,60,55,70,45,50,40,55,3,3,3,2,3,1,1,No national LDCT program
+Kenya,1,2,1,1,1,1,1,1,50,45,60,35,40,30,48,2,2,2,1,2,1,1,No national LDCT program
+Nigeria,1,2,1,1,1,1,1,1,48,43,58,33,38,28,45,2,2,2,1,2,1,1,No national LDCT program
+Egypt,2,3,2,2,2,2,2,2,70,65,78,52,57,47,62,3,3,3,2,3,1,1,No national LDCT program
+Morocco,2,2,2,2,2,2,2,2,65,60,75,50,55,45,58,3,3,3,2,3,1,1,No national LDCT program
+Algeria,2,2,2,2,2,2,2,2,60,55,70,45,50,40,55,2,2,2,1,2,2,2,No national LDCT program
+Ethiopia,1,1,1,1,1,1,1,1,45,40,55,30,35,25,42,2,1,1,1,1,1,1,No national LDCT program
+India,3,4,3,3,3,3,3,3,65,60,75,50,55,45,58,3,2,2,1,2,1,1,No national LDCT program
+Japan,5,5,5,4,5,5,4,5,92,87,96,75,78,70,85,5,5,5,3,5,3,3,No national LDCT program
+South Korea,5,5,5,4,5,5,4,5,91,86,95,74,77,69,84,5,5,5,3,5,3,3,LDCT for high-risk individuals (50-74 years)
+China,4,4,4,3,4,3,3,4,80,73,85,58,63,53,68,4,3,3,2,3,2,2,No national LDCT program
+Thailand,3,3,3,3,3,3,3,3,78,70,83,57,62,52,67,4,3,3,2,3,2,2,No national LDCT program
+Singapore,5,5,5,5,5,5,5,5,89,84,94,72,76,67,82,5,5,5,3,5,2,2,No national LDCT program
+United Kingdom,5,5,5,5,5,5,5,5,85,80,90,65,70,60,75,5,5,5,3,5,3,3,LDCT for high-risk individuals (55-74 years)
+Germany,5,4,5,5,5,5,5,5,89,83,94,69,74,63,79,5,5,5,3,5,3,3,"No national program, under evaluation"
+France,5,5,5,4,5,5,5,5,86,79,91,64,69,59,74,5,5,5,3,5,3,3,No national LDCT screening
+Netherlands,5,4,5,5,5,5,5,5,85,78,90,63,68,58,73,5,5,5,3,5,3,3,Participating in European screening studies
+Sweden,5,4,5,5,5,5,5,5,84,77,89,62,67,57,72,5,5,5,3,5,3,3,No national LDCT screening
+Italy,5,4,5,4,4,5,4,5,83,76,88,61,66,56,71,4,4,4,2,4,3,3,Regional pilot LDCT screening
+Spain,5,4,5,4,4,5,4,5,82,75,87,60,65,55,70,4,4,4,2,4,2,2,No national LDCT program
+Poland,4,3,4,3,4,3,3,4,75,68,80,55,60,50,65,3,3,3,2,3,2,2,No national program
+Mexico,2,3,2,2,3,2,3,2,75,70,82,54,60,50,66,3,3,3,2,3,2,2,No national LDCT program
+Brazil,3,3,3,3,3,3,3,3,78,73,85,58,63,53,68,4,3,3,2,3,2,2,No national LDCT program
+Argentina,3,3,3,3,3,3,3,3,77,72,84,57,62,52,67,4,3,3,2,3,2,2,No national LDCT program
+Chile,3,3,3,3,3,3,3,3,76,71,83,56,61,51,66,4,3,3,2,3,2,2,No national LDCT program
+Colombia,2,3,2,2,3,2,3,2,74,69,81,53,59,49,64,4,3,3,2,3,2,2,No national LDCT program
+United States,5,5,5,5,5,5,5,5,90,85,95,70,75,65,80,5,5,5,3,5,2,1,"Annual LDCT (50-80 years, high-risk smokers)"
+Canada,5,4,5,5,5,5,5,5,88,82,93,68,73,62,78,5,5,5,3,5,3,3,LDCT for high-risk individuals (55-74 years)
+Australia,5,5,5,4,5,5,4,5,87,81,92,67,72,61,77,5,5,5,3,5,2,2,"No national program, high-risk groups advised LDCT"
+New Zealand,4,4,4,4,4,4,4,4,86,81,92,67,72,61,77,5,5,5,3,5,2,2,No national LDCT program
+Greece,4,3,4,3,4,3,3,4,80,75,87,60,65,55,70,4,3,3,2,3,2,2,No national LDCT program
+Rwanda,1,1,1,1,1,1,1,1,40,35,50,25,30,20,38,2,1,1,1,1,1,1,No national LDCT program
+Uganda,1,1,1,1,1,1,1,1,42,37,52,27,32,22,40,2,1,1,1,1,1,1,No national LDCT program
+Serbia,3,3,3,3,3,3,3,3,68,63,78,52,57,47,62,3,3,3,2,3,3,3,No national LDCT program
+Saudi Arabia,4,4,4,3,4,4,3,4,75,70,85,60,65,50,68,4,4,4,2,4,2,2,No program high-risk CT pilots
+UAE,4,4,4,3,4,4,3,4,78,72,88,62,68,55,70,4,4,4,2,4,0,0,na
+Syria,1,1,1,1,1,1,1,1,40,35,50,25,30,20,38,2,1,1,1,1,0,0,na
+Indonesia,2,2,3,2,3,3,2,3,60,55,70,45,50,40,55,3,2,2,1,2,0,0,na
+Vietnam,3,3,3,2,3,3,2,3,62,57,72,47,52,42,58,3,2,2,1,2,0,0,na
+Philippines,2,2,2,2,3,2,2,3,58,52,68,43,48,38,53,3,2,2,1,2,0,0,na
+Russia,4,3,4,3,3,4,3,3,80,75,85,60,65,50,70,4,3,3,2,3,0,0,na
+Malaysia,4,4,4,3,3,3,2,3,90,75,85,40,35,25,20,4,4,4,2,4,0,0,na

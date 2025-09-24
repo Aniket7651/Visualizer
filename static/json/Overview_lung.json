@@ -1,0 +1,2807 @@
+[
+    {
+        "id": 45,
+        "cancer_type": "lung",
+        "country": "Algeria",
+        "country_shortForm": "DZ",
+        "introduction": "Lung cancer in Algeria is a rising health concern, constrained by limited infrastructure, diagnostics, and treatment access. Specialized oncology services are concentrated in urban centers, leaving rural populations underserved. Molecular testing for biomarkers is available but restricted to a few hospitals. Survival outcomes remain poor due to late-stage detection, with no national LDCT screening program in place. Palliative care is weak, and awareness campaigns are limited in scope. Clinical guidelines exist but lack consistent adoption, and reimbursement remains underdeveloped, creating inequities in access to therapies. Overall, Algeria’s maturity level for lung cancer care is 2, reflecting foundational structures but major gaps in equity, screening, and advanced care.",
+        "swot_analysis": {
+            "Strengths":
+                ["Oncology centers established in main cities.",
+"Biomarker testing (EGFR, ALK, PD-L1) available in tertiary hospitals.",
+"National framework supports guideline-based care."
+],
+
+            "Weaknesses":
+                ["Rural and regional disparities in care and diagnostics.",
+"No national LDCT screening program; late diagnoses dominate.",
+"Weak reimbursement and high out-of-pocket burden.",
+"Palliative care underdeveloped with limited opioid access."
+],
+
+            "Opportunities": ["Expansion of biomarker testing beyond tertiary centers.",
+"Development of national screening for high-risk populations.",
+"Policy reforms to expand reimbursement and palliative care.",
+"International collaborations for clinical research."
+],
+
+            "Threats": 
+                ["Rising incidence linked to smoking may outpace capacity.",
+"Workforce shortages in oncology services.",
+"Economic constraints slowing uptake of innovation."
+]
+        },
+        "infrastructure": {
+            "Specialized_Centers": {"score": "2/5", "disc": "Few centers in major cities, limited rural access."},
+            "Genetic_Molecular_Testing": {"score": "2/5", "disc": "Available in select hospitals, not widespread."}
+        },
+        "treatment_funding_awareness": {
+            "Treatment_Access": {"score": "2/5", "disc": "Standard therapies in urban centers, gaps in equity."},
+            "Research_Funding": {"score": "2/5", "disc": "Limited oncology-specific funding."},
+            "Awareness_Campaigns": {"score": "2/5", "disc": "Weak campaigns, limited rural engagement."}
+        },
+        "survival_rates": {
+            "Survival_Rates": {"score": "2/5", "disc": "Low survival due to late diagnoses."},
+            "Early_Detection": {"score": "2/5", "disc": "No screening program, poor early-stage detection."},
+            "Palliative_Care": {"score": "2/5", "disc": "Weak availability, opioid access barriers."}
+        },
+        "biomarkers": {
+            "EGFR":{"score": "60%", "disc": "Moderately available."},
+            "ALK": {"score": "55%", "disc": "Limited access."},
+            "PD_L1": {"score": "70%", "disc": "Widely used compared to others."},
+            "MET": {"score": "45%", "disc": "Minimal coverage."},
+            "ROS1": {"score": "50%", "disc": "Some testing in tertiary hospitals."},
+            "BRAF": {"score": "40%", "disc": "Rarely available."},
+            "KRAS": {"score": "55%", "disc": "Limited to advanced centers."}
+        },
+        "clinical_guidelines": {
+            "Implementation": {"score": "2/5", "disc": "Guidelines exist, weak integration."},
+            "Feasibility": {"score": "2/5", "disc": "Limited by training/resources."},
+            "Adoption_International_Guideline": {"score": "2/5", "disc": "Partial ESMO alignment."},
+            "Engagement_with_Updates": {"score": "1/3", "disc": "Rarely updated outside major centers."},
+            "ESMO_Guidelines": {"score": "2/5", "disc": "Adopted in principle, weak adherence."}
+        },
+        "reimbursement": {
+            "Reimbursement_Coverage": {"score": "2/5", "disc": "Limited reimbursement, gaps in innovative drugs."},
+            "No-cost_Access": {"score": "2/5", "disc": "Patients face high out-of-pocket burden."}
+        },
+        "cancer_screening": {
+            "National_Screening": {"score": "Absent", "disc": "No national lung cancer screening program."}
+        }
+    },
+
+
+    {
+        "id": 46,
+        "cancer_type": "lung",
+        "country": "Argentina",
+        "country_shortForm": "AR",
+        "introduction": "Argentina has made steady progress in lung cancer care, with infrastructure, treatment access, and molecular diagnostics improving across major urban centers. Specialized cancer hospitals and advanced laboratories support biomarker testing, while awareness campaigns are increasing in reach. However, disparities remain between public and private healthcare systems, and reimbursement challenges limit equitable access to innovative therapies. No national LDCT screening program exists, contributing to late-stage diagnoses. With survival rates and research funding at moderate levels, Argentina demonstrates a maturity level of 3, highlighting solid foundations with room for scaling equity and screening.",
+        "swot_analysis": {
+            "Strengths":
+                ["Specialized cancer centers with urban coverage.",
+"Biomarker testing (EGFR, ALK, PD-L1) widely available.",
+"National clinical guidelines integrated in oncology practice.",
+"Growing research activity and awareness efforts."
+],
+
+            "Weaknesses":
+                ["Absence of national screening programs.",
+"Reimbursement gaps create inequities in access to novel therapies.",
+"Regional disparities between urban and rural healthcare.",
+"Dependence on private sector for advanced care."
+],
+
+            "Opportunities": ["Expansion of LDCT-based screening for high-risk groups.",
+"Policy reforms to broaden reimbursement and access to targeted therapies.",
+"Strengthening clinical trial participation.",
+"Wider deployment of biomarker testing nationwide."
+],
+
+            "Threats": 
+                ["Rising incidence and late diagnoses strain healthcare resources.",
+"Economic constraints may slow adoption of innovation.",
+"Urban-rural disparities may worsen without targeted interventions."
+]
+        },
+        "infrastructure": {
+            "Specialized_Centers": {"score": "3/5", "disc": "Strong urban coverage, weaker in rural regions."},
+            "Genetic_Molecular_Testing": {"score": "3/5", "disc": "Widely available in major hospitals."}
+        },
+        "treatment_funding_awareness": {
+            "Treatment_Access": {"score": "3/5", "disc": "Standard therapies broadly accessible."},
+            "Research_Funding": {"score": "3/5", "disc": "Steady but moderate oncology research investment."},
+            "Awareness_Campaigns": {"score": "3/5", "disc": "Active but limited reach outside cities."}
+        },
+        "survival_rates": {
+            "Survival_Rates": {"score": "3/5", "disc": "Moderate, reflecting late-stage diagnoses."},
+            "Early_Detection": {"score": "3/5", "disc": "No national screening, opportunistic detection."},
+            "Palliative_Care": {"score": "3/5", "disc": "Services present but unevenly distributed."}
+        },
+        "biomarkers": {
+            "EGFR":{"score": "77%", "disc": "Widely available."},
+            "ALK": {"score": "72%", "disc": "Strong testing uptake."},
+            "PD_L1": {"score": "84%", "disc": "High adoption in practice."},
+            "MET": {"score": "57%", "disc": "Moderate access."},
+            "ROS1": {"score": "62%", "disc": "Reasonable availability."},
+            "BRAF": {"score": "52%", "disc": "Lower uptake compared to major biomarkers."},
+            "KRAS": {"score": "67%", "disc": "Increasingly tested."}
+        },
+        "clinical_guidelines": {
+            "Implementation": {"score": "4/5", "disc": "National guidelines well integrated."},
+            "Feasibility": {"score": "3/5", "disc": "Feasible in most urban centers"},
+            "Adoption_International_Guideline": {"score": "3/5", "disc": "Aligned with ESMO, partial integration."},
+            "Engagement_with_Updates": {"score": "2/3", "disc": "Moderate adherence to latest updates."},
+            "ESMO_Guidelines": {"score": "3/5", "disc": "Partially adopted in clinical practice."}
+        },
+        "reimbursement": {
+            "Reimbursement_Coverage": {"score": "2/5", "disc": "Basic coverage, gaps for novel drugs."},
+            "No-cost_Access": {"score": "2/5", "disc": "Patients often pay out-of-pocket for advanced care."}
+        },
+        "cancer_screening": {
+            "National_Screening": {"score": "Absent", "disc": "No national LDCT program."}
+        }
+    },
+
+
+    {
+        "id": 47,
+        "cancer_type": "lung",
+        "country": "Australia",
+        "country_shortForm": "AU",
+        "introduction": "Australia demonstrates advanced maturity in lung cancer care, with strong infrastructure, universal healthcare coverage, and robust biomarker utilization. Specialized cancer centers and cutting-edge diagnostics are widely available. Survival rates are among the highest globally, supported by comprehensive palliative care and strong awareness campaigns. Clinical guidelines are well aligned with international standards and updated regularly. However, despite the excellence in care, reimbursement remains a challenge for certain advanced therapies, and there is no national LDCT program, though high-risk groups are encouraged for screening. With strong research and treatment systems, Australia’s maturity level is 5, positioning it as a global leader.",
+        "swot_analysis": {
+            "Strengths":
+                ["World-class specialized cancer centers and infrastructure.",
+"Comprehensive biomarker testing with high adoption.",
+"Universal treatment access under national health schemes.",
+"High survival rates supported by early detection and strong palliative care.",
+"Extensive awareness campaigns and patient engagement."
+],
+
+            "Weaknesses":
+                ["No universal LDCT screening program.",
+"Some reimbursement gaps for latest targeted therapies.",
+"Rural/remote populations face logistical barriers to access."
+],
+
+            "Opportunities": ["Implementation of a national LDCT screening program.",
+"Further integration of digital health to reach remote populations.",
+"Expanding participation in global oncology trials."
+],
+
+            "Threats": 
+                ["Rising incidence may strain long-term system sustainability.",
+"Cost pressures of novel therapies could challenge reimbursement."
+]
+        },
+        "infrastructure": {
+            "Specialized_Centers": {"score": "5/5", "disc": "Advanced nationwide coverage."},
+            "Genetic_Molecular_Testing": {"score": "5/5", "disc": "State-of-the-art biomarker testing."}
+        },
+        "treatment_funding_awareness": {
+            "Treatment_Access": {"score": "5/5", "disc": "Universal access to standard and targeted therapies."},
+            "Research_Funding": {"score": "4/5", "disc": "Strong national and international oncology funding."},
+            "Awareness_Campaigns": {"score": "5/5", "disc": "Extensive national awareness efforts."}
+        },
+        "survival_rates": {
+            "Survival_Rates": {"score": "5/5", "disc": "Among the highest globally."},
+            "Early_Detection": {"score": "4/5", "disc": "No national LDCT, but high uptake in high-risk groups."},
+            "Palliative_Care": {"score": "5/5", "disc": "Strong, well-distributed palliative services."}
+        },
+        "biomarkers": {
+            "EGFR":{"score": "87%", "disc": "Widely available."},
+            "ALK": {"score": "81%", "disc": "Routinely used."},
+            "PD_L1": {"score": "92%", "disc": "Highly adopted."},
+            "MET": {"score": "67%", "disc": "Good access."},
+            "ROS1": {"score": "72%", "disc": "Widely available."},
+            "BRAF": {"score": "61%", "disc": "Commonly tested."},
+            "KRAS": {"score": "77%", "disc": "Increasingly used."}
+        },
+        "clinical_guidelines": {
+            "Implementation": {"score": "5/5", "disc": "Fully integrated into practice."},
+            "Feasibility": {"score": "5/5", "disc": "Feasible nationwide."},
+            "Adoption_International_Guideline": {"score": "5/5", "disc": "Fully aligned with ESMO."},
+            "Engagement_with_Updates": {"score": "3/3", "disc": "Regular updates adopted."},
+            "ESMO_Guidelines": {"score": "5/5", "disc": "Fully implemented."}
+        },
+        "reimbursement": {
+            "Reimbursement_Coverage": {"score": "2/5", "disc": "Coverage gaps for some advanced therapies."},
+            "No-cost_Access": {"score": "2/5", "disc": "Out-of-pocket costs for certain drugs."}
+        },
+        "cancer_screening": {
+            "National_Screening": {"score": "Limited", "disc": "No national program, high-risk individuals screened."}
+        }
+    },
+
+
+    {
+        "id": 48,
+        "cancer_type": "lung",
+        "country": "Brazil",
+        "country_shortForm": "BR",
+        "introduction": "Brazil’s lung cancer system shows moderate maturity with well-established specialized centers in major cities and growing molecular testing capacity. Treatment access is mixed between public (SUS) and private sectors, producing inequalities in care and access to innovative therapies. Research activity is solid in academic hospitals, but national LDCT screening is absent. Biomarker testing (EGFR, ALK, PD-L1) is widely available in urban centers.",
+        "swot_analysis": {
+            "Strengths":
+                ["Strong specialized centers in large cities.",
+"Widespread biomarker testing in tertiary hospitals.",
+"Active oncology research and trial participation."
+],
+
+            "Weaknesses":
+                ["Public–private disparities in access and timeliness of care.",
+"No national LDCT screening program.",
+"Reimbursement and no-cost access gaps for innovative drugs."
+],
+
+            "Opportunities": ["Expand molecular testing and decentralized diagnostics.",
+"Introduce targeted LDCT screening for high-risk groups.",
+"Policy reforms to reduce out-of-pocket costs."
+],
+
+            "Threats": 
+                ["Regional inequities may widen without investment.",
+"Economic constraints could limit implementation of new therapies."
+]
+        },
+        "infrastructure": {
+            "Specialized_Centers": {"score": "3/5", "disc": "Good urban coverage; limited rural access."},
+            "Genetic_Molecular_Testing": {"score": "3/5", "disc": "Available in major hospitals."}
+        },
+        "treatment_funding_awareness": {
+            "Treatment_Access": {"score": "3/5", "disc": "Varies by public/private sector."},
+            "Research_Funding": {"score": "3/5", "disc": "Active but moderate."},
+            "Awareness_Campaigns": {"score": "3/5", "disc": "Present, stronger in cities."}
+        },
+        "survival_rates": {
+            "Survival_Rates": {"score": "2/5", "disc": "Moderate."},
+            "Early_Detection": {"score": "2/5", "disc": "Opportunistic detection; no national LDCT."},
+            "Palliative_Care": {"score": "2/5", "disc": "Present but unevenly distributed."}
+        },
+        "biomarkers": {
+            "EGFR":{"score": "78%", "disc": "Widely used."},
+            "ALK": {"score": "73%", "disc": "Commonly tested."},
+            "PD_L1": {"score": "85%", "disc": "High adoption."},
+            "MET": {"score": "58%", "disc": "Moderate."},
+            "ROS1": {"score": "63%", "disc": "Moderate availability."},
+            "BRAF": {"score": "53%", "disc": "Moderate."},
+            "KRAS": {"score": "68%", "disc": "Increasingly tested."}
+        },
+        "clinical_guidelines": {
+            "Implementation": {"score": "4/5", "disc": "National guidelines widely used."},
+            "Feasibility": {"score": "3/5", "disc": "Feasible in urban centers."},
+            "Adoption_International_Guideline": {"score": "3/5", "disc": "Partial alignment with ESMO."},
+            "Engagement_with_Updates": {"score": "2/3", "disc": "Moderate."},
+            "ESMO_Guidelines": {"score": "3/5", "disc": "Partially implemented."}
+        },
+        "reimbursement": {
+            "Reimbursement_Coverage": {"score": "2/5", "disc": "Gaps for costly novel therapies."},
+            "No-cost_Access": {"score": "2/5", "disc": "Out-of-pocket costs common."}
+        },
+        "cancer_screening": {
+            "National_Screening": {"score": "Absent", "disc": "No national program."}
+        }
+    },
+
+
+    {
+        "id": 49,
+        "cancer_type": "lung",
+        "country": "Canada",
+        "country_shortForm": "CA",
+        "introduction": "Canada’s lung cancer care is highly mature — strong specialized centers, broad molecular testing, universal coverage of many standard treatments, established LDCT screening for eligible high-risk groups, and excellent palliative services. Research funding and guideline adoption are robust. Reimbursement for some innovative therapies may still vary regionally, but overall care outcomes and early detection are among the best. Overall maturity level: 5.",
+        "swot_analysis": {
+            "Strengths":
+                ["Comprehensive specialized cancer centers and coordinated provincial programs.",
+"High biomarker utilization and strong clinical-research linkages.",
+"LDCT screening programs for eligible high-risk individuals.",
+"Excellent palliative care and survival outcomes."
+],
+
+            "Weaknesses":
+                ["Provincial variations in funding for some novel therapies.",
+"Rural/remote access (Indigenous and northern communities) still challenging."
+],
+
+            "Opportunities": ["Broader harmonization of reimbursement across provinces.",
+"Increased outreach to remote and Indigenous communities for screening and care."
+],
+
+            "Threats": 
+                ["Rising costs of novel oncology drugs.",
+"Workforce shortages in remote regions."
+]
+        },
+        "infrastructure": {
+            "Specialized_Centers": {"score": "5/5", "disc": "Excellent national capacity."},
+            "Genetic_Molecular_Testing": {"score": "4/5", "disc": "Widely available; strong lab networks."}
+        },
+        "treatment_funding_awareness": {
+            "Treatment_Access": {"score": "5/5", "disc": "Standard therapies broadly accessible."},
+            "Research_Funding": {"score": "5/5", "disc": "Strong national research investment."},
+            "Awareness_Campaigns": {"score": "5/5", "disc": "Well-developed public campaigns."}
+        },
+        "survival_rates": {
+            "Survival_Rates": {"score": "5/5", "disc": "High survival with strong outcomes."},
+            "Early_Detection": {"score": "5/5", "disc": "LDCT for high-risk individuals implemented."},
+            "Palliative_Care": {"score": "5/5", "disc": "Robust services."}
+        },
+        "biomarkers": {
+            "EGFR":{"score": "88%", "disc": "Very high."},
+            "ALK": {"score": "82%", "disc": "High."},
+            "PD_L1": {"score": "93%", "disc": "Very high."},
+            "MET": {"score": "68%", "disc": "Good."},
+            "ROS1": {"score": "73%", "disc": "Good."},
+            "BRAF": {"score": "62%", "disc": "Good."},
+            "KRAS": {"score": "78%", "disc": "High."}
+        },
+        "clinical_guidelines": {
+            "Implementation": {"score": "5/5", "disc": "Fully implemented in practice."},
+            "Feasibility": {"score": "5/5", "disc": "Feasible nationwide."},
+            "Adoption_International_Guideline": {"score": "5/5", "disc": "Strong alignment with ESMO."},
+            "Engagement_with_Updates": {"score": "3/3", "disc": "Rapid uptake of updates."},
+            "ESMO_Guidelines": {"score": "5/5", "disc": "Well integrated."}
+        },
+        "reimbursement": {
+            "Reimbursement_Coverage": {"score": "3/5", "disc": "Good overall, but some regional variability."},
+            "No-cost_Access": {"score": "3/5", "disc": "Many therapies covered; gaps exist for very new drugs."}
+        },
+        "cancer_screening": {
+            "National_Screening": {"score": "Present", "disc": "LDCT for high-risk groups (e.g., 55–74 years) implemented in many jurisdictions."}
+        }
+    },
+
+
+    {
+        "id": 50,
+        "cancer_type": "lung",
+        "country": "Chile",
+        "country_shortForm": "CL",
+        "introduction": "Chile has moderate lung cancer capacity with centralized specialized centers and expanding molecular testing. Treatment access and palliative care are available but uneven across regions. No national LDCT program exists. Clinical guidelines are present and partly integrated. Overall maturity level: 2 (as provided).",
+        "swot_analysis": {
+            "Strengths":
+                ["Centralized specialized centers and biomarker testing in major hospitals.",
+"National guidelines in place."
+],
+
+            "Weaknesses":
+                ["Lack of national LDCT screening; regional disparities in access.",
+"Reimbursement and no-cost access limited for advanced therapies."
+],
+
+            "Opportunities": ["Scale biomarker testing to regional hospitals.",
+"Implement targeted LDCT screening for high-risk groups."
+],
+
+            "Threats": 
+                ["Resource constraints could widen urban–rural gaps.",
+"Increasing incidence may strain services."
+]
+        },
+        "infrastructure": {
+            "Specialized_Centers": {"score": "3/5", "disc": "Concentrated in Santiago and major cities."},
+            "Genetic_Molecular_Testing": {"score": "3/5", "disc": "Available in tertiary hospitals."}
+        },
+        "treatment_funding_awareness": {
+            "Treatment_Access": {"score": "3/5", "disc": "Standard care available in urban centers."},
+            "Research_Funding": {"score": "3/5", "disc": "Moderate."},
+            "Awareness_Campaigns": {"score": "3/5", "disc": "Present but variable."}
+        },
+        "survival_rates": {
+            "Survival_Rates": {"score": "3/5", "disc": "Moderate."},
+            "Early_Detection": {"score": "3/5", "disc": "No national LDCT; opportunistic detection."},
+            "Palliative_Care": {"score": "3/5", "disc": "Services available but unevenly distributed."}
+        },
+        "biomarkers": {
+            "EGFR":{"score": "76%", "disc": "Good availability."},
+            "ALK": {"score": "71%", "disc": "Reasonable."},
+            "PD_L1": {"score": "83%", "disc": "Widely used."},
+            "MET": {"score": "56%", "disc": "Moderate."},
+            "ROS1": {"score": "61%", "disc": "Moderate availability."},
+            "BRAF": {"score": "51%", "disc": "Limited."},
+            "KRAS": {"score": "66%", "disc": "Increasingly tested."}
+        },
+        "clinical_guidelines": {
+            "Implementation": {"score": "4/5", "disc": "Guidelines well developed."},
+            "Feasibility": {"score": "3/5", "disc": "Implementation feasible in urban centers."},
+            "Adoption_International_Guideline": {"score": "3/5", "disc": "Some alignment with ESMO."},
+            "Engagement_with_Updates": {"score": "2/3", "disc": "Moderate."},
+            "ESMO_Guidelines": {"score": "3/5", "disc": "Partial adoption."}
+        },
+        "reimbursement": {
+            "Reimbursement_Coverage": {"score": "3/5", "disc": "Limited for novel therapies."},
+            "No-cost_Access": {"score": "3/5", "disc": "Patients often face costs."}
+        },
+        "cancer_screening": {
+            "National_Screening": {"score": "Absent", "disc": "No national LDCT program."}
+        }
+    },
+
+
+    {
+        "id": 51,
+        "cancer_type": "lung",
+        "country": "United Kingdom",
+        "country_shortForm": "GB",
+        "introduction": "The United Kingdom has a highly developed lung cancer care system, with widespread specialized centers and advanced molecular testing infrastructure. Treatment access, research funding, and public awareness campaigns are strong, contributing to high survival rates and comprehensive palliative care. Biomarker testing for EGFR, ALK, PD-L1, MET, ROS1, BRAF, and KRAS is widely implemented to guide precision therapies. Clinical guidelines are fully aligned with international standards, and updates are actively adopted. National reimbursement ensures good coverage, and high-risk populations have access to LDCT screening programs, although uptake can vary regionally.",
+        "swot_analysis": {
+            "Strengths":
+                ["Highly developed specialized centers with strong molecular diagnostics.",
+"Widespread biomarker testing supports precision medicine.",
+"Clinical guidelines fully aligned with international standards and actively updated.",
+"Strong research funding and public awareness initiatives."
+],
+
+            "Weaknesses":
+                ["Uptake of LDCT screening among eligible high-risk individuals is variable.",
+"Some high-cost innovative therapies may require additional approvals.",
+"Regional disparities in access to cutting-edge treatments exist.",
+"Pressure on healthcare workforce in oncology may affect service delivery."
+],
+
+            "Opportunities": ["Expand LDCT screening uptake across all eligible populations.",
+"Further integrate digital health tools and tele-oncology services.",
+"Increase international collaboration in clinical trials.",
+"Strengthen access to novel therapies through reimbursement reforms."
+],
+
+            "Threats": 
+                ["Rising lung cancer incidence could strain specialized centers.",
+"Economic constraints may slow adoption of expensive therapies.",
+"Regional disparities may persist without targeted interventions.",
+"Delays in guideline implementation in smaller hospitals could affect care quality."
+]
+        },
+        "infrastructure": {
+            "Specialized_Centers": {"score": "5/5", "disc": "Advanced centers widely available across the UK."},
+            "Genetic_Molecular_Testing": {"score": "5/5", "disc": "Comprehensive testing infrastructure in tertiary hospitals."}
+        },
+        "treatment_funding_awareness": {
+            "Treatment_Access": {"score": "5/5", "disc": "Broad access to surgery, chemotherapy, targeted and immunotherapy."},
+            "Research_Funding": {"score": "5/5", "disc": "High investment in lung cancer research."},
+            "Awareness_Campaigns": {"score": "5/5", "disc": "Well-organized public campaigns nationwide."}
+        },
+        "survival_rates": {
+            "Survival_Rates": {"score": "5/5", "disc": "High survival driven by early access to treatments."},
+            "Early_Detection": {"score": "5/5", "disc": "LDCT screening for high-risk individuals (55-74 years)."},
+            "Palliative_Care": {"score": "5/5", "disc": "Comprehensive services with good opioid access."}
+        },
+        "biomarkers": {
+            "EGFR":{"score": "85%", "disc": "Routinely tested in most patients."},
+            "ALK": {"score": "80%", "disc": "Widely tested."},
+            "PD_L1": {"score": "90%", "disc": "Standard testing in clinical care."},
+            "MET": {"score": "65%", "disc": "Increasingly available."},
+            "ROS1": {"score": "70%", "disc": "Routinely tested in tertiary centers."},
+            "BRAF": {"score": "60%", "disc": "Incorporated in diagnostic workflows."},
+            "KRAS": {"score": "75%", "disc": "Regularly assessed in molecular panels."}
+        },
+        "clinical_guidelines": {
+            "Implementation": {"score": "5/5", "disc": "Fully integrated with ESMO/NCCN standards."},
+            "Feasibility": {"score": "5/5", "disc": "Easily implementable in hospitals nationwide."},
+            "Adoption_International_Guideline": {"score": "5/5", "disc": "Strong alignment with international standards."},
+            "Engagement_with_Updates": {"score": "3/3", "disc": "Actively adopted."},
+            "ESMO_Guidelines": {"score": "5/5", "disc": "Implemented in routine practice."}
+        },
+        "reimbursement": {
+            "Reimbursement_Coverage": {"score": "3/5", "disc": "Good coverage for standard and targeted therapies."},
+            "No-cost_Access": {"score": "3/5", "disc": "Generally available through NHS."}
+        },
+        "cancer_screening": {
+            "National_Screening": {"score": "LDCT for high-risk individuals (55-74 years)", "disc": "Structured early detection program exists."}
+        }
+    },
+
+
+    {
+        "id": 52,
+        "cancer_type": "lung",
+        "country": "United States",
+        "country_shortForm": "US",
+        "introduction": "The United States has a highly advanced lung cancer care system, characterized by extensive specialized centers and cutting-edge molecular testing infrastructure. Treatment access, research funding, and public awareness campaigns are robust, resulting in high survival rates and well-developed palliative care services. Biomarker testing for EGFR, ALK, PD-L1, MET, ROS1, BRAF, and KRAS is widely implemented to enable precision medicine. Clinical guidelines are fully aligned with international standards and updates are actively incorporated. Reimbursement frameworks vary by insurance type, and LDCT screening for high-risk individuals is established nationally, supporting early detection.",
+        "swot_analysis": {
+            "Strengths":
+                ["Advanced specialized centers with comprehensive molecular testing capabilities.",
+"Widespread biomarker testing enabling precision therapies.",
+"High research funding and active clinical trial participation.",
+"National LDCT screening program for high-risk populations."
+],
+
+            "Weaknesses":
+                ["Access to some high-cost targeted therapies depends on insurance coverage.",
+"Disparities in care quality may exist between urban and rural regions.",
+"Reimbursement and out-of-pocket costs can be barriers for certain populations.",
+"Variable adoption speed of new therapies across different states."
+],
+
+            "Opportunities": ["Expand outreach to underserved populations to increase screening uptake.",
+"Further integrate telemedicine and digital health tools for remote care.",
+"Strengthen public awareness campaigns on early detection and smoking cessation.",
+"Improve equitable access to innovative therapies through policy reforms."
+],
+
+            "Threats": 
+                ["Rising incidence among high-risk populations may increase healthcare demand.",
+"Economic pressures could limit adoption of very high-cost therapies.",
+"Regional disparities in access to diagnostics and treatment may persist.",
+"Regulatory or supply chain issues could delay new drug availability"
+]
+        },
+        "infrastructure": {
+            "Specialized_Centers": {"score": "3/5", "disc": "Advanced centers widely distributed nationwide."},
+            "Genetic_Molecular_Testing": {"score": "3/5", "disc": "Comprehensive molecular testing available in most tertiary hospitals."}
+        },
+        "treatment_funding_awareness": {
+            "Treatment_Access": {"score": "3/5", "disc": "Broad access to surgery, chemo, targeted and immunotherapy."},
+            "Research_Funding": {"score": "3/5", "disc": "High investment in lung cancer research and clinical trials."},
+            "Awareness_Campaigns": {"score": "3/5", "disc": "Extensive public campaigns promoting early detection."}
+        },
+        "survival_rates": {
+            "Survival_Rates": {"score": "3/5", "disc": "High survival rates due to early access and advanced treatments."},
+            "Early_Detection": {"score": "3/5", "disc": "LDCT screening for high-risk individuals (50-80 years)."},
+            "Palliative_Care": {"score": "3/5", "disc": "Comprehensive services with good opioid access."}
+        },
+        "biomarkers": {
+            "EGFR":{"score": "90%", "disc": "Routinely tested in most patients."},
+            "ALK": {"score": "85%", "disc": "Widely tested across tertiary centers."},
+            "PD_L1": {"score": "95%", "disc": "Standard testing for immunotherapy eligibility."},
+            "MET": {"score": "70%", "disc": "Available in specialized centers"},
+            "ROS1": {"score": "75%", "disc": "Routinely tested."},
+            "BRAF": {"score": "65%", "disc": "Incorporated in standard diagnostic workflows."},
+            "KRAS": {"score": "80%", "disc": "Regularly assessed in molecular panels."}
+        },
+        "clinical_guidelines": {
+            "Implementation": {"score": "5/5", "disc": "Fully aligned with ESMO/NCCN standards."},
+            "Feasibility": {"score": "5/5", "disc": "Easily implementable across hospital types."},
+            "Adoption_International_Guideline": {"score": "5/5", "disc": "Strong alignment with international standards."},
+            "Engagement_with_Updates": {"score": "3/3", "disc": "Actively adopted."},
+            "ESMO_Guidelines": {"score": "5/5", "disc": "Fully implemented in practice."}
+        },
+        "reimbursement": {
+            "Reimbursement_Coverage": {"score": "2/5", "disc": "Varies by insurance; some treatments may be restricted."},
+            "No-cost_Access": {"score": "1/5", "disc": "High-cost therapies often not fully covered."}
+        },
+        "cancer_screening": {
+            "National_Screening": {"score": "Annual LDCT (50-80 years, high-risk smokers)", "disc": "Structured national screening program exists."}
+        }
+    },
+
+
+    {
+        "id": 53,
+        "cancer_type": "lung",
+        "country": "Uganda",
+        "country_shortForm": "UG",
+        "introduction": "Uganda has a nascent lung cancer care system, with very limited specialized centers and minimal molecular testing infrastructure. Treatment access, research funding, and awareness campaigns are extremely low, leading to poor survival rates and limited early detection. Palliative care is underdeveloped, and biomarker testing for EGFR, ALK, PD-L1, MET, ROS1, BRAF, and KRAS is scarce. Clinical guidelines are minimally implemented, with little alignment to international standards and almost no engagement with updates. Reimbursement frameworks and no-cost access are minimal, and no national LDCT screening program exists. Overall, the system faces significant challenges in providing equitable and timely lung cancer care.",
+        "swot_analysis": {
+            "Strengths":
+                ["Some specialized centers exist in major cities.",
+"Basic clinical guidelines are present for standard care.",
+"Limited biomarker testing is available in tertiary centers.",
+"Growing awareness of the need for cancer care improvements."
+],
+
+            "Weaknesses":
+                ["Very low treatment access and research funding.",
+"Palliative care is underdeveloped and opioid access is limited.",
+"Biomarker testing and molecular diagnostics are scarce.",
+"No national screening or early detection programs."
+
+],
+
+            "Opportunities": ["Develop specialized centers and expand molecular testing infrastructure.",
+"Implement national awareness campaigns and early detection programs.",
+"Strengthen palliative care networks and improve access to opioids.",
+"Collaborate with international research initiatives to build capacity."
+],
+
+            "Threats": 
+                ["Rising lung cancer incidence may overwhelm the limited healthcare infrastructure.",
+"Economic constraints could limit access to treatments and diagnostics.",
+"Workforce shortages in oncology may persist.",
+"Delays in adopting international guidelines could impact care quality."
+
+]
+        },
+        "infrastructure": {
+            "Specialized_Centers": {"score": "1/5", "disc": "Very limited; mostly urban."},
+            "Genetic_Molecular_Testing": {"score": "1/5", "disc": "Minimal infrastructure; scarce testing."}
+        },
+        "treatment_funding_awareness": {
+            "Treatment_Access": {"score": "1/5", "disc": "Extremely limited; mostly in major hospitals."},
+            "Research_Funding": {"score": "1/5", "disc": "Very low investment in lung cancer research."},
+            "Awareness_Campaigns": {"score": "1/5", "disc": "Minimal public campaigns; limited reach."}
+        },
+        "survival_rates": {
+            "Survival_Rates": {"score": "1/5", "disc": "Poor, due to late diagnosis and limited care."},
+            "Early_Detection": {"score": "1/5", "disc": "No structured programs."},
+            "Palliative_Care": {"score": "1/5", "disc": "Underdeveloped; limited opioid access."}
+        },
+        "biomarkers": {
+            "EGFR":{"score": "42%", "disc": "Sparse testing."},
+            "ALK": {"score": "37%", "disc": "Limited availability."},
+            "PD_L1": {"score": "52%", "disc": "Rarely tested."},
+            "MET": {"score": "27%", "disc": "Minimal testing."},
+            "ROS1": {"score": "32%", "disc": "Limited availability."},
+            "BRAF": {"score": "22%", "disc": "Rare testing."},
+            "KRAS": {"score": "40%", "disc": "Minimal adoption."}
+        },
+        "clinical_guidelines": {
+            "Implementation": {"score": "2/5", "disc": "Guidelines exist but poorly applied."},
+            "Feasibility": {"score": "1/5", "disc": "Hard to implement outside urban hospitals."},
+            "Adoption_International_Guideline": {"score": "1/5", "disc": "Minimal alignment."},
+            "Engagement_with_Updates": {"score": "1/3", "disc": "Very limited."},
+            "ESMO_Guidelines": {"score": "1/5", "disc": "Not implemented."}
+        },
+        "reimbursement": {
+            "Reimbursement_Coverage": {"score": "1/5", "disc": "Very limited; patients mostly pay out-of-pocket."},
+            "No-cost_Access": {"score": "1/5", "disc": "Minimal access."}
+        },
+        "cancer_screening": {
+            "National_Screening": {"score": "No national LDCT program", "disc": "No structured screening program."}
+        }
+    },
+
+
+    {
+        "id": 54,
+        "cancer_type": "lung",
+        "country": "China",
+        "country_shortForm": "CN",
+        "introduction": "China has rapidly expanded lung cancer capacity — strong specialized centers, rapidly growing molecular diagnostics, and increasing awareness campaigns. Although no single national LDCT program exists, local pilot programs and high-risk screening initiatives operate in many regions. Research funding and clinical guideline implementation are substantial in tertiary centers. Reimbursement remains variable and access gaps persist in rural areas. Overall maturity level: 4.",
+        "swot_analysis": {
+            "Strengths":
+                ["Large network of specialized centers and advanced molecular labs.",
+"High uptake of key biomarkers (EGFR, PD-L1).",
+"Strong domestic oncology research and clinical trial capacity."
+],
+
+            "Weaknesses":
+                ["Regional disparities between coastal cities and inland/rural areas.",
+"No nationwide LDCT program; implementation is local/pilot-based.",
+"Reimbursement gaps for some innovative therapies."
+],
+
+            "Opportunities": ["Scale LDCT screening pilots to a coordinated national program.",
+"Expand genomic sequencing and regional lab networks.",
+"Strengthen rural outreach and telemedicine."
+],
+
+            "Threats": 
+                ["High incidence and large population could strain resources.",
+"Cost and supply constraints for targeted agents"
+]
+        },
+        "infrastructure": {
+            "Specialized_Centers": {"score": "4/5", "disc": "Strong tertiary centers in major cities."},
+            "Genetic_Molecular_Testing": {"score": "4/5", "disc": "Widespread in urban centers; expanding."}
+        },
+        "treatment_funding_awareness": {
+            "Treatment_Access": {"score": "4/5", "disc": "Broad access in cities; variability in rural areas."},
+            "Research_Funding": {"score": "3/5", "disc": "Growing investment; strong institutional research."},
+            "Awareness_Campaigns": {"score": "4/5", "disc": "Increasing national and local campaigns."}
+        },
+        "survival_rates": {
+            "Survival_Rates": {"score": "3/5", "disc": "Improving but varies regionally."},
+            "Early_Detection": {"score": "4/5", "disc": "Local LDCT pilots; not yet nationwide."},
+            "Palliative_Care": {"score": "3/5", "disc": "Growing services in major centers."}
+        },
+        "biomarkers": {
+            "EGFR":{"score": "80%", "disc": "High."},
+            "ALK": {"score": "73%", "disc": "Widely tested."},
+            "PD_L1": {"score": "85%", "disc": "High."},
+            "MET": {"score": "58%", "disc": "Moderate."},
+            "ROS1": {"score": "63%", "disc": "Moderate."},
+            "BRAF": {"score": "53%", "disc": "Moderate."},
+            "KRAS": {"score": "68%", "disc": "Increasing adoption."}
+        },
+        "clinical_guidelines": {
+            "Implementation": {"score": "4/5", "disc": "Strong in tertiary centers."},
+            "Feasibility": {"score": "3/5", "disc": "Implementation varies by region."},
+            "Adoption_International_Guideline": {"score": "3/5", "disc": "Partial alignment with ESMO."},
+            "Engagement_with_Updates": {"score": "2/3", "disc": "Moderate speed of uptake."},
+            "ESMO_Guidelines": {"score": "3/5", "disc": "Partially implemented."}
+        },
+        "reimbursement": {
+            "Reimbursement_Coverage": {"score": "2/5", "disc": "National negotiations improving coverage but gaps remain."},
+            "No-cost_Access": {"score": "2/5", "disc": "Some out-of-pocket costs for advanced drugs."}
+        },
+        "cancer_screening": {
+            "National_Screening": {"score": "Limited", "disc": "Local pilot programs for high-risk groups, no single national LDCT program."}
+        }
+    },
+
+
+    {
+        "id": 55,
+        "cancer_type": "lung",
+        "country": "Colombia",
+        "country_shortForm": "CO",
+        "introduction": "Colombia presents intermediate capacity with stronger diagnostics and guideline implementation in urban centers but limited access in rural areas. Molecular testing is available in tertiary facilities; however there is no national LDCT screening and reimbursement gaps create equity issues. Overall maturity level: 2.",
+        "swot_analysis": {
+            "Strengths":
+                ["Tertiary centers with molecular testing and guideline adoption.",
+"Active clinical guideline frameworks."
+],
+            "Weaknesses":
+                ["Limited access in rural and remote regions.",
+"No national LDCT screening program.",
+"Reimbursement gaps and out-of-pocket costs for novel therapies."
+],
+
+            "Opportunities": ["Expand biomarker testing networks and regional lab capacity.",
+"Implement targeted screening for high-risk subpopulations."
+],
+
+            "Threats": 
+                ["Urban–rural disparities may increase if not addressed.",
+"Economic constraints on scaling advanced diagnostics."
+]
+        },
+        "infrastructure": {
+            "Specialized_Centers": {"score": "2/5", "disc": "Concentrated in big cities; limited outside."},
+            "Genetic_Molecular_Testing": {"score": "3/5", "disc": "Available in tertiary hospitals."}
+        },
+        "treatment_funding_awareness": {
+            "Treatment_Access": {"score": "2/5", "disc": "Uneven access across public/private sectors."},
+            "Research_Funding": {"score": "2/5", "disc": "Limited."},
+            "Awareness_Campaigns": {"score": "3/5", "disc": "Active in urban areas."}
+        },
+        "survival_rates": {
+            "Survival_Rates": {"score": "2/5", "disc": "Lower in rural areas."},
+            "Early_Detection": {"score": "3/5", "disc": "Opportunistic detection; no national LDCT."},
+            "Palliative_Care": {"score": "2/5", "disc": "Limited access."}
+        },
+        "biomarkers": {
+            "EGFR":{"score": "74%", "disc": "Good in tertiary centers."},
+            "ALK": {"score": "69%", "disc": "Moderate."},
+            "PD_L1": {"score": "81%", "disc": "Widely adopted in referral centers."},
+            "MET": {"score": "53%", "disc": "Limited."},
+            "ROS1": {"score": "59%", "disc": "Moderate."},
+            "BRAF": {"score": "49%", "disc": "Less common."},
+            "KRAS": {"score": "64%", "disc": "Growing."}
+        },
+        "clinical_guidelines": {
+            "Implementation": {"score": "4/5", "disc": "National guidelines in place."},
+            "Feasibility": {"score": "3/5", "disc": "Feasible in urban centers."},
+            "Adoption_International_Guideline": {"score": "3/5", "disc": "Partial alignment with ESMO."},
+            "Engagement_with_Updates": {"score": "2/3", "disc": "Moderate uptake."},
+            "ESMO_Guidelines": {"score": "3/5", "disc": "Partial implementation."}
+        },
+        "reimbursement": {
+            "Reimbursement_Coverage": {"score": "2/5", "disc": "Gaps for advanced/expensive therapies."},
+            "No-cost_Access": {"score": "2/5", "disc": "Out-of-pocket spending common."}
+        },
+        "cancer_screening": {
+            "National_Screening": {"score": "Absent", "disc": "No national LDCT program."}
+        }
+    },
+
+
+    {
+        "id": 56,
+        "cancer_type": "lung",
+        "country": "Egypt",
+        "country_shortForm": "EG",
+        "introduction": "Egypt shows early-to-intermediate maturity in lung cancer care. Specialized centers and molecular testing exist in urban tertiary hospitals, but access is limited elsewhere. Treatment access and palliative care are constrained by reimbursement and resource limitations. No national LDCT screening program exists. Overall maturity level: 2.",
+        "swot_analysis": {
+            "Strengths":
+                ["Tertiary centers providing molecular testing and oncology services.",
+"Growing recognition of lung cancer as a public health priority."
+],
+
+            "Weaknesses":
+                ["Weak reimbursement framework and limited no-cost access.",
+"No national LDCT screening program.",
+"Palliative care and opioid access are limited."
+
+
+],
+
+            "Opportunities": ["Scale molecular diagnostics and improve regional lab capacity.",
+"Develop national awareness and targeted screening pilots.",
+"Strengthen reimbursement policies for essential targeted agents."
+],
+
+            "Threats": 
+                ["Economic constraints that limit nationwide rollout of advanced diagnostics.",
+"Workforce shortages and regional inequities."
+]
+        },
+        "infrastructure": {
+            "Specialized_Centers": {"score": "2/5", "disc": "Mostly urban tertiary centers (Cairo/Alexandria)."},
+            "Genetic_Molecular_Testing": {"score": "3/5", "disc": "Available in select urban hospitals."}
+        },
+        "treatment_funding_awareness": {
+            "Treatment_Access": {"score": "2/5", "disc": "Limited in many regions."},
+            "Research_Funding": {"score": "2/5", "disc": "Low to moderate."},
+            "Awareness_Campaigns": {"score": "2/5", "disc": "Limited reach."}
+        },
+        "survival_rates": {
+            "Survival_Rates": {"score": "2/5", "disc": "Low, due to late-stage presentation."},
+            "Early_Detection": {"score": "2/5", "disc": "No national LDCT; late diagnoses common."},
+            "Palliative_Care": {"score": "2/5", "disc": "Underdeveloped with opioid access challenges."}
+        },
+        "biomarkers": {
+            "EGFR":{"score": "70%", "disc": "Available in tertiary centers."},
+            "ALK": {"score": "65%", "disc": "Moderate."},
+            "PD_L1": {"score": "78%", "disc": "Reasonable uptake."},
+            "MET": {"score": "52%", "disc": "Limited."},
+            "ROS1": {"score": "57%", "disc": "Moderate."},
+            "BRAF": {"score": "47%", "disc": "Limited."},
+            "KRAS": {"score": "62%", "disc": "Moderate."}
+        },
+        "clinical_guidelines": {
+            "Implementation": {"score": "3/5", "disc": "Guidelines exist and are used in urban centers."},
+            "Feasibility": {"score": "3/5", "disc": "Feasible in tertiary settings."},
+            "Adoption_International_Guideline": {"score": "3/5", "disc": "Some alignment with international standards."},
+            "Engagement_with_Updates": {"score": "2/3", "disc": "Moderate."},
+            "ESMO_Guidelines": {"score": "3/5", "disc": "Partial adoption."}
+        },
+        "reimbursement": {
+            "Reimbursement_Coverage": {"score": "1/5", "disc": "Weak reimbursement framework."},
+            "No-cost_Access": {"score": "1/5", "disc": "Very limited no-cost access to advanced therapies."}
+        },
+        "cancer_screening": {
+            "National_Screening": {"score": "Absent", "disc": "No national LDCT screening program."}
+        }
+    },
+
+
+    {
+        "id": 57,
+        "cancer_type": "lung",
+        "country": "Ethiopia",
+        "country_shortForm": "ET",
+        "introduction": "Ethiopia faces significant challenges in lung cancer care, with limited infrastructure, weak access to modern treatments, and underdeveloped diagnostic capacity. Specialized cancer centers and biomarker testing remain minimal, concentrated in a few urban hospitals. Awareness campaigns are scarce, survival rates are poor, and palliative care is under-resourced. No national LDCT screening program exists, and reimbursement is nearly absent, leaving patients to bear heavy financial burdens. While basic clinical guidelines exist, their feasibility and alignment with international standards are weak. Overall, Ethiopia demonstrates a maturity level of 1, reflecting severe systemic gaps but also highlighting areas for urgent capacity-building.",
+        "swot_analysis": {
+            "Strengths":
+                ["Some biomarker testing (EGFR, PD-L1) available in urban tertiary hospitals.",
+"Small but growing oncology workforce.",
+"International collaborations occasionally support research and training."
+],
+
+            "Weaknesses":
+                ["Only one or two specialized cancer centers in the country.",
+"Minimal molecular testing infrastructure.",
+"Extremely limited treatment access and awareness programs.",
+"Poor survival rates and absent early detection.",
+"Very weak reimbursement frameworks."
+],
+
+            "Opportunities": ["Potential to build regional diagnostic hubs.",
+"Expansion of palliative care training and opioid access.",
+"Leverage global health partnerships for funding and research.",
+"Integration of mobile health campaigns for awareness."
+],
+
+            "Threats": 
+                ["Rising incidence without system readiness.",
+"Continued dependence on international aid for cancer programs.",
+"Risk of widening urban-rural disparities."
+]
+        },
+        "infrastructure": {
+            "Specialized_Centers": {"score": "1/5", "disc": "Only one or two functional centers; concentrated in Addis Ababa."},
+            "Genetic_Molecular_Testing": {"score": "1/5", "disc": "Very limited biomarker testing infrastructure."}
+        },
+        "treatment_funding_awareness": {
+            "Treatment_Access": {"score": "1/5", "disc": "Standard therapies often unavailable."},
+            "Research_Funding": {"score": "1/5", "disc": "Minimal investment in lung cancer research."},
+            "Awareness_Campaigns": {"score": "1/5", "disc": "Awareness activities almost absent."}
+        },
+        "survival_rates": {
+            "Survival_Rates": {"score": "1/5", "disc": "Very poor survival due to late diagnosis."},
+            "Early_Detection": {"score": "1/5", "disc": "No systematic early detection strategies."},
+            "Palliative_Care": {"score": "1/5", "disc": "Services minimal, opioid access severely restricted."}
+        },
+        "biomarkers": {
+            "EGFR":{"score": "45%", "disc": "Some access in tertiary hospitals."},
+            "ALK": {"score": "40%", "disc": "Limited testing capacity."},
+            "PD_L1": {"score": "55%", "disc": "Some adoption in urban centers."},
+            "MET": {"score": "30%", "disc": "Very limited."},
+            "ROS1": {"score": "35%", "disc": "Rarely tested."},
+            "BRAF": {"score": "25%", "disc": "Minimal testing."},
+            "KRAS": {"score": "42%", "disc": "Basic but limited availability."}
+        },
+        "clinical_guidelines": {
+            "Implementation": {"score": "2/5", "disc": "Basic guidelines exist."},
+            "Feasibility": {"score": "1/5", "disc": "Poorly feasible beyond major hospitals."},
+            "Adoption_International_Guideline": {"score": "1/5", "disc": "Limited alignment with ESMO."},
+            "Engagement_with_Updates": {"score": "1/3", "disc": "Rarely updated."},
+            "ESMO_Guidelines": {"score": "1/5", "disc": "Barely integrated."}
+        },
+        "reimbursement": {
+            "Reimbursement_Coverage": {"score": "1/5", "disc": "Almost no financial support."},
+            "No-cost_Access": {"score": "1/5", "disc": "Patients largely pay out-of-pocket."}
+        },
+        "cancer_screening": {
+            "National_Screening": {"score": "Absent", "disc": "No national LDCT screening program."}
+        }
+    },
+
+    {
+        "id": 58,
+        "cancer_type": "lung",
+        "country": "France",
+        "country_shortForm": "FR",
+        "introduction": "France has a highly developed and well-coordinated lung cancer care system, characterized by world-class specialized centers and a robust network of tertiary hospitals. Molecular testing is comprehensive and widely accessible, ensuring personalized treatment approaches for patients. Public awareness campaigns are strong, contributing to early recognition of symptoms and timely care. Access to standard and advanced therapies is excellent, and palliative care services are fully integrated across the healthcare system. Survival outcomes for lung cancer patients in France are among the highest globally, reflecting the quality of care and adherence to evidence-based practices. Clinical guidelines are rigorously implemented and aligned with international standards, supporting consistent and high-quality treatment. Although there is no single national LDCT screening program, France actively participates in organized regional pilots and research initiatives to promote early detection.",
+        "swot_analysis": {
+            "Strengths":
+                ["World-class specialized centers and widespread molecular testing.",
+"Strong research base and active clinical trials.",
+"High biomarker utilization and integrated palliative care services.",
+"Robust awareness campaigns and guideline implementation."
+],
+
+            "Weaknesses":
+                ["No single national LDCT program (reliance on regional pilots).",
+"Some reimbursement complexities for newest therapies."
+],
+
+            "Opportunities": ["Scale pilot screening initiatives nationally.",
+"Continue to harmonize reimbursement for rapid access to innovations."
+],
+
+            "Threats": 
+                ["Rising drug costs may challenge sustainability.",
+"Regional access differences could persist without targeted policies."
+]
+        },
+        "infrastructure": {
+            "Specialized_Centers": {"score": "5/5", "disc": "Excellent nationwide tertiary care and cancer networks."},
+            "Genetic_Molecular_Testing": {"score": "5/5", "disc": "State-of-the-art genomic and pathology services."}
+        },
+        "treatment_funding_awareness": {
+            "Treatment_Access": {"score": "5/5", "disc": "Broad access to standard and targeted therapies."},
+            "Research_Funding": {"score": "4/5", "disc": "Strong public and institutional funding."},
+            "Awareness_Campaigns": {"score": "5/5", "disc": "National campaigns and high public engagement."}
+        },
+        "survival_rates": {
+            "Survival_Rates": {"score": "5/5", "disc": "High survival outcomes."},
+            "Early_Detection": {"score": "5/5", "disc": "Active pilot/organized screening initiatives."},
+            "Palliative_Care": {"score": "5/5", "disc": "Comprehensive palliative networks."}
+        },
+        "biomarkers": {
+            "EGFR":{"score": "86%", "disc": "Very high."},
+            "ALK": {"score": "79%", "disc": "High."},
+            "PD_L1": {"score": "91%", "disc": "Very high."},
+            "MET": {"score": "64%", "disc": "Good."},
+            "ROS1": {"score": "69%", "disc": "Good."},
+            "BRAF": {"score": "59%", "disc": "Good."},
+            "KRAS": {"score": "74%", "disc": "High."}
+        },
+        "clinical_guidelines": {
+            "Implementation": {"score": "5/5", "disc": "Strong national guideline use."},
+            "Feasibility": {"score": "5/5", "disc": "Highly feasible across centers."},
+            "Adoption_International_Guideline": {"score": "5/5", "disc": "Well aligned with ESMO/NCCN."},
+            "Engagement_with_Updates": {"score": "3/3", "disc": "Rapid uptake of guideline updates."},
+            "ESMO_Guidelines": {"score": "5/5", "disc": "Fully integrated."}
+        },
+        "reimbursement": {
+            "Reimbursement_Coverage": {"score": "3/5", "disc": "Good overall coverage, with some complexities."},
+            "No-cost_Access": {"score": "3/5", "disc": "Many therapies covered; some co-pay/limits apply."}
+        },
+        "cancer_screening": {
+            "National_Screening": {"score": "No national LDCT program", "disc": "Regional/experimental screening programs in place."}
+        }
+    },
+
+    
+    {
+        "id": 59,
+        "cancer_type": "lung",
+        "country": "Germany",
+        "country_shortForm": "DE",
+        "introduction": "Germany’s lung cancer care system is highly advanced, featuring specialized cancer centers, modern molecular testing, and wide access to targeted therapies. Early detection and palliative care services are strong, contributing to excellent survival rates. Awareness campaigns are comprehensive, and biomarker testing for EGFR, ALK, PD-L1, and others is routine. Clinical guidelines are fully aligned with ESMO standards, and updates are systematically implemented. Reimbursement frameworks cover most treatments, although some advanced therapies may require additional approvals. Screening is being evaluated at a national level, reflecting continuous investment in early detection strategies.",
+        "swot_analysis": {
+            "Strengths":
+                ["Extensive network of specialized cancer centers.",
+"Advanced molecular testing infrastructure.",
+"High survival rates due to comprehensive care and early detection.",
+"Strong guideline adherence and research funding."
+],
+
+            "Weaknesses":
+                ["National LDCT screening not yet implemented.",
+"Some minor regional disparities in access."
+],
+
+            "Opportunities": ["Expansion of national screening programs.",
+"Greater patient education on early detection.",
+"Integration of digital health for remote regions."
+],
+
+            "Threats": 
+                ["Rising patient volumes could pressure existing infrastructure.",
+"Delays in reimbursement for newest therapies may occur."
+]
+        },
+        "infrastructure": {
+            "Specialized_Centers": {"score": "5/5", "disc": "Advanced centers across major cities; comprehensive care available."},
+            "Genetic_Molecular_Testing": {"score": "4/5", "disc": "EGFR, ALK, PD-L1, MET, ROS1, BRAF, KRAS routinely tested."}
+        },
+        "treatment_funding_awareness": {
+            "Treatment_Access": {"score": "5/5", "disc": "Full access to standard and targeted therapies."},
+            "Research_Funding": {"score": "5/5", "disc": "Strong investment and active international collaborations."},
+            "Awareness_Campaigns": {"score": "5/5", "disc": "National campaigns effectively raise public awareness."}
+        },
+        "survival_rates": {
+            "Survival_Rates": {"score": "5/5", "disc": "Excellent outcomes; early detection and palliative care robust."},
+            "Early_Detection": {"score": "5/5", "disc": "Opportunistic and targeted screening; national program under evaluation."},
+            "Palliative_Care": {"score": "5/5", "disc": "Widely available; comprehensive pain management."}
+        },
+        "biomarkers": {
+            "EGFR":{"score": "89%", "disc": "Routinely tested."},
+            "ALK": {"score": "83%", "disc": "Standard in specialized centers."},
+            "PD_L1": {"score": "94%", "disc": "Widely implemented for therapy selection."},
+            "MET": {"score": "69%", "disc": "Available in advanced care centers."},
+            "ROS1": {"score": "74%", "disc": "Commonly tested."},
+            "BRAF": {"score": "63%", "disc": "Included in clinical decision-making."},
+            "KRAS": {"score": "79%", "disc": "Regularly tested in tertiary centers."}
+        },
+        "clinical_guidelines": {
+            "Implementation": {"score": "5/5", "disc": "Well-established and widely followed."},
+            "Feasibility": {"score": "5/5", "disc": "Highly feasible in hospitals nationwide."},
+            "Adoption_International_Guideline": {"score": "5/5", "disc": "Fully aligned with ESMO standards."},
+            "Engagement_with_Updates": {"score": "3/3", "disc": "Updated regularly."},
+            "ESMO_Guidelines": {"score": "5/5", "disc": "Fully integrated."}
+        },
+        "reimbursement": {
+            "Reimbursement_Coverage": {"score": "3/5", "disc": "Most therapies covered."},
+            "No-cost_Access": {"score": "3/5", "disc": "Patients have limited out-of-pocket expenses."}
+        },
+        "cancer_screening": {
+            "National_Screening": {"score": "Under evaluation", "disc": "National LDCT program not yet established."}
+        }
+    },
+
+
+    {
+        "id": 60,
+        "cancer_type": "lung",
+        "country": "Greece",
+        "country_shortForm": "GR",
+        "introduction": "Greece has moderate lung cancer care capabilities, with several specialized centers concentrated in urban areas. Molecular testing infrastructure exists but is limited to larger hospitals. Treatment access and palliative care are improving, while survival rates remain moderate. Awareness campaigns are ongoing but vary in effectiveness across regions. Biomarker testing (EGFR, ALK, PD-L1) is established in tertiary hospitals. Clinical guidelines are partially aligned with international standards, with slower update adoption. National LDCT screening is absent, and reimbursement is moderate, leading to some out-of-pocket costs. The overall system reflects a maturity level of 4, with potential for expansion and improvement.",
+        "swot_analysis": {
+            "Strengths":
+                ["Several specialized centers in major cities.",
+"Established biomarker testing for EGFR, ALK, PD-L1.",
+"Improving palliative care services."
+],
+
+            "Weaknesses":
+                ["Molecular testing limited outside tertiary centers.",
+"National screening absent.",
+"Moderate reimbursement and partial guideline adoption."
+],
+
+            "Opportunities": ["Expand molecular diagnostics to regional hospitals.",
+"Introduce national LDCT screening.",
+"Strengthen awareness campaigns for early detection."
+],
+
+            "Threats": 
+                ["Regional disparities may persist.",
+"Limited funding could restrict new therapy access."
+]
+        },
+        "infrastructure": {
+            "Specialized_Centers": {"score": "4/5", "disc": "Concentrated in urban centers; limited in rural areas."},
+            "Genetic_Molecular_Testing": {"score": "3/5", "disc": "Available in tertiary hospitals; limited outside major cities."}
+        },
+        "treatment_funding_awareness": {
+            "Treatment_Access": {"score": "4/5", "disc": "Standard therapies accessible; targeted therapies growing."},
+            "Research_Funding": {"score": "3/5", "disc": "Moderate investment; participation in some clinical trials."},
+            "Awareness_Campaigns": {"score": "4/5", "disc": "Ongoing national and local campaigns."}
+        },
+        "survival_rates": {
+            "Survival_Rates": {"score": "3/5", "disc": "Moderate survival outcomes; early detection uneven."},
+            "Early_Detection": {"score": "3/5", "disc": "Screening programs absent; diagnosis mostly symptomatic."},
+            "Palliative_Care": {"score": "4/5", "disc": "Improving services, mainly in tertiary centers."}
+        },
+        "biomarkers": {
+            "EGFR":{"score": "80%", "disc": "Established in major centers."},
+            "ALK": {"score": "75%", "disc": "Routinely tested in tertiary hospitals."},
+            "PD_L1": {"score": "87%", "disc": "Implemented in advanced care."},
+            "MET": {"score": "60%", "disc": "Limited coverage."},
+            "ROS1": {"score": "65%", "disc": "Available in specialized centers."},
+            "BRAF": {"score": "55%", "disc": "Moderate coverage."},
+            "KRAS": {"score": "70%", "disc": "Available in selected centers."}
+        },
+        "clinical_guidelines": {
+            "Implementation": {"score": "4/5", "disc": "Partially integrated."},
+            "Feasibility": {"score": "3/5", "disc": "Challenging in smaller hospitals."},
+            "Adoption_International_Guideline": {"score": "3/5", "disc": "Partial alignment with ESMO."},
+            "Engagement_with_Updates": {"score": "2/3", "disc": "Updates adopted slowly."},
+            "ESMO_Guidelines": {"score": "3/5", "disc": "Some integration in clinical practice."}
+        },
+        "reimbursement": {
+            "Reimbursement_Coverage": {"score": "2/5", "disc": "Moderate national coverage."},
+            "No-cost_Access": {"score": "2/5", "disc": "Out-of-pocket costs remain significant."}
+        },
+        "cancer_screening": {
+            "National_Screening": {"score": "Absent", "disc": "No national LDCT program."}
+        }
+    },
+
+
+    {
+        "id": 61,
+        "cancer_type": "lung",
+        "country": "India",
+        "country_shortForm": "IN",
+        "introduction": "India has a developing lung cancer care system, with specialized centers mostly in metropolitan areas. Molecular testing for EGFR, ALK, and PD-L1 is increasingly available but limited outside major hospitals. Treatment access is improving, yet affordability remains a challenge due to limited reimbursement. Awareness campaigns exist but have uneven reach, leading to late-stage diagnosis for many patients. Palliative care services are growing but are not fully integrated nationwide. Clinical guidelines are partially aligned with international standards, and updates are slowly adopted. National LDCT screening programs are absent, reflecting a moderate maturity level.",
+        "swot_analysis": {
+            "Strengths":
+                ["Several specialized centers in urban hubs.",
+"Molecular testing infrastructure gradually expanding.",
+"Awareness campaigns and treatment access improving."
+],
+
+            "Weaknesses":
+                ["Limited access to targeted therapies in smaller cities.",
+"Palliative care uneven across regions.",
+"Low early detection and absent national screening."
+],
+
+            "Opportunities": ["Expand molecular diagnostics to regional hospitals.",
+"Introduce national LDCT screening.",
+"Strengthen public awareness for early detection."
+],
+
+            "Threats": 
+                ["Rising lung cancer burden may stress existing facilities.",
+"Out-of-pocket costs may prevent equitable treatment access."
+]
+        },
+        "infrastructure": {
+            "Specialized_Centers": {"score": "3/5", "disc": "Concentrated in metropolitan areas."},
+            "Genetic_Molecular_Testing": {"score": "4/5", "disc": "EGFR, ALK, PD-L1, MET, ROS1, BRAF, KRAS available in major centers."}
+        },
+        "treatment_funding_awareness": {
+            "Treatment_Access": {"score": "3/5", "disc": "Standard and targeted therapies available in top hospitals."},
+            "Research_Funding": {"score": "3/5", "disc": "Moderate investment, some clinical trial participation."},
+            "Awareness_Campaigns": {"score": "3/5", "disc": "Limited reach in rural areas."}
+        },
+        "survival_rates": {
+            "Survival_Rates": {"score": "3/5", "disc": "Moderate; late diagnosis common."},
+            "Early_Detection": {"score": "3/5", "disc": "Opportunistic detection; national screening absent."},
+            "Palliative_Care": {"score": "3/5", "disc": "Growing services, not uniformly available."}
+        },
+        "biomarkers": {
+            "EGFR":{"score": "65%", "disc": "Routinely tested in tertiary hospitals."},
+            "ALK": {"score": "60%", "disc": "Available in major centers."},
+            "PD_L1": {"score": "75%", "disc": "Growing availability."},
+            "MET": {"score": "50%", "disc": "Limited coverage."},
+            "ROS1": {"score": "55%", "disc": "Select hospitals only."},
+            "BRAF": {"score": "45%", "disc": "Limited testing."},
+            "KRAS": {"score": "58%", "disc": "Partial coverage."}
+        },
+        "clinical_guidelines": {
+            "Implementation": {"score": "3/5", "disc": "Partially applied."},
+            "Feasibility": {"score": "2/5", "disc": "Resource-limited hospitals face challenges."},
+            "Adoption_International_Guideline": {"score": "2/5", "disc": "Partial alignment with ESMO."},
+            "Engagement_with_Updates": {"score": "1/3", "disc": "Slow adoption."},
+            "ESMO_Guidelines": {"score": "2/5", "disc": "Limited integration."}
+        },
+        "reimbursement": {
+            "Reimbursement_Coverage": {"score": "1/5", "disc": "Minimal coverage."},
+            "No-cost_Access": {"score": "1/5", "disc": "High out-of-pocket costs."}
+        },
+        "cancer_screening": {
+            "National_Screening": {"score": "Absent", "disc": "No national program."}
+        }
+    },
+
+
+    {
+        "id": 62,
+        "cancer_type": "lung",
+        "country": "Indonesia",
+        "country_shortForm": "DE",
+        "introduction": "Lung cancer poses a growing health challenge in Indonesia. While some progress has been made in treatment access, awareness, and biomarker utilization, significant gaps remain in infrastructure, reimbursement, and early detection. Specialized cancer centers and testing facilities are limited outside urban hubs, and national screening programs are absent. Clinical guidelines exist but are inconsistently integrated, and reimbursement structures leave patients facing high out-of-pocket costs. Indonesia’s lung cancer maturity is assessed at Level 2, indicating a system still building core capabilities.",
+        "swot_analysis": {
+            "Strengths":
+                ["Specialized cancer centers and tertiary hospitals offer lung cancer care.",
+"Biomarker testing (PD-L1, EGFR, ALK) is increasingly available.",
+"Awareness campaigns have begun to improve public knowledge.",
+"Palliative care services show gradual improvement."
+],
+
+            "Weaknesses":
+                ["Limited infrastructure for genetic and molecular testing (Score 2/5).",
+"Reimbursement system weak, with very limited no-cost access.",
+"Absence of a national lung cancer screening program.",
+"Guidelines not fully integrated, with limited uptake of updates.",
+"Regional disparities in treatment access."
+],
+
+            "Opportunities": ["Expansion of molecular testing and lab capacity.",
+"Potential to establish a national LDCT screening program.",
+"Stronger funding for research and early detection initiatives.",
+"International partnerships to build clinical trial capacity.",
+"Scaling awareness campaigns to rural populations."
+],
+
+            "Threats": 
+                ["Rising lung cancer incidence may overwhelm underdeveloped infrastructure.",
+"Geographic inequities risk widening without policy interventions.",
+"Financial burden on patients may worsen due to limited reimbursement.",
+"Inconsistent adoption of international guidelines could delay best practices."
+]
+        },
+        "infrastructure": {
+            "Specialized_Centers": {"score": "2/5", "disc": "Limited centers, concentrated in cities."},
+            "Genetic_Molecular_Testing": {"score": "2/5", "disc": "Available but inconsistent nationwide."}
+        },
+        "treatment_funding_awareness": {
+            "Treatment_Access": {"score": "3/5", "disc": "Access improving, but inequities remain."},
+            "Research_Funding": {"score": "2/5", "disc": "Weak funding base."},
+            "Awareness_Campaigns": {"score": "3/5", "disc": "Moderate activity, but not universal."}
+        },
+        "survival_rates": {
+            "Survival_Rates": {"score": "3/5", "disc": "Improving, but not optimal."},
+            "Early_Detection": {"score": "2/5", "disc": "Limited initiatives, no national program."},
+            "Palliative_Care": {"score": "3/5", "disc": "Services available, uneven across regions."}
+        },
+        "biomarkers": {
+            "EGFR":{"score": "60%", "disc": "Moderately available."},
+            "ALK": {"score": "55%", "disc": "Variable access."},
+            "PD_L1": {"score": "70%", "disc": "Most widely used."},
+            "MET": {"score": "40-55%", "disc": "Limited beyond main hubs."},
+            "ROS1": {"score": "40-55%", "disc": "Limited beyond main hubs."},
+            "BRAF": {"score": "40-55%", "disc": "Limited beyond main hubs."},
+            "KRAS": {"score": "40-55%", "disc": "Limited beyond main hubs."}
+        },
+        "clinical_guidelines": {
+            "Implementation": {"score": "3/5", "disc": "Basic application exists."},
+            "Feasibility": {"score": "2/5", "disc": "Smaller centers struggle."},
+            "Adoption_International_Guideline": {"score": "2/5", "disc": "Incomplete integration."},
+            "Engagement_with_Updates": {"score": "1/3", "disc": "Rarely implemented."},
+            "ESMO_Guidelines": {"score": "2/5", "disc": "Limited adoption."}
+        },
+        "reimbursement": {
+            "Reimbursement_Coverage": {"score": "2/5", "disc": "Weak framework."},
+            "No-cost_Access": {"score": "1/5", "disc": "Minimal availability."}
+        },
+        "cancer_screening": {
+            "National_Screening": {"score": "None", "disc": "Opportunistic private sector screening only."}
+        }
+    },
+
+
+    {
+        "id": 63,
+        "cancer_type": "lung",
+        "country": "Italy",
+        "country_shortForm": "IT",
+        "introduction": "Italy has a mature lung cancer care system, with well-distributed specialized centers and strong molecular testing infrastructure. Standard treatments and targeted therapies are widely accessible, supported by reimbursement schemes. Early detection is partially available through regional LDCT pilots. Awareness campaigns are ongoing, and biomarker testing for EGFR, ALK, and PD-L1 is standard in tertiary centers. Clinical guidelines follow ESMO standards, though update adoption varies. Palliative care is comprehensive, contributing to high survival rates. Overall, Italy demonstrates high maturity with opportunities for expansion of screening programs.",
+        "swot_analysis": {
+            "Strengths":
+                ["Extensive network of specialized centers.",
+"Strong molecular testing and treatment access.",
+"High-quality palliative care."
+],
+
+            "Weaknesses":
+                ["Early detection mainly through regional pilots.",
+"Minor disparities between regions."
+],
+
+            "Opportunities": ["Expand LDCT screening nationwide.",
+"Integrate digital tools for remote patient management."
+],
+
+            "Threats": 
+                ["Increasing incidence could strain hospitals."]
+        },
+        "infrastructure": {
+            "Specialized_Centers": {"score": "5/5", "disc": "Well-distributed nationally."},
+            "Genetic_Molecular_Testing": {"score": "4/5", "disc": "EGFR, ALK, PD-L1, MET, ROS1, BRAF, KRAS available."}
+        },
+        "treatment_funding_awareness": {
+            "Treatment_Access": {"score": "5/5", "disc": "Widely accessible; targeted drugs included."},
+            "Research_Funding": {"score": "4/5", "disc": "Moderate, strong regional programs."},
+            "Awareness_Campaigns": {"score": "4/5", "disc": "Active campaigns across regions."}
+        },
+        "survival_rates": {
+            "Survival_Rates": {"score": "5/5", "disc": "High survival rates."},
+            "Early_Detection": {"score": "4/5", "disc": "Regional LDCT pilots implemented."},
+            "Palliative_Care": {"score": "5/5", "disc": "Comprehensive services available."}
+        },
+        "biomarkers": {
+            "EGFR":{"score": "83%", "disc": "Standard practice."},
+            "ALK": {"score": "76%", "disc": "Standard practice."},
+            "PD_L1": {"score": "88%", "disc": "Routinely applied."},
+            "MET": {"score": "61%", "disc": "Available in tertiary centers."},
+            "ROS1": {"score": "66%", "disc": "Implemented selectively."},
+            "BRAF": {"score": "56%", "disc": "Limited but available."},
+            "KRAS": {"score": "71%", "disc": "Standard practice in selected centers."}
+        },
+        "clinical_guidelines": {
+            "Implementation": {"score": "4/5", "disc": "Widely applied."},
+            "Feasibility": {"score": "4/5", "disc": "Integration feasible."},
+            "Adoption_International_Guideline": {"score": "4/5", "disc": "Aligned with ESMO."},
+            "Engagement_with_Updates": {"score": "2/3", "disc": "Moderate pace."},
+            "ESMO_Guidelines": {"score": "4/5", "disc": "Integrated in practice."}
+        },
+        "reimbursement": {
+            "Reimbursement_Coverage": {"score": "3/5", "disc": "Coverage exists, with some regional differences."},
+            "No-cost_Access": {"score": "3/5", "disc": "Limited out-of-pocket costs."}
+        },
+        "cancer_screening": {
+            "National_Screening": {"score": "Regional pilots", "disc": "Early detection through selective programs."}
+        }
+    },
+
+
+    {
+        "id": 64,
+        "cancer_type": "lung",
+        "country": "Japan",
+        "country_shortForm": "JP",
+        "introduction": "Japan has one of the most advanced lung cancer care systems globally. Specialized centers and molecular testing infrastructure are comprehensive. Treatment access, including targeted and immunotherapies, is widely available. Awareness campaigns are active, and survival rates are high due to early detection and integrated palliative care. Biomarker testing for EGFR, ALK, PD-L1, and others is routine in most tertiary centers. Clinical guidelines are aligned with international standards, and updates are efficiently adopted. National LDCT screening is not yet standard but under consideration, reflecting high system maturity.",
+        "swot_analysis": {
+            "Strengths":
+                ["Extensive specialized centers and molecular testing.",
+"High survival and early detection rates.",
+"Active awareness campaigns and robust palliative care."
+],
+
+            "Weaknesses":
+                ["No nationwide LDCT screening yet.",
+"Minor regional variations in care access."
+],
+
+            "Opportunities": ["Establish national LDCT screening program.",
+"Expand digital health integration."
+],
+
+            "Threats": 
+                ["Increasing patient load could strain resources."]
+        },
+        "infrastructure": {
+            "Specialized_Centers": {"score": "5/5", "disc": "Comprehensive network nationally."},
+            "Genetic_Molecular_Testing": {"score": "4/5", "disc": "EGFR, ALK, PD-L1, MET, ROS1, BRAF, KRAS fully available"}
+        },
+        "treatment_funding_awareness": {
+            "Treatment_Access": {"score": "5/5", "disc": "Targeted and standard therapies widely available."},
+            "Research_Funding": {"score": "4/5", "disc": "Significant investment and trial participation."},
+            "Awareness_Campaigns": {"score": "5/5", "disc": "Extensive nationwide campaigns."}
+        },
+        "survival_rates": {
+            "Survival_Rates": {"score": "5/5", "disc": "High survival due to early detection and care."},
+            "Early_Detection": {"score": "4/5", "disc": "Opportunistic LDCT screening in some centers."},
+            "Palliative_Care": {"score": "5/5", "disc": "Integrated and comprehensive."}
+        },
+        "biomarkers": {
+            "EGFR":{"score": "92%", "disc": "Standard in tertiary centers."},
+            "ALK": {"score": "87%", "disc": "Standard practice."},
+            "PD_L1": {"score": "96%", "disc": "Routinely implemented."},
+            "MET": {"score": "75%", "disc": "Available in advanced care."},
+            "ROS1": {"score": "78%", "disc": "Standard practice."},
+            "BRAF": {"score": "70%", "disc": "Routine in tertiary hospitals."},
+            "KRAS": {"score": "85%", "disc": "Widely tested."}
+        },
+        "clinical_guidelines": {
+            "Implementation": {"score": "5/5", "disc": "Fully applied nationally."},
+            "Feasibility": {"score": "5/5", "disc": "Integration feasible across centers."},
+            "Adoption_International_Guideline": {"score": "5/5", "disc": "Aligned with ESMO."},
+            "Engagement_with_Updates": {"score": "3/3", "disc": "Regular adoption."},
+            "ESMO_Guidelines": {"score": "5/5", "disc": "Integrated in practice."}
+        },
+        "reimbursement": {
+            "Reimbursement_Coverage": {"score": "3/5", "disc": "Broad coverage, some approvals required."},
+            "No-cost_Access": {"score": "3/5", "disc": "Minimal out-of-pocket costs."}
+        },
+        "cancer_screening": {
+            "National_Screening": {"score": "Absent", "disc": "No national program yet."}
+        }
+    },
+
+
+    {
+        "id": 65,
+        "cancer_type": "lung",
+        "country": "Kenya",
+        "country_shortForm": "KE",
+        "introduction": "Kenya has a nascent lung cancer care system with very limited specialized centers concentrated in Nairobi and a few other cities. Molecular testing infrastructure is minimal, and most biomarkers like EGFR, ALK, and PD-L1 are available only in private or research facilities. Access to standard treatment, targeted therapy, and immunotherapy is very limited and largely unaffordable due to poor reimbursement schemes. Awareness campaigns are scarce, resulting in late-stage diagnosis for most patients. Palliative care is underdeveloped, with uneven opioid availability. Clinical guidelines are partially implemented, but adoption of international updates is slow. No national LDCT screening exists, making the overall maturity very low.",
+        "swot_analysis": {
+            "Strengths":
+                ["Presence of a few tertiary hospitals offering lung cancer care.",
+"Limited molecular testing for key biomarkers in research settings."
+],
+
+            "Weaknesses":
+                ["Severe lack of specialized centers outside the capital.",
+"Low treatment access and affordability.",
+"Minimal public awareness and screening programs.",
+"Palliative care services are sparse and unevenly distributed."
+],
+
+            "Opportunities": ["Expand molecular testing and specialized centers to regional hospitals.",
+"Introduce national awareness campaigns and early detection initiatives.",
+"Strengthen palliative care networks and opioid access.",
+"Collaborate with international organizations for capacity building."
+],
+
+            "Threats": 
+                ["High out-of-pocket costs may prevent treatment access.",
+"Rising lung cancer incidence could overwhelm limited resources.",
+"Geographic disparities in access may worsen without intervention.",
+"Slow adoption of updated clinical guidelines may compromise care quality."
+]
+        },
+        "infrastructure": {
+            "Specialized_Centers": {"score": "1/5", "disc": "Limited mainly to Nairobi."},
+            "Genetic_Molecular_Testing": {"score": "2/5", "disc": "EGFR, ALK, PD-L1, MET, ROS1, BRAF, KRAS minimally available."}
+        },
+        "treatment_funding_awareness": {
+            "Treatment_Access": {"score": "1/5", "disc": "Standard and targeted therapies limited and expensive."},
+            "Research_Funding": {"score": "1/5", "disc": "Minimal investment; few trials."},
+            "Awareness_Campaigns": {"score": "1/5", "disc": "Scarce campaigns; low public knowledge."}
+        },
+        "survival_rates": {
+            "Survival_Rates": {"score": "1/5", "disc": "Late-stage diagnosis common."},
+            "Early_Detection": {"score": "1/5", "disc": "No screening programs."},
+            "Palliative_Care": {"score": "1/5", "disc": "Very limited services."}
+        },
+        "biomarkers": {
+            "EGFR":{"score": "50%", "disc": "Available only in private/research labs."},
+            "ALK": {"score": "45%", "disc": "Limited access."},
+            "PD_L1": {"score": "60%", "disc": "Minimal coverage."},
+            "MET": {"score": "35%", "disc": "Sparse testing."},
+            "ROS1": {"score": "40%", "disc": "Rarely tested."},
+            "BRAF": {"score": "30%", "disc": "Very limited."},
+            "KRAS": {"score": "48%", "disc": "Not widely available."}
+        },
+        "clinical_guidelines": {
+            "Implementation": {"score": "2/5", "disc": "Partial application in tertiary hospitals."},
+            "Feasibility": {"score": "2/5", "disc": "Resource limitations hinder integration."},
+            "Adoption_International_Guideline": {"score": "2/5", "disc": "Partial alignment with ESMO."},
+            "Engagement_with_Updates": {"score": "1/3", "disc": "Slow adoption."},
+            "ESMO_Guidelines": {"score": "2/5", "disc": "Limited implementation."}
+        },
+        "reimbursement": {
+            "Reimbursement_Coverage": {"score": "1/5", "disc": "Almost no coverage; mostly out-of-pocket."},
+            "No-cost_Access": {"score": "1/5", "disc": "Minimal availability."}
+        },
+        "cancer_screening": {
+            "National_Screening": {"score": "None", "disc": "No national program."}
+        }
+    },
+
+
+    {
+        "id": 66,
+        "cancer_type": "lung",
+        "country": "Malaysia",
+        "country_shortForm": "MY",
+        "introduction": "Malaysia has made significant progress in lung cancer care, with strong infrastructure, high biomarker testing adoption, and well-integrated clinical guidelines. However, gaps remain in early detection, reimbursement, and equitable access. National screening is absent, and survival outcomes are still constrained by late-stage diagnosis. With its maturity level at 3, Malaysia demonstrates strong capacity but requires targeted investments in screening, reimbursement, and public health strategies.",
+        "swot_analysis": {
+            "Strengths":
+                ["Specialized cancer centers with advanced infrastructure.",
+"High utilization of biomarkers (EGFR 90%, PD-L1 85%).",
+"Strong adoption of clinical guidelines (aligned with ESMO).",
+"Access to standard therapies is widely available.",
+"Growing research funding and oncology expertise."
+],
+
+            "Weaknesses":
+                ["No national LDCT screening program, only pilots.",
+"Limited access to advanced therapies due to reimbursement barriers.",
+"Early detection rates remain low.",
+"Regional disparities persist outside urban areas."
+],
+
+            "Opportunities": ["Expansion of screening pilots into a national program.",
+"Broader reimbursement reforms to reduce out-of-pocket costs.",
+"Investment in advanced biomarker testing beyond EGFR/PD-L1.",
+"Digital health and tele-oncology to improve rural access."
+],
+
+            "Threats": 
+                ["Rising lung cancer burden may strain current infrastructure.",
+"Economic constraints may slow reimbursement reforms.",
+"Inconsistent awareness efforts may limit screening uptake.",
+"Workforce shortages in oncology specialties."
+]
+        },
+        "infrastructure": {
+            "Specialized_Centers": {"score": "4/5", "disc": "Strong network of tertiary cancer hospitals."},
+            "Genetic_Molecular_Testing": {"score": "4/5", "disc": "High adoption of testing."}
+        },
+        "treatment_funding_awareness": {
+            "Treatment_Access": {"score": "4/5", "disc": "Good access to standard therapies."},
+            "Research_Funding": {"score": "3/5", "disc": "Steady, moderate."},
+            "Awareness_Campaigns": {"score": "3/5", "disc": "Present but not universal."}
+        },
+        "survival_rates": {
+            "Survival_Rates": {"score": "3/5", "disc": "Outcomes limited by late-stage diagnosis."},
+            "Early_Detection": {"score": "2/5", "disc": "Weak national programs."},
+            "Palliative_Care": {"score": "3/5", "disc": "Growing services."}
+        },
+        "biomarkers": {
+            "EGFR":{"score": "90%", "disc": "Very high testing rates."},
+            "ALK": {"score": "75%", "disc": "Strong adoption."},
+            "PD_L1": {"score": "85%", "disc": "Widely available."},
+            "MET": {"score": "20-40%", "disc": "Still limited."},
+            "ROS1": {"score": "20-40%", "disc": "Still limited."},
+            "BRAF": {"score": "20-40%", "disc": "Still limited."},
+            "KRAS": {"score": "20-40%", "disc": "Still limited."}
+        },
+        "clinical_guidelines": {
+            "Implementation": {"score": "4/5", "disc": "Nationally established."},
+            "Feasibility": {"score": "4/5", "disc": "Highly feasible."},
+            "Adoption_International_Guideline": {"score": "4/5", "disc": "Strong alignment."},
+            "Engagement_with_Updates": {"score": "2/3", "disc": "Moderate uptake."},
+            "ESMO_Guidelines": {"score": "4/5", "disc": "Widely implemented."}
+        },
+        "reimbursement": {
+            "Reimbursement_Coverage": {"score": "2/5", "disc": "Weak framework."},
+            "No-cost_Access": {"score": "2/5", "disc": "Limited access."}
+        },
+        "cancer_screening": {
+            "National_Screening": {"score": "None", "disc": "Pilots in high-risk groups only."}
+        }
+    },
+
+
+    {
+        "id": 67,
+        "cancer_type": "lung",
+        "country": "Mexico",
+        "country_shortForm": "MX",
+        "introduction": "Mexico has a developing lung cancer care system with specialized centers concentrated in major urban areas. Molecular testing for EGFR, ALK, PD-L1, and other biomarkers is available but not uniformly across all hospitals. Treatment access is uneven, with reimbursement varying between public and private sectors. Awareness campaigns exist but fail to reach rural populations effectively. Early detection is limited, and national LDCT screening is absent. Palliative care is developing but inconsistent. Clinical guidelines follow international standards partially, with slow adoption of updates. The overall maturity level is moderate.",
+        "swot_analysis": {
+            "Strengths":
+                ["Urban specialized centers provide comprehensive lung cancer care.",
+"Molecular testing for major biomarkers available in tertiary centers.",
+"Growing awareness campaigns in urban areas."
+],
+
+            "Weaknesses":
+                ["Unequal access to care in rural regions.",
+"Limited reimbursement and high out-of-pocket costs.",
+"Palliative care underdeveloped.",
+"Early detection largely absent."
+],
+
+            "Opportunities": ["Expand molecular diagnostics to regional hospitals.",
+"Launch nationwide awareness campaigns.",
+"Pilot LDCT screening programs in high-risk populations.",
+"Strengthen clinical trial participation."
+],
+
+            "Threats": 
+                ["Rising lung cancer incidence may outpace infrastructure.",
+"Economic disparities may prevent equitable care.",
+"Slow adoption of international guideline updates.",
+"Limited funding for palliative care expansion."
+]
+        },
+        "infrastructure": {
+            "Specialized_Centers": {"score": "2/5", "disc": "Mainly urban-based centers."},
+            "Genetic_Molecular_Testing": {"score": "3/5", "disc": "EGFR, ALK, PD-L1, MET, ROS1, BRAF, KRAS available in select hospitals."}
+        },
+        "treatment_funding_awareness": {
+            "Treatment_Access": {"score": "2/5", "disc": "Uneven access; private sector stronger."},
+            "Research_Funding": {"score": "2/5", "disc": "Limited, growing slowly."},
+            "Awareness_Campaigns": {"score": "3/5", "disc": "Focused on cities; rural reach limited."}
+        },
+        "survival_rates": {
+            "Survival_Rates": {"score": "2/5", "disc": "Late-stage presentation common."},
+            "Early_Detection": {"score": "3/5", "disc": "Opportunistic only; no national program."},
+            "Palliative_Care": {"score": "2/5", "disc": "Developing but inconsistent."}
+        },
+        "biomarkers": {
+            "EGFR":{"score": "75%", "disc": "Standard in tertiary centers."},
+            "ALK": {"score": "70%", "disc": "Available in major hospitals."},
+            "PD_L1": {"score": "82%", "disc": "Increasing coverage."},
+            "MET": {"score": "54%", "disc": "Limited."},
+            "ROS1": {"score": "60%", "disc": "Moderate availability."},
+            "BRAF": {"score": "50%", "disc": "Limited."},
+            "KRAS": {"score": "66%", "disc": "Available in tertiary care."}
+        },
+        "clinical_guidelines": {
+            "Implementation": {"score": "3/5", "disc": "Applied in major centers."},
+            "Feasibility": {"score": "3/5", "disc": "Resource constraints in smaller hospitals."},
+            "Adoption_International_Guideline": {"score": "3/5", "disc": "Partial alignment with ESMO."},
+            "Engagement_with_Updates": {"score": "2/3", "disc": "Moderate adoption."},
+            "ESMO_Guidelines": {"score": "3/5", "disc": "Implemented in tertiary centers."}
+        },
+        "reimbursement": {
+            "Reimbursement_Coverage": {"score": "2/5", "disc": "Limited coverage; private insurance better."},
+            "No-cost_Access": {"score": "2/5", "disc": "Mostly urban-based."}
+        },
+        "cancer_screening": {
+            "National_Screening": {"score": "None", "disc": "No national screening program."}
+        }
+    },
+
+
+    {
+        "id": 68,
+        "cancer_type": "lung",
+        "country": "Morocco",
+        "country_shortForm": "MA",
+        "introduction": "Morocco’s lung cancer care system is in early development, with specialized centers concentrated in Casablanca, Rabat, and a few other urban areas. Molecular testing is limited to major tertiary hospitals, making biomarkers like EGFR, ALK, and PD-L1 available only to a small subset of patients. Treatment access is constrained, with reimbursement largely insufficient and out-of-pocket costs high. Awareness campaigns exist but reach is low, resulting in late-stage diagnosis for many patients. Early detection programs are minimal, and no national LDCT screening exists. Palliative care is emerging but inconsistent across regions. Clinical guidelines are partially implemented, with limited adoption of international updates.",
+        "swot_analysis": {
+            "Strengths":
+                ["Specialized centers in major urban areas provide comprehensive care.",
+"Key molecular testing (EGFR, ALK, PD-L1) available in tertiary hospitals.",
+"Awareness campaigns exist, mainly in urban centers.",
+"Growing oncology workforce in select cities."
+
+],
+
+            "Weaknesses":
+                ["Limited access to care in rural and remote areas.",
+"Low treatment affordability and insufficient reimbursement coverage.",
+"Palliative care services are inconsistent and under-resourced.",
+"No national screening program; early detection remains minimal."
+],
+
+            "Opportunities": ["Expand molecular testing to regional hospitals.",
+"Develop national awareness and early detection initiatives.",
+"Strengthen palliative care networks and training.",
+"Collaborate with international partners for clinical trials and capacity building."
+],
+
+            "Threats": 
+                ["Rising lung cancer incidence may outpace existing infrastructure.",
+"Socioeconomic disparities may worsen inequity in care.",
+"Slow adoption of updated clinical guidelines may affect care quality.",
+"Limited funding may constrain expansion of screening or biomarker testing."
+]
+        },
+        "infrastructure": {
+            "Specialized_Centers": {"score": "2/5", "disc": "Concentrated in Casablanca, Rabat; regional access limited."},
+            "Genetic_Molecular_Testing": {"score": "2/5", "disc": "EGFR, ALK, PD-L1, MET, ROS1, BRAF, KRAS available only in tertiary hospitals."}
+        },
+        "treatment_funding_awareness": {
+            "Treatment_Access": {"score": "2/5", "disc": "Standard and targeted therapy limited; high out-of-pocket cost."},
+            "Research_Funding": {"score": "2/5", "disc": "Limited public funding; some private support."},
+            "Awareness_Campaigns": {"score": "2/5", "disc": "Mainly urban-focused; rural coverage weak."}
+        },
+        "survival_rates": {
+            "Survival_Rates": {"score": "2/5", "disc": "Late-stage diagnosis common."},
+            "Early_Detection": {"score": "2/5", "disc": "Opportunistic only; no national screening."},
+            "Palliative_Care": {"score": "2/5", "disc": "Uneven availability across regions."}
+        },
+        "biomarkers": {
+            "EGFR":{"score": "65%", "disc": "Testing in tertiary centers."},
+            "ALK": {"score": "60%", "disc": "Limited to specialized hospitals."},
+            "PD_L1": {"score": "75%", "disc": "Mostly urban centers."},
+            "MET": {"score": "50%", "disc": "Sparse availability."},
+            "ROS1": {"score": "55%", "disc": "Limited."},
+            "BRAF": {"score": "45%", "disc": "Minimal coverage."},
+            "KRAS": {"score": "58%", "disc": "Only in major hospitals."}
+        },
+        "clinical_guidelines": {
+            "Implementation": {"score": "3/5", "disc": "Partial use in tertiary centers."},
+            "Feasibility": {"score": "3/5", "disc": "Limited integration in smaller hospitals."},
+            "Adoption_International_Guideline": {"score": "3/5", "disc": "Partial alignment with ESMO."},
+            "Engagement_with_Updates": {"score": "2/3", "disc": "Slowly adopted."},
+            "ESMO_Guidelines": {"score": "3/5", "disc": "Tertiary centers apply recommendations."}
+        },
+        "reimbursement": {
+            "Reimbursement_Coverage": {"score": "1/5", "disc": "Minimal coverage; out-of-pocket predominates."},
+            "No-cost_Access": {"score": "1/5", "disc": "Almost none."}
+        },
+        "cancer_screening": {
+            "National_Screening": {"score": "None", "disc": "No national screening program."}
+        }
+    },
+
+
+    {
+        "id": 69,
+        "cancer_type": "lung",
+        "country": "Netherlands",
+        "country_shortForm": "NL",
+        "introduction": "The Netherlands has a highly developed lung cancer care system with specialized centers widely available in urban and regional areas. Molecular testing infrastructure is advanced, providing comprehensive coverage for EGFR, ALK, PD-L1, and other biomarkers. Standard treatment access is excellent, with strong research funding and active awareness campaigns. Survival rates are high, and palliative care services are well-established. Clinical guidelines are consistently implemented and regularly updated, with strong alignment to ESMO standards. Screening initiatives are underway through participation in European LDCT studies. The overall maturity level is very high, reflecting an advanced, equitable, and research-driven system.",
+        "swot_analysis": {
+            "Strengths":
+                ["Widespread specialized centers and advanced infrastructure.",
+"Comprehensive molecular testing for all major biomarkers.",
+"High survival rates due to early detection and effective treatment.",
+"Strong research funding and active participation in international trials.",
+"Established palliative care networks across the country."
+],
+
+            "Weaknesses":
+                ["Some minor regional disparities in access to the newest therapies.",
+"LDCT screening is still pilot; not fully national.",
+"Potential for administrative delays in adoption of new protocols.",
+"Cost of innovative therapies can still be high despite reimbursement."
+],
+
+            "Opportunities": ["Expand national LDCT screening programs.",
+"Further integration of digital health and telemedicine for rural regions.",
+"Enhance precision medicine initiatives through genomic research.",
+"Increase public awareness campaigns targeting high-risk groups."
+],
+
+            "Threats": 
+                ["Rising lung cancer incidence in aging populations may increase demand.",
+"Budgetary constraints could limit further innovation uptake.",
+"Global supply chain issues for targeted therapies may affect availability.",
+"Patient adherence to screening programs may vary, affecting early detection."
+]
+        },
+        "infrastructure": {
+            "Specialized_Centers": {"score": "5/5", "disc": "Widely available across urban and regional areas."},
+            "Genetic_Molecular_Testing": {"score": "4/5", "disc": "EGFR, ALK, PD-L1, MET, ROS1, BRAF, KRAS fully available."}
+        },
+        "treatment_funding_awareness": {
+            "Treatment_Access": {"score": "5/5", "disc": "Standard and targeted therapies highly accessible."},
+            "Research_Funding": {"score": "5/5", "disc": "Strong national and international funding."},
+            "Awareness_Campaigns": {"score": "5/5", "disc": "Comprehensive and ongoing."}
+        },
+        "survival_rates": {
+            "Survival_Rates": {"score": "5/5", "disc": "High due to early diagnosis and effective treatment."},
+            "Early_Detection": {"score": "5/5", "disc": "LDCT screening in European pilot studies."},
+            "Palliative_Care": {"score": "5/5", "disc": "Well-developed services nationwide."}
+        },
+        "biomarkers": {
+            "EGFR":{"score": "85%", "disc": "High coverage."},
+            "ALK": {"score": "78%", "disc": "Widely tested."},
+            "PD_L1": {"score": "90%", "disc": "Standard in all major centers."},
+            "MET": {"score": "63%", "disc": "Available in specialized labs."},
+            "ROS1": {"score": "68%", "disc": "Full coverage in tertiary centers."},
+            "BRAF": {"score": "58%", "disc": "Tested routinely."},
+            "KRAS": {"score": "75%", "disc": "Widely available."}
+        },
+        "clinical_guidelines": {
+            "Implementation": {"score": "5/5", "disc": "Consistently applied."},
+            "Feasibility": {"score": "5/5", "disc": "High; all centers adhere."},
+            "Adoption_International_Guideline": {"score": "5/5", "disc": "Fully aligned with ESMO."},
+            "Engagement_with_Updates": {"score": "3/3", "disc": "Regular adoption of guideline updates."},
+            "ESMO_Guidelines": {"score": "5/5", "disc": "Fully integrated into care."}
+        },
+        "reimbursement": {
+            "Reimbursement_Coverage": {"score": "3/5", "disc": "Good national coverage."},
+            "No-cost_Access": {"score": "3/5", "disc": "Accessible with insurance."}
+        },
+        "cancer_screening": {
+            "National_Screening": {"score": "Participating in European studies", "disc": "Screening ongoing in pilot studies; not yet national."}
+        }
+    },
+
+
+    {
+        "id": 70,
+        "cancer_type": "lung",
+        "country": "New Zealand",
+        "country_shortForm": "NZ",
+        "introduction": "Lung cancer represents a significant health burden in New Zealand, though the country benefits from a well-developed healthcare system. Specialized cancer centers are accessible in major urban areas, and genetic/molecular testing infrastructure is robust. Treatment access, research funding, and awareness programs are strong, supporting timely diagnosis and patient care. Survival rates are comparatively high, and early detection programs are in place, although there is no national LDCT screening program. Biomarker testing for EGFR, ALK, PD-L1, and others is widely implemented, aiding precision medicine. Clinical guidelines are well-established and updated regularly, though reimbursement for innovative therapies remains limited.",
+        "swot_analysis": {
+            "Strengths":
+                ["Comprehensive specialized centers and advanced molecular testing in major cities.",
+"Strong treatment access, research funding, and active awareness campaigns.",
+"High utilization of biomarkers (EGFR 86%, PD-L1 92%), supporting personalized therapy.",
+"Clinical guidelines fully integrated, aligned with ESMO standards, and updated consistently."
+],
+
+            "Weaknesses":
+                ["Lack of a national LDCT screening program limits early detection in high-risk populations.",
+"Reimbursement coverage for innovative therapies and no-cost access is limited.",
+"Some regional disparities exist for access to specialized care outside major cities.",
+"Advanced therapies may still incur out-of-pocket costs for patients."
+],
+
+            "Opportunities": ["Implement a national LDCT screening program to improve early diagnosis.",
+"Expand rural access to molecular testing and specialist care.",
+"Increase funding for advanced therapeutics to reduce financial barriers.",
+"Strengthen public awareness campaigns targeting high-risk populations."
+],
+
+            "Threats": 
+                ["Geographic and socioeconomic disparities could widen without targeted interventions.",
+"Rising lung cancer incidence may strain healthcare infrastructure.",
+"Delays in adoption of next-generation therapies may affect outcomes.",
+"Patient engagement in screening programs may remain low without policy support."
+]
+        },
+        "infrastructure": {
+            "Specialized_Centers": {"score": "4/5", "disc": "Accessible in major cities; rural coverage limited."},
+            "Genetic_Molecular_Testing": {"score": "4/5", "disc": "Robust testing for key biomarkers; urban-centric."}
+        },
+        "treatment_funding_awareness": {
+            "Treatment_Access": {"score": "4/5", "disc": "Standard therapies widely available; some cost limitations."},
+            "Research_Funding": {"score": "4/5", "disc": "Strong investment and international collaborations."},
+            "Awareness_Campaigns": {"score": "4/5", "disc": "Active programs, but potential for wider reach."}
+        },
+        "survival_rates": {
+            "Survival_Rates": {"score": "4/5", "disc": "Late-stage presentation common."},
+            "Early_Detection": {"score": "4/5", "disc": "Opportunistic only; no national program."},
+            "Palliative_Care": {"score": "4/5", "disc": "Developing but inconsistent."}
+        },
+        "biomarkers": {
+            "EGFR":{"score": "86%", "disc": "Widely tested; standard in clinical practice."},
+            "ALK": {"score": "81%", "disc": "Regularly tested in specialized centers."},
+            "PD_L1": {"score": "92%", "disc": "High coverage supports immunotherapy decisions."},
+            "MET": {"score": "67%", "disc": "Available in major centers."},
+            "ROS1": {"score": "72%", "disc": "Standard testing for advanced patients."},
+            "BRAF": {"score": "61%", "disc": "Increasingly integrated into treatment plans."},
+            "KRAS": {"score": "77%", "disc": "High adoption in clinical practice."}
+        },
+        "clinical_guidelines": {
+            "Implementation": {"score": "5/5", "disc": "Fully integrated into care pathways."},
+            "Feasibility": {"score": "5/5", "disc": "Easily implemented in tertiary centers."},
+            "Adoption_International_Guideline": {"score": "5/5", "disc": "Aligned with ESMO recommendations."},
+            "Engagement_with_Updates": {"score": "3/3", "disc": "National centers actively adopt updates."},
+            "ESMO_Guidelines": {"score": "5/5", "disc": "Integrated into standard practice."}
+        },
+        "reimbursement": {
+            "Reimbursement_Coverage": {"score": "2/5", "disc": "Limited coverage for advanced therapies."},
+            "No-cost_Access": {"score": "2/5", "disc": "Patients often bear costs for innovative drugs."}
+        },
+        "cancer_screening": {
+            "National_Screening": {"score": "No national LDCT program", "disc": "Screening only for high-risk individuals in select regions."}
+        }
+    },
+
+
+    {
+        "id": 71,
+        "cancer_type": "lung",
+        "country": "Nigeria",
+        "country_shortForm": "NG",
+        "introduction": "Lung cancer care in Nigeria faces significant challenges due to limited infrastructure, low treatment access, and minimal awareness programs. Specialized centers are scarce, and genetic/molecular testing is limited, particularly outside urban hubs. Survival rates are low, and early detection programs are virtually non-existent. Biomarker testing for EGFR, ALK, PD-L1, and others is underutilized, restricting personalized therapy. Clinical guidelines exist but are poorly implemented, with limited engagement in international standards. Reimbursement and no-cost access for therapies are minimal, and no national LDCT screening program is in place. Overall, Nigeria’s lung cancer care remains in the early stages of development.",
+        "swot_analysis": {
+            "Strengths":
+                ["Existence of some tertiary hospitals with basic oncology services.",
+"Limited molecular testing facilities available in major urban centers.",
+"National guidelines exist, providing a framework for care.",
+"Engagement in international research collaborations, though limited."
+],
+
+            "Weaknesses":
+                ["Scarce specialized centers and inadequate treatment access.",
+"Low awareness and education campaigns, particularly in rural areas.",
+"Minimal biomarker testing for precision medicine.",
+"Poor implementation of clinical guidelines and lack of national screening."
+],
+
+            "Opportunities": ["Expansion of specialized centers and molecular testing infrastructure.",
+"Development of awareness campaigns targeting high-risk populations.",
+"Investment in workforce training and oncology research.",
+"Implementation of national LDCT screening to improve early detection."
+],
+
+            "Threats": 
+                ["Geographic and socioeconomic disparities limit patient access.",
+"Limited healthcare funding could restrict adoption of new therapies.",
+"Rising lung cancer incidence may overwhelm existing services.",
+"Delays in guideline adoption could impact patient outcomes."
+]
+        },
+        "infrastructure": {
+            "Specialized_Centers": {"score": "1/5", "disc": "Very limited, concentrated in few urban areas."},
+            "Genetic_Molecular_Testing": {"score": "2/5", "disc": "Testing available in select hospitals only."}
+        },
+        "treatment_funding_awareness": {
+            "Treatment_Access": {"score": "1/5", "disc": "Poor availability; high out-of-pocket costs."},
+            "Research_Funding": {"score": "1/5", "disc": "Minimal investment in lung cancer research."},
+            "Awareness_Campaigns": {"score": "1/5", "disc": "Very limited public education and campaigns."}
+        },
+        "survival_rates": {
+            "Survival_Rates": {"score": "1/5", "disc": "Very low due to late diagnosis and limited care."},
+            "Early_Detection": {"score": "1/5", "disc": "No structured programs; late-stage presentation common."},
+            "Palliative_Care": {"score": "1/5", "disc": "Limited availability; opioids and support scarce."}
+        },
+        "biomarkers": {
+            "EGFR":{"score": "48%", "disc": "Testing available in few centers."},
+            "ALK": {"score": "43%", "disc": "Limited coverage."},
+            "PD_L1": {"score": "58%", "disc": "Partial adoption in major hospitals."},
+            "MET": {"score": "33%", "disc": "Very limited."},
+            "ROS1": {"score": "38%", "disc": "Low availability."},
+            "BRAF": {"score": "28%", "disc": "Minimal testing."},
+            "KRAS": {"score": "47%", "disc": "Partial implementation."}
+        },
+        "clinical_guidelines": {
+            "Implementation": {"score": "2/5", "disc": "Guidelines exist but poorly applied."},
+            "Feasibility": {"score": "2/5", "disc": "Implementation limited by resources."},
+            "Adoption_International_Guideline": {"score": "2/5", "disc": "Partially followed."},
+            "Engagement_with_Updates": {"score": "1/3", "disc": "Rarely updated in practice."},
+            "ESMO_Guidelines": {"score": "2/5", "disc": "Limited integration."}
+        },
+        "reimbursement": {
+            "Reimbursement_Coverage": {"score": "1/5", "disc": "Minimal; most therapies paid out-of-pocket."},
+            "No-cost_Access": {"score": "1/5", "disc": "Very limited."}
+        },
+        "cancer_screening": {
+            "National_Screening": {"score": "No national LDCT program", "disc": "Screening not available."}
+        }
+    },
+
+
+    {
+        "id": 72,
+        "cancer_type": "lung",
+        "country": "Poland",
+        "country_shortForm": "PL",
+        "introduction": "Poland has a moderately developed lung cancer care system, with specialized centers concentrated in major cities and reasonable access to molecular testing. Treatment access, research funding, and awareness campaigns are growing, supporting improved patient outcomes. Survival rates are moderate, and early detection programs exist but coverage is limited. Biomarker testing for EGFR, ALK, PD-L1, and others is widely used, enabling personalized therapy. Clinical guidelines are aligned with international standards, though adoption in smaller centers may lag. Reimbursement and no-cost access for advanced therapies remain partial. There is currently no national LDCT screening program, highlighting an area for improvement.",
+        "swot_analysis": {
+            "Strengths":
+                ["Well-established specialized centers in major urban areas.",
+"Moderate biomarker testing (EGFR 75%, PD-L1 80%) supports personalized treatment.",
+"Clinical guidelines aligned with international standards and partially integrated.",
+"Growing research funding and awareness campaigns increase public knowledge."
+],
+
+            "Weaknesses":
+                ["Limited access to care and molecular testing in rural regions.",
+"Partial reimbursement for innovative therapies; patients may face out-of-pocket costs.",
+"Early detection programs and LDCT screening not fully implemented.",
+"Engagement with guideline updates in smaller hospitals is inconsistent."
+],
+
+            "Opportunities": ["Expand molecular testing infrastructure in regional hospitals.",
+"Develop a national LDCT screening program for high-risk populations.",
+"Increase public awareness campaigns targeting early detection.",
+"Strengthen funding for clinical research and adoption of advanced therapies."
+],
+
+            "Threats": 
+                ["Geographic disparities may limit access for rural populations.",
+"Rising lung cancer incidence could strain existing infrastructure.",
+"Economic constraints may slow uptake of innovative therapies.",
+"Delayed guideline adoption in smaller centers could affect treatment quality."
+]
+        },
+        "infrastructure": {
+            "Specialized_Centers": {"score": "4/5", "disc": "Concentrated in major cities; regional coverage limited."},
+            "Genetic_Molecular_Testing": {"score": "3/5", "disc": "Moderate availability; urban-focused."}
+        },
+        "treatment_funding_awareness": {
+            "Treatment_Access": {"score": "4/5", "disc": "Standard therapies accessible in urban centers."},
+            "Research_Funding": {"score": "3/5", "disc": "Moderate funding and participation in clinical studies."},
+            "Awareness_Campaigns": {"score": "4/5", "disc": "Public campaigns exist, urban reach stronger than rural."}
+        },
+        "survival_rates": {
+            "Survival_Rates": {"score": "3/5", "disc": "Moderate; late-stage presentation affects outcomes."},
+            "Early_Detection": {"score": "3/5", "disc": "Some programs; coverage limited."},
+            "Palliative_Care": {"score": "4/5", "disc": "Available in specialized centers."}
+        },
+        "biomarkers": {
+            "EGFR":{"score": "75%", "disc": "Widely tested in urban centers."},
+            "ALK": {"score": "68%", "disc": "Moderate adoption."},
+            "PD_L1": {"score": "80%", "disc": "Standard testing in specialized hospitals."},
+            "MET": {"score": "55%", "disc": "Partial availability."},
+            "ROS1": {"score": "60%", "disc": "Moderate adoption."},
+            "BRAF": {"score": "50%", "disc": "Available in tertiary centers."},
+            "KRAS": {"score": "65%", "disc": "Increasingly implemented."}
+        },
+        "clinical_guidelines": {
+            "Implementation": {"score": "3/5", "disc": "Guidelines applied in major centers."},
+            "Feasibility": {"score": "3/5", "disc": "Urban implementation feasible; regional gaps remain."},
+            "Adoption_International_Guideline": {"score": "3/5", "disc": "Partially adopted."},
+            "Engagement_with_Updates": {"score": "2/3", "disc": "Limited in smaller centers."},
+            "ESMO_Guidelines": {"score": "3/5", "disc": "Integrated in leading hospitals."}
+        },
+        "reimbursement": {
+            "Reimbursement_Coverage": {"score": "2/5", "disc": "Partial; innovative therapies often paid out-of-pocket."},
+            "No-cost_Access": {"score": "2/5", "disc": "Limited availability."}
+        },
+        "cancer_screening": {
+            "National_Screening": {"score": "No national LDCT program", "disc": "Screening not yet implemented."}
+        }
+    },
+
+
+    {
+        "id": 73,
+        "cancer_type": "lung",
+        "country": "Russia",
+        "country_shortForm": "RU",
+        "introduction": "Russia’s lung cancer care benefits from strong tertiary centers in major cities and growing molecular diagnostics, though regional disparities persist. Treatment access is relatively good and supported by guideline-based care, while research funding and awareness are moderate. Survival and palliative care are improving, but early detection lacks a national LDCT program, with only regional pilots to date. Clinical guidelines align with international standards, though updates and integration vary by region. Reimbursement and no-cost access are partial, leading to inequities for innovative therapies.",
+        "swot_analysis": {
+            "Strengths":
+                ["Robust specialized centers in major urban hubs.",
+"Broad biomarker utilization (PD-L1 85%, EGFR 80%).",
+"Guideline-based care widely implemented.",
+"Steady oncology research activity."
+],
+
+            "Weaknesses":
+                ["Uneven access to advanced diagnostics outside cities.",
+"Partial reimbursement and limited no-cost access (2/5 each).",
+"Variable adoption of updates (2/3).",
+"No national LDCT program; pilots only."
+],
+
+            "Opportunities": ["Expand regional molecular capacity and referral networks.",
+"Scale pilot LDCT into broader coverage for high-risk groups.",
+"Enhance funding for precision oncology and real-world registries.",
+"Strengthen tele-oncology to narrow regional gaps."
+],
+
+            "Threats": 
+                ["Economic pressures may slow innovation uptake.",
+"Urban–rural disparities could widen without targeted policy.",
+"Workforce distribution challenges in oncology specialties.",
+"Rising incidence may strain existing capacity."
+]
+        },
+        "infrastructure": {
+            "Specialized_Centers": {"score": "4/5", "disc": "Several national/regional centers."},
+            "Genetic_Molecular_Testing": {"score": "3/5", "disc": "Growing capacity with regional gaps."}
+        },
+        "treatment_funding_awareness": {
+            "Treatment_Access": {"score": "4/5", "disc": "Good access to standard therapies."},
+            "Research_Funding": {"score": "3/5", "disc": "Moderate investment."},
+            "Awareness_Campaigns": {"score": "3/5", "disc": "Ongoing but variable reach."}
+        },
+        "survival_rates": {
+            "Survival_Rates": {"score": "4/5", "disc": "Improving outcomes."},
+            "Early_Detection": {"score": "3/5", "disc": "No national LDCT; regional pilots."},
+            "Palliative_Care": {"score": "3/5", "disc": "Developing services."}
+        },
+        "biomarkers": {
+            "EGFR":{"score": "80%", "disc": "Routinely tested in tertiary centers."},
+            "ALK": {"score": "75%", "disc": "Broad availability in urban hospitals."},
+            "PD_L1": {"score": "85%", "disc": "Widely used to guide immunotherapy decisions."},
+            "MET": {"score": "60%", "disc": "Testing available but not universal."},
+            "ROS1": {"score": "65%", "disc": "Present in tertiary hospitals; not consistent nationwide."},
+            "BRAF": {"score": "50%", "disc": "Limited adoption due to cost and infrastructure."},
+            "KRAS": {"score": "70%", "disc": "Growing uptake as precision medicine expands."}
+        },
+        "clinical_guidelines": {
+            "Implementation": {"score": "4/5", "disc": "Widely used."},
+            "Feasibility": {"score": "3/5", "disc": "Resource-dependent in regions."},
+            "Adoption_International_Guideline": {"score": "3/5", "disc": "Good alignment."},
+            "Engagement_with_Updates": {"score": "2/3", "disc": "Moderate."},
+            "ESMO_Guidelines": {"score": "3/5", "disc": "Integrated in leading centers."}
+        },
+        "reimbursement": {
+            "Reimbursement_Coverage": {"score": "2/5", "disc": "Partial; gaps for novel agents."},
+            "No-cost_Access": {"score": "2/5", "disc": "Limited."}
+        },
+        "cancer_screening": {
+            "National_Screening": {"score": "None", "disc": "Regional LDCT pilots in large cities."}
+        }
+    },
+
+
+    {
+        "id": 74,
+        "cancer_type": "lung",
+        "country": "Rwanda",
+        "country_shortForm": "RW",
+        "introduction": "Lung cancer care in Rwanda is in the early stages of development, with very limited infrastructure and specialized centers. Access to molecular and genetic testing is minimal, restricting the use of precision medicine. Treatment options, research funding, and public awareness campaigns are scarce, resulting in low survival rates. Early detection programs are largely absent, and palliative care services are underdeveloped. Biomarker testing for EGFR, ALK, PD-L1, and other markers is limited to a few urban centers. Clinical guidelines exist but are poorly implemented, and reimbursement for therapies is minimal. There is no national LDCT screening program, highlighting significant gaps in lung cancer management.",
+        "swot_analysis": {
+            "Strengths":
+                ["Some tertiary hospitals provide basic oncology services.",
+"Minimal molecular testing facilities are available in urban areas.",
+"Existence of national guidelines provides a foundation for future care.",
+"Growing awareness of the need for oncology capacity-building."
+],
+
+            "Weaknesses":
+                ["Very limited specialized centers and treatment access.",
+"Biomarker testing is largely unavailable, restricting personalized therapy.",
+"Public awareness and early detection programs are nearly absent.",
+"Clinical guidelines are poorly implemented and rarely updated."
+],
+
+            "Opportunities": ["Investment in specialized centers and molecular testing infrastructure.",
+"Development of national awareness campaigns targeting lung cancer.",
+"Training of healthcare workforce in oncology care and palliative services.",
+"Implementation of national LDCT screening programs to enable early diagnosis."
+],
+
+            "Threats": 
+                ["Geographic and socioeconomic disparities limit access to care.",
+"Limited healthcare funding may hinder adoption of new therapies.",
+"Rising lung cancer incidence could overwhelm existing services.",
+"Delays in guideline adoption may reduce the quality of care."
+]
+        },
+        "infrastructure": {
+            "Specialized_Centers": {"score": "1/5", "disc": "Very few centers, mostly urban."},
+            "Genetic_Molecular_Testing": {"score": "1/5", "disc": "Minimal availability."}
+        },
+        "treatment_funding_awareness": {
+            "Treatment_Access": {"score": "1/5", "disc": "Very limited therapy options."},
+            "Research_Funding": {"score": "1/5", "disc": "Minimal investment in lung cancer research."},
+            "Awareness_Campaigns": {"score": "1/5", "disc": "Almost no public campaigns."}
+        },
+        "survival_rates": {
+            "Survival_Rates": {"score": "1/5", "disc": "Very low; late-stage diagnoses common."},
+            "Early_Detection": {"score": "1/5", "disc": "No structured programs."},
+            "Palliative_Care": {"score": "1/5", "disc": "Minimal availability; opioids scarce."}
+        },
+        "biomarkers": {
+            "EGFR":{"score": "40%", "disc": "Very limited testing."},
+            "ALK": {"score": "35%", "disc": "Rarely tested."},
+            "PD_L1": {"score": "50%", "disc": "Minimal adoption."},
+            "MET": {"score": "25%", "disc": "Scarce testing."},
+            "ROS1": {"score": "30%", "disc": "Very limited."},
+            "BRAF": {"score": "20%", "disc": "Almost unavailable."},
+            "KRAS": {"score": "38%", "disc": "Limited testing."}
+        },
+        "clinical_guidelines": {
+            "Implementation": {"score": "2/5", "disc": "Guidelines exist but poorly applied."},
+            "Feasibility": {"score": "1/5", "disc": "Very challenging due to resource limitations."},
+            "Adoption_International_Guideline": {"score": "1/5", "disc": "Rarely followed."},
+            "Engagement_with_Updates": {"score": "1/3", "disc": "Almost no updates implemented."},
+            "ESMO_Guidelines": {"score": "1/5", "disc": "Very limited integration."}
+        },
+        "reimbursement": {
+            "Reimbursement_Coverage": {"score": "1/5", "disc": "Minimal; most therapies paid out-of-pocket."},
+            "No-cost_Access": {"score": "1/5", "disc": "Very limited."}
+        },
+        "cancer_screening": {
+            "National_Screening": {"score": "No national LDCT program", "disc": "No screening program exists."}
+        }
+    },
+
+
+    {
+        "id": 75,
+        "cancer_type": "lung",
+        "country": "Saudi Arabia",
+        "country_shortForm": "SA",
+        "introduction": "Saudi Arabia has strengthened its lung cancer services through well-equipped specialized centers and expanding molecular diagnostics. Treatment access is good, backed by guideline-aligned care and active awareness efforts; research funding is moderate. Survival and palliative care are improving, though early detection lacks a national LDCT program, with hospital-based opportunistic screening in place. Clinical guidelines align with international standards and are feasible to implement, but updates can lag. Reimbursement and no-cost access are partial, creating affordability challenges for novel therapies.",
+        "swot_analysis": {
+            "Strengths":
+                ["Strong specialist infrastructure and molecular testing (4/5).",
+"High adoption of key biomarkers (PD-L1 85%, EGFR 75%).",
+"Guidelines aligned with ESMO; feasible nationwide integration.",
+"Good access to standard therapies in major centers."
+],
+
+            "Weaknesses":
+                ["No national LDCT program; opportunistic screening only.",
+"Partial reimbursement and limited no-cost access (2/5 each).",
+"Regional disparities between major cities and peripheral areas.",
+"Moderate uptake of guideline updates (2/3)."
+],
+
+            "Opportunities": ["Develop and scale a national high-risk LDCT program.",
+"Expand reimbursement for targeted/immunotherapies.",
+"Strengthen clinical research networks and registries.",
+"Enhance community awareness and smoking cessation programs."
+],
+
+            "Threats": 
+                ["Rising incidence could strain capacity.",
+"Budget constraints may slow adoption of high-cost innovations.",
+"Geographic disparities may persist without targeted policies.",
+"Dependence on imported diagnostics/therapies may pose supply risks."
+]
+        },
+        "infrastructure": {
+            "Specialized_Centers": {"score": "4/5", "disc": "Well-equipped tertiary centers."},
+            "Genetic_Molecular_Testing": {"score": "4/5", "disc": "Broad capacity in major hospitals."}
+        },
+        "treatment_funding_awareness": {
+            "Treatment_Access": {"score": "4/5", "disc": "Good access to standard care."},
+            "Research_Funding": {"score": "3/5", "disc": "Moderate and growing."},
+            "Awareness_Campaigns": {"score": "4/5", "disc": "Active national initiatives."}
+        },
+        "survival_rates": {
+            "Survival_Rates": {"score": "4/5", "disc": "Improving outcomes."},
+            "Early_Detection": {"score": "3/5", "disc": "No national LDCT; hospital-based screening."},
+            "Palliative_Care": {"score": "4/5", "disc": "Expanding services and coverage."}
+        },
+        "biomarkers": {
+            "EGFR":{"score": "75%", "disc": "Routinely tested and used in treatment pathways"},
+            "ALK": {"score": "70%", "disc": "Widely available, especially in tertiary hospitals."},
+            "PD_L1": {"score": "85%", "disc": "Strongly integrated into immunotherapy decisions"},
+            "MET": {"score": "60%", "disc": "Available in select centers, uneven access."},
+            "ROS1": {"score": "65%", "disc": "Testing offered in major labs, limited in smaller hospitals."},
+            "BRAF": {"score": "50%", "disc": "Present but not consistently adopted due to costs."},
+            "KRAS": {"score": "68%", "disc": "Adoption growing as part of expanded biomarker panels."}
+        },
+        "clinical_guidelines": {
+            "Implementation": {"score": "4/5", "disc": "Widely applied."},
+            "Feasibility": {"score": "4/5", "disc": "High across health systems."},
+            "Adoption_International_Guideline": {"score": "4/5", "disc": "Strong alignment."},
+            "Engagement_with_Updates": {"score": "2/3", "disc": "Moderate."},
+            "ESMO_Guidelines": {"score": "4/5", "disc": "Routinely used."}
+        },
+        "reimbursement": {
+            "Reimbursement_Coverage": {"score": "2/5", "disc": "Partial; gaps for innovative drugs."},
+            "No-cost_Access": {"score": "2/5", "disc": "Limited for high-cost therapies."}
+        },
+        "cancer_screening": {
+            "National_Screening": {"score": "None", "disc": "No national LDCT; hospital-based opportunistic programs."}
+        }
+    },
+
+
+    {
+        "id": 76,
+        "cancer_type": "lung",
+        "country": "Serbia",
+        "country_shortForm": "RS",
+        "introduction": "Lung cancer care in Serbia is moderately developed, with a network of specialized centers and adequate molecular testing infrastructure in urban areas. Treatment access, research funding, and awareness campaigns are present but not fully comprehensive. Survival rates are moderate, and early detection programs exist but coverage is limited. Biomarker testing for EGFR, ALK, PD-L1, and other markers is widely implemented in tertiary centers, supporting personalized treatment. Clinical guidelines are in place and generally aligned with international standards, though smaller centers may face implementation challenges. Reimbursement for advanced therapies is partial, and there is no national LDCT screening program.",
+        "swot_analysis": {
+            "Strengths":
+                ["Established specialized centers in major cities.",
+"Moderate biomarker utilization (EGFR 68%, PD-L1 78%) for personalized therapy.",
+"Clinical guidelines aligned with international standards and applied in tertiary centers.",
+"Awareness campaigns exist, enhancing early detection in urban populations."
+],
+
+            "Weaknesses":
+                ["Limited access to specialized care and molecular testing in rural regions.",
+"Partial reimbursement; patients often bear costs for advanced therapies.",
+"Early detection programs and screening coverage are limited.",
+"Engagement with guideline updates is inconsistent in smaller hospitals."
+],
+
+            "Opportunities": ["Expand molecular testing and specialized care to regional hospitals.",
+"Develop national awareness campaigns to increase screening and early detection.",
+"Strengthen funding for clinical research and adoption of innovative therapies.",
+"Implement LDCT screening programs to improve early diagnosis."
+],
+
+            "Threats": 
+                ["Geographic and socioeconomic disparities may limit equitable access.",
+"Rising incidence could strain existing healthcare infrastructure.",
+"Delayed adoption of new therapies may affect patient outcomes.",
+"Limited funding could restrict expansion of services to underserved areas."
+]
+        },
+        "infrastructure": {
+            "Specialized_Centers": {"score": "3/5", "disc": "Urban-centered; limited regional access."},
+            "Genetic_Molecular_Testing": {"score": "3/5", "disc": "Available in major tertiary centers."}
+        },
+        "treatment_funding_awareness": {
+            "Treatment_Access": {"score": "3/5", "disc": "Accessible in cities; regional gaps exist."},
+            "Research_Funding": {"score": "3/5", "disc": "Moderate support for clinical studies."},
+            "Awareness_Campaigns": {"score": "3/5", "disc": "Present, mostly in urban areas."}
+        },
+        "survival_rates": {
+            "Survival_Rates": {"score": "3/5", "disc": "Moderate; influenced by late-stage diagnosis."},
+            "Early_Detection": {"score": "3/5", "disc": "Programs exist; coverage limited."},
+            "Palliative_Care": {"score": "3/5", "disc": "Available in specialized centers."}
+        },
+        "biomarkers": {
+            "EGFR":{"score": "68%", "disc": "Widely used in tertiary hospitals."},
+            "ALK": {"score": "63%", "disc": "Moderate adoption."},
+            "PD_L1": {"score": "78%", "disc": "Integrated into clinical practice."},
+            "MET": {"score": "52%", "disc": "Partial availability."},
+            "ROS1": {"score": "57%", "disc": "Moderate adoption."},
+            "BRAF": {"score": "47%", "disc": "Available in select centers."},
+            "KRAS": {"score": "62%", "disc": "Increasing implementation."}
+        },
+        "clinical_guidelines": {
+            "Implementation": {"score": "3/5", "disc": "Applied in major hospitals."},
+            "Feasibility": {"score": "3/5", "disc": "Feasible in urban centers; limited in rural areas."},
+            "Adoption_International_Guideline": {"score": "3/5", "disc": "Partially adopted."},
+            "Engagement_with_Updates": {"score": "2/3", "disc": "Moderate; smaller centers lag."},
+            "ESMO_Guidelines": {"score": "3/5", "disc": "Implemented in tertiary centers."}
+        },
+        "reimbursement": {
+            "Reimbursement_Coverage": {"score": "3/5", "disc": "Partial; some therapies paid out-of-pocket."},
+            "No-cost_Access": {"score": "3/5", "disc": "Limited access for innovative drugs."}
+        },
+        "cancer_screening": {
+            "National_Screening": {"score": "No national LDCT program", "disc": "Screening not implemented."}
+        }
+    },
+
+
+    {
+        "id": 77,
+        "cancer_type": "lung",
+        "country": "Singapore",
+        "country_shortForm": "SG",
+        "introduction": "Singapore has a highly advanced lung cancer care system, with top-tier specialized centers and comprehensive genetic/molecular testing infrastructure. Treatment access, research funding, and awareness campaigns are robust, supporting high survival rates. Early detection programs and palliative care services are well-developed, ensuring effective patient management. Biomarker testing for EGFR, ALK, PD-L1, MET, ROS1, BRAF, and KRAS is widespread, enabling precision therapy. Clinical guidelines are fully integrated and aligned with international standards, with strong engagement in updates. Despite advanced care, reimbursement and no-cost access for certain therapies remain partial. Currently, there is no national LDCT screening program, although high-risk patients may receive targeted screening.",
+        "swot_analysis": {
+            "Strengths":
+                ["World-class specialized centers and comprehensive molecular testing.",
+"High biomarker utilization for precision medicine (EGFR 89%, PD-L1 94%).",
+"Clinical guidelines fully integrated and aligned with international standards.",
+"Strong public awareness campaigns and research funding supporting innovation."
+],
+
+            "Weaknesses":
+                ["Reimbursement and no-cost access for advanced therapies are limited.",
+"National LDCT screening program not yet implemented.",
+"Slight regional disparities may exist between public and private hospitals.",
+"High cost of innovative treatments may restrict access for some patients."
+],
+
+            "Opportunities": ["Introduce a national LDCT screening program for early detection.",
+"Expand coverage and reimbursement for advanced targeted therapies.",
+"Further integration of telemedicine and digital health tools for remote care.",
+"Increase international collaboration in clinical research and trials."
+],
+
+            "Threats": 
+                ["Rising lung cancer incidence could increase the burden on specialized centers.",
+"Economic constraints may affect funding for high-cost therapies.",
+"Delays in guideline updates in smaller institutions may occur.",
+"Patient reliance on private care may exacerbate inequities in access."
+]
+        },
+        "infrastructure": {
+            "Specialized_Centers": {"score": "5/5", "disc": "World-class centers with advanced facilities."},
+            "Genetic_Molecular_Testing": {"score": "5/5", "disc": "Comprehensive testing widely available."}
+        },
+        "treatment_funding_awareness": {
+            "Treatment_Access": {"score": "5/5", "disc": "Full access to standard and targeted therapies."},
+            "Research_Funding": {"score": "5/5", "disc": "Strong support for clinical and translational studies."},
+            "Awareness_Campaigns": {"score": "5/5", "disc": "Extensive public education initiatives."}
+        },
+        "survival_rates": {
+            "Survival_Rates": {"score": "5/5", "disc": "High survival due to early detection and quality care."},
+            "Early_Detection": {"score": "5/5", "disc": "Programs available, though no national LDCT."},
+            "Palliative_Care": {"score": "5/5", "disc": "Comprehensive services including opioid availability."}
+        },
+        "biomarkers": {
+            "EGFR":{"score": "89%", "disc": "Widespread testing."},
+            "ALK": {"score": "84%", "disc": "Fully integrated into care."},
+            "PD_L1": {"score": "94%", "disc": "Standard testing in all major centers."},
+            "MET": {"score": "72%", "disc": "Widely used."},
+            "ROS1": {"score": "76%", "disc": "Standard testing in tertiary hospitals."},
+            "BRAF": {"score": "67%", "disc": "Regularly tested."},
+            "KRAS": {"score": "82%", "disc": "Integrated into treatment planning."}
+        },
+        "clinical_guidelines": {
+            "Implementation": {"score": "5/5", "disc": "Fully applied in all centers."},
+            "Feasibility": {"score": "5/5", "disc": "High feasibility across public and private hospitals."},
+            "Adoption_International_Guideline": {"score": "5/5", "disc": "Aligned with ESMO/NCCN."},
+            "Engagement_with_Updates": {"score": "3/3", "disc": "Strong adherence to updates."},
+            "ESMO_Guidelines": {"score": "5/5", "disc": "Fully integrated into practice."}
+        },
+        "reimbursement": {
+            "Reimbursement_Coverage": {"score": "2/5", "disc": "Partial; some therapies require out-of-pocket payment."},
+            "No-cost_Access": {"score": "2/5", "disc": "Limited access to high-cost drugs."}
+        },
+        "cancer_screening": {
+            "National_Screening": {"score": "No national LDCT program", "disc": "Screening limited to high-risk patients."}
+        }
+    },
+
+
+    {
+        "id": 78,
+        "cancer_type": "lung",
+        "country": "South Africa",
+        "country_shortForm": "ZA",
+        "introduction": "Lung cancer care in South Africa is moderately developed, with specialized centers concentrated in major cities. Molecular testing infrastructure is available but unevenly distributed, limiting access to precision medicine in rural areas. Treatment access, research funding, and awareness campaigns are growing, yet disparities remain. Survival rates and palliative care services are moderate, while early detection programs are limited. Biomarker testing for EGFR, ALK, PD-L1, and other markers is implemented in tertiary centers. Clinical guidelines are aligned with international standards but updates are inconsistently applied in smaller hospitals. Reimbursement is limited, and there is no national LDCT screening program.",
+        "swot_analysis": {
+            "Strengths":
+                ["Specialized centers provide urban-focused care.",
+"Biomarker testing (EGFR 60%, PD-L1 70%) supports personalized therapy.",
+"Awareness campaigns and research initiatives are present.",
+"Clinical guidelines align with international standards and are applied in tertiary centers."
+],
+
+            "Weaknesses":
+                ["Limited access to advanced diagnostics and care in rural regions.",
+"Reimbursement and no-cost access are minimal, creating financial barriers.",
+"Early detection and screening programs are scarce.",
+"Engagement with guideline updates is inconsistent in smaller hospitals."
+],
+
+            "Opportunities": ["Expand molecular testing and specialized care to underserved regions.",
+"Develop national awareness and early detection campaigns.",
+"Strengthen research funding and clinical trial participation.",
+"Implement LDCT screening programs for high-risk populations."
+],
+
+            "Threats": 
+                ["Geographic and socioeconomic disparities may widen without intervention.",
+"Rising incidence rates could overwhelm urban centers.",
+"Limited funding may delay adoption of innovative therapies.",
+"Inconsistent guideline adoption may reduce quality of care in smaller centers."
+]
+        },
+        "infrastructure": {
+            "Specialized_Centers": {"score": "3/5", "disc": "Urban-centered; limited regional access."},
+            "Genetic_Molecular_Testing": {"score": "3/5", "disc": "Available in tertiary centers; rural gaps exist."}
+        },
+        "treatment_funding_awareness": {
+            "Treatment_Access": {"score": "3/5", "disc": "Accessible in cities; limited elsewhere."},
+            "Research_Funding": {"score": "3/5", "disc": "Moderate support for clinical research."},
+            "Awareness_Campaigns": {"score": "4/5", "disc": "Public campaigns exist, mainly urban."}
+        },
+        "survival_rates": {
+            "Survival_Rates": {"score": "3/5", "disc": "Moderate; late-stage presentation affects outcomes."},
+            "Early_Detection": {"score": "3/5", "disc": "Limited coverage."},
+            "Palliative_Care": {"score": "3/5", "disc": "Available in specialized centers; urban-focused."}
+        },
+        "biomarkers": {
+            "EGFR":{"score": "60%", "disc": "Moderate adoption in tertiary hospitals."},
+            "ALK": {"score": "55%", "disc": "Limited access outside urban centers."},
+            "PD_L1": {"score": "70%", "disc": "Standard testing in major centers."},
+            "MET": {"score": "45%", "disc": "Limited testing."},
+            "ROS1": {"score": "50%", "disc": "Partial adoption."},
+            "BRAF": {"score": "40%", "disc": "Limited availability."},
+            "KRAS": {"score": "55%", "disc": "Moderate adoption."}
+        },
+        "clinical_guidelines": {
+            "Implementation": {"score": "3/5", "disc": "Applied in tertiary centers; smaller hospitals lag."},
+            "Feasibility": {"score": "3/5", "disc": "Urban implementation feasible; rural challenges exist."},
+            "Adoption_International_Guideline": {"score": "3/5", "disc": "Partial alignment."},
+            "Engagement_with_Updates": {"score": "2/3", "disc": "Moderate adoption."},
+            "ESMO_Guidelines": {"score": "3/5", "disc": "Integrated in tertiary centers."}
+        },
+        "reimbursement": {
+            "Reimbursement_Coverage": {"score": "1/5", "disc": "Minimal; many therapies paid out-of-pocket."},
+            "No-cost_Access": {"score": "1/5", "disc": "Very limited."}
+        },
+        "cancer_screening": {
+            "National_Screening": {"score": "No national LDCT program", "disc": "Screening not implemented."}
+        }
+    },
+
+
+    {
+        "id": 79,
+        "cancer_type": "lung",
+        "country": "South Korea",
+        "country_shortForm": "KR",
+        "introduction": "South Korea has a highly advanced lung cancer care system, with world-class specialized centers and comprehensive genetic and molecular testing infrastructure. Treatment access, research funding, and awareness campaigns are robust, supporting high survival rates. Early detection programs are in place, particularly for high-risk populations, and palliative care services are well-established. Biomarker testing for EGFR, ALK, PD-L1, MET, ROS1, BRAF, and KRAS is widely implemented, enabling precision therapy. Clinical guidelines are fully integrated and aligned with international standards, with strong engagement in updates. National LDCT screening is available for high-risk individuals aged 50–74. Reimbursement and no-cost access are moderate but could be expanded.",
+        "swot_analysis": {
+            "Strengths":
+                ["Specialized centers with comprehensive molecular testing and advanced diagnostics.",
+"High biomarker utilization (EGFR 91%, PD-L1 95%) supports personalized therapy.",
+"Clinical guidelines fully integrated and aligned with international standards.",
+"Established LDCT screening for high-risk individuals."
+],
+
+            "Weaknesses":
+                ["Moderate reimbursement and no-cost access may limit patient access to some therapies.",
+"Rural populations may still face disparities in access to specialized care.",
+"High cost of innovative treatments could affect equitable access.",
+"Slight delays in adoption of updates outside major centers."
+],
+
+            "Opportunities": ["Expand coverage of innovative therapies through reimbursement policies.",
+"Further strengthen telemedicine and digital health integration.",
+"Increase public awareness campaigns for early detection beyond urban centers.",
+"Enhance participation in international clinical trials."
+],
+
+            "Threats": 
+                ["Rising lung cancer incidence could strain specialized centers.",
+"Economic constraints may affect healthcare budgets for high-cost therapies.",
+"Disparities in rural access may persist.",
+"Delays in guideline implementation in smaller hospitals could reduce care quality."
+]
+        },
+        "infrastructure": {
+            "Specialized_Centers": {"score": "5/5", "disc": "World-class centers with advanced facilities."},
+            "Genetic_Molecular_Testing": {"score": "5/5", "disc": "Comprehensive and widely available."}
+        },
+        "treatment_funding_awareness": {
+            "Treatment_Access": {"score": "5/5", "disc": "Full access to standard and targeted therapies."},
+            "Research_Funding": {"score": "4/5", "disc": "Strong support for research initiatives."},
+            "Awareness_Campaigns": {"score": "5/5", "disc": "Extensive public education and outreach."}
+        },
+        "survival_rates": {
+            "Survival_Rates": {"score": "5/5", "disc": "High; early diagnosis and advanced care contribute."},
+            "Early_Detection": {"score": "4/5", "disc": "LDCT screening for high-risk groups implemented."},
+            "Palliative_Care": {"score": "5/5", "disc": "Comprehensive and accessible."}
+        },
+        "biomarkers": {
+            "EGFR":{"score": "91%", "disc": "Widely tested."},
+            "ALK": {"score": "86%", "disc": "Standard in tertiary centers."},
+            "PD_L1": {"score": "95%", "disc": "Fully integrated."},
+            "MET": {"score": "74%", "disc": "Available in major centers."},
+            "ROS1": {"score": "77%", "disc": "Widely tested."},
+            "BRAF": {"score": "69%", "disc": "Integrated into clinical practice."},
+            "KRAS": {"score": "84%", "disc": "Standardized testing."}
+        },
+        "clinical_guidelines": {
+            "Implementation": {"score": "5/5", "disc": "Fully applied across centers."},
+            "Feasibility": {"score": "5/5", "disc": "High feasibility in all hospitals."},
+            "Adoption_International_Guideline": {"score": "5/5", "disc": "Aligned with ESMO/NCCN."},
+            "Engagement_with_Updates": {"score": "3/3", "disc": "Strong adherence."},
+            "ESMO_Guidelines": {"score": "5/5", "disc": "Fully integrated."}
+        },
+        "reimbursement": {
+            "Reimbursement_Coverage": {"score": "3/5", "disc": "Moderate; some therapies require patient contribution."},
+            "No-cost_Access": {"score": "3/5", "disc": "Partial access for advanced therapies."}
+        },
+        "cancer_screening": {
+            "National_Screening": {"score": "LDCT for high-risk individuals (50–74 years)", "disc": "Targeted national screening program exists."}
+        }
+    },
+
+
+    {
+        "id": 80,
+        "cancer_type": "lung",
+        "country": "Spain",
+        "country_shortForm": "ES",
+        "introduction": "Spain has an advanced lung cancer care system, with specialized centers and strong molecular testing infrastructure. Treatment access, research funding, and awareness campaigns are well-established, supporting high survival rates. Early detection programs exist, though coverage is not yet universal, and palliative care services are comprehensive. Biomarker testing for EGFR, ALK, PD-L1, MET, ROS1, BRAF, and KRAS is widely implemented, facilitating precision medicine. Clinical guidelines are aligned with international standards, though smaller hospitals may experience delays in updates. Reimbursement is partial, and no national LDCT screening program exists, limiting structured early detection initiatives.",
+        "swot_analysis": {
+            "Strengths":
+                ["Specialized centers with good molecular testing infrastructure.",
+"High biomarker utilization (EGFR 82%, PD-L1 87%) supports personalized treatment.",
+"Clinical guidelines aligned with international standards and generally applied.",
+"Strong awareness campaigns and research funding."
+],
+
+            "Weaknesses":
+                ["Reimbursement and no-cost access for innovative therapies remain limited.",
+"Early detection programs are not fully comprehensive nationwide.",
+"Implementation of guideline updates can lag in smaller hospitals.",
+"Regional disparities in access to specialized care persist."
+],
+
+            "Opportunities": ["Implement a national LDCT screening program for high-risk populations.",
+"Expand reimbursement coverage for advanced therapies.",
+"Increase telemedicine and digital health integration for underserved regions.",
+"Strengthen participation in international clinical trials."
+],
+
+            "Threats": 
+                ["Rising incidence of lung cancer could stress existing infrastructure.",
+"Economic constraints may impact funding for innovative treatments.",
+"Disparities between urban and rural regions may persist.",
+"Delays in guideline adoption could reduce standardization of care."
+]
+        },
+        "infrastructure": {
+            "Specialized_Centers": {"score": "5/5", "disc": "Advanced centers with strong urban focus."},
+            "Genetic_Molecular_Testing": {"score": "4/5", "disc": "Widely available in tertiary centers."}
+        },
+        "treatment_funding_awareness": {
+            "Treatment_Access": {"score": "5/5", "disc": "Good access to standard and targeted therapies."},
+            "Research_Funding": {"score": "4/5", "disc": "Strong support for oncology research."},
+            "Awareness_Campaigns": {"score": "4/5", "disc": "Effective public campaigns, mainly urban-focused."}
+        },
+        "survival_rates": {
+            "Survival_Rates": {"score": "5/5", "disc": "High survival due to quality treatment."},
+            "Early_Detection": {"score": "4/5", "disc": "Programs exist but not fully nationwide."},
+            "Palliative_Care": {"score": "5/5", "disc": "Comprehensive services including opioid access."}
+        },
+        "biomarkers": {
+            "EGFR":{"score": "82%", "disc": "Widespread testing."},
+            "ALK": {"score": "75%", "disc": "Integrated in tertiary hospitals."},
+            "PD_L1": {"score": "87%", "disc": "Standard practice."},
+            "MET": {"score": "60%", "disc": "Partial coverage."},
+            "ROS1": {"score": "65%", "disc": "Available in major centers."},
+            "BRAF": {"score": "55%", "disc": "imited but increasing."},
+            "KRAS": {"score": "70%", "disc": "Increasing adoption."}
+        },
+        "clinical_guidelines": {
+            "Implementation": {"score": "4/5", "disc": "Applied across major hospitals."},
+            "Feasibility": {"score": "4/5", "disc": "Urban implementation feasible; regional gaps exist."},
+            "Adoption_International_Guideline": {"score": "4/5", "disc": "Aligned with ESMO/NCCN standards."},
+            "Engagement_with_Updates": {"score": "2/3", "disc": "Moderate; smaller hospitals lag."},
+            "ESMO_Guidelines": {"score": "4/5", "disc": "Implemented in major centers."}
+        },
+        "reimbursement": {
+            "Reimbursement_Coverage": {"score": "2/5", "disc": "Partial; out-of-pocket costs remain."},
+            "No-cost_Access": {"score": "2/5", "disc": "Limited access for high-cost therapies."}
+        },
+        "cancer_screening": {
+            "National_Screening": {"score": "No national LDCT program", "disc": "Screening not yet implemented."}
+        }
+    },
+
+
+    {
+        "id": 81,
+        "cancer_type": "lung",
+        "country": "Sweden",
+        "country_shortForm": "SE",
+        "introduction": "Sweden has one of the most advanced lung cancer care systems globally, backed by universal healthcare and strong national cancer programmes. Specialized cancer centres and comprehensive molecular testing are widely available across regions, enabling rapid diagnosis and precision treatment. Treatment access, research funding and public awareness are robust, which together support high survival rates and well-developed palliative care. Early detection initiatives exist, although there is no single nationwide LDCT screening program for all high-risk groups. Clinical guidelines are tightly integrated with international standards and updates are actively adopted. Reimbursement frameworks provide broad access to standard therapies, though access to some high-cost innovations varies by region.",
+        "swot_analysis": {
+            "Strengths":
+                ["Universal healthcare and well-distributed specialized cancer centers ensure broad access.",
+"Strong molecular testing infrastructure and high biomarker utilization support precision medicine.",
+"Excellent research funding and coordinated national awareness programs.",
+"Clinical guidelines are fully implemented and aligned with ESMO/NCCN standards."
+],
+
+            "Weaknesses":
+                ["No single, fully-implemented national LDCT screening program for all eligible high-risk populations.",
+"Small regional differences in access to the very latest high-cost drugs.",
+"Occasional lag in rapid rollout of some novel therapies across all regions.",
+"Reimbursement for some cutting-edge treatments may require additional approvals, adding delays."
+],
+
+            "Opportunities": ["Pilot/scale a national LDCT screening initiative to standardize early detection for high-risk groups.",
+"Expand rapid-access molecular testing in smaller hospitals to reduce referral delays.",
+"Increase public-targeted screening awareness to raise high-risk participation.",
+"Strengthen mechanisms for faster reimbursement approval of novel therapies."
+],
+
+            "Threats": 
+                ["Rising incidence or demographic shifts could increase demand on specialized services.",
+"Budgetary pressures might slow adoption of very high-cost targeted/immunotherapies.",
+"Persistent regional variations could widen if not actively managed.",
+"Global supply or regulatory issues could delay access to new drugs/diagnostics."
+]
+        },
+        "infrastructure": {
+            "Specialized_Centers": {"score": "5/5", "disc": "Well-distributed, high-quality centres nationwide."},
+            "Genetic_Molecular_Testing": {"score": "4/5", "disc": "Strong national capacity; near-universal in tertiary centres."}
+        },
+        "treatment_funding_awareness": {
+            "Treatment_Access": {"score": "5/5", "disc": "Broad access to surgery, chemo, targeted and immunotherapy."},
+            "Research_Funding": {"score": "5/5", "disc": "High investment in clinical and translational studies."},
+            "Awareness_Campaigns": {"score": "5/5", "disc": "Well-coordinated national campaigns and outreach."}
+        },
+        "survival_rates": {
+            "Survival_Rates": {"score": "5/5", "disc": "High survival driven by timely care and treatments."},
+            "Early_Detection": {"score": "5/5", "disc": "Early-detection programs active; LDCT not yet universal."},
+            "Palliative_Care": {"score": "5/5", "disc": "Comprehensive services and opioid availability."}
+        },
+        "biomarkers": {
+            "EGFR":{"score": "84%", "disc": "Routinely tested in most patients."},
+            "ALK": {"score": "77%", "disc": "Widely incorporated into diagnostics."},
+            "PD_L1": {"score": "89%", "disc": "Standard testing for immunotherapy decisions."},
+            "MET": {"score": "62%", "disc": "Increasingly available in major centres."},
+            "ROS1": {"score": "57%", "disc": "Available across tertiary hospitals."},
+            "BRAF": {"score": "67%", "disc": "Tested in appropriate clinical scenarios."},
+            "KRAS": {"score": "72%", "disc": "Regularly assessed as part of molecular panels."}
+        },
+        "clinical_guidelines": {
+            "Implementation": {"score": "5/5", "disc": "National pathways aligned with ESMO/NCCN."},
+            "Feasibility": {"score": "5/5", "disc": "High feasibility across hospital types."},
+            "Adoption_International_Guideline": {"score": "5/5", "disc": "Strong alignment and adoption."},
+            "Engagement_with_Updates": {"score": "3/3", "disc": "Active uptake of guideline updates."},
+            "ESMO_Guidelines": {"score": "5/5", "disc": "Integrated into standard care."}
+        },
+        "reimbursement": {
+            "Reimbursement_Coverage": {"score": "3/5", "disc": "Good coverage for standard care; some limits on newest drugs."},
+            "No-cost_Access": {"score": "3/5", "disc": "Many treatments covered; very high-cost drugs sometimes restricted."}
+        },
+        "cancer_screening": {
+            "National_Screening": {"score": "No national LDCT screening", "disc": "LDCT screening not universally implemented as a single national program."}
+        }
+    },
+
+
+    {
+        "id": 82,
+        "cancer_type": "lung",
+        "country": "Thailand",
+        "country_shortForm": "TH",
+        "introduction": "Thailand’s lung cancer care system is moderately developed, with specialized centers and molecular testing available primarily in urban hospitals. Treatment access, research funding, and awareness campaigns exist but are limited outside major cities. Survival rates, early detection, and palliative care services are moderate, with some regional disparities. Biomarker testing for EGFR, ALK, PD-L1, MET, ROS1, BRAF, and KRAS is implemented mainly in tertiary centers. Clinical guidelines are partially aligned with international standards, with slower uptake of updates in smaller hospitals. Reimbursement and no-cost access are limited, and there is no national LDCT screening program, affecting early detection efforts.",
+        "swot_analysis": {
+            "Strengths":
+                ["Specialized centers in urban areas provide standard care and molecular testing.",
+"Biomarker testing supports targeted therapy in tertiary hospitals.",
+"Clinical guidelines partially align with international standards.",
+"Awareness campaigns and research initiatives are in place."
+],
+
+            "Weaknesses":
+                ["Limited access to specialized care and molecular diagnostics in rural areas.",
+"Reimbursement and no-cost access are low, restricting patient access to advanced therapies.",
+"Early detection and screening programs are scarce.",
+"Guideline updates are slowly adopted in smaller hospitals."
+],
+
+            "Opportunities": ["Expand molecular testing and access to targeted therapies outside urban centers.",
+"Implement national awareness campaigns to improve early detection.",
+"Strengthen research collaborations and clinical trial participation.",
+"Introduce a national LDCT screening program for high-risk populations."
+],
+
+            "Threats": 
+                ["Rising incidence rates may overwhelm urban centers.",
+"Economic constraints may limit adoption of innovative therapies.",
+"Disparities between urban and rural access may persist.",
+"Delays in guideline adoption could affect care quality."
+]
+        },
+        "infrastructure": {
+            "Specialized_Centers": {"score": "3/5", "disc": "Urban-focused; limited regional coverage."},
+            "Genetic_Molecular_Testing": {"score": "3/5", "disc": "Available in tertiary centers; rural gaps exist."}
+        },
+        "treatment_funding_awareness": {
+            "Treatment_Access": {"score": "3/5", "disc": "Accessible in cities; limited elsewhere."},
+            "Research_Funding": {"score": "3/5", "disc": "Moderate support for clinical research."},
+            "Awareness_Campaigns": {"score": "3/5", "disc": "Campaigns exist but limited in rural areas."}
+        },
+        "survival_rates": {
+            "Survival_Rates": {"score": "3/5", "disc": "Moderate; outcomes affected by late diagnosis."},
+            "Early_Detection": {"score": "3/5", "disc": "Limited coverage and accessibility."},
+            "Palliative_Care": {"score": "3/5", "disc": "Available mainly in urban hospitals."}
+        },
+        "biomarkers": {
+            "EGFR":{"score": "78%", "disc": "Standard in tertiary centers."},
+            "ALK": {"score": "70%", "disc": "Moderate adoption."},
+            "PD_L1": {"score": "83%", "disc": "Integrated in specialized centers."},
+            "MET": {"score": "57%", "disc": "Limited testing."},
+            "ROS1": {"score": "62%", "disc": "Partial adoption."},
+            "BRAF": {"score": "52%", "disc": "Limited availability."},
+            "KRAS": {"score": "67%", "disc": "Moderate adoption."}
+        },
+        "clinical_guidelines": {
+            "Implementation": {"score": "4/5", "disc": "Guidelines partially aligned with international standards."},
+            "Feasibility": {"score": "3/5", "disc": "Implementation feasible in tertiary centers; rural challenges exist."},
+            "Adoption_International_Guideline": {"score": "3/5", "disc": "Partial adoption."},
+            "Engagement_with_Updates": {"score": "2/3", "disc": "Moderate uptake."},
+            "ESMO_Guidelines": {"score": "3/5", "disc": "Integrated in specialized centers."}
+        },
+        "reimbursement": {
+            "Reimbursement_Coverage": {"score": "2/5", "disc": "Limited access for high-cost therapies."},
+            "No-cost_Access": {"score": "2/5", "disc": "Minimal; patients often pay out-of-pocket."}
+        },
+        "cancer_screening": {
+            "National_Screening": {"score": "No national LDCT program", "disc": "Screening not implemented."}
+        }
+    },
+
+
+    {
+        "id": 83,
+        "cancer_type": "lung",
+        "country": "Philippines",
+        "country_shortForm": "PH",
+        "introduction": "The Philippines is building capacity for lung cancer care but still faces systemic constraints. Specialized centers and molecular testing are limited, especially outside Metro Manila and major cities. Treatment access and awareness are improving but remain uneven; research funding is modest. Survival is hindered by late-stage presentation, and early detection efforts are nascent without a national LDCT program. Guidelines exist but integration and updates are inconsistent, while reimbursement and no-cost access are very limited. Overall maturity at Level 2 reflects a system in transition toward broader, more equitable care.",
+        "swot_analysis": {
+            "Strengths":
+                ["Emerging network of specialized centers.",
+"Growing availability of key biomarkers (PD-L1, EGFR, ALK).",
+"Active awareness efforts through NGOs and societies.",
+"Expanding palliative care footprint."
+],
+
+            "Weaknesses":
+                ["Limited molecular infrastructure (2/5) and regional access.",
+"Weak reimbursement and minimal no-cost access (1/5 each).",
+"No national LDCT screening program.",
+"Low feasibility and adoption of international guidelines outside hubs."
+],
+
+            "Opportunities": ["Develop high-risk LDCT pilots leading to national adoption.",
+"Invest in regional molecular labs and workforce training.",
+"Strengthen research funding and data registries.",
+"Scale smoking cessation and public awareness campaigns."
+],
+
+            "Threats": 
+                ["Rising incidence and late diagnosis may worsen outcomes.",
+"Financial toxicity due to out-of-pocket spending.",
+"Persistent urban–rural access gaps.",
+"Slow guideline updates could delay best practices."
+]
+        },
+        "infrastructure": {
+            "Specialized_Centers": {"score": "2/5", "disc": "Limited; urban-centric."},
+            "Genetic_Molecular_Testing": {"score": "2/5", "disc": "Constrained capacity outside tertiary hospitals."}
+        },
+        "treatment_funding_awareness": {
+            "Treatment_Access": {"score": "2/5", "disc": "Variable access to standard therapies."},
+            "Research_Funding": {"score": "2/5", "disc": "Limited funding base."},
+            "Awareness_Campaigns": {"score": "3/5", "disc": "Active but uneven reach."}
+        },
+        "survival_rates": {
+            "Survival_Rates": {"score": "2/5", "disc": "Impacted by late presentation."},
+            "Early_Detection": {"score": "2/5", "disc": "No national program."},
+            "Palliative_Care": {"score": "3/5", "disc": "Growing services."}
+        },
+        "biomarkers": {
+            "EGFR":{"score": "58%", "disc": "Moderate adoption; limited by affordability."},
+            "ALK": {"score": "52%", "disc": "Tested in select tertiary hospitals."},
+            "PD_L1": {"score": "68%", "disc": "Growing integration in immunotherapy decisions"},
+            "MET": {"score": "43%", "disc": "Limited availability outside major centers."},
+            "ROS1": {"score": "48%", "disc": "Testing offered selectively; not routine nationwide."},
+            "BRAF": {"score": "38%", "disc": "Rarely tested due to cost and infrastructure."},
+            "KRAS": {"score": "53%", "disc": "Moderate adoption, mainly in top centers."}
+        },
+        "clinical_guidelines": {
+            "Implementation": {"score": "3/5", "disc": "Present but uneven adherence."},
+            "Feasibility": {"score": "2/5", "disc": "Resource constraints."},
+            "Adoption_International_Guideline": {"score": "2/5", "disc": "Partial alignment."},
+            "Engagement_with_Updates": {"score": "1/3", "disc": "Low."},
+            "ESMO_Guidelines": {"score": "2/5", "disc": "Limited use."}
+        },
+        "reimbursement": {
+            "Reimbursement_Coverage": {"score": "1/5", "disc": "Very limited coverage."},
+            "No-cost_Access": {"score": "1/5", "disc": "Minimal."}
+        },
+        "cancer_screening": {
+            "National_Screening": {"score": "None", "disc": "LDCT under discussion; no national program."}
+        }
+    }
+]

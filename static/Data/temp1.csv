@@ -1,0 +1,35 @@
+Country,Specialized Centers,Genetic & Molecular Testing Infrastructure (1-5),Treatment Access,Research Funding,Awareness Campaigns,Survival Rates,Early Detection,Palliative Care,HER2,ER,PR,BRCA1,BRCA2,Clinical Guideline Implementation (1-5),Feasibility of Integration (1-5),Adoption of Int'l Guidelines (1-5),Engagement with Updates (1-3),ESMO Guidelines Implementation (1-5),Reimbursement Framework,No-cost Access,Breast Cancer Screening
+South Africa,3,5,3,3,3,3,3,3,4,4,4,3,3,3,3,3,2,3,1,0,Biennial mammograms (50-74 years)
+Kenya,2,2,2,2,2,2,2,2,3,3,3,2,2,2,2,2,1,2,0,0,Triennial mammograms (50-71 years)
+Nigeria,2,2,2,2,2,2,1,2,2,2,2,2,2,2,2,2,1,2,0,0,Mammograms every 2-3 years (50-74 years)
+Egypt,3,4,3,3,3,3,3,3,4,4,4,3,3,4,3,3,2,3,1,2,Biennial mammograms (50-74 years)
+Morocco,2,5,2,2,3,3,3,3,3,3,3,2,2,3,3,3,2,2,1,0,Mammograms every 2 years (50-69 years)
+Algeria,2,5,2,2,2,2,2,2,3,3,3,2,2,3,3,3,2,2,1,0,Biennial mammograms (50-74 years)
+Ethiopia,1,2,1,1,1,1,1,1,2,2,2,1,1,1,1,1,1,1,0,0,Mammograms every 2 years (50-75 years)
+India,3,5,3,3,3,3,3,3,4,4,4,3,3,3,3,3,2,3,2,0,Mammograms every 18-24 months (40-74 years)
+Japan,4,4,4,4,4,4,4,4,5,5,5,5,5,5,4,5,5,5,1,1,Mammograms every 2 years (50-69 years)
+South Korea,4,4,4,4,4,4,4,4,5,5,5,5,5,5,5,5,3,5,1,1,Mammograms every 2 years (50-69 years)
+China,3,3,3,4,3,3,3,3,4,4,4,4,4,4,4,4,3,4,1,2,Mammograms every 2 years (50-69 years)
+Thailand,3,5,3,3,3,3,3,3,4,4,4,3,3,4,4,4,2,4,1,2,Mammograms every 2 years (40+ years)
+Singapore,4,5,4,5,5,4,5,4,5,5,5,5,5,5,5,5,3,5,1,1,Biennial mammograms (40+ years)
+United Kingdom,4,4,4,5,5,4,5,4,5,5,5,5,5,5,5,5,3,5,1,1,Regional mammogram programs (40-69 years)
+Germany,5,4,5,5,5,5,5,5,5,5,5,5,5,5,4,5,5,5,1,1,Opportunistic screening
+France,4,4,4,5,5,4,5,4,5,5,5,5,5,5,5,5,3,5,1,1,Biennial mammograms (50-69 years)
+Netherlands,4,4,5,5,5,5,5,5,5,5,5,5,5,5,5,5,3,5,1,1,Biennial mammograms (50-69 years)
+Sweden,5,3,5,5,5,5,5,5,5,5,5,5,5,5,5,5,3,5,1,1,Opportunistic screening
+Italy,4,1,4,4,4,4,4,4,5,5,5,5,5,5,5,5,3,5,1,1,No national program
+Spain,4,3,4,4,4,4,4,4,5,5,5,5,5,5,5,5,3,5,1,1,No national program
+Poland,3,3,3,3,3,3,3,3,4,4,4,3,3,4,4,4,2,4,1,2,National awareness campaigns
+Mexico,2,2,2,2,3,2,3,2,3,3,3,2,2,3,3,3,2,3,1,0,National program for 45-69 years
+Brazil,3,2,3,3,3,3,3,3,3,3,3,2,2,3,3,3,2,3,1,0,Planned national program (50-69 years)
+Argentina,3,1,3,3,3,3,3,3,3,3,3,2,2,3,3,3,2,3,1,0,No national program
+Chile,3,3,2,3,3,2,3,3,4,4,4,3,3,4,4,4,2,4,1,2,Biennial mammograms (40-69 years)
+Colombia,2,4,2,2,3,2,3,2,3,3,3,2,2,3,3,3,2,3,1,0,Biennial mammograms (50-69 years)
+United States,5,4,5,5,5,5,5,5,5,5,5,5,5,5,5,5,3,5,1,1,Biennial mammograms (50-69 years)
+Canada,4,4,5,5,5,5,5,4,5,5,5,5,5,5,5,5,3,5,1,1,Mammograms every 3 years (50-69 years)
+Australia,4,4,4,4,5,4,4,4,5,5,5,5,5,5,5,5,3,5,1,1,Biennial mammograms (50-69 years)
+New Zealand,4,4,4,4,4,4,4,4,5,5,5,5,5,5,5,5,3,5,1,1,Biennial mammograms (45-69 years)
+Greece,3,3,3,3,3,3,3,3,4,4,4,3,3,4,4,4,2,4,1,2,Biennial mammograms (50-69 years)
+Rwanda,1,1,1,1,1,1,1,1,2,2,2,1,1,1,1,1,1,1,0,0,No national program
+Uganda,1,1,1,1,1,1,1,1,2,2,2,1,1,1,1,1,1,1,0,0,No national program
+Serbia,3,3,3,3,3,3,3,3,3,3,3,2,2,3,3,3,2,3,1,2,Biennial mammograms (50-69 years)

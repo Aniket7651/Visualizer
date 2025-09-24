@@ -41,7 +41,7 @@ urlpatterns = [
     path('api/stats/country_Wise/<str:cancer_type>/', get_CountryStatJSON, name='country_stat'), 
     path('downloadPolicy/<str:cancer_type>/<str:country>/', downloadPolicy_file, name='downloadPolicy_file'), # Download Policy Paper
     path('downloadFactSheet/<str:cancer_type>/<str:country>/', downloadFactSheet_file, name='downloadFactSheet_file'), # Download Fact Sheet
-]
+] 
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

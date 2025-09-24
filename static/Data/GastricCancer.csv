@@ -1,0 +1,43 @@
+Country,Specialized Centers,Genetic & Molecular Testing Infrastructure (1–5),Treatment Access,Research Funding,Awareness Campaigns,Survival Rates,Early Detection,Palliative Care,HER2,MSI-H / dMMR,PD-L1 (CPS≥1),CLDN18.2,FGFR2b,Clinical Guideline Implementation (1-5),Feasibility of Integration (1-5),Adoption of Int'l Guidelines (1-5),Engagement with Updates (1-3),ESMO Guidelines Implementation (1-5),Reimbursement Framework,No-cost Access,Gastric Cancer Screening
+South Africa,3,3,3,2,2,3,3,3,50,40,40,20,15,4,3,3,2,3,2,2,"No screening program; minimal access, mostly urban centers"
+Kenya,2,2,2,1,2,2,2,2,20,10,10,5,5,2,2,2,1,1,1,1,No screening; very limited availability
+Nigeria,2,1,2,1,1,2,1,1,20,10,10,5,5,2,2,2,1,1,1,1,No screening program
+Egypt,3,2,3,2,2,3,2,2,50,40,40,25,20,3,3,3,2,2,2,2,No organized screening; some access in urban hospitals
+Morocco,2,2,2,2,2,2,2,2,40,30,30,20,15,2,2,2,1,1,2,2,No national program; minimal access
+Algeria,2,2,2,2,2,2,2,2,40,30,30,20,15,2,2,2,1,1,2,2,No program; screening is opportunistic if at all
+Ethiopia,1,1,1,1,1,1,1,1,10,5,5,2,2,1,1,1,1,1,1,1,No screening infrastructure
+India,3,3,3,3,3,3,3,3,50,40,40,20,15,3,3,3,2,2,1,1,No national program; opportunistic screening in private sector
+Japan,5,5,5,5,5,5,5,5,90,85,85,60,50,4,4,3,2,3,2,2,National program: UGIS or endoscopy every 2 years for people aged 50+
+South Korea,5,5,5,5,5,5,5,5,90,85,85,60,50,4,4,4,2,3,3,3,National program: endoscopy or UGIS every 2 years from age 50
+China,5,5,4,5,4,4,4,4,70,60,60,40,30,3,3,3,2,2,2,2,No national program; pilot programs and urban regional efforts exist
+Thailand,3,3,3,3,3,3,3,3,60,50,50,30,20,3,3,3,2,2,2,2,No national program; pilot H. pylori-based programs in place
+Singapore,5,5,5,4,4,5,5,5,80,75,75,50,40,5,5,5,3,4,3,3,No program; H. pylori testing in clinical high-risk cases
+United Kingdom,4,5,5,5,4,5,5,5,90,85,85,70,55,5,5,5,3,5,3,3,No national program; not recommended for general population
+Germany,5,5,5,5,5,5,5,5,90,85,85,70,55,5,5,5,3,5,3,3,No national program; some consideration of H. pylori-based strategies
+France,5,5,5,5,4,5,5,5,90,85,85,70,55,5,5,5,3,5,3,3,No national program; limited to high-risk monitoring
+Netherlands,5,5,5,5,4,5,5,5,90,85,85,70,55,5,5,5,3,5,3,3,No screening;  research on H. pylori test-and-treat ongoing
+Sweden,4,5,5,5,4,5,5,5,90,85,85,70,55,5,5,5,3,5,3,3,No national screening; limited to clinical high-risk groups
+Italy,4,4,4,4,4,4,4,4,90,85,85,70,55,5,5,5,3,5,3,3,No organized program; risk-based surveillance
+Spain,4,4,4,4,4,4,4,4,90,85,85,70,55,5,5,5,3,5,3,3,No population screening; limited to high-risk monitoring
+Poland,3,3,3,3,3,3,3,3,80,70,70,50,35,4,4,4,2,4,2,2,No screening program; some pilot research ongoing
+Mexico,3,2,3,2,2,3,3,3,60,50,50,30,25,3,3,3,2,3,2,2,No national program; awareness growing
+Brazil,4,3,4,3,3,3,3,3,70,60,60,40,30,4,4,4,2,4,3,3,No national program; some state-level initiatives
+Argentina,3,3,3,3,3,3,3,3,70,60,60,40,30,4,4,4,2,4,3,3,No organized screening; some access in urban areas
+Chile,3,3,3,3,3,3,3,3,70,60,60,40,30,4,4,4,2,4,2,2,No program; occasional screening in urban centers
+Colombia,3,2,3,2,2,3,3,3,60,50,50,30,25,3,3,3,2,3,2,2,No national program; limited opportunistic screening
+United States,5,5,5,5,4,5,5,4,90,85,85,70,55,5,5,5,3,5,2,2,No national program; screening limited to high-risk individuals
+Canada,5,5,5,5,4,5,5,5,90,85,85,70,55,5,5,5,3,5,3,3,No national program; screening only in high-risk or symptomatic individuals
+Australia,5,5,5,5,4,5,5,5,90,85,85,70,55,5,5,5,3,5,3,3,No program; surveillance only for high-risk groups
+New Zealand,4,4,4,4,3,5,5,5,85,80,80,65,50,5,5,5,3,5,3,3,No organized program; high-risk surveillance only
+Greece,3,3,3,3,3,4,4,4,70,60,60,40,30,4,4,4,2,4,3,3,No national program; awareness limited
+Rwanda,1,1,1,1,1,1,1,1,10,5,5,1,1,1,1,1,1,1,1,1,No program; no infrastructure
+Uganda,1,1,1,1,1,1,1,1,10,5,5,1,1,1,1,1,1,1,1,1,No screening program
+Serbia,3,3,3,2,2,3,3,3,70,60,60,40,30,4,4,4,2,4,2,2,No national program; some risk-based hospital screening
+Saudi Arabia,3,3,3,2,2,3,3,3,60,50,50,30,25,3,3,3,2,2,2,2,No national screening; limited opportunistic testing in private hospitals
+UAE,3,3,3,3,3,3,3,3,60,50,50,30,25,3,3,3,2,2,2,2,No organized screening; some private hospital programs exist
+Syria,1,1,1,1,1,1,1,1,20,10,10,5,5,1,1,1,1,1,1,1,No screening; system affected by conflict
+Indonesia,3,2,3,2,2,3,2,2,40,30,30,20,15,2,2,2,1,1,2,2,No program; screening in some urban private settings
+Vietnam,3,2,3,2,2,3,2,2,40,30,30,20,15,2,2,2,1,1,2,2,No national program; pilot H. pylori initiatives in cities
+Philippines,3,2,3,2,2,3,2,2,40,30,30,20,15,2,2,2,1,1,2,2,No organized screening; NGO and hospital-led initiatives exist
+Russia,4,4,4,3,3,3,3,3,70,60,60,40,30,4,4,4,2,4,2,2,No national program; opportunistic screening in urban hospitals
+Malaysia,3,2,3,2,2,3,2,3,70,40,60,20,15,3,3,3,1,3,2,1,No screening; some endoscopy opportunistically

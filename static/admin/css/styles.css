@@ -1,0 +1,394 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --background-color-body: #f7f1f8;
+    --background-color-header: #fff;
+    --color-header: #5743c8;
+    --text-color: #000;
+}
+
+.dark-theme {
+    --background-color-header: #353535;
+    --background-color-body: #1f1f1f;
+    --color-header: #f7f7f7;
+    --text-color: #fff;
+}
+
+body {
+    line-height: 1.6;
+    background-color: var(--background-color-body);
+    /* background-image: url("https://unite4cancer.com/wp-content/uploads/2024/02/bckg-icpc-2-fixed.webp");
+    background-repeat: no-repeat;
+    background-position: 100% 0%; 
+    background-size: auto padding-box border-box; */
+    color: var(--text-color);
+    font-family: 'Poppins', sans-serif;
+}
+
+i {
+    color: var(--color-header);
+}
+
+
+.select-field {
+    padding: 10px;
+    border-radius: 20px;
+    border: 2px solid #604eb1;
+    background-color: var(--background-color-header);
+    color: #604eb1;
+    margin-right: 10px;
+}
+
+.select-field option {
+    background-color: var(--background-color-body);
+    color: #604eb1;
+}
+
+.select-field:focus {
+    outline: none;
+    border-color: #604eb1;
+}
+
+
+
+header {
+    background-color: var(--background-color-header);
+    color: var(--color-header);
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+}
+
+header .logo img {
+    width: 70px;
+    margin-right: 10px;
+}
+
+header .logo span {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+header .logo .subtitle {
+    font-size: 0.9rem;
+    font-weight: normal;
+    margin-left: 10px;
+}
+
+header nav a {
+    color: var(--color-header);
+    text-decoration: none;
+    margin-left: 1rem;
+}
+
+.a:hover {
+    transition: .3s;
+}
+
+header nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+header nav a:hover {
+    color: #5e5a98;
+    text-decoration: underline;
+}
+
+h2 {
+    color: #604eb1;
+    font-weight: 700;
+    font-style: bold;
+}
+
+.filter {
+    background-color: var(--background-color-body);
+    padding: 1rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.filter select,
+.filter button {
+    padding: 0.5rem;
+    font-size: 1rem;
+}
+
+.filter button {
+    background-color: #f6c646;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+}
+
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+main h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+main p {
+    margin-bottom: 1rem;
+    color: #555;
+}
+
+.tabs {
+    display: flex;
+    gap: 0.8rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+
+}
+
+.tab {
+    padding: 0.5rem 1rem;
+    font-size: 12px;
+    background-color: #e0e0e0;
+    cursor: pointer;
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.tab.active {
+    background-color: #f3c750;
+    color: white;
+}
+
+.tab:hover {
+    background-color: #f3c750;
+    color: #5e5a98;
+    transition: background-color 0.3s;
+}
+
+.content {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.column h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #f3c750;
+}
+
+.column p {
+    margin-bottom: 1rem;
+}
+
+.row {
+    display: flex;
+    flex-direction: column;
+    /* Stack columns and map vertically */
+    gap: 2rem;
+}
+
+/* Make columns take full width */
+
+.cont {
+    display: flex;
+    flex-direction: row;
+    /* Stack rows and map vertically */
+    gap: 2rem;
+}
+
+/* Ensure map takes full width below */
+.map {
+    width: 100%;
+    /* Full width */
+    min-width: 0;
+    /* Reset min-width */
+    position: relative;
+}
+
+.map img {
+    width: 100%;
+    height: auto;
+}
+
+.map-buttons {
+    margin-top: 1rem;
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+}
+
+.map-buttons button {
+    padding: 0.5rem 1rem;
+    background-color: #5743c8;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.map-buttons button:hover {
+    background-color: #5751fa;
+    transition: 0.3s;
+}
+
+.map-icons,
+.chart-icons {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    gap: 1.8rem;
+}
+
+i {
+    color: #003087;
+    cursor: pointer;
+    transition: #5751fa 0.3s;
+}
+
+.chart-section {
+    margin-top: 2rem;
+}
+
+.chart-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #003087;
+}
+
+.chart-wrapper {
+    position: relative;
+}
+
+.chart-wrapper canvas {
+    width: 100%;
+    height: 300px;
+}
+
+footer {
+    background-color: #e0e0e0;
+    color: var(--background-color-header);
+    padding: 1rem;
+    max-height: 30%;
+    text-align: center;
+}
+
+footer .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+footer .logo {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 0% 20px;
+    margin: 2%;
+
+}
+
+footer .logo img {
+    width: 40%;
+    margin: 30px;
+    margin-left: 2%;
+}
+
+footer .links a {
+    color: black;
+    text-decoration: none;
+    margin-left: 1rem;
+}
+
+footer .links a:hover {
+    text-decoration: underline;
+}
+
+.right-footer p {
+    color: #000;
+}
+
+button {
+    border: none;
+    background-color: transparent;
+}
+
+.social-media a i {
+    font-size: 30px;
+    color: #555;
+    padding: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.social-media a i:hover {
+    color: #604eb1;
+}
+
+.right-footer {
+    display: flex;
+    flex-direction: row;
+    gap: 2.5rem;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+    font-size: 18px;
+    color: #353535;
+    text-align: left;
+}
+
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header nav {
+        margin-top: 1rem;
+    }
+
+    .filter {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cont {
+        flex-direction: column;
+        /* Stack columns and map vertically */
+    }
+
+    .row {
+        flex-direction: column;
+    }
+
+    footer .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    footer .links {
+        margin-top: 1rem;
+    }
+}
