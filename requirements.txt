@@ -57,7 +57,7 @@ pywin32-ctypes==0.2.3
 pyzmq==26.4.0
 referencing==0.36.2
 rpds-py==0.24.0
-scipy==1.16.0
+scipy==1.15.0
 setuptools==80.9.0
 shapely==2.1.0
 six==1.17.0
