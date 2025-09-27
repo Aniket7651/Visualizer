@@ -122,6 +122,8 @@ function drawChart() {
   }
 
   const options = {
+    responseive: true,
+    maintainAspectRatio: false,
     colorAxis: { colors: ['#F6C646', '#5643D1'] },
     backgroundColor: {
       fill: 'transparent', // Ocean color
@@ -133,6 +135,10 @@ function drawChart() {
   const chart = new google.visualization.GeoChart(document.getElementById('geochart'));
   chart.__dataTable = data; // Store DataTable
   chart.draw(data, options);
+
+  window.addEventListener('resize', function () {
+    chart.resize();
+  });
 
   addChartClickListener(chart, cancerType, 'Cancer_Screening'); // Use 'Cancer Screening' as text column
 }
