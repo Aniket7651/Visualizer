@@ -35,7 +35,11 @@ def downloadFactSheet_file(request, cancer_type, country):
     country = country.title()
 
     if cancer_type == "Lung":
-        fileName = f"{country}- {cancer_type} Cancer.pdf"
+        if os.path.exists(os.path.join(settings.MEDIA_ROOT, 'Data', f'{cancer_type}FactSheet', country, f"{country}- {cancer_type} Cancer.pdf")):
+            fileName = f"{country}- {cancer_type} Cancer.pdf"
+        else:
+            fileName = f"{country}-{cancer_type}Cancer.pdf"
+
 
     elif cancer_type == "Breast":
         fileName = f"Factsheet - {country} High Resolution SWOT.pdf" # Factsheet - Algeria High Resolution SWOT
