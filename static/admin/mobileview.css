@@ -49,8 +49,6 @@
     }
 
     .ham-icon {
-        display: block;
-        position: absolute;
         top: 15px;
         right: 20px;
         font-size: 24px;

@@ -381,10 +381,12 @@ button {
 
 .ham-icon {
     display: none;
+    position: none;
 }
 
 @media (max-width: 768px) {
     .ham-icon {
         display: block;
+        position: absolute;
     }
 }
