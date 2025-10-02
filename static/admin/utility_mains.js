@@ -230,8 +230,13 @@ function showPopup(country, text, overviewLink, x, y, overviewShort = null) {
                           ${country}<br><br>Cancer Screening</strong><br>${text}<br>
                           <br>${overviewShort}<br><p>For more details, visit ${overviewLink}</p>`;
 
-  popup.style.left = `${x + 10}px`; // 10px offset
-  popup.style.top = `${y + 10}px`;
+  if (window.innerWidth <= 768) {
+    popup.style.left = 'auto';
+  }
+  else {
+    popup.style.left = `${x + 1}px`; // 10px offset
+  }
+  popup.style.top = `${y + 5}px`;
   popup.style.display = 'block';
 }
 
