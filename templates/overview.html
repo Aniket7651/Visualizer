@@ -11,6 +11,18 @@ Overview of {{ cancer_type }} Cancer in {{ country }}
 
 <link rel="stylesheet" href="{% static 'admin/overview.css' %}">
 <h1>Overview of {{ cancer_type }} Cancer in {{ country }}</h1>
+
+<div class="container download-section">
+    <div class="feedback-section download-box">
+        <h2>Download Fact Sheet</h2>
+        <a href="{% url 'downloadFactSheet_file' cancer_type=cancer_type country=country %}" class="download-button">Download Fact Sheet</a>
+    </div>
+    <div class="feedback-section download-box">
+        <h2>Download Our Policy Paper</h2>
+        <a href="{% url 'downloadPolicy_file' cancer_type=cancer_type country=country %}" class="download-button">Download Policy Paper</a>
+    </div>
+</div>
+
 <div class="container">
     <div class="text-content">
         <div class="box">
@@ -23,6 +35,7 @@ Overview of {{ cancer_type }} Cancer in {{ country }}
         </div>
     </div>
 </div>
+
 <div class="container">
     <div class="swot-content">
         <h2>SWOT Analysis: {{ cancer_type }} Cancer Care in {{ country }}</h2>
@@ -130,16 +143,6 @@ Overview of {{ cancer_type }} Cancer in {{ country }}
         {% endfor %}
 </div>
 
-<div class="container download-section">
-    <div class="feedback-section download-box">
-        <h2>Download Fact Sheet</h2>
-        <a href="{% url 'downloadFactSheet_file' cancer_type=cancer_type country=country %}" class="download-button">Download Fact Sheet</a>
-    </div>
-    <div class="feedback-section download-box">
-        <h2>Download Our Policy Paper</h2>
-        <a href="{% url 'downloadPolicy_file' cancer_type=cancer_type country=country %}" class="download-button">Download Policy Paper</a>
-    </div>
-</div>
 
 <div class="feedback-section">
     <h2>Feedback & Collaboration</h2>

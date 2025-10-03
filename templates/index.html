@@ -16,12 +16,20 @@ Cancer Explorer
 <div class="title-nav">
     <h2>Cancer Data Visualizer</h2>
     <p>
-        This study will provide us a comprehensive overview of key pillars shaping different cancer care, 
-        including specialized infrastructure, treatment accessibility, research funding, early detection, 
+        This study will provide us a comprehensive overview of key pillars shaping different cancer care,
+        including specialized infrastructure, treatment accessibility, research funding, early detection,
         and palliative care.
     </p>
+    <p>
+        This site presents data on <strong>lung</strong>, <strong>colorectal</strong>, <strong>prostate</strong>, <strong>breast</strong> and <strong>gastric</strong> cancers across various countries. It
+        visualizes the availability of facilities such as Survival, Early Detection & Palliative Care, Infrastructure,
+        Treatment, Research & Awareness, biomarker tests, and Reimbursement. This information enhances the understanding
+        of cancer care access worldwide.
+    </p>
     <div>
-        <label for="cancerType">Cancer Type:</label>
+        <strong class="area-title-context">Click on the drop-down to select disease areas and piller parameters:</strong>
+        <br>
+        <label for="cancerType">Disease Areas:</label>
         <select id="cancerType" class="select-field" onchange="updateChart()">
             <option value="lung">Lung</option>
             <option value="breast">Breast</option>
@@ -31,7 +39,7 @@ Cancer Explorer
             <!-- Add other cancer types here -->
         </select>
 
-        <label for="column">Data Features:</label>
+        <label for="column">Piller Parameters:</label>
         <select id="column" class="select-field" onchange="drawChart()"></select>
     </div>
 
@@ -42,8 +50,13 @@ Cancer Explorer
     </div>
 </div>
 
+<div class="note-map-instruct">
+    <p>Note: To access the factsheet and policy paper, click on the country of interest on the map and select the
+        overview link.</p>
+</div>
+
 <section class="map-content">
-    
+
     <div class="chart_div">
         <button id="toggle-rowdetail"><i class="fa fa-bar-chart"></i></button>
         <div class="tooltip-container">
@@ -71,19 +84,15 @@ Cancer Explorer
 
         </div>
     </div>
-    
+
     <div id="popup" class="popup"></div>
 </section>
 
-<div class="note-map-instruct">
-    <p>Note: To access the factsheet and policy paper, click on the country of interest on the map and select the overview link.</p>
-</div>
-
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
-    
 
-    document.getElementById('toggle-rowdetail').addEventListener('click', function() {
+
+    document.getElementById('toggle-rowdetail').addEventListener('click', function () {
         const countryDetail = document.getElementById('country-detail');
         const geochart = document.getElementById('geochart');
         if (countryDetail.style.display === 'none' || countryDetail.style.display === '') {
@@ -95,7 +104,7 @@ Cancer Explorer
         }
     })
 
-    document.getElementById('infoBtn').addEventListener('click', function() {
+    document.getElementById('infoBtn').addEventListener('click', function () {
         const countryDetail = document.getElementById('feature-detail');
         const geochart = document.getElementById('geochart');
         if (countryDetail.style.display === 'none' || countryDetail.style.display === '') {
@@ -107,10 +116,10 @@ Cancer Explorer
         }
     });
 
-    document.getElementById('downloadbtn').addEventListener('click', function() {
+    document.getElementById('downloadbtn').addEventListener('click', function () {
         const mapContainer = document.getElementById('geochart');
 
-        html2canvas(mapContainer).then(function(canvas) {
+        html2canvas(mapContainer).then(function (canvas) {
             // Create a temporary link element
             const link = document.createElement('a');
             link.download = 'ICPC_GeoData.png'; // Set the desired filename

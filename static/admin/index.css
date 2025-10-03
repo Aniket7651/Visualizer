@@ -35,9 +35,9 @@
 }
 
 .title-nav p {
-    padding: 30px;
-    padding-left: 20%;
-    padding-right: 20%;
+    padding: 15px;
+    padding-left: 10%;
+    padding-right: 10%;
     text-align: center;
 }
 
@@ -99,6 +99,19 @@
         font-size: 10px;
         margin: 5px 0;
     }
+}
+
+.title-nav p strong {
+    color: #5743c8;
+    font-size: 1rem;
+}
+
+.area-title-context {
+    text-align: center;
+    padding-left: 0;
+    padding-right: 0;
+    font-weight: bold;
+    display: block;
 }
 
 .map-content {

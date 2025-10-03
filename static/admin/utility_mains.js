@@ -227,8 +227,9 @@ function showPopup(country, text, overviewLink, x, y, overviewShort = null) {
     return;
   }
   popup.innerHTML = `<strong>
-                          ${country}<br><br>Cancer Screening</strong><br>${text}<br>
-                          <br>${overviewShort}<br><p>For more details, visit ${overviewLink}</p>`;
+                          ${country}<br><p>For more details about overview and policy paper, ${overviewLink}</p>
+                          <br>Cancer Screening</strong><br>${text}<br>
+                          <br>${overviewShort}<br>`;
 
   if (window.innerWidth <= 768) {
     popup.style.left = 'auto';
@@ -315,7 +316,7 @@ function addChartClickListener(chart, cancerType, textColumn) {
       const dataTable = chart.__dataTable;
       lastSelectedCountry = dataTable.getValue(selection[0].row, 0); // Store selected country
       var link = domain_link + "overview/" + encodeURIComponent(cancerType) + "/" + encodeURIComponent(lastSelectedCountry);
-      var popupContent = `<a href="${link}" target="_blank">Overview</a>`;
+      var popupContent = `<a href="${link}" target="_blank">Click Here</a>`;
 
       overviewLink = popupContent;
 

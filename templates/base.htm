@@ -29,9 +29,9 @@
             <button id="theme-btn"><i class="fa fa-moon-o" style="font-size: 20px;"></i></button>
             <a href="{% url 'index' %}">Home</a>
             <a href="{% url 'datasetView' %}">Data</a>
+            <a href="">Methodology</a>
             <a href="{% url 'apiAccess' %}">API Access</a>
             <a href="https://unite4cancer.com/about-us/">About</a>
-            <a href="">Help</a>
         </nav>
         
     </header>
@@ -62,17 +62,33 @@
                     <br>
                     <p>Follow us on social media:</p>
                     <div class="social-media">
-                        <a href="#" target="_blank"><i class="fa fa-twitter"></i></a>
-                        <a href="#" target="_blank"><i class="fa fa-facebook"></i></a>
-                        <a href="#" target="_blank"><i class="fa fa-linkedin"></i></a>
+                        <a href="https://x.com/united4cancer?s=21" target="_blank"><i class="fa fa-twitter"></i></a>
+                        <a href="https://youtube.com/@icpc-tv?si=gVyGiQxNAGQCbB_c" target="_blank"><i class="fa fa-youtube"></i></a>
+                        <a href="https://www.linkedin.com/company/international-cancer-patient-coalition/" target="_blank"><i class="fa fa-linkedin"></i></a>
                     </div>
                 </div>
-                <!-- <p>&copy; 2024 International Cancer Patient Coalition (ICPC). All rights reserved.</p> -->
+                
             </div>
+            <p class="rights-line">&copy; 2025 International Cancer Patient Coalition (ICPC). All rights reserved.</p>
         </div>
         
     </footer>
 </body>
+
+<style>
+
+    .rights-line {
+        color: black;
+        font-size: 12px;
+    }
+
+    @media (max-width: 768px) {
+        .rights-line {
+            font-size: 9.5px;
+        }
+    }
+
+</style>
 
 <script>
     function hambmenu() {
