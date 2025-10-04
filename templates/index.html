@@ -21,13 +21,15 @@ Cancer Explorer
         and palliative care.
     </p>
     <p>
-        This site presents data on <strong>lung</strong>, <strong>colorectal</strong>, <strong>prostate</strong>, <strong>breast</strong> and <strong>gastric</strong> cancers across various countries. It
+        This site presents data on <strong>lung</strong>, <strong>colorectal</strong>, <strong>prostate</strong>,
+        <strong>breast</strong> and <strong>gastric</strong> cancers across various countries. It
         visualizes the availability of facilities such as Survival, Early Detection & Palliative Care, Infrastructure,
         Treatment, Research & Awareness, biomarker tests, and Reimbursement. This information enhances the understanding
         of cancer care access worldwide.
     </p>
     <div>
-        <strong class="area-title-context">Click on the drop-down to select disease areas and piller parameters:</strong>
+        <strong class="area-title-context">Click on the drop-down to select disease areas and piller
+            parameters:</strong>
         <br>
         <label for="cancerType">Disease Areas:</label>
         <select id="cancerType" class="select-field" onchange="updateChart()">
@@ -88,6 +90,12 @@ Cancer Explorer
     <div id="popup" class="popup"></div>
 </section>
 
+<div class="legend-box">
+    <h1 class="legend-head">Understanding Legends On Map</h1>
+    <div id="legend-container">
+        <!-- legend content gose here dynamically -->
+    </div>
+</div>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
 

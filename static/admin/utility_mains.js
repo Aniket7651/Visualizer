@@ -180,6 +180,8 @@ function fetchAndRenderJson(cancerType, colNameFromPillar, attempt = 1, maxAttem
   const dataList = document.getElementById('data-list');
   const featureDetail = document.getElementById('feature-detail');
 
+  const legendText = document.getElementById('legend-container');
+
   const jsonUrl = `${baseJsonUrl}${cancerType}.json`;
 
   fetch(jsonUrl, { cache: 'no-store' })
@@ -199,9 +201,26 @@ function fetchAndRenderJson(cancerType, colNameFromPillar, attempt = 1, maxAttem
       const pillar = findStringInArrays(colNameFromPillar, allArrays);
       if (pillar !== null) {
         featureDetail.innerHTML = `<ul>${data[pillar].legends.map(legend => `<li class="legend">${legend}</li>`).join('')}</ul>`;
+        
+        if (data[pillar].legends[0] == "No legend available" ) {
+          legendText.innerHTML = `<p class="legend-alert">No legend available for this parameter yet</p>`;
+        }
+        else {
+          legendText.innerHTML = `
+            <ul>
+              ${data[pillar].legends.map(legend => `<li><h1>${legend.split("–")[0]}</h1><p>${legend.split("–")[1]}</p></li>`).join('')}
+            </ul>
+          `;
+        }
       }
       else {
         featureDetail.innerHTML = `<ul>${data.utilization_biom.legends.map(legend => `<li class="legend">${legend}</li>`).join('')}</ul>`;
+
+        legendText.innerHTML = `
+          <ul>
+            ${data.utilization_biom.legends.map(legend => `<li><h1>${legend.split("–")[0]}</h1><p>${legend.split("–")[1]}</p></li>`).join('')}
+          </ul>
+        `;
       }
     })
     .catch(error => {
