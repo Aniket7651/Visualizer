@@ -1,0 +1,436 @@
+{% extends "base.htm" %}
+
+{% load static %}
+{% block title %}Methodology & Maturity level{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" type="text/css" href="{% static 'admin/methodology.css' %}?v={% now 'U' %}">
+
+<div class="container">
+    <h1>Advancing Cancer Care: Insights from Global Best Practices</h1>
+    <h2>Comparative Maturity Index Across Five Cancer Types – Breast, Lung, Colorectal, Prostate, and Gastric</h2>
+    <div class="goal-objective">
+        <h1>Our Objective</h1>
+        <p>To deliver a comprehensive, comparative analysis of cancer care systems across <b>42 diverse countries</b>,
+            with a
+            strong focus on five of the most burdensome cancers globally, <strong>breast</strong>,
+            <strong>lung</strong>, <strong>colorectal</strong>, <strong>prostate</strong>, and
+            <strong>gastric</strong>. This study applies a unified 7-pillar maturity index to assess how health systems
+            perform in areas
+            such as <strong>infrastructure</strong>, access to <strong>diagnostics and treatment</strong>,
+            <strong>clinical practices</strong>, and <strong>financial protection</strong>.
+            While drawing lessons from a wide range of health system models, this presentation puts a spotlight on the
+            Focus countries. <b>The aim is to leverage global benchmarks to identify opportunities for reform,
+                innovation,
+                and improved equity in the cancer care continuum.</b>
+        </p>
+
+        <h1>Goal</h1>
+        <div class="goal-cards">
+            <div class="goal-card">
+                <div class="card-header">
+                    <h2>Highlight the Global Cancer Care Landscape Using Data-Driven Insights</h2>
+                </div>
+                <p>Compare cancer care maturity across 43 countries using standardized maturity scores, identifying
+                    global trends, strengths, and systemic gaps to guide international alignment with best practices.
+                </p>
+            </div>
+
+            <div class="goal-card">
+                <div class="card-header">
+                    <h2>Benchmark System Maturity Across Seven Strategic Pillars Reflecting Readiness, Equity, and
+                        Innovation</h2>
+                </div>
+                <p>Apply a unified maturity framework to assess performance in infrastructure, treatment access,
+                    survival outcomes, biomarker utilization, clinical guidelines, reimbursement systems, and screening
+                    programs, enabling robust cross-country and regional comparisons</p>
+            </div>
+
+            <div class="goal-card">
+                <div class="card-header">
+                    <h2>Identify Globally and Regionally Relevant Solutions by Learning from Peer Countries</h2>
+                </div>
+                <p>Examine challenges and successes in comparable health systems across regions to extract feasible,
+                    context-sensitive strategies applicable to diverse settings.</p>
+            </div>
+
+            <div class="goal-card">
+                <div class="card-header">
+                    <h2>Drive Actionable Discussions to Inform National, Regional, and Global Cancer Care Strategies
+                    </h2>
+                </div>
+                <p>Engage policymakers, healthcare leaders, and patient advocates to co-develop targeted policy and
+                    program priorities, leveraging real-world data and global best practices for impactful cancer care
+                    improvement.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">
+            <img src="{% static 'admin/img/picture2.png' %}" alt="Infrastructure Icon">
+            Infrastructure
+        </div>
+        <table class="measures-table">
+            <tr>
+                <th>Measure</th>
+                <th>Scale</th>
+            </tr>
+            <tr>
+                <td>Specialized Cancer Centers</td>
+                <td>1-5</td>
+            </tr>
+            <tr>
+                <td>Genetic & Molecular Testing Infrastructure</td>
+                <td>1-5</td>
+            </tr>
+        </table>
+    </div>
+    <div class="section">
+        <div class="section-title">
+            <img src="{% static 'admin/img/picture3.png' %}" alt="Treatment Icon">
+            Treatment Access, Research Funding & Awareness
+        </div>
+        <table class="measures-table">
+            <tr>
+                <th>Measure</th>
+                <th>Scale</th>
+            </tr>
+            <tr>
+                <td>Treatment Access</td>
+                <td>1-5</td>
+            </tr>
+            <tr>
+                <td>Research Funding</td>
+                <td>1-5</td>
+            </tr>
+            <tr>
+                <td>Awareness Campaigns</td>
+                <td>1-5</td>
+            </tr>
+        </table>
+    </div>
+    <div class="section">
+        <div class="section-title">
+            <img src="{% static 'admin/img/picture4.png' %}" alt="Survival Icon">
+            Survival, Early Detection & Palliative Care
+        </div>
+        <table class="measures-table">
+            <tr>
+                <th>Measure</th>
+                <th>Scale</th>
+            </tr>
+            <tr>
+                <td>Survival Rates</td>
+                <td>1-5</td>
+            </tr>
+            <tr>
+                <td>Early Detection</td>
+                <td>1-5</td>
+            </tr>
+            <tr>
+                <td>Palliative Care</td>
+                <td>1-5</td>
+            </tr>
+        </table>
+    </div>
+    <div class="section">
+        <div class="section-title">
+            <img src="{% static 'admin/img/picture5.png' %}" alt="Biomarker Icon">
+            Biomarker Utilization
+        </div>
+        <table class="measures-table">
+            <tr>
+                <th>Measure</th>
+                <th>Scale</th>
+            </tr>
+            <tr>
+                <td>HER2</td>
+                <td>% Coverage</td>
+            </tr>
+            <tr>
+                <td>Estrogen Receptor (ER)</td>
+                <td>% Coverage</td>
+            </tr>
+            <tr>
+                <td>Progesterone Receptor (PR)</td>
+                <td>% Coverage</td>
+            </tr>
+            <tr>
+                <td>BRCA1</td>
+                <td>% Coverage</td>
+            </tr>
+            <tr>
+                <td>BRCA2</td>
+                <td>% Coverage</td>
+            </tr>
+        </table>
+    </div>
+    <div class="section">
+        <div class="section-title">
+            <img src="{% static 'admin/img/picture6.png' %}" alt="Clinical Icon">
+            Clinical Guidelines
+        </div>
+        <table class="measures-table">
+            <tr>
+                <th>Measure</th>
+                <th>Scale</th>
+            </tr>
+            <tr>
+                <td>National Guideline Implementation</td>
+                <td>1-5</td>
+            </tr>
+            <tr>
+                <td>Feasibility of Integration</td>
+                <td>1-5</td>
+            </tr>
+            <tr>
+                <td>Adoption of International Guidelines</td>
+                <td>1-5</td>
+            </tr>
+            <tr>
+                <td>Engagement with Updates</td>
+                <td>1-5</td>
+            </tr>
+            <tr>
+                <td>ESMO Guidelines Implementation</td>
+                <td>1-5</td>
+            </tr>
+        </table>
+    </div>
+    <div class="section">
+        <div class="section-title">
+            <img src="{% static 'admin/img/picture7.png' %}" alt="Reimbursement Icon">
+            Reimbursement Systems
+        </div>
+        <table class="measures-table">
+            <tr>
+                <th>Measure</th>
+                <th>Scale</th>
+            </tr>
+            <tr>
+                <td>Reimbursement</td>
+                <td>1-3</td>
+            </tr>
+            <tr>
+                <td>No-Cost Access</td>
+                <td>1-3</td>
+            </tr>
+        </table>
+    </div>
+    <div class="section">
+        <div class="section-title">
+            Cancer Screening
+        </div>
+        <table class="measures-table">
+            <tr>
+                <th>Measure</th>
+                <th>Scale</th>
+            </tr>
+            <tr>
+                <td>Type of Screening Program</td>
+                <td>Descriptive</td>
+            </tr>
+        </table>
+    </div>
+    <div class="section">
+        <div class="section-title">
+            Regional Coverage
+        </div>
+        <div class="table-map-div">
+            <table class="regions-table">
+                <tr>
+                    <th>North America</th>
+                    <th>Europe</th>
+                    <th>Asia</th>
+                    <th>Africa</th>
+                    <th>Latin America & Caribbean</th>
+                    <th>Oceania</th>
+                </tr>
+                <tr>
+                    <td>United States</td>
+                    <td>United Kingdom</td>
+                    <td>Japan</td>
+                    <td>South Africa</td>
+                    <td>Mexico</td>
+                    <td>Australia</td>
+                </tr>
+                <tr>
+                    <td>Canada</td>
+                    <td>Germany</td>
+                    <td>South Korea</td>
+                    <td>Kenya</td>
+                    <td>Brazil</td>
+                    <td>New Zealand</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>France</td>
+                    <td>China</td>
+                    <td>Nigeria</td>
+                    <td>Argentina</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Netherland</td>
+                    <td>India</td>
+                    <td>Egypt</td>
+                    <td>Chile</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Sweden</td>
+                    <td>Singapore</td>
+                    <td>Morocco</td>
+                    <td>Colombia</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Italy</td>
+                    <td>Thailand</td>
+                    <td>Algeria</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Spain</td>
+                    <td>Saudi Arabia</td>
+                    <td>Ethiopia</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Poland</td>
+                    <td>UAE</td>
+                    <td>Rwanda</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Greecs</td>
+                    <td>Syria</td>
+                    <td>Uganda</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Russia</td>
+                    <td>Indonesia</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Serbia</td>
+                    <td>Vietnam</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Philippines</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Malaysia</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+            <img src="{% static 'admin/img/worldmap.png' %}" alt="World Map" class="map-img">
+        </div>
+    </div>
+
+    <div>
+        <h1>Maturity Level Framework</h1>
+        <table>
+            <tr>
+                <th>Pillar</th>
+                <th class="level-header">Level 1 (Critical) - Least Developed</th>
+                <th class="level-header">Level 2 (Emerging) - Underdeveloped</th>
+                <th class="level-header">Level 3 (Intermediate) - Developing</th>
+                <th class="level-header">Level 4 (Advanced) - Well Developed</th>
+                <th class="level-header">Level 5 (Leading) - Highly Developed</th>
+            </tr>
+            <tr>
+                <td class="pillar">Infrastructure</td>
+                <td>No specialized cancer infrastructure; basic hospitals lack diagnostic or oncology units.</td>
+                <td>Select tertiary hospitals offer basic cancer services; most regions underserved.</td>
+                <td>Moderate access in regional centers; basic pathology, imaging, and oncology units exist.</td>
+                <td>Well-distributed cancer centers with full diagnostics and treatment capabilities.</td>
+                <td>Nationwide network of specialized cancer institutes with digital and AI-enabled systems.</td>
+            </tr>
+            <tr>
+                <td class="pillar">Treatment Access, Research Funding, and Awareness Campaigns</td>
+                <td>Only generic chemotherapy is available; no clinical trials or awareness initiatives.</td>
+                <td>Some chemotherapy options; few research grants, limited campaigns.</td>
+                <td>Public access to chemotherapy and some targeted therapies; national research budgets growing.</td>
+                <td>Widespread access to modern treatments; robust national research and funded awareness campaigns.
+                </td>
+                <td>Cutting-edge treatments (immunotherapy, research pipeline, high-profile national campaigns).</td>
+            </tr>
+            <tr>
+                <td class="pillar">Survival Rates, Early Detection, and Palliative Care</td>
+                <td>Survival <10%, late-stage diagnosis is the norm; palliative care absent.</td>
+                <td>Survival 10-20%, early detection rare; some hospitals offer pain management.</td>
+                <td>Survival 20-35%, early detection phase; regional palliative services exist.</td>
+                <td>Survival 35-50%; structured early detection and nationwide palliative care programs.</td>
+                <td>Survival >50% population-based early detection, full palliative and survivorship programs
+                    integrated.</td>
+            </tr>
+            <tr>
+                <td class="pillar">Utilization of Biomarkers</td>
+                <td>No biomarker testing; no labs or capacity for KRAS, EGFR, ALK, etc.</td>
+                <td>Testing limited to private labs or funded projects; no reimbursement.</td>
+                <td>Select biomarkers (e.g., EGFR) available in cities; partial coverage exists.</td>
+                <td>Routine biomarker use (EGFR, ALK, PD-L1) for eligible cases with regional access.</td>
+                <td>Universal biomarker integration, rapid, reimbursed, and standardized across all regions.</td>
+            </tr>
+            <tr>
+                <td class="pillar">Clinical Guidelines</td>
+                <td>No national guidelines; treatment decisions vary widely by facility.</td>
+                <td>Guidelines under development or loosely adopted; low adherence.</td>
+                <td>National guidelines published; inconsistent implementation across hospitals.</td>
+                <td>Guidelines enforced through audits, training, and digital systems.</td>
+                <td>Fully integrated clinical pathways and real-time decision support tools in all institutions.</td>
+            </tr>
+        </table>
+    </div>
+
+</div>
+
+
+
+<script>
+    const cards = document.querySelectorAll('.goal-card');
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, {
+        threshold: 0.1
+    });
+
+    cards.forEach(card => observer.observe(card));
+
+</script>
+
+{% endblock %}

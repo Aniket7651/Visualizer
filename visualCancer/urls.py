@@ -34,6 +34,7 @@ urlpatterns = [
     path('overview/<str:cancer_type>/<str:country>', overviewPage, name='overviewPage'),
     path('api/', apiAccess, name='apiAccess'),
     path('feedback/', view_feedback, name='view_feedback'),  # Feedback page
+    path('method/', view_methodology, name='methodology'),
 
     # API Links
     path('api/cancer/<str:cancer_type>/', get_cancer_data, name='get_cancer_data'), # API link for cancer data

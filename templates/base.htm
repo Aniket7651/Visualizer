@@ -7,14 +7,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title id="title-section">{% block title %} {% endblock %} - International Cancer Patient Coalition (ICPC)</title>
-    <link rel="stylesheet" href="{% static 'admin/css/styles.css' %}">
-    <link rel="icon" type="image/png" href="{% static 'admin/img/ICPClogo.jpg' %}">
-    <link rel="stylesheet" href="{% static 'admin/mobileview.css' %}">
+    <link rel="stylesheet" href="{% static 'admin/css/styles.css' %}?v={% now 'U' %}">
+    <link rel="icon" type="image/png" href="{% static 'admin/img/ICPClogo.jpg' %}?v={% now 'U' %}">
+    <link rel="stylesheet" href="{% static 'admin/mobileview.css' %}?v={% now 'U' %}">
     <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
-    <script type="text/javascript" src="{% static 'admin/theme-toggle.js' %}"></script>
+    <script type="text/javascript" src="{% static 'admin/theme-toggle.js' %}?v={% now 'U' %}"></script>
 </head>
 
 <body>
@@ -29,7 +29,7 @@
             <button id="theme-btn"><i class="fa fa-moon-o" style="font-size: 20px;"></i></button>
             <a href="{% url 'index' %}">Home</a>
             <a href="{% url 'datasetView' %}">Data</a>
-            <a href="">Methodology</a>
+            <a href="{% url 'methodology' %}">Methodology</a>
             <a href="{% url 'apiAccess' %}">API Access</a>
             <a href="https://unite4cancer.com/about-us/">About</a>
         </nav>

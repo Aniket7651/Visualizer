@@ -1,0 +1,107 @@
+/* mobileview.css */
+
+/* Ensure responsive layout for mobile devices */
+@media (max-width: 768px) {
+    body {
+        padding: 0;
+        margin: 0;
+        background-color: white;
+    }
+
+    header, nav {
+        padding: 10px;
+        text-align: center;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    footer {
+        padding: 10px;
+        text-align: center;
+    }
+
+    nav #theme-btn {
+        visibility: hidden;
+    }
+
+    header nav {
+        display: none;
+    }
+
+    .title-nav {
+        font-size: 14px;
+    }
+
+    .title-nav div {
+        padding: 5px;
+        text-align: center;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+    }
+
+    .subtitle {
+        display: none;
+    }
+
+    .ham-icon {
+        top: 15px;
+        right: 20px;
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    .container, .content {
+        width: 100%;
+        padding: 0 5px;
+        box-sizing: border-box;
+    }
+
+    
+
+    img, video {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
+
+    table {
+        width: 100%;
+        font-size: 14px;
+        overflow-x: auto;
+        display: block;
+    }
+
+    /* Hide sidebar or make it collapsible */
+    .sidebar {
+        display: none;
+    }
+
+    /* Navigation menu as dropdown */
+    .nav-menu {
+        display: block;
+        width: 100%;
+    }
+
+    .footer-content {
+        flex-direction: column-reverse;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-content .logo {
+        padding: 0;
+    }
+
+    .links {
+        font-size: 12px;
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+    }
+}

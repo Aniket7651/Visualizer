@@ -10,9 +10,9 @@ Cancer Explorer
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-<script type="text/javascript" src="{% static 'admin/utility_mains.js' %}"></script>
+<script type="text/javascript" src="{% static 'admin/utility_mains.js' %}?v={% now 'U' %}"></script>
 
-<link rel="stylesheet" type="text/css" href="{% static 'admin/index.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'admin/index.css' %}?v={% now 'U' %}">
 <div class="title-nav">
     <h2>Cancer Data Visualizer</h2>
     <p>
@@ -27,6 +27,11 @@ Cancer Explorer
         Treatment, Research & Awareness, biomarker tests, and Reimbursement. This information enhances the understanding
         of cancer care access worldwide.
     </p>
+    <p>In this study, a <b>maturity framework</b> is used as a structured model to evaluate the readiness and progression 
+        of cancer screening systems. It defines stages of development, from basic to advanced, allowing us to assess current 
+        capabilities, identify gaps, and provide a roadmap for improvement in line with global best practices.</p>
+
+    <a class="method-btn" href="{% url 'methodology' %}">More About Maturity & Methodology</a>
     <div>
         <strong class="area-title-context">Click on the drop-down to select disease areas and piller
             parameters:</strong>

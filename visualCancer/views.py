@@ -238,3 +238,6 @@ def view_feedback(request):
         })
     return render(request, 'feedback.html')
 
+
+def view_methodology(request):
+    return render(request, 'methodology.html')

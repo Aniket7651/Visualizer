@@ -182,3 +182,46 @@ li {
     background-color: #f3c750;
 }
 
+@media (max-width: 768px) {
+
+    label {
+        font-size: 14px;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    .container h2 {
+        font-size: 2.5rem;
+    }
+
+    .container h3 {
+        font-size: 1.8rem;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .btn-group {
+        gap: 10px;
+    }
+
+    .btn-group button {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+
+    #popup {
+        padding-top: 50px;
+        width: 90%;
+    }
+
+    #chart-container {
+        max-width: 100%;
+    }
+
+    .frame-div h3 {
+        flex-direction: column;
+        font-size: 1.2rem;
+    }
+}

@@ -330,6 +330,26 @@ footer .links a:hover {
     color: #000;
 }
 
+@media (max-width: 768px) {
+    footer .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    footer .links {
+        margin-top: 1rem;
+    }
+    footer .links a {
+        display: block;
+        margin: 0.5rem 0;
+    }
+    
+    .right-footer div p {
+        font-size: 12px;
+    }
+}
+
 button {
     border: none;
     background-color: transparent;
@@ -359,36 +379,14 @@ button {
 }
 
 
+.ham-icon {
+    display: none;
+    position: none;
+}
+
 @media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    header nav {
-        margin-top: 1rem;
-    }
-
-    .filter {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .cont {
-        flex-direction: column;
-        /* Stack columns and map vertically */
-    }
-
-    .row {
-        flex-direction: column;
-    }
-
-    footer .footer-content {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    footer .links {
-        margin-top: 1rem;
+    .ham-icon {
+        display: block;
+        position: absolute;
     }
 }

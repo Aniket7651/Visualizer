@@ -53,6 +53,25 @@
     }
 }
 
+.method-btn {
+    display: inline-block;
+    background-color: #5743c8;
+    color: #ffffff;
+    font-weight: bold;
+    border: none;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.method-btn:hover {
+    background-color: #452c8c;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+
 .container {
     font-size: 18px;
     max-width: 900px;

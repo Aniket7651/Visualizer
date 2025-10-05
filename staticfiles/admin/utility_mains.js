@@ -122,6 +122,8 @@ function drawChart() {
   }
 
   const options = {
+    responseive: true,
+    maintainAspectRatio: false,
     colorAxis: { colors: ['#F6C646', '#5643D1'] },
     backgroundColor: {
       fill: 'transparent', // Ocean color
@@ -133,6 +135,10 @@ function drawChart() {
   const chart = new google.visualization.GeoChart(document.getElementById('geochart'));
   chart.__dataTable = data; // Store DataTable
   chart.draw(data, options);
+
+  window.addEventListener('resize', function () {
+    chart.resize();
+  });
 
   addChartClickListener(chart, cancerType, 'Cancer_Screening'); // Use 'Cancer Screening' as text column
 }
@@ -174,6 +180,8 @@ function fetchAndRenderJson(cancerType, colNameFromPillar, attempt = 1, maxAttem
   const dataList = document.getElementById('data-list');
   const featureDetail = document.getElementById('feature-detail');
 
+  const legendText = document.getElementById('legend-container');
+
   const jsonUrl = `${baseJsonUrl}${cancerType}.json`;
 
   fetch(jsonUrl, { cache: 'no-store' })
@@ -193,9 +201,26 @@ function fetchAndRenderJson(cancerType, colNameFromPillar, attempt = 1, maxAttem
       const pillar = findStringInArrays(colNameFromPillar, allArrays);
       if (pillar !== null) {
         featureDetail.innerHTML = `<ul>${data[pillar].legends.map(legend => `<li class="legend">${legend}</li>`).join('')}</ul>`;
+        
+        if (data[pillar].legends[0] == "No legend available" ) {
+          legendText.innerHTML = `<p class="legend-alert">No legend available for this parameter yet</p>`;
+        }
+        else {
+          legendText.innerHTML = `
+            <ul>
+              ${data[pillar].legends.map(legend => `<li><h1>${legend.split("–")[0]}</h1><p>${legend.split("–")[1]}</p></li>`).join('')}
+            </ul>
+          `;
+        }
       }
       else {
         featureDetail.innerHTML = `<ul>${data.utilization_biom.legends.map(legend => `<li class="legend">${legend}</li>`).join('')}</ul>`;
+
+        legendText.innerHTML = `
+          <ul>
+            ${data.utilization_biom.legends.map(legend => `<li><h1>${legend.split("–")[0]}</h1><p>${legend.split("–")[1]}</p></li>`).join('')}
+          </ul>
+        `;
       }
     })
     .catch(error => {
@@ -221,11 +246,17 @@ function showPopup(country, text, overviewLink, x, y, overviewShort = null) {
     return;
   }
   popup.innerHTML = `<strong>
-                          ${country}<br><br>Cancer Screening</strong><br>${text}<br>
-                          <br>${overviewShort}<br><p>For more details, visit ${overviewLink}</p>`;
+                          ${country}<br><p>For more details about overview and policy paper, ${overviewLink}</p>
+                          <br>Cancer Screening</strong><br>${text}<br>
+                          <br>${overviewShort}<br>`;
 
-  popup.style.left = `${x + 10}px`; // 10px offset
-  popup.style.top = `${y + 10}px`;
+  if (window.innerWidth <= 768) {
+    popup.style.left = 'auto';
+  }
+  else {
+    popup.style.left = `${x + 1}px`; // 10px offset
+  }
+  popup.style.top = `${y + 5}px`;
   popup.style.display = 'block';
 }
 
@@ -304,7 +335,7 @@ function addChartClickListener(chart, cancerType, textColumn) {
       const dataTable = chart.__dataTable;
       lastSelectedCountry = dataTable.getValue(selection[0].row, 0); // Store selected country
       var link = domain_link + "overview/" + encodeURIComponent(cancerType) + "/" + encodeURIComponent(lastSelectedCountry);
-      var popupContent = `<a href="${link}" target="_blank">Overview</a>`;
+      var popupContent = `<a href="${link}" target="_blank">Click Here</a>`;
 
       overviewLink = popupContent;
 
