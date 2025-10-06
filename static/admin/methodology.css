@@ -82,7 +82,7 @@ strong {
 
 .goal-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 10px 25px var(--text-color);
 }
 
 .card-header {
@@ -239,4 +239,167 @@ th {
 .pillar {
     font-weight: bold;
     background-color: var(--background-color);
+}
+
+
+.workflow {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    gap: 2px;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    /* Adjusted for better flow */
+    padding: 20px 0;
+}
+
+.arrow-bg {
+    position: absolute;
+    top: 30%;
+    left: 0;
+    width: 100%;
+    height: 40%;
+    background: linear-gradient(to right, #6a0dad, #8a4af3);
+    /* Gradient for modern look */
+    clip-path: polygon(0 0, 100% 0, 95% 100%, 0 100%);
+    z-index: -1;
+    opacity: 0.6;
+}
+
+.step {
+    background-color: var(--background-color);
+    border: 2px solid #5743c8;
+    border-radius: 15px;
+    padding: 10px;
+    width: 12%;
+    /* Adjusted for better spacing on desktop */
+    min-width: 190px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    text-align: left;
+    position: relative;
+    z-index: 1;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.step:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px var(--text-color);
+}
+
+.step h2 {
+    color: #5743c8;
+    font-size: clamp(1em, 1.5vw, 1.3em);
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.step ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin: 0;
+    font-size: clamp(0.8em, 1vw, 1em);
+}
+
+.step ul li {
+    margin-bottom: 10px;
+}
+
+.step ul ul {
+    margin-top: 5px;
+    padding-left: 20px;
+}
+
+/* Connector Lines for Desktop/Laptop */
+.workflow::before,
+.workflow::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, #6a0dad, #8a4af3);
+    z-index: 0;
+}
+
+.workflow::before {
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.workflow::after {
+    display: none;
+    /* Optional: for symmetry */
+}
+
+.step:not(:first-child) {
+    margin-left: 40px;
+    /* Space between steps */
+}
+
+.step:first-child {
+    margin-left: 0;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+    .step {
+        width: 22%;
+    }
+
+    .workflow {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .workflow {
+        flex-direction: column;
+        align-items: center;
+        min-height: auto;
+        padding: 0;
+    }
+
+    .arrow-bg {
+        display: none;
+    }
+
+    .workflow::before {
+        display: none;
+    }
+
+    .step {
+        width: 80%;
+        margin-bottom: 60px;
+    }
+
+    .step::after {
+        content: '';
+        position: absolute;
+        bottom: -30px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 2px;
+        height: 30px;
+        background: linear-gradient(to bottom, #6a0dad, #8a4af3);
+    }
+
+    .step:last-child::after {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .step {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .step h2 {
+        font-size: clamp(0.9em, 4vw, 1.2em);
+    }
+
+    .step ul {
+        font-size: clamp(0.7em, 3vw, 0.9em);
+    }
 }
